@@ -1,0 +1,35 @@
+import { DataTypes } from "sequelize";
+import { sequelize } from "../config/database";
+import { Role } from "./Role";
+import { Permission } from "./Permission";
+import { User } from "./User";
+import { MediaAsset } from "./MediaAsset";
+
+// Role <-> Permission join table. A role's grants live entirely in here, which
+// is what lets permissions be re-assigned at runtime from Settings > Roles
+// without any code change or redeploy.
+export const RolePermission = sequelize.define(
+  "RolePermission",
+  {
+    roleId: { type: DataTypes.UUID, allowNull: false },
+    permissionId: { type: DataTypes.UUID, allowNull: false },
+  },
+  { tableName: "role_permissions", timestamps: false }
+);
+
+Role.belongsToMany(Permission, { through: RolePermission, foreignKey: "roleId" });
+Permission.belongsToMany(Role, { through: RolePermission, foreignKey: "permissionId" });
+
+// User <-> Role
+User.belongsTo(Role, { foreignKey: "roleId", as: "role" });
+Role.hasMany(User, { foreignKey: "roleId" });
+
+// Media — uploader is nullable so an asset survives its uploader being removed.
+MediaAsset.belongsTo(User, { foreignKey: "uploadedById", as: "uploadedBy" });
+User.hasMany(MediaAsset, { foreignKey: "uploadedById", as: "uploads" });
+
+export async function syncDatabase() {
+  await sequelize.sync({ alter: true });
+}
+
+export { sequelize, Role, Permission, User, MediaAsset };

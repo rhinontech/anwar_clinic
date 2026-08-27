@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Class-based dark mode, matching the reference admin panel: the `dark:`
+   variant applies only under an explicit `.dark` ancestor, never from the OS's
+   prefers-color-scheme. The panel is light-mode only until something actually
+   puts `.dark` on <html> — add a theme toggle there and every dark: class in
+   the codebase lights up. */
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Pin native UI (form controls, scrollbars, autofill) to light as well —
+   without this they'd still render dark on a dark-mode OS. */
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-slate-50);
+  color: var(--color-slate-900);
+}
+
+.dark body {
+  background: var(--color-slate-950);
+  color: var(--color-slate-100);
+}

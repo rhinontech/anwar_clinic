@@ -1,0 +1,92 @@
+import type { ReactNode } from "react";
+import {
+  TbLayoutDashboard,
+  TbCalendarEvent,
+  TbUsers,
+  TbStethoscope,
+  TbPrescription,
+  TbReceipt2,
+  TbPackage,
+  TbUserCog,
+  TbChartHistogram,
+  TbPhoto,
+  TbSettings,
+} from "react-icons/tb";
+
+export interface NavItem {
+  title: string;
+  icon: ReactNode;
+  /** Path suffix, appended after /:role. */
+  path: string;
+  /** The user needs ANY one of these to see the item. */
+  permissions: string[];
+}
+
+// The nav is data — each entry declares the permissions that reveal it, and
+// Sidebar filters this list through `has()`. Nothing here is role-specific,
+// so a role created at runtime gets the right nav automatically from its grants.
+export const NAV_ITEMS: NavItem[] = [
+  { title: "Dashboard",     icon: <TbLayoutDashboard className="h-5 w-5 shrink-0" />, path: "/dashboard",     permissions: ["dashboard:read"] },
+  { title: "Appointments",  icon: <TbCalendarEvent className="h-5 w-5 shrink-0" />,   path: "/appointments",  permissions: ["appointments:read"] },
+  { title: "Patients",      icon: <TbUsers className="h-5 w-5 shrink-0" />,           path: "/patients",      permissions: ["patients:read"] },
+  { title: "Doctors",       icon: <TbStethoscope className="h-5 w-5 shrink-0" />,     path: "/doctors",       permissions: ["doctors:read"] },
+  { title: "Prescriptions", icon: <TbPrescription className="h-5 w-5 shrink-0" />,    path: "/prescriptions", permissions: ["prescriptions:read"] },
+  { title: "Billing",       icon: <TbReceipt2 className="h-5 w-5 shrink-0" />,        path: "/billing",       permissions: ["billing:read"] },
+  { title: "Inventory",     icon: <TbPackage className="h-5 w-5 shrink-0" />,         path: "/inventory",     permissions: ["inventory:read"] },
+  { title: "Staff",         icon: <TbUserCog className="h-5 w-5 shrink-0" />,         path: "/staff",         permissions: ["staff:read"] },
+  { title: "Reports",       icon: <TbChartHistogram className="h-5 w-5 shrink-0" />,  path: "/reports",       permissions: ["reports:read"] },
+  { title: "Media",         icon: <TbPhoto className="h-5 w-5 shrink-0" />,           path: "/media",         permissions: ["media:read"] },
+  { title: "Settings",      icon: <TbSettings className="h-5 w-5 shrink-0" />,        path: "/settings",      permissions: ["settings:read"] },
+];
+
+// Human labels for the permission matrix in Settings > Roles. Anything missing
+// falls back to a prettified "Resource — action", so new catalog entries just work.
+export const PERMISSION_LABELS: Record<string, string> = {
+  "dashboard:read": "View dashboard",
+  "appointments:read": "View appointments",
+  "appointments:write": "Book, reschedule & cancel appointments",
+  "patients:read": "View patient records",
+  "patients:write": "Create & edit patient records",
+  "doctors:read": "View doctors & schedules",
+  "doctors:write": "Manage doctors & schedules",
+  "prescriptions:read": "View prescriptions",
+  "prescriptions:write": "Issue & edit prescriptions",
+  "billing:read": "View invoices & payments",
+  "billing:write": "Create invoices & record payments",
+  "inventory:read": "View stock levels",
+  "inventory:write": "Manage stock & suppliers",
+  "staff:read": "View staff directory",
+  "staff:write": "Add, edit & deactivate staff",
+  "reports:read": "View clinic reports",
+  "media:read": "View the media library",
+  "media:write": "Upload & delete media files",
+  "settings:read": "View settings",
+  "settings:write": "Manage roles, permissions & clinic settings",
+};
+
+// Display order + label per resource group in the matrix. Unlisted resources
+// still render, using a capitalized fallback — the matrix is fully data-driven.
+export const RESOURCE_META: { key: string; label: string; order: number }[] = [
+  { key: "dashboard", label: "Dashboard", order: 0 },
+  { key: "appointments", label: "Appointments", order: 1 },
+  { key: "patients", label: "Patients", order: 2 },
+  { key: "doctors", label: "Doctors", order: 3 },
+  { key: "prescriptions", label: "Prescriptions", order: 4 },
+  { key: "billing", label: "Billing", order: 5 },
+  { key: "inventory", label: "Inventory", order: 6 },
+  { key: "staff", label: "Staff", order: 7 },
+  { key: "reports", label: "Reports", order: 8 },
+  { key: "media", label: "Media Library", order: 9 },
+  { key: "settings", label: "Settings", order: 10 },
+];
+
+export function resourceLabel(resource: string) {
+  const known = RESOURCE_META.find((r) => r.key === resource);
+  if (known) return known.label;
+  return resource.charAt(0).toUpperCase() + resource.slice(1);
+}
+
+export function resourceOrder(resource: string) {
+  const known = RESOURCE_META.find((r) => r.key === resource);
+  return known ? known.order : 99;
+}

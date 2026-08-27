@@ -2,13 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "private": true,
-  "description": "Anwar Clinic backend — Express + PostgreSQL + Sequelize with dynamic RBAC",
+  "description": "Anwar Clinic backend \u2014 Express + PostgreSQL + Sequelize with dynamic RBAC",
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "rm -rf dist && tsc",
     "start": "node dist/server.js",
-    "db:seed": "ts-node src/config/seed.ts"
+    "db:seed": "ts-node src/config/seed.ts",
+    "db:seed:services": "ts-node src/config/seedServices.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1119.0",

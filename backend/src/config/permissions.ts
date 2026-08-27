@@ -21,6 +21,8 @@ export const PERMISSION_CATALOG = [
   { name: "staff:read",         resource: "staff",         action: "read"  },
   { name: "staff:write",        resource: "staff",         action: "write" },
   { name: "reports:read",       resource: "reports",       action: "read"  },
+  { name: "services:read",      resource: "services",      action: "read"  },
+  { name: "services:write",     resource: "services",      action: "write" },
   { name: "media:read",         resource: "media",         action: "read"  },
   { name: "media:write",        resource: "media",         action: "write" },
   { name: "settings:read",      resource: "settings",      action: "read"  },

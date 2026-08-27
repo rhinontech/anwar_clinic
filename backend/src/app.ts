@@ -6,6 +6,8 @@ import authRoutes from "./routes/auth";
 import rolesRoutes from "./routes/roles";
 import permissionsRoutes from "./routes/permissions";
 import mediaRoutes from "./routes/media";
+import servicesRoutes from "./routes/services";
+import publicRoutes from "./routes/public";
 
 const app = express();
 
@@ -45,6 +47,9 @@ app.use("/auth", authRoutes);
 app.use("/roles", rolesRoutes);
 app.use("/permissions", permissionsRoutes);
 app.use("/media", mediaRoutes);
+app.use("/services", servicesRoutes);
+// Open CORS: the landing page fetches this from its own origin (and at build time).
+app.use("/public", cors({ origin: true }), publicRoutes);
 
 app.use((_req, res) => {
   res.status(404).json({ message: "Route not found" });

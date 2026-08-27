@@ -79,6 +79,20 @@ keep the UI honest. The API enforces the same rules server-side.
 
 It appears in the Settings → Roles matrix automatically, ready to grant.
 
+## Services
+
+`/:role/services` — the list; `/:role/services/:id` — the editor. Gated by
+`services:read` / `services:write`.
+
+Every form is generated from the schema the backend serves at
+`GET /services/schema`; there is no hardcoded field list here. `SchemaFields.tsx`
+renders the five field types (`text`, `textarea`, `image`, `stringList`,
+`objectList`) — adding a **field** needs no change in this app at all, and adding
+a new *field type* is the only front-end work a schema change can require.
+
+Image fields can pull a URL straight from the Media Library via the picker,
+rather than copy-pasting between tabs.
+
 ## Media Library
 
 `/:role/media` — upload an image, copy its URL, paste it into the landing page.
@@ -100,6 +114,7 @@ app/
     layout.tsx          PermissionsProvider + LayoutProvider + chrome
     dashboard/          modules the current role can reach
     media/              upload files, copy public URLs
+    services/           landing-page service pages (list + section editor)
     settings/roles/     create roles, edit the permission matrix
   auth/login/           the only unauthenticated route
 components/
@@ -107,6 +122,7 @@ components/
   Layout/               Sidebar (permission-filtered), Header
   Settings/             RolesManager — the dynamic RBAC UI
   Media/                MediaLibrary — upload, preview, copy URL
+  Services/             ServicesList, ServiceEditor, SchemaFields, MediaPicker
   UI/                   Guards (Can, RequirePermission)
 context/                PermissionsContext, LayoutContext
 lib/                    api (fetch, apiUpload, 401 handling), auth (JWT decode), utils

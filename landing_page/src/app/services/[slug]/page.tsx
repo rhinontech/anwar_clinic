@@ -1,34 +1,47 @@
 import type { Metadata } from "next";
 import ServiceDetailPage from "@/pages/services/ServiceDetailPage";
 import { ALL_SERVICES_LIST } from "@/data/allServicesData";
+import { fetchService, fetchServices, SERVICES_REVALIDATE } from "@/lib/services";
 
 interface PageProps {
-  params: {
-    slug: string;
-  };
+  params: { slug: string };
 }
 
-export function generateStaticParams() {
-  return ALL_SERVICES_LIST.map((service) => ({
-    slug: service.id,
-  })).concat([
-    { slug: "hair-transplant-repair" },
-    { slug: "failed-hair-transplant-repair" },
-    { slug: "hair-transplant-for-men" },
-  ]);
+// Statically generated at build, refreshed in the background on this interval —
+// a service published in the admin panel appears without a redeploy.
+export const revalidate = SERVICES_REVALIDATE;
+// A slug added after the build still renders on first request, then is cached.
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const services = await fetchServices();
+  if (services && services.length > 0) {
+    return services.map((s) => ({ slug: s.slug }));
+  }
+  // API unreachable at build time — fall back to the bundled list so the build
+  // still produces pages instead of failing.
+  return ALL_SERVICES_LIST.map((service) => ({ slug: service.id }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const service = await fetchService(params.slug);
+  if (service) {
+    return {
+      title: service.seoTitle || `${service.title} in India | QHT Clinic`,
+      description: service.seoDescription || service.cardDescription,
+    };
+  }
+
   const formattedTitle = params.slug
     .replace(/-/g, " ")
     .replace(/\b\w/g, (c) => c.toUpperCase());
-
   return {
     title: `${formattedTitle} in India | QHT Clinic`,
     description: `Discover best ${formattedTitle} at QHT Clinic with advanced patented QHT techniques, natural hairline design, and affordable pricing.`,
   };
 }
 
-export default function Page({ params }: PageProps) {
-  return <ServiceDetailPage slug={params.slug} />;
+export default async function Page({ params }: PageProps) {
+  const service = await fetchService(params.slug);
+  return <ServiceDetailPage slug={params.slug} service={service} />;
 }

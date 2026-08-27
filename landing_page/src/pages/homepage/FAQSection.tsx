@@ -59,11 +59,11 @@ export default function FAQSection({
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
-      <div className="max-w-4xl mx-auto px-5 sm:px-8">
-        
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+
         {/* Section Heading */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-5xl  font-[500] text-[#1b221d] tracking-tight leading-tight">
             {title}
           </h2>
         </div>
@@ -88,29 +88,27 @@ export default function FAQSection({
                     </span>
 
                     {/* Question Text */}
-                    <span className="text-sm sm:text-base font-bold text-[#1b221d] group-hover:text-[#596d53] transition-colors leading-snug">
+                    <span className="text-sm sm:text-2xl font-[500] text-[#1b221d] group-hover:text-[#596d53] transition-colors leading-snug">
                       {faq.question}
                     </span>
                   </div>
 
                   {/* Smooth Rotating Chevron */}
                   <ChevronDown
-                    className={`w-4 h-4 text-gray-500 flex-shrink-0 transition-transform duration-300 ease-out ${
-                      isOpen ? "rotate-180 text-[#1b221d]" : "text-gray-400 group-hover:text-gray-700"
-                    }`}
+                    className={`w-4 h-4 text-gray-500 flex-shrink-0 transition-transform duration-300 ease-out ${isOpen ? "rotate-180 text-[#1b221d]" : "text-gray-400 group-hover:text-gray-700"
+                      }`}
                   />
                 </button>
 
                 {/* Smooth Animated Answer Container */}
                 <div
-                  className={`grid transition-all duration-300 ease-in-out ${
-                    isOpen
-                      ? "grid-rows-[1fr] opacity-100 mt-3"
-                      : "grid-rows-[0fr] opacity-0"
-                  }`}
+                  className={`grid transition-all duration-300 ease-in-out ${isOpen
+                    ? "grid-rows-[1fr] opacity-100 mt-3"
+                    : "grid-rows-[0fr] opacity-0"
+                    }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-xs sm:text-[13.5px] text-[#5c685f] leading-relaxed pl-8 sm:pl-10 font-normal">
+                    <p className="text-xs sm:text-[18.5px] text-[#5c685f] leading-relaxed pl-8 sm:pl-10 font-normal">
                       {faq.answer}
                     </p>
                   </div>

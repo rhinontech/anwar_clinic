@@ -1,130 +1,123 @@
 "use client";
 
 import React from "react";
+import { CheckCircle2 } from "lucide-react";
 import { PRICING_PACKAGES } from "@/data/qhtData";
-import { Check, Sparkles, ArrowRight } from "lucide-react";
 
 interface PricingTechniquesProps {
-  onOpenConsultation: () => void;
+  onOpenConsultation?: () => void;
 }
 
 export default function PricingTechniques({
   onOpenConsultation,
 }: PricingTechniquesProps) {
   return (
-    <section className="py-20 bg-[#f8faf8]">
+    <section className="py-20 sm:py-24 bg-[#f8faf8] overflow-hidden">
       <div className="qht-container">
+
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#162418]">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl font-[500] text-[#162418] tracking-tight">
             Hair Transplant Cost by Technique
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-gray-600">
+          <p className="mt-3 text-sm sm:text-lg text-[#5c685f] font-normal leading-relaxed">
             Discover three proven hair transplant techniques at three different price points, each delivering permanent, natural-looking hair restoration.
           </p>
         </div>
 
         {/* 3 Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
-          {PRICING_PACKAGES.map((pkg, idx) => (
-            <div
-              key={idx}
-              className={`rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 relative ${
-                pkg.isFeatured
-                  ? "bg-[#1b392b] text-white shadow-xl md:-translate-y-3 border-2 border-[#b1fc85]"
-                  : "bg-white text-gray-900 border border-gray-100 shadow-sm hover:shadow-md"
-              }`}
-            >
-              {/* Featured Badge */}
-              {pkg.isFeatured && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#b1fc85] text-[#162418] text-[11px] font-extrabold uppercase px-4 py-1 rounded-full shadow-sm flex items-center gap-1">
-                  <Sparkles className="w-3 h-3" /> Most Popular Globally
-                </div>
-              )}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-7xl mx-auto">
+          {PRICING_PACKAGES.map((pkg, idx) => {
+            const isFeatured = pkg.isFeatured;
 
-              <div>
-                <div className="mb-4">
+            return (
+              <div
+                key={idx}
+                className={`rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 relative ${isFeatured
+                  ? "bg-[#52664d] text-white shadow-xl"
+                  : "bg-white text-gray-900 border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)]"
+                  }`}
+              >
+                {/* Card Top: Technique Name, Full Title, Description */}
+                <div>
                   <span
-                    className={`text-xs font-bold uppercase tracking-wider ${
-                      pkg.isFeatured ? "text-[#b1fc85]" : "text-[#1b392b]"
-                    }`}
+                    className={`text-xs font-semibold block mb-1.5 ${isFeatured ? "text-[#b1fc85]" : "text-[#5c685f]"
+                      }`}
                   >
                     {pkg.technique}
                   </span>
+
                   <h3
-                    className={`text-xl font-bold mt-1 ${
-                      pkg.isFeatured ? "text-white" : "text-[#162418]"
-                    }`}
+                    className={`text-lg sm:text-xl font-[500] leading-snug mb-3 ${isFeatured ? "text-white" : "text-[#1b221d]"
+                      }`}
                   >
                     {pkg.fullName}
                   </h3>
+
                   <p
-                    className={`text-xs mt-2 leading-relaxed ${
-                      pkg.isFeatured ? "text-gray-300" : "text-gray-600"
-                    }`}
+                    className={`text-xs sm:text-[13px] leading-relaxed mb-6 font-normal ${isFeatured ? "text-white/85" : "text-[#5c685f]"
+                      }`}
                   >
                     {pkg.desc}
                   </p>
                 </div>
 
-                {/* Price Display */}
-                <div className="py-4 my-4 border-y border-gray-100/20 flex items-end justify-between">
+                {/* Middle: Pricing Row with Horizontal Border */}
+                <div
+                  className={`border-y py-4 my-2 flex items-center justify-between ${isFeatured ? "border-white/15" : "border-gray-100"
+                    }`}
+                >
                   <div>
-                    <span className="text-[11px] block font-semibold opacity-80">
-                      Per Graft Onwards
+                    <span
+                      className={`text-xs font-bold block ${isFeatured ? "text-[#b1fc85]" : "text-[#1b221d]"
+                        }`}
+                    >
+                      per graft onwards
                     </span>
-                    <span className="text-xs block opacity-70">
+                    <span
+                      className={`text-xs font-normal mt-0.5 block ${isFeatured ? "text-white/80" : "text-[#5c685f]"
+                        }`}
+                    >
                       Total: {pkg.totalRange}
                     </span>
                   </div>
-                  <div className="flex items-baseline gap-0.5">
-                    <span className="text-lg font-bold">₹</span>
-                    <span className="text-4xl font-extrabold font-mono">
-                      {pkg.perGraft}
+
+                  <div className="text-right">
+                    <span
+                      className={`text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight ${isFeatured ? "text-[#b1fc85]" : "text-[#52664d]"
+                        }`}
+                    >
+                      ₹{pkg.perGraft}
                     </span>
                   </div>
                 </div>
 
-                {/* Features List */}
-                <ul className="space-y-2.5 my-6 text-xs sm:text-sm">
-                  {pkg.features.map((feature, fIdx) => (
-                    <li key={fIdx} className="flex items-start gap-2">
-                      <span
-                        className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                          pkg.isFeatured
-                            ? "bg-[#b1fc85] text-[#162418]"
-                            : "bg-[#1b392b] text-white"
-                        }`}
+                {/* Bottom: Feature Rows with Clean Hairline Dividers */}
+                <div className="pt-2">
+                  <ul
+                    className={`divide-y ${isFeatured ? "divide-white/10" : "divide-gray-100"
+                      }`}
+                  >
+                    {pkg.features.map((feature, fIdx) => (
+                      <li
+                        key={fIdx}
+                        className={`py-3 flex items-center gap-2.5 text-xs sm:text-[13px] font-normal ${isFeatured ? "text-white" : "text-[#2b302c]"
+                          }`}
                       >
-                        <Check className="w-2.5 h-2.5 stroke-[3]" />
-                      </span>
-                      <span
-                        className={
-                          pkg.isFeatured ? "text-gray-200" : "text-gray-700"
-                        }
-                      >
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                        <CheckCircle2
+                          className={`w-4 h-4 flex-shrink-0 ${isFeatured ? "text-[#b1fc85]" : "text-[#52664d]"
+                            }`}
+                        />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-
-              {/* Action Button */}
-              <button
-                onClick={onOpenConsultation}
-                className={`w-full py-3 rounded-full font-bold text-xs sm:text-sm transition-all duration-200 shadow-sm flex items-center justify-center gap-1.5 ${
-                  pkg.isFeatured
-                    ? "bg-[#b1fc85] text-[#162418] hover:bg-white"
-                    : "bg-[#1b392b] text-white hover:bg-[#284c3b]"
-                }`}
-              >
-                <span>Get Exact Graft Estimate</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
       </div>
     </section>
   );

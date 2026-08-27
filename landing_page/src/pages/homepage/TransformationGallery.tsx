@@ -123,7 +123,7 @@ export default function TransformationGallery({
       <div className="qht-large-container">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-4 mb-6 border-b border-gray-200">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#162418]">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-[500] text-[#162418]">
             Transformation Gallery
           </h2>
           <a
@@ -135,7 +135,7 @@ export default function TransformationGallery({
           </a>
         </div>
 
-        <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mb-8 sm:mb-10">
+        <p className="text-xs sm:text-2xl  max-w-xl mb-8 sm:mb-10">
           Real patient before and after results. Drag the slider on any card to see the full transformation.
         </p>
 

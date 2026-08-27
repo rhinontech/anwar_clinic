@@ -64,17 +64,17 @@ function HeaderBar({
           <img
             src="https://www.qhtclinic.com/wp-content/uploads/2025/08/header-logo.webp"
             alt="QHT Clinic Logo"
-            className={`${isSticky ? "h-8 md:h-10" : "h-9 md:h-11"} w-auto object-contain transition-all duration-200`}
+            className={`${isSticky ? "h-9 md:h-11" : "h-10 sm:h-12 md:h-13"} w-auto object-contain transition-all duration-200`}
           />
         </Link>
 
         {/* Desktop Navigation Floating White Pill */}
-        <div className="hidden lg:flex items-center bg-white rounded-xl shadow-[0_2px_12px_rgba(0,0,0,0.04)] border border-gray-100/90 pl-6 pr-2 py-1.5 gap-4 xl:gap-6">
-          <nav className="flex items-center gap-4 xl:gap-6">
+        <div className="hidden lg:flex items-center bg-white rounded-xl md:rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-100/90 pl-7 pr-3 py-2.5 gap-6 xl:gap-8">
+          <nav className="flex items-center gap-6 xl:gap-8 text-[14.5px] sm:text-[15px]">
             {/* Home */}
             <Link
               href="/"
-              className="text-sm font-semibold text-[#627566] hover:text-[#384c3c] transition-colors"
+              className="font-semibold text-[#52664d] hover:text-[#384c3c] transition-colors"
             >
               Home
             </Link>
@@ -82,7 +82,7 @@ function HeaderBar({
             {/* Results */}
             <Link
               href="/results"
-              className="text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors py-1"
+              className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors py-1"
             >
               Results
             </Link>
@@ -95,11 +95,11 @@ function HeaderBar({
             >
               <Link
                 href="/services"
-                className="flex items-center gap-1 text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors py-1"
+                className="flex items-center gap-1.5 font-medium text-[#2b302c] hover:text-[#52664d] transition-colors py-1"
               >
                 <span>Services</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180 text-[#627566]" : ""
+                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180 text-[#52664d]" : ""
                     }`}
                 />
               </Link>
@@ -108,7 +108,7 @@ function HeaderBar({
             {/* Hair Transplant Cost */}
             <Link
               href="/hair-transplant-cost-in-india"
-              className="text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors whitespace-nowrap"
+              className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors whitespace-nowrap"
             >
               Hair Transplant Cost
             </Link>
@@ -118,7 +118,7 @@ function HeaderBar({
               href="https://theuroots.com/collections/all"
               target="_blank"
               rel="noreferrer"
-              className="text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors"
+              className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors"
             >
               Medicines
             </a>
@@ -129,22 +129,22 @@ function HeaderBar({
               onMouseEnter={() => onMouseEnter("about")}
               onMouseLeave={onMouseLeave}
             >
-              <button className="flex items-center gap-1 text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors py-1">
+              <button className="flex items-center gap-1.5 font-medium text-[#2b302c] hover:text-[#52664d] transition-colors py-1 cursor-pointer">
                 <span>About us</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "about" ? "rotate-180 text-[#627566]" : ""
+                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "about" ? "rotate-180 text-[#52664d]" : ""
                     }`}
                 />
               </button>
             </div>
 
             {/* Our Clinic */}
-            <a
-              href="/our-clinic/"
-              className="text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors whitespace-nowrap"
+            <Link
+              href="/our-clinic"
+              className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors whitespace-nowrap"
             >
               Our Clinic
-            </a>
+            </Link>
           </nav>
 
           {/* CTA Button: Book your surgery */}
@@ -152,7 +152,7 @@ function HeaderBar({
             href="https://pages.razorpay.com/pl_R9xTz14IIPBGyE/view"
             target="_blank"
             rel="noreferrer"
-            className="bg-[#596d53] hover:bg-[#495c44] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors duration-200 shadow-sm whitespace-nowrap"
+            className="bg-[#52664d] hover:bg-[#43543e] text-white px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl md:rounded-2xl text-[14px] sm:text-[15px] font-bold transition-colors duration-200 shadow-md whitespace-nowrap ml-1"
           >
             Book your surgery
           </a>
@@ -164,7 +164,7 @@ function HeaderBar({
             href="https://pages.razorpay.com/pl_R9xTz14IIPBGyE/view"
             target="_blank"
             rel="noreferrer"
-            className="px-3 py-1.5 bg-[#596d53] text-white text-xs font-semibold rounded-lg"
+            className="px-4 py-2 bg-[#52664d] text-white text-xs font-semibold rounded-xl shadow-xs"
           >
             Book Surgery
           </a>
@@ -188,8 +188,8 @@ function HeaderBar({
         onMouseEnter={() => onMouseEnter("services")}
         onMouseLeave={onMouseLeave}
         className={`absolute left-0 right-0 top-full transition-all duration-300 ease-out origin-top overflow-hidden z-50 px-4 md:px-6 lg:px-8 ${activeDropdown === "services"
-            ? "max-h-[700px] opacity-100 pointer-events-auto pt-2 pb-6"
-            : "max-h-0 opacity-0 pointer-events-none p-0"
+          ? "max-h-[700px] opacity-100 pointer-events-auto pt-2 pb-6"
+          : "max-h-0 opacity-0 pointer-events-none p-0"
           }`}
       >
         <div className="qht-large-container">
@@ -270,8 +270,8 @@ function HeaderBar({
         onMouseEnter={() => onMouseEnter("about")}
         onMouseLeave={onMouseLeave}
         className={`absolute left-0 right-0 top-full transition-all duration-300 ease-out origin-top overflow-hidden z-50 px-4 md:px-6 lg:px-8 ${activeDropdown === "about"
-            ? "max-h-[700px] opacity-100 pointer-events-auto pt-2 pb-6"
-            : "max-h-0 opacity-0 pointer-events-none p-0"
+          ? "max-h-[700px] opacity-100 pointer-events-auto pt-2 pb-6"
+          : "max-h-0 opacity-0 pointer-events-none p-0"
           }`}
       >
         <div className="qht-large-container">
@@ -366,7 +366,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
   return (
     <>
       {/* 1. Static Initial Header - Transparent overlay on every page */}
-      <header className="absolute top-0 left-0 right-0 z-40 bg-transparent py-4">
+      <header className="absolute top-0 left-0 right-0 z-40 bg-transparent pt-6 sm:pt-8 pb-4">
         <HeaderBar
           isSticky={false}
           activeDropdown={!isStickyVisible ? activeDropdown : null}
@@ -381,8 +381,8 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
       {/* 2. Floating Sticky Header - Slides in smoothly from top on hero scroll */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 bg-[#f4f7f4]/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#e5ebe5] py-2.5 transition-all duration-300 ease-out ${isStickyVisible
-            ? "translate-y-0 opacity-100 pointer-events-auto"
-            : "-translate-y-full opacity-0 pointer-events-none"
+          ? "translate-y-0 opacity-100 pointer-events-auto"
+          : "-translate-y-full opacity-0 pointer-events-none"
           }`}
       >
         <HeaderBar

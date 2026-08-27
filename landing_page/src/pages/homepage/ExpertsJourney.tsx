@@ -12,11 +12,11 @@ export default function ExpertsJourney() {
     <section className="py-20 bg-white">
       <div className="qht-container">
         {/* Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#162418]">
+        <div className="text-center max-w-7xl mx-auto mb-14">
+          <h2 className="text-3xl sm:text-5xl font-[500] text-[#162418]">
             A Team of Experts, Focused on You
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-gray-600">
+          <p className="mt-2 text-sm sm:text-lg text-gray-600">
             At QHT, hair restoration{" "}
             <strong className="text-gray-900">
               isn’t a one-person job — it’s a team effort.
@@ -26,24 +26,22 @@ export default function ExpertsJourney() {
         </div>
 
         {/* 4-Stage Stepper Header */}
-        <div className="max-w-3xl mx-auto mb-10">
+        <div className="max-w-5xl mx-auto mb-10">
           <div className="grid grid-cols-4 gap-2 sm:gap-4 relative">
             {EXPERT_STAGES.map((stage, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveStageIndex(idx)}
-                className={`flex flex-col items-center text-center p-3 sm:p-4 rounded-2xl transition-all duration-300 relative ${
-                  activeStageIndex === idx
-                    ? "bg-[#1b392b] text-white shadow-lg scale-105 z-10"
-                    : "bg-[#f8faf8] text-gray-700 hover:bg-gray-100"
-                }`}
+                className={`flex flex-col items-center text-center p-3 sm:p-4 rounded-2xl transition-all duration-300 relative ${activeStageIndex === idx
+                  ? "bg-[#1b392b] text-white shadow-lg scale-105 z-10"
+                  : "bg-[#f8faf8] text-gray-700 hover:bg-gray-100"
+                  }`}
               >
                 <span
-                  className={`text-[11px] font-extrabold px-2 py-0.5 rounded-full mb-1.5 ${
-                    activeStageIndex === idx
-                      ? "bg-[#b1fc85] text-[#162418]"
-                      : "bg-gray-200 text-gray-700"
-                  }`}
+                  className={`text-[11px] font-extrabold px-2 py-0.5 rounded-full mb-1.5 ${activeStageIndex === idx
+                    ? "bg-[#b1fc85] text-[#162418]"
+                    : "bg-gray-200 text-gray-700"
+                    }`}
                 >
                   {stage.percentage}
                 </span>
@@ -59,22 +57,21 @@ export default function ExpertsJourney() {
             <div
               className="bg-[#00d084] h-full transition-all duration-500 rounded-full"
               style={{
-                width: `${
-                  activeStageIndex === 0
-                    ? 25
-                    : activeStageIndex === 1
+                width: `${activeStageIndex === 0
+                  ? 25
+                  : activeStageIndex === 1
                     ? 50
                     : activeStageIndex === 2
-                    ? 75
-                    : 100
-                }%`,
+                      ? 75
+                      : 100
+                  }%`,
               }}
             ></div>
           </div>
         </div>
 
         {/* Dual Panel Stage Content Card */}
-        <div className="max-w-4xl mx-auto bg-[#f8faf8] rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-sm animate-in fade-in duration-300">
+        <div className="max-w-5xl mx-auto bg-[#f8faf8] rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-sm animate-in fade-in duration-300">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Panel 1: Who's With You */}
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">

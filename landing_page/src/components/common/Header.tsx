@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
-import { NAV_RESULTS_MENU, NAV_ABOUT_LIST } from "@/data/qhtData";
+import { NAV_ABOUT_LIST } from "@/data/qhtData";
 import { useConsultation } from "@/context/ConsultationContext";
 
 interface HeaderProps {
@@ -80,112 +80,12 @@ function HeaderBar({
             </Link>
 
             {/* Results */}
-            <div
-              className="relative"
-              onMouseEnter={() => onMouseEnter("results")}
-              onMouseLeave={onMouseLeave}
+            <Link
+              href="/results"
+              className="text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors py-1"
             >
-              <button className="flex items-center gap-1 text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors py-1">
-                <span>Results</span>
-              </button>
-
-              {activeDropdown === "results" && (
-                <div
-                  onMouseEnter={() => onMouseEnter("results")}
-                  onMouseLeave={onMouseLeave}
-                  className="absolute top-full -left-20 w-[820px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 z-50 grid grid-cols-3 gap-6 animate-in fade-in slide-in-from-top-2 duration-200 mt-2"
-                >
-                  {/* By Baldness Grade */}
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#1b392b] pb-2 border-b border-gray-100 mb-3">
-                      By Baldness Grade
-                    </h4>
-                    <ul className="space-y-1.5 max-h-60 overflow-y-auto pr-2 text-xs text-gray-700">
-                      {NAV_RESULTS_MENU.baldnessGrades.map((grade, idx) => (
-                        <li key={idx}>
-                          <a
-                            href={grade.href}
-                            className="block py-1 hover:text-[#1b392b] hover:font-medium transition-colors"
-                          >
-                            {grade.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* By Patient Type */}
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#1b392b] pb-2 border-b border-gray-100 mb-3">
-                      By Patient Type
-                    </h4>
-                    <ul className="space-y-1.5 text-xs text-gray-700 mb-6">
-                      {NAV_RESULTS_MENU.patientTypes.map((type, idx) => (
-                        <li key={idx}>
-                          <a
-                            href={type.href}
-                            className="block py-1 hover:text-[#1b392b] hover:font-medium transition-colors"
-                          >
-                            {type.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#1b392b] pb-2 border-b border-gray-100 mb-3">
-                      By Grafts Range
-                    </h4>
-                    <ul className="space-y-1 text-xs text-gray-700 max-h-32 overflow-y-auto">
-                      {NAV_RESULTS_MENU.graftRanges.slice(0, 4).map((range, idx) => (
-                        <li key={idx}>
-                          <a
-                            href={range.href}
-                            className="block py-1 hover:text-[#1b392b] hover:font-medium transition-colors"
-                          >
-                            {range.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* By Area Treated */}
-                  <div className="bg-[#f8faf8] p-4 rounded-xl flex flex-col justify-between">
-                    <div>
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-[#1b392b] mb-3">
-                        By Area Treated
-                      </h4>
-                      <ul className="space-y-2 text-xs">
-                        {NAV_RESULTS_MENU.areasTreated.map((area, idx) => (
-                          <li key={idx}>
-                            <a
-                              href={area.href}
-                              className="flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100 hover:border-[#1b392b] text-gray-800 hover:text-[#1b392b] transition-all"
-                            >
-                              <img
-                                src={area.icon}
-                                alt={area.label}
-                                className="w-5 h-5 object-contain"
-                              />
-                              <span className="font-medium text-[11px] leading-tight">
-                                {area.label}
-                              </span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <button
-                      onClick={onOpenConsultation}
-                      className="mt-4 w-full py-2 bg-[#1b392b] text-white rounded-lg text-xs font-semibold hover:bg-[#284c3b] transition-colors"
-                    >
-                      Book Appointment
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
+              Results
+            </Link>
 
             {/* Services */}
             <div
@@ -206,12 +106,12 @@ function HeaderBar({
             </div>
 
             {/* Hair Transplant Cost */}
-            <a
-              href="/hair-transplant-cost-in-india/"
+            <Link
+              href="/hair-transplant-cost-in-india"
               className="text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors whitespace-nowrap"
             >
               Hair Transplant Cost
-            </a>
+            </Link>
 
             {/* Medicines */}
             <a
@@ -523,35 +423,13 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                 Home
               </Link>
 
-              <div>
-                <button
-                  onClick={() =>
-                    setMobileSubmenu(
-                      mobileSubmenu === "results" ? null : "results"
-                    )
-                  }
-                  className="w-full flex items-center justify-between text-base font-semibold text-gray-800 py-1"
-                >
-                  <span>Results</span>
-                  <ChevronDown
-                    className={`w-5 h-5 transition-transform ${mobileSubmenu === "results" ? "rotate-180" : ""
-                      }`}
-                  />
-                </button>
-                {mobileSubmenu === "results" && (
-                  <div className="pl-4 pt-2 space-y-2 text-sm text-gray-600">
-                    <a href="/results/?patient-type=celebrity" className="block py-1">
-                      Celebrity Results
-                    </a>
-                    <a href="/results/?baldness-grade=grade-02" className="block py-1">
-                      By Baldness Grade
-                    </a>
-                    <a href="/results/?area-treated=frontal" className="block py-1">
-                      By Area Treated
-                    </a>
-                  </div>
-                )}
-              </div>
+              <Link
+                href="/results"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block text-base font-semibold text-gray-800"
+              >
+                Results
+              </Link>
 
               <div>
                 <button
@@ -586,12 +464,13 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                 )}
               </div>
 
-              <a
-                href="/hair-transplant-cost-in-india/"
+              <Link
+                href="/hair-transplant-cost-in-india"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block text-base font-semibold text-gray-800"
               >
                 Hair Transplant Cost
-              </a>
+              </Link>
 
               <a
                 href="https://theuroots.com/collections/all"

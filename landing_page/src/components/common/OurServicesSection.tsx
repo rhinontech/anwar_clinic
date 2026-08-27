@@ -1,0 +1,196 @@
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { ChevronDown } from "lucide-react";
+
+interface ServiceAccordionItem {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
+const SERVICES_LIST: ServiceAccordionItem[] = [
+  {
+    id: "men",
+    number: "01",
+    title: "Hair Transplant For Men",
+    description:
+      "Are you worried about a receding hairline or uneven hair growth? Are you looking for solutions to achieve a fuller, more natural-looking hairline?",
+    href: "/services/hair-transplant-for-men/",
+  },
+  {
+    id: "hairline",
+    number: "02",
+    title: "Hairline Reconstruction",
+    description:
+      "Restore your natural facial frame with customized artistic hairline design tailored to your face shape, age, and natural hair growth angle.",
+    href: "/services/hairline-reconstruction/",
+  },
+  {
+    id: "repair",
+    number: "03",
+    title: "Failed Hair Transplant Repair",
+    description:
+      "Fix unnatural pluggy hairlines, poor density, or donor depletion from previous sub-standard procedures with our specialized revision techniques.",
+    href: "/services/failed-hair-transplant-repair/",
+  },
+  {
+    id: "body-hair",
+    number: "04",
+    title: "Body Hair Transplant",
+    description:
+      "Harvest healthy follicles from beard or chest donor areas to reconstruct scalp density when traditional scalp donor supply is depleted.",
+    href: "/services/body-hair-transplant/",
+  },
+  {
+    id: "beard",
+    number: "05",
+    title: "Beard Transplant",
+    description:
+      "Fill in patchy facial hair or reconstruct a full, sharp beard and mustache with meticulous single-follicle precision placement.",
+    href: "/services/beard-hair-transplant-in-india/",
+  },
+  {
+    id: "prp",
+    number: "06",
+    title: "PRP Treatment",
+    description:
+      "Stimulate inactive follicles, accelerate post-surgical healing, and strengthen native hair with concentrated autologous platelet growth factors.",
+    href: "/services/prp-treatment/",
+  },
+];
+
+interface OurServicesSectionProps {
+  onOpenConsultation?: () => void;
+}
+
+export default function OurServicesSection({
+  onOpenConsultation,
+}: OurServicesSectionProps) {
+  const [openIndex, setOpenIndex] = useState<number>(0);
+
+  const toggleAccordion = (idx: number) => {
+    setOpenIndex(openIndex === idx ? -1 : idx);
+  };
+
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
+      <div className="qht-large-container">
+        
+        {/* Section Title */}
+        <div className="pb-6 border-b border-gray-200">
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#1b221d] tracking-tight leading-tight">
+            Our Services
+          </h2>
+        </div>
+
+        {/* 2-Column Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pt-10 sm:pt-14 items-start">
+          
+          {/* Left Column: Introduction & Hair Follicles Image */}
+          <div className="lg:col-span-5 flex flex-col items-start">
+            <span className="text-xs sm:text-[13px] font-semibold text-[#5c685f] block mb-4 tracking-wide">
+              Introduction
+            </span>
+
+            {/* Hair Strands Image from public folder */}
+            <div className="py-2 flex justify-start">
+              <img
+                src="/images/service1.webp"
+                alt="Hair Loss Introduction"
+                className="w-56 sm:w-64 h-auto object-contain select-none"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "/service1.webp";
+                }}
+              />
+            </div>
+
+            {/* Book Free Consultation Button immediately after image */}
+            <div className="pt-6">
+              <button
+                type="button"
+                onClick={onOpenConsultation}
+                className="bg-[#52664d] hover:bg-[#43543e] text-white font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
+              >
+                Book Free Consultation
+              </button>
+            </div>
+          </div>
+
+          {/* Right Column: Headline & 6-Item Accordion */}
+          <div className="lg:col-span-7">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1b221d] tracking-tight leading-snug mb-8">
+              Hair loss affects more than just your scalp — <br className="hidden sm:inline" />
+              it touches your identity.
+            </h3>
+
+            {/* Accordion List */}
+            <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
+              {SERVICES_LIST.map((service, idx) => {
+                const isOpen = openIndex === idx;
+
+                return (
+                  <div key={service.id} className="py-4 sm:py-5 transition-colors">
+                    {/* Trigger Row */}
+                    <button
+                      type="button"
+                      onClick={() => toggleAccordion(idx)}
+                      className="w-full flex items-center justify-between text-left group cursor-pointer select-none focus:outline-none"
+                    >
+                      <div className="flex items-center gap-3.5 sm:gap-4">
+                        {/* Number Badge (01, 02, etc.) */}
+                        <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[11px] font-bold flex items-center justify-center flex-shrink-0 shadow-2xs">
+                          {service.number}
+                        </div>
+
+                        {/* Title */}
+                        <span className="text-sm sm:text-base font-bold text-[#1b221d] group-hover:text-[#52664d] transition-colors">
+                          {service.title}
+                        </span>
+                      </div>
+
+                      {/* Rotating Chevron */}
+                      <ChevronDown
+                        className={`w-4 h-4 text-gray-500 transition-transform duration-300 ease-out ${
+                          isOpen ? "rotate-180 text-[#1b221d]" : "text-gray-400 group-hover:text-gray-700"
+                        }`}
+                      />
+                    </button>
+
+                    {/* Expandable Content Container */}
+                    <div
+                      className={`grid transition-all duration-300 ease-in-out ${
+                        isOpen
+                          ? "grid-rows-[1fr] opacity-100 mt-3"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden pl-9.5 sm:pl-10">
+                        <p className="text-xs sm:text-[13px] text-[#5c685f] leading-relaxed mb-4 font-normal">
+                          {service.description}
+                        </p>
+
+                        <Link
+                          href={service.href}
+                          className="inline-block border border-[#52664d] text-[#52664d] hover:bg-[#52664d] hover:text-white font-semibold text-xs px-5 py-2 rounded-full transition-all duration-200"
+                        >
+                          Explore Service
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}

@@ -4,9 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
 import { NAV_RESULTS_MENU, NAV_ABOUT_LIST } from "@/data/qhtData";
+import { useConsultation } from "@/context/ConsultationContext";
 
 interface HeaderProps {
-  onOpenConsultation: () => void;
+  onOpenConsultation?: () => void;
 }
 
 const SERVICES_COL_1 = [
@@ -192,14 +193,16 @@ function HeaderBar({
               onMouseEnter={() => onMouseEnter("services")}
               onMouseLeave={onMouseLeave}
             >
-              <button className="flex items-center gap-1 text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors py-1">
+              <Link
+                href="/services"
+                className="flex items-center gap-1 text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors py-1"
+              >
                 <span>Services</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${
-                    activeDropdown === "services" ? "rotate-180 text-[#627566]" : ""
-                  }`}
+                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180 text-[#627566]" : ""
+                    }`}
                 />
-              </button>
+              </Link>
             </div>
 
             {/* Hair Transplant Cost */}
@@ -229,9 +232,8 @@ function HeaderBar({
               <button className="flex items-center gap-1 text-sm font-medium text-[#2b302c] hover:text-[#627566] transition-colors py-1">
                 <span>About us</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${
-                    activeDropdown === "about" ? "rotate-180 text-[#627566]" : ""
-                  }`}
+                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "about" ? "rotate-180 text-[#627566]" : ""
+                    }`}
                 />
               </button>
             </div>
@@ -285,11 +287,10 @@ function HeaderBar({
       <div
         onMouseEnter={() => onMouseEnter("services")}
         onMouseLeave={onMouseLeave}
-        className={`absolute left-0 right-0 top-full transition-all duration-300 ease-out origin-top overflow-hidden z-50 px-4 md:px-6 lg:px-8 ${
-          activeDropdown === "services"
+        className={`absolute left-0 right-0 top-full transition-all duration-300 ease-out origin-top overflow-hidden z-50 px-4 md:px-6 lg:px-8 ${activeDropdown === "services"
             ? "max-h-[700px] opacity-100 pointer-events-auto pt-2 pb-6"
             : "max-h-0 opacity-0 pointer-events-none p-0"
-        }`}
+          }`}
       >
         <div className="qht-large-container">
           <div className="bg-[#243527] text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#344b38]">
@@ -368,11 +369,10 @@ function HeaderBar({
       <div
         onMouseEnter={() => onMouseEnter("about")}
         onMouseLeave={onMouseLeave}
-        className={`absolute left-0 right-0 top-full transition-all duration-300 ease-out origin-top overflow-hidden z-50 px-4 md:px-6 lg:px-8 ${
-          activeDropdown === "about"
+        className={`absolute left-0 right-0 top-full transition-all duration-300 ease-out origin-top overflow-hidden z-50 px-4 md:px-6 lg:px-8 ${activeDropdown === "about"
             ? "max-h-[700px] opacity-100 pointer-events-auto pt-2 pb-6"
             : "max-h-0 opacity-0 pointer-events-none p-0"
-        }`}
+          }`}
       >
         <div className="qht-large-container">
           <div className="bg-[#243527] text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#344b38]">
@@ -433,6 +433,9 @@ function HeaderBar({
 }
 
 export default function Header({ onOpenConsultation }: HeaderProps) {
+  const { openConsultation } = useConsultation();
+  const handleOpenConsultation = onOpenConsultation || openConsultation;
+
   const [isStickyVisible, setIsStickyVisible] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -462,14 +465,14 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
   return (
     <>
-      {/* 1. Static Initial Header - In normal page flow, never causes layout shift */}
-      <header className="relative w-full z-40 bg-[#f4f7f4] py-3.5">
+      {/* 1. Static Initial Header - Transparent overlay on every page */}
+      <header className="absolute top-0 left-0 right-0 z-40 bg-transparent py-4">
         <HeaderBar
           isSticky={false}
           activeDropdown={!isStickyVisible ? activeDropdown : null}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          onOpenConsultation={onOpenConsultation}
+          onOpenConsultation={handleOpenConsultation}
           onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           isMobileMenuOpen={isMobileMenuOpen}
         />
@@ -477,18 +480,17 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
       {/* 2. Floating Sticky Header - Slides in smoothly from top on hero scroll */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-[#f4f7f4]/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#e5ebe5] py-2.5 transition-all duration-300 ease-out ${
-          isStickyVisible
+        className={`fixed top-0 left-0 right-0 z-50 bg-[#f4f7f4]/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#e5ebe5] py-2.5 transition-all duration-300 ease-out ${isStickyVisible
             ? "translate-y-0 opacity-100 pointer-events-auto"
             : "-translate-y-full opacity-0 pointer-events-none"
-        }`}
+          }`}
       >
         <HeaderBar
           isSticky={true}
           activeDropdown={isStickyVisible ? activeDropdown : null}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          onOpenConsultation={onOpenConsultation}
+          onOpenConsultation={handleOpenConsultation}
           onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           isMobileMenuOpen={isMobileMenuOpen}
         />
@@ -532,9 +534,8 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                 >
                   <span>Results</span>
                   <ChevronDown
-                    className={`w-5 h-5 transition-transform ${
-                      mobileSubmenu === "results" ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 transition-transform ${mobileSubmenu === "results" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {mobileSubmenu === "results" && (
@@ -563,13 +564,19 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                 >
                   <span>Services</span>
                   <ChevronDown
-                    className={`w-5 h-5 transition-transform ${
-                      mobileSubmenu === "services" ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 transition-transform ${mobileSubmenu === "services" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {mobileSubmenu === "services" && (
                   <div className="pl-4 pt-2 space-y-2 text-sm text-gray-600 max-h-48 overflow-y-auto">
+                    <Link
+                      href="/services"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block py-1 font-semibold text-[#1b392b]"
+                    >
+                      View All Services →
+                    </Link>
                     {SERVICES_COL_1.concat(SERVICES_COL_2).map((srv, idx) => (
                       <a key={idx} href={srv.href} className="block py-1">
                         {srv.label}
@@ -606,9 +613,8 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                 >
                   <span>About us</span>
                   <ChevronDown
-                    className={`w-5 h-5 transition-transform ${
-                      mobileSubmenu === "about" ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 transition-transform ${mobileSubmenu === "about" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {mobileSubmenu === "about" && (
@@ -643,7 +649,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
-                  onOpenConsultation();
+                  handleOpenConsultation();
                 }}
                 className="w-full py-2.5 border border-[#1b392b] text-[#1b392b] rounded-xl font-bold text-sm"
               >

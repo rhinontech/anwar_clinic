@@ -2,12 +2,15 @@
 
 import React from "react";
 import Link from "next/link";
+import { useConsultation } from "@/context/ConsultationContext";
 
 interface FooterProps {
   onOpenConsultation?: () => void;
 }
 
 export default function Footer({ onOpenConsultation }: FooterProps) {
+  const { openConsultation } = useConsultation();
+  const handleOpenConsultation = onOpenConsultation || openConsultation;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -209,7 +212,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
           </p>
 
           <button
-            onClick={onOpenConsultation}
+            onClick={handleOpenConsultation}
             className="bg-[#596d53] hover:bg-[#495c44] text-white font-semibold text-sm py-3 px-8 rounded-full shadow-sm transition-colors"
           >
             Book an Appointment

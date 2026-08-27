@@ -11,7 +11,7 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
   const duplicatedSlides = [...HERO_SLIDES, ...HERO_SLIDES];
 
   return (
-    <section className="pt-8 sm:pt-12 pb-16 bg-[#f4f7f4] overflow-hidden">
+    <section className="pt-28 sm:pt-36 lg:pt-40 pb-16 bg-[#f4f7f4] overflow-hidden">
       <div className="qht-container text-center">
         {/* Main Headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-[#222222] tracking-tight leading-[1.2] max-w-4xl mx-auto">

@@ -2,14 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import { Calendar } from "lucide-react";
+import { useConsultation } from "@/context/ConsultationContext";
 
 interface FloatingActionBarProps {
-  onOpenConsultation: () => void;
+  onOpenConsultation?: () => void;
 }
 
 export default function FloatingActionBar({
   onOpenConsultation,
 }: FloatingActionBarProps) {
+  const { openConsultation } = useConsultation();
+  const handleOpenConsultation = onOpenConsultation || openConsultation;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -41,7 +44,7 @@ export default function FloatingActionBar({
 
       {/* Book Appointment CTA Button */}
       <button
-        onClick={onOpenConsultation}
+        onClick={handleOpenConsultation}
         className="flex items-center gap-2 bg-[#1b392b] text-white px-5 py-3 rounded-full text-xs sm:text-sm font-bold shadow-xl hover:bg-[#284c3b] hover:scale-105 transition-all duration-300 border border-[#b1fc85]/30"
       >
         <Calendar className="w-4 h-4 text-[#b1fc85]" />

@@ -1,0 +1,123 @@
+"use client";
+
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
+
+interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+interface ServiceFAQSectionProps {
+  title?: string;
+  faqs?: FAQItem[];
+}
+
+const DEFAULT_FAQS: FAQItem[] = [
+  {
+    id: 1,
+    question: "Is Hair Transplant Repair painful?",
+    answer: "Corrective Hair Transplants are painless as they are performed under local anesthesia.",
+  },
+  {
+    id: 2,
+    question: "How long does Hair Transplant Repair last?",
+    answer: "The results are permanent when performed by expert surgeons like those at QHT Clinic.",
+  },
+  {
+    id: 3,
+    question: "Can failed hair transplants be corrected completely?",
+    answer: "Yes, most of the failed procedures can be corrected at QHT Clinic with our advanced microscopic techniques and patented SAVA implanters.",
+  },
+  {
+    id: 4,
+    question: "How is QHT better for corrective hair transplant?",
+    answer: "QHT has expert surgeons, advanced technology, minimal out-of-body graft time (<2 hours), and higher success rates exceeding 98%.",
+  },
+];
+
+export default function ServiceFAQSection({
+  title = "Hair Transplant Repair",
+  faqs = DEFAULT_FAQS,
+}: ServiceFAQSectionProps) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (idx: number) => {
+    setOpenIndex(openIndex === idx ? null : idx);
+  };
+
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-200/80">
+      <div className="qht-large-container">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          {/* Left Column: Heading + Vector Logo Graphic */}
+          <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-8">
+            <div>
+              <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1b221d] tracking-tight leading-[1.18]">
+                FAQ on {title}
+              </h2>
+            </div>
+
+            {/* Circular Root Vector Graphic */}
+            <div className="w-40 sm:w-48 aspect-square opacity-70 hover:opacity-100 transition-opacity">
+              <img
+                src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/sd-faq-thumb.webp"
+                alt="QHT Clinic FAQ Vector"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Right Column: Animated Accordion Items */}
+          <div className="lg:col-span-7 divide-y divide-gray-200/90 border-t border-b border-gray-200/90">
+            {faqs.map((faq, idx) => {
+              const isOpen = openIndex === idx;
+
+              return (
+                <div key={faq.id} className="transition-colors">
+                  {/* Accordion Trigger Head */}
+                  <button
+                    onClick={() => toggleAccordion(idx)}
+                    className="w-full py-5 sm:py-6 flex items-center justify-between text-left group focus:outline-none"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="text-base sm:text-lg font-semibold text-[#1b221d] group-hover:text-[#596d53] transition-colors pr-4 leading-snug">
+                      {faq.question}
+                    </span>
+                    <div
+                      className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-gray-500 group-hover:text-[#596d53] transition-transform duration-300 ${
+                        isOpen ? "rotate-180 text-[#596d53]" : "rotate-0"
+                      }`}
+                    >
+                      <ChevronDown className="w-5 h-5 stroke-[2]" />
+                    </div>
+                  </button>
+
+                  {/* Accordion Animated Body (CSS Grid Rows for fluid height transition) */}
+                  <div
+                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                      isOpen
+                        ? "grid-rows-[1fr] opacity-100 pb-5 sm:pb-6"
+                        : "grid-rows-[0fr] opacity-0 pb-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal pr-8">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}

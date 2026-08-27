@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
+import FloatingActionBar from "@/components/common/FloatingActionBar";
+import { ConsultationProvider } from "@/context/ConsultationContext";
 
 export const metadata: Metadata = {
   title: "Best Hair Transplant Clinic In India | QHT Clinic",
@@ -35,7 +39,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased text-slate-900 bg-white selection:bg-[#1b392b] selection:text-white">
-        {children}
+        <ConsultationProvider>
+          <div className="min-h-screen flex flex-col bg-white">
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            {/* <FloatingActionBar /> */}
+          </div>
+        </ConsultationProvider>
       </body>
     </html>
   );

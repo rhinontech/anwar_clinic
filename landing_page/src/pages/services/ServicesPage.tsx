@@ -7,8 +7,14 @@ import ServicesListing from "./ServicesListing";
 import FAQSection from "@/pages/homepage/FAQSection";
 import ContactSection from "@/components/common/ContactSection";
 import BottomBanner from "@/pages/homepage/BottomBanner";
+import type { ServiceCard } from "@/lib/services";
 
-export default function ServicesPage() {
+interface ServicesPageProps {
+  /** From the API; null when it was unreachable, so the bundled list is used. */
+  services?: ServiceCard[] | null;
+}
+
+export default function ServicesPage({ services }: ServicesPageProps) {
   const { openConsultation } = useConsultation();
 
   return (
@@ -17,7 +23,7 @@ export default function ServicesPage() {
       <ServicesHero onOpenConsultation={openConsultation} />
 
       {/* 2. All Hair Transplant Services Listing Grid with Filters */}
-      <ServicesListing onOpenConsultation={openConsultation} />
+      <ServicesListing services={services} onOpenConsultation={openConsultation} />
 
       {/* 3. Common FAQs */}
       <FAQSection />

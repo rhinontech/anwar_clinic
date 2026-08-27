@@ -106,11 +106,48 @@ To add a permission: add a line to `PERMISSION_CATALOG` and restart.
 | `PUT` | `/media/:id` | `media:write` — alt text |
 | `DELETE` | `/media/:id` | `media:write` — removes row **and** stored object |
 | `GET` | `/uploads/:key` | **public** — serves local files, open CORS |
+| `GET` | `/services` | `services:read` |
+| `GET` | `/services/schema` | `services:read` — drives the admin section forms |
+| `GET` | `/services/:id` | `services:read` |
+| `POST` | `/services` | `services:write` |
+| `PUT` | `/services/:id` | `services:write` |
+| `PUT` | `/services/reorder` | `services:write` |
+| `DELETE` | `/services/:id` | `services:write` |
+| `GET` | `/public/services` | **public** — published only, card data |
+| `GET` | `/public/services/:slug` | **public** — published only, full sections |
 | `GET` | `/health` | public |
 
 Protected rules: the `superadmin` role cannot be renamed, deleted, or have its
 permissions edited; a role with members cannot be deleted; role slugs must be
 URL-safe (`[a-z0-9-]+`) because they become the panel's first URL segment.
+
+## Website services
+
+Each row in `services` is one page at `/services/<slug>` on the landing page.
+`src/config/serviceSections.ts` is the **single source of truth** for what is
+editable: it lists all 21 sections and their fields, and the admin panel builds
+every form from it via `GET /services/schema`.
+
+Per-service content lives in a JSONB `sections` column keyed by section, so
+**adding a field is a change to `serviceSections.ts` alone** — no migration, no
+admin UI work. Two safeguards on write:
+
+- unknown section keys and unknown field names are **stripped**, so the blob can
+  never drift from the schema
+- empty strings and empty arrays are **not persisted** — "empty" means "use the
+  component default", which is what lets a brand-new service render a complete
+  21-section page before anything is filled in
+
+`hiddenSections` holds the section keys switched off for that service.
+
+Drafts are invisible to `/public/*`, so an unfinished page can't leak.
+
+```bash
+npm run db:seed:services   # imports the 21 services from the landing page's old data file
+```
+
+The importer is idempotent — re-running it leaves existing rows (and your edits)
+alone.
 
 ## File storage
 

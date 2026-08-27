@@ -4,6 +4,7 @@ import { Role } from "./Role";
 import { Permission } from "./Permission";
 import { User } from "./User";
 import { MediaAsset } from "./MediaAsset";
+import { Service } from "./Service";
 
 // Role <-> Permission join table. A role's grants live entirely in here, which
 // is what lets permissions be re-assigned at runtime from Settings > Roles
@@ -32,4 +33,4 @@ export async function syncDatabase() {
   await sequelize.sync({ alter: true });
 }
 
-export { sequelize, Role, Permission, User, MediaAsset };
+export { sequelize, Role, Permission, User, MediaAsset, Service };

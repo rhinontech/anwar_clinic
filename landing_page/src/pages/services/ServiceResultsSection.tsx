@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 interface ServiceResultsSectionProps {
   title?: string;
   subtitle?: string;
+  results?: ResultPair[];
   onOpenConsultation?: () => void;
 }
 
@@ -16,7 +17,7 @@ interface ResultPair {
   afterImg: string;
 }
 
-const SERVICE_RESULTS: ResultPair[] = [
+const DEFAULT_RESULTS: ResultPair[] = [
   {
     id: 1,
     name: "Irfan",
@@ -138,6 +139,7 @@ function ServiceComparisonCard({ item }: { item: ResultPair }) {
 export default function ServiceResultsSection({
   title = "Hair Transplant Repair",
   subtitle = "Corrective Hair Transplant at QHT Clinic focuses on hairline design, hair density, and no-scar growth, for long-term results in people with failed Hair Transplants.",
+  results = DEFAULT_RESULTS,
   onOpenConsultation,
 }: ServiceResultsSectionProps) {
   return (
@@ -167,7 +169,7 @@ export default function ServiceResultsSection({
 
         {/* 3-Column Results Cards Grid using TransformationGallery component architecture */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {SERVICE_RESULTS.map((item) => (
+          {results.map((item) => (
             <ServiceComparisonCard key={item.id} item={item} />
           ))}
         </div>

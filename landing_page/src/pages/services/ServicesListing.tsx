@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { ALL_SERVICES_LIST, ServiceCardItem } from "@/data/allServicesData";
+import type { ServiceCard } from "@/lib/services";
 
 interface ServicesListingProps {
+  services?: ServiceCard[] | null;
   onOpenConsultation?: () => void;
 }
 
@@ -17,10 +19,23 @@ const CATEGORIES = [
   "Specialized & Repair",
 ];
 
-export default function ServicesListing({ onOpenConsultation }: ServicesListingProps) {
+export default function ServicesListing({ services, onOpenConsultation }: ServicesListingProps) {
   const [activeFilter, setActiveFilter] = useState("All Services");
 
-  const filteredServices = ALL_SERVICES_LIST.filter((item) => {
+  // API content when available, otherwise the list bundled with the site.
+  const allServices: ServiceCardItem[] =
+    services && services.length > 0
+      ? services.map((s) => ({
+          id: s.slug,
+          title: s.title,
+          desc: s.cardDescription,
+          image: s.cardImage || "",
+          link: `/services/${s.slug}/`,
+          badge: s.badge || undefined,
+        }))
+      : ALL_SERVICES_LIST;
+
+  const filteredServices = allServices.filter((item) => {
     if (activeFilter === "All Services") return true;
     if (activeFilter === "Popular")
       return ["fut-hair-transplant", "best-fue-hair-transplant-in-india", "quick-hair-transplant-in-india", "hair-transplant-for-men"].includes(item.id);

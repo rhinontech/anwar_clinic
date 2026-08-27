@@ -26,7 +26,7 @@ import ContactSection from "@/components/common/ContactSection";
 import { ALL_SERVICES_LIST } from "@/data/allServicesData";
 
 interface ServiceDetailPageProps {
-  slug: string;
+  slug?: string;
 }
 
 // Map slugs to customized info
@@ -109,7 +109,8 @@ const SERVICE_META: Record<
   },
 };
 
-function formatSlugToTitle(slug: string): string {
+function formatSlugToTitle(slug?: string): string {
+  if (!slug) return "Hair Transplant Repair";
   return slug
     .replace(/-/g, " ")
     .replace(/\b\w/g, (c) => c.toUpperCase())
@@ -117,9 +118,9 @@ function formatSlugToTitle(slug: string): string {
     .trim();
 }
 
-export default function ServiceDetailPage({ slug }: ServiceDetailPageProps) {
+export default function ServiceDetailPage({ slug = "hair-transplant-repair" }: ServiceDetailPageProps) {
   const { openConsultation } = useConsultation();
-  const normalizedSlug = slug.toLowerCase().replace(/\/$/, "");
+  const normalizedSlug = (slug || "hair-transplant-repair").toLowerCase().replace(/\/$/, "");
 
   const matchedService = ALL_SERVICES_LIST.find(
     (s) => s.id === normalizedSlug || s.link.includes(normalizedSlug)

@@ -88,15 +88,15 @@ export default function BaldTruthSection() {
         <div
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="bg-[#42523f] text-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 shadow-xl relative overflow-hidden"
+          className="bg-[#42523f] text-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-20 shadow-xl relative overflow-hidden"
         >
           {/* Section Header & Slider Controls */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 sm:mb-12">
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-[500] tracking-tight text-white">
                 The Bald Truth.
               </h2>
-              <p className="mt-1.5 text-xs sm:text-sm md:text-[15px] text-white/90 font-normal max-w-2xl">
+              <p className="mt-1.5 text-xs sm:text-sm md:text-[18px] text-white/90 font-normal max-w-4xl">
                 Most transplants fail because no Hair transplantation clinic in India tells you what really happens
               </p>
             </div>
@@ -135,21 +135,21 @@ export default function BaldTruthSection() {
                 >
                   {/* Item Number */}
                   {isCircled ? (
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-[1.5px] border-[#b4f67c] flex items-center justify-center flex-shrink-0 text-2xl sm:text-3xl font-light text-white leading-none">
+                    <div className="w-14 h-14 sm:w-24 sm:h-24 rounded-full border-[1.5px] border-[#b4f67c] flex items-center justify-center flex-shrink-0 text-2xl sm:text-7xl font-light text-white leading-none">
                       {item.id}.
                     </div>
                   ) : (
-                    <span className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#b4f67c] flex-shrink-0 leading-none pt-1">
+                    <span className="text-3xl sm:text-4xl lg:text-7xl font-light text-[#b4f67c] flex-shrink-0 leading-none pt-1">
                       {item.id}.
                     </span>
                   )}
 
                   {/* Title & Description */}
                   <div className="flex-1">
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white leading-tight mb-2">
+                    <h3 className="text-base sm:text-lg md:text-4xl font-[500] text-white leading-tight mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-white/80 font-normal leading-relaxed">
+                    <p className="text-xs sm:text-xl text-white/90 font-normal leading-relaxed">
                       {item.desc}
                     </p>
                   </div>

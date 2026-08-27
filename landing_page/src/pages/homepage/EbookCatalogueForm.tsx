@@ -1,10 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
+import { Download, CheckCircle } from "lucide-react";
 import { COUNTRY_CODES } from "@/data/qhtData";
-import { Download, CheckCircle, BookOpen } from "lucide-react";
 
-export default function EbookCatalogueForm() {
+interface EbookCatalogueFormProps {
+  onOpenConsultation?: () => void;
+}
+
+export default function EbookCatalogueForm({
+  onOpenConsultation,
+}: EbookCatalogueFormProps) {
   const [name, setName] = useState("");
   const [countryCode, setCountryCode] = useState("+91");
   const [phone, setPhone] = useState("");
@@ -23,80 +29,146 @@ export default function EbookCatalogueForm() {
   };
 
   return (
-    <section className="py-16 bg-[#1b392b] text-white">
+    <section className="py-20 sm:py-24 lg:py-28 bg-[#52664d] text-white overflow-hidden relative">
       <div className="qht-large-container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left: Thumbnail & Guide Highlights */}
-          <div className="lg:col-span-6 flex flex-col sm:flex-row items-center gap-6">
-            <div className="w-48 sm:w-56 flex-shrink-0">
-              <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/10/hp-catalogue-thumb.webp"
-                alt="Hair Transplant Guide"
-                className="w-full h-auto object-contain drop-shadow-2xl"
-              />
-            </div>
-            <div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#b1fc85] text-[#162418] text-xs font-bold uppercase tracking-wider mb-3">
-                <BookOpen className="w-3.5 h-3.5" /> Free Patient Guide
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold leading-tight">
-                Thinking about Hair Transplant? Read this First.
-              </h3>
-              <p className="mt-2 text-xs sm:text-sm text-gray-300">
-                A free expert-curated guide that clears all doubts about Costs, Results, Pain, Recovery and how to avoid botched transplants.
-              </p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          {/* Left Column: 3D Dual Book Mockups */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-start">
+            <div className="relative w-full max-w-[480px] flex items-center justify-center">
+              {/* Dual Book Graphic Mockup */}
+              <div className="relative flex items-center justify-center">
+                {/* Book 1 (Left tilted) */}
+                <div className="w-[180px] sm:w-[220px] md:w-[240px] rounded-2xl overflow-hidden shadow-2xl transform -rotate-12 hover:-rotate-6 transition-transform duration-500 z-10 border border-white/20 bg-white">
+                  <div className="p-4 sm:p-5 bg-white text-[#1b221d] flex flex-col justify-between aspect-[3/4]">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center font-bold text-[10px]">
+                        QHT
+                      </div>
+                    </div>
+                    <div className="my-auto py-2">
+                      <h4 className="text-base sm:text-lg font-extrabold leading-tight text-[#1b221d]">
+                        Hair Transplant <br />
+                        <span className="text-[#52664d]">Techniques</span>
+                      </h4>
+                      <p className="text-[10px] text-gray-500 mt-1 leading-snug">
+                        The Consumer’s guide to hair transplant surgery
+                      </p>
+                    </div>
+                    {/* Illustration preview */}
+                    <div className="pt-2 border-t border-gray-100 flex items-center justify-center gap-1 opacity-80">
+                      <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
+                      <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
+                      <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[8px] flex items-center justify-center font-bold">QHT</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Book 2 (Right upright) */}
+                <div className="w-[180px] sm:w-[220px] md:w-[240px] rounded-2xl overflow-hidden shadow-2xl transform rotate-6 hover:rotate-3 transition-transform duration-500 -ml-12 sm:-ml-16 z-20 border border-white/20 bg-white">
+                  <div className="p-4 sm:p-5 bg-white text-[#1b221d] flex flex-col justify-between aspect-[3/4]">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center font-bold text-[10px]">
+                        QHT
+                      </div>
+                    </div>
+                    <div className="my-auto py-2">
+                      <h4 className="text-base sm:text-lg font-extrabold leading-tight text-[#1b221d]">
+                        Hair Transplant <br />
+                        <span className="text-[#52664d]">Techniques</span>
+                      </h4>
+                      <p className="text-[10px] text-gray-500 mt-1 leading-snug">
+                        Everything you wanted to know about hair transplant
+                      </p>
+                    </div>
+                    {/* Illustration preview */}
+                    <div className="pt-2 border-t border-gray-100 flex items-center justify-center gap-1 opacity-80">
+                      <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
+                      <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[8px] flex items-center justify-center font-bold">QHT</div>
+                      <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right: Interactive Form */}
-          <div className="lg:col-span-6 bg-white text-gray-900 p-6 sm:p-8 rounded-3xl shadow-xl">
-            {downloadSuccess ? (
-              <div className="text-center py-4 space-y-3">
-                <div className="w-12 h-12 rounded-full bg-green-100 text-green-700 flex items-center justify-center mx-auto">
-                  <CheckCircle className="w-8 h-8 text-[#00d084]" />
+          {/* Right Column: Heading, Subtitle, Bullet Points & Clean Underlined Form */}
+          <div className="lg:col-span-6 space-y-6">
+            <div>
+              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-[500] text-white tracking-tight leading-[1.16]">
+                Thinking about Hair <br />
+                Transplant? Read this First.
+              </h2>
+
+              <p className="mt-4 text-xs sm:text-[14.5px] text-white/90 leading-relaxed font-normal max-w-xl">
+                A free experts curated guide that clears all your doubts about Costs, Results, Pain, Recovery and much more.
+              </p>
+            </div>
+
+            {/* 3 Bullet Points */}
+            <ul className="space-y-3 pt-2 text-xs sm:text-[14px] text-white font-normal">
+              <li className="flex items-start gap-2.5">
+                <span className="text-white text-base leading-none">•</span>
+                <span>Look at the real transformation results</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-white text-base leading-none">•</span>
+                <span>Know what comes next: a step-by-step guide</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-white text-base leading-none">•</span>
+                <span>Learn tips to prevent bad results.</span>
+              </li>
+            </ul>
+
+            {/* Interactive Inline Underlined Form */}
+            <div className="pt-6">
+              {downloadSuccess ? (
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center space-y-3">
+                  <CheckCircle className="w-10 h-10 text-[#b1fc85] mx-auto" />
+                  <h4 className="text-base font-bold text-white">
+                    Guide Ready For Download!
+                  </h4>
+                  <p className="text-xs text-white/90">
+                    Thank you, <strong>{name}</strong>! Your comprehensive guide has been prepared.
+                  </p>
+                  <a
+                    href="#download"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      alert("Downloading QHT-Hair-Transplant-Guide.pdf");
+                    }}
+                    className="inline-flex items-center gap-2 px-7 py-3 bg-white text-[#52664d] rounded-full text-xs font-bold hover:bg-gray-100 transition-colors shadow-md cursor-pointer"
+                  >
+                    <Download className="w-4 h-4" /> Download PDF Now
+                  </a>
                 </div>
-                <h4 className="text-lg font-bold text-[#162418]">
-                  Guide Ready For Download!
-                </h4>
-                <p className="text-xs text-gray-600">
-                  Thank you, <strong>{name}</strong>! Your comprehensive guide has been generated.
-                </p>
-                <a
-                  href="#download"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert("Download started: QHT-Hair-Transplant-Guide.pdf");
-                  }}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#1b392b] text-white rounded-full text-xs font-bold hover:bg-[#284c3b] transition-colors"
-                >
-                  <Download className="w-4 h-4" /> Download PDF Now
-                </a>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <h4 className="text-base font-bold text-[#162418]">
-                  Get Instant Free Access
-                </h4>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-end gap-6 sm:gap-8">
+                  {/* Full Name Underlined Field */}
+                  <div className="sm:w-[220px]">
+                    <input
+                      type="text"
+                      required
+                      placeholder="Full Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-full bg-transparent border-b border-white/70 focus:border-white pb-2.5 text-white placeholder-white/80 text-xs sm:text-sm focus:outline-none transition-colors"
+                    />
+                  </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <input
-                    type="text"
-                    required
-                    placeholder="Full Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-[#1b392b]"
-                  />
-
-                  <div className="flex gap-1.5">
+                  {/* Mobile Number Underlined Field with Country Prefix */}
+                  <div className="flex-1 flex items-center gap-2 border-b border-white/70 focus-within:border-white pb-2.5 transition-colors">
                     <select
                       value={countryCode}
                       onChange={(e) => setCountryCode(e.target.value)}
-                      className="w-24 px-2 py-2.5 rounded-xl border border-gray-300 text-xs bg-gray-50 focus:outline-none"
+                      className="bg-transparent text-white text-xs sm:text-sm focus:outline-none cursor-pointer pr-1"
                     >
                       {COUNTRY_CODES.map((c, idx) => (
-                        <option key={idx} value={c.code}>
-                          {c.code}
+                        <option key={idx} value={c.code} className="text-gray-900">
+                          {c.code} {c.country}
                         </option>
                       ))}
                     </select>
@@ -110,25 +182,39 @@ export default function EbookCatalogueForm() {
                       onChange={(e) =>
                         setPhone(e.target.value.replace(/\D/g, ""))
                       }
-                      className="flex-1 px-3 py-2.5 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-[#1b392b]"
+                      className="w-full bg-transparent text-white placeholder-white/80 text-xs sm:text-sm focus:outline-none"
                     />
                   </div>
-                </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-3 bg-[#1b392b] text-white rounded-full text-xs font-bold hover:bg-[#284c3b] transition-colors flex items-center justify-center gap-2"
-                >
-                  <Download className="w-4 h-4 text-[#b1fc85]" />
-                  <span>
-                    {isSubmitting ? "Processing..." : "Download Free E-Book"}
-                  </span>
-                </button>
-              </form>
-            )}
+                  {/* Download Now Button */}
+                  <div>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full sm:w-auto bg-white hover:bg-gray-100 text-[#52664d] font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-lg transition-all active:scale-95 whitespace-nowrap cursor-pointer"
+                    >
+                      {isSubmitting ? "Processing..." : "Download Now"}
+                    </button>
+                  </div>
+                </form>
+              )}
+            </div>
+
           </div>
+
         </div>
+
+        {/* Floating Bottom Center Consultation Button */}
+        {/* <div className="mt-14 sm:mt-16 flex justify-center">
+          <button
+            type="button"
+            onClick={onOpenConsultation}
+            className="bg-[#42523f] hover:bg-[#354332] text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-full shadow-md transition-all active:scale-95 cursor-pointer"
+          >
+            Book an Appointment
+          </button>
+        </div> */}
+
       </div>
     </section>
   );

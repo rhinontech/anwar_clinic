@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
@@ -23,7 +23,7 @@ interface ComingSoonPageProps {
   category?: string;
 }
 
-export default function ComingSoonPage({
+function ComingSoonContent({
   title: propTitle,
   category: propCategory,
 }: ComingSoonPageProps) {
@@ -213,5 +213,13 @@ export default function ComingSoonPage({
 
       </div>
     </div>
+  );
+}
+
+export default function ComingSoonPage(props: ComingSoonPageProps) {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#eff5f1]" />}>
+      <ComingSoonContent {...props} />
+    </Suspense>
   );
 }

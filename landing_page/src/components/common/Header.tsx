@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
 import { NAV_ABOUT_LIST } from "@/data/qhtData";
 import { useConsultation } from "@/context/ConsultationContext";
-
+import TopOfferBanner from "./TopOfferBanner";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface HeaderProps {
@@ -356,6 +356,8 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [isBannerVisible, setIsBannerVisible] = useState(false);
+
   const handleMouseEnter = (menu: string) => {
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current);
@@ -371,8 +373,20 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
   return (
     <>
+      {/* 0. Top Announcement & Offer Banner */}
+      <TopOfferBanner
+        onOpenConsultation={handleOpenConsultation}
+        onVisibilityChange={setIsBannerVisible}
+      />
+
       {/* 1. Static Initial Header - Transparent overlay on every page */}
-      <header className="absolute top-0 left-0 right-0 z-40 bg-transparent pt-6 sm:pt-8 pb-4">
+      <header
+        className={`absolute left-0 right-0 z-40 bg-transparent pb-4 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          isBannerVisible
+            ? "top-[52px] sm:top-[54px] pt-4 sm:pt-6"
+            : "top-0 pt-6 sm:pt-8"
+        }`}
+      >
         <HeaderBar
           isSticky={false}
           activeDropdown={!isStickyVisible ? activeDropdown : null}

@@ -45,7 +45,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-grow">{children}</main>
             <Footer />
-            {/* <FloatingActionBar /> */}
+            <FloatingActionBar />
           </div>
         </ConsultationProvider>
       </body>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface SupportItem {
   id: number;
@@ -20,7 +21,7 @@ const DEFAULT_SUPPORT_ITEMS: SupportItem[] = [
   {
     id: 1,
     title: "Regular Follow-ups",
-    desc: "QHT Clinic ensures recovery with proper follow-ups.",
+    desc: `${COMPANY_NAME} Clinic ensures recovery with proper follow-ups.`,
   },
   {
     id: 2,
@@ -36,7 +37,7 @@ const DEFAULT_SUPPORT_ITEMS: SupportItem[] = [
 
 export default function ServicePostSurgerySupportSection({
   title = "Hair Transplant Repair",
-  subtitle = "QHT Clinic, with surgeons and methods, ensures natural graft growth and long-term Hair Transplant Repair. The support includes:",
+  subtitle = `${COMPANY_NAME} Clinic, with surgeons and methods, ensures natural graft growth and long-term Hair Transplant Repair. The support includes:`,
   image = "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-3.jpg",
   supportItems = DEFAULT_SUPPORT_ITEMS,
 }: ServicePostSurgerySupportSectionProps) {

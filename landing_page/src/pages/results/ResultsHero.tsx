@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useCallback } from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ResultsHeroProps {
   videoSrc?: string;
@@ -80,9 +81,8 @@ export default function ResultsHero({
             </div>
           </div>
 
-          {/* 2. CENTER TYPOGRAPHY & SCROLL DOWN (Overlapping into the right card on desktop) */}
+          {/* 2. CENTER TYPOGRAPHY & SCROLL DOWN */}
           <div className="relative z-20 text-center flex flex-col items-center justify-center lg:-mr-24 lg:translate-x-4 max-w-sm sm:max-w-md pointer-events-auto">
-
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-bold text-[#1b221d] tracking-tight leading-[1.04]">
               Real Results <br />
@@ -92,7 +92,7 @@ export default function ResultsHero({
 
             {/* Subtitle */}
             <p className="text-xs sm:text-[13px] text-[#5c685f] mt-4 max-w-[270px] mx-auto leading-relaxed font-normal">
-              From thinning crowns to full heads — see what’s possible with QHT
+              From thinning crowns to full heads — see what’s possible with {COMPANY_NAME}
             </p>
 
             {/* Vertical Scroll Down Indicator */}

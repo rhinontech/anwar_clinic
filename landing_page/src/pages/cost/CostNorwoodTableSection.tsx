@@ -1,43 +1,21 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 const NORWOOD_PRICING_ROWS = [
-  {
-    stage: "Norwood II–III",
-    grafts: "800 – 1,500",
-    cost: "₹56,000 – ₹1,05,000",
-  },
-  {
-    stage: "Norwood III (Vertex)",
-    grafts: "1,200 – 1,800",
-    cost: "₹84,000 – ₹1,26,000",
-  },
-  {
-    stage: "Norwood IV",
-    grafts: "2,000 – 2,500",
-    cost: "₹1,40,000 – ₹1,75,000",
-  },
-  {
-    stage: "Norwood V",
-    grafts: "2,500 – 3,500",
-    cost: "₹1,75,000 – ₹2,45,000",
-  },
-  {
-    stage: "Norwood VI",
-    grafts: "3,500 – 4,500",
-    cost: "₹2,45,000 – ₹3,15,000",
-  },
-  {
-    stage: "Norwood VII",
-    grafts: "5,000 – 6,000",
-    cost: "₹3,50,000 – ₹4,20,000",
-  },
+  { stage: "Grade 1 (Minor Receding)", grafts: "500 - 1,000", cost: "₹35,000 - ₹70,000" },
+  { stage: "Grade 2 (Receding Hairline)", grafts: "1,000 - 1,500", cost: "₹70,000 - ₹1,05,000" },
+  { stage: "Grade 3 (Receding Temples + Crown)", grafts: "1,500 - 2,500", cost: "₹1,05,000 - ₹1,75,000" },
+  { stage: "Grade 4 (Moderate Thinning / Crown)", grafts: "2,000 - 3,000", cost: "₹1,40,000 - ₹2,10,000" },
+  { stage: "Grade 5 (Significant Loss)", grafts: "2,500 - 3,500", cost: "₹1,75,000 - ₹2,45,000" },
+  { stage: "Grade 6 (Extensive Baldness)", grafts: "3,000 - 4,500", cost: "₹2,10,000 - ₹3,15,000" },
+  { stage: "Grade 7 (Severe Hair Loss)", grafts: "4,000 - 5,500", cost: "₹2,80,000 - ₹3,85,000" },
 ];
 
 export default function CostNorwoodTableSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
+    <section className="py-14 sm:py-18 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
         
         {/* Header */}
@@ -50,7 +28,7 @@ export default function CostNorwoodTableSection() {
             by Norwood Stage
           </h2>
           <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-3xl">
-            Follicular Unit Extraction is an advanced, minimally invasive technique with no linear scar. The FUE hair transplant cost at QHT Clinic starts from ₹70 per graft. The number of grafts and therefore total cost is determined by your Norwood baldness grade, assessed during a scalp consultation.
+            Follicular Unit Extraction is an advanced, minimally invasive technique with no linear scar. The FUE hair transplant cost at {COMPANY_NAME} Clinic starts from ₹70 per graft. The number of grafts and therefore total cost is determined by your Norwood baldness grade, assessed during a scalp consultation.
           </p>
         </div>
 
@@ -61,7 +39,7 @@ export default function CostNorwoodTableSection() {
           <div className="bg-[#243322] text-white py-4 sm:py-5 px-6 sm:px-10 grid grid-cols-12 font-bold text-xs sm:text-sm">
             <div className="col-span-4 sm:col-span-5">Norwood Stage</div>
             <div className="col-span-4 sm:col-span-4">Grafts Required</div>
-            <div className="col-span-4 sm:col-span-3 text-left">FUE Cost (QHT Clinic)</div>
+            <div className="col-span-4 sm:col-span-3 text-left">FUE Cost ({COMPANY_NAME} Clinic)</div>
           </div>
 
           {/* Table Body Rows */}
@@ -88,7 +66,7 @@ export default function CostNorwoodTableSection() {
 
         {/* Footer Note */}
         <p className="text-xs text-gray-500 font-normal mt-6">
-          Prices at QHT Clinic – FUE from ₹70/graft. Final cost confirmed only after personalised scalp assessment.
+          Prices at {COMPANY_NAME} Clinic – FUE from ₹70/graft. Final cost confirmed only after personalised scalp assessment.
         </p>
 
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import ConsultationModal from "@/components/common/ConsultationModal";
 
 interface ConsultationContextType {
@@ -16,6 +16,24 @@ export function ConsultationProvider({ children }: { children: ReactNode }) {
 
   const openConsultation = () => setIsConsultationOpen(true);
   const closeConsultation = () => setIsConsultationOpen(false);
+
+  // Auto-open on initial website load and recurring every 1 minute (60 seconds)
+  useEffect(() => {
+    // 1. Open on website initial load (slight delay for hydration smoothness)
+    const initialLoadTimer = setTimeout(() => {
+      setIsConsultationOpen(true);
+    }, 1000);
+
+    // 2. Open recurringly every 1 minute
+    const intervalTimer = setInterval(() => {
+      setIsConsultationOpen(true);
+    }, 60000); // 60,000ms = 1 min
+
+    return () => {
+      clearTimeout(initialLoadTimer);
+      clearInterval(intervalTimer);
+    };
+  }, []);
 
   return (
     <ConsultationContext.Provider
@@ -39,8 +57,8 @@ export function useConsultation() {
   if (!context) {
     return {
       isConsultationOpen: false,
-      openConsultation: () => {},
-      closeConsultation: () => {},
+      openConsultation: () => { },
+      closeConsultation: () => { },
     };
   }
   return context;

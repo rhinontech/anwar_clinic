@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { EXPERT_STAGES } from "@/data/qhtData";
 import { Users, CheckCircle2, Shield } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 export default function ExpertsJourney() {
   const [activeStageIndex, setActiveStageIndex] = useState(0);
@@ -17,7 +18,7 @@ export default function ExpertsJourney() {
             A Team of Experts, Focused on You
           </h2>
           <p className="mt-2 text-sm sm:text-lg text-gray-600">
-            At QHT, hair restoration{" "}
+            At {COMPANY_NAME}, hair restoration{" "}
             <strong className="text-gray-900">
               isn’t a one-person job — it’s a team effort.
             </strong>{" "}

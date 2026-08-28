@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ArrowDown } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface CostFactor {
   id: number;
@@ -18,8 +19,8 @@ interface ServiceCostSectionProps {
 }
 
 const DEFAULT_COST_OVERVIEW = [
-  "The Hair Transplant Repair in India costs differently for different grades of severity of the problem, the chosen method, the number of grafts that will be required, and the clinical expertise. The average costs at QHT Clinic range between Rs. 60,000 to Rs. 1,20,000 for minor repairs, whereas those for major corrections cost about Rs. 1,50,000 to Rs. 3,00,000.",
-  "The cost of a hair transplant at a clinic depends on several factors, including the clinic’s reputation, the surgeon’s experience, the clinic’s location, and the specific type of procedure performed (such as QHT, FUE or FUT).",
+  `The Hair Transplant Repair in India costs differently for different grades of severity of the problem, the chosen method, the number of grafts that will be required, and the clinical expertise. The average costs at ${COMPANY_NAME} Clinic range between Rs. 60,000 to Rs. 1,20,000 for minor repairs, whereas those for major corrections cost about Rs. 1,50,000 to Rs. 3,00,000.`,
+  `The cost of a hair transplant at a clinic depends on several factors, including the clinic’s reputation, the surgeon’s experience, the clinic’s location, and the specific type of procedure performed (such as ${COMPANY_NAME}, FUE or FUT).`,
 ];
 
 const DEFAULT_FACTORS: CostFactor[] = [
@@ -39,13 +40,13 @@ const DEFAULT_FACTORS: CostFactor[] = [
     id: 3,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-8.png",
     title: "Treatment Method Chosen",
-    desc: "Different techniques like FUE or QHT have varying costs depending on their complexity and precision.",
+    desc: `Different techniques like FUE or ${COMPANY_NAME} have varying costs depending on their complexity and precision.`,
   },
   {
     id: 4,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
-    title: "Clinical Expertise at QHT Clinic",
-    desc: "QHT Clinic’s experienced specialists provide safe, natural-looking results, ensuring that the cost reflects high-quality care and realistic outcomes.",
+    title: `Clinical Expertise at ${COMPANY_NAME} Clinic`,
+    desc: `${COMPANY_NAME} Clinic’s experienced specialists provide safe, natural-looking results, ensuring that the cost reflects high-quality care and realistic outcomes.`,
   },
   {
     id: 5,
@@ -58,7 +59,7 @@ const DEFAULT_FACTORS: CostFactor[] = [
 export default function ServiceCostSection({
   title = "Hair Transplant Repair",
   costOverview = DEFAULT_COST_OVERVIEW,
-  factorsSubtitle = "The Hair Transplant Repair in India and at QHT Clinic offers a more affordable approach when compared to Western countries, making it a hub for Corrective Hair Surgery due to its affordable yet trustworthy expertise. The focus must be on getting the right expertise to avoid repeated failures.",
+  factorsSubtitle = `The Hair Transplant Repair in India and at ${COMPANY_NAME} Clinic offers a more affordable approach when compared to Western countries, making it a hub for Corrective Hair Surgery due to its affordable yet trustworthy expertise. The focus must be on getting the right expertise to avoid repeated failures.`,
   factors = DEFAULT_FACTORS,
 }: ServiceCostSectionProps) {
   return (

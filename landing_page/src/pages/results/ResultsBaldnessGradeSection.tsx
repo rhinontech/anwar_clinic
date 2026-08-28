@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Clock, FlaskConical, Stethoscope, BadgePercent } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ResultsBaldnessGradeSectionProps {
   onOpenConsultation?: () => void;
@@ -11,27 +12,17 @@ export default function ResultsBaldnessGradeSection({
   onOpenConsultation,
 }: ResultsBaldnessGradeSectionProps) {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#596d53] text-white overflow-hidden">
-      <div className="qht-large-container">
-        
-        {/* Top Header + Number Badge [2] */}
-        <div className="flex items-center justify-between pb-6 border-b border-white/20 mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-tight">
-            What’s Your Baldness Grade
-          </h2>
-          <div className="w-8 h-8 rounded-lg border border-white/35 flex items-center justify-center text-xs font-semibold text-white/90 shadow-2xs">
-            2
-          </div>
-        </div>
+    <section className="py-12 sm:py-16 bg-white">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6">
 
-        {/* 2-Column Content Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          
-          {/* Left Column: Baldness Grade Photo */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-[420px] aspect-square rounded-3xl overflow-hidden shadow-2xl bg-white/5 border border-white/10 group">
+        {/* Dark Olive Rounded Container */}
+        <div className="bg-[#52664d] rounded-3xl sm:rounded-[40px] p-6 sm:p-10 lg:p-14 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+          {/* Left Column: Grade Chart Illustration Image */}
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="w-full max-w-[380px] aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden bg-white/10 border border-white/20 shadow-lg relative group">
               <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-why-us-thumb.webp"
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80"
                 alt="Baldness Grade Assessment"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -40,7 +31,7 @@ export default function ResultsBaldnessGradeSection({
 
           {/* Right Column: Assessment Details & Features */}
           <div className="lg:col-span-7 space-y-6">
-            
+
             {/* Heading */}
             <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-white leading-tight tracking-tight">
               Finally, get the right treatment <br className="hidden sm:block" />
@@ -55,7 +46,7 @@ export default function ResultsBaldnessGradeSection({
 
             {/* Description */}
             <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal max-w-lg">
-              Answer a few questions to see if QHT is right for you and we’ll recommend a personalized plan based on your results.
+              Answer a few questions to see if {COMPANY_NAME} is right for you and we’ll recommend a personalized plan based on your results.
             </p>
 
             {/* 3 Key Features List */}

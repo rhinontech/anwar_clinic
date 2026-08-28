@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useConsultation } from "@/context/ConsultationContext";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface FooterProps {
   onOpenConsultation?: () => void;
@@ -24,7 +25,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
             <Link href="/" className="inline-block mb-3">
               <img
                 src="https://www.qhtclinic.com/wp-content/uploads/2025/08/header-logo.webp"
-                alt="QHT Clinic Logo"
+                alt={`${COMPANY_NAME} Clinic Logo`}
                 className="h-11 w-auto object-contain brightness-0 invert"
               />
             </Link>
@@ -35,7 +36,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
                 North India Branch
               </span>
               <p className="leading-relaxed">
-                QHT Clinic,521, Model Colony, Haridwar, Uttarakhand
+                {COMPANY_NAME} Clinic, 521, Model Colony, Haridwar, Uttarakhand
               </p>
             </div>
 
@@ -57,7 +58,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
                 South India Branch
               </span>
               <p className="leading-relaxed">
-                QHT Clinic Opposite Hotel Park HyattRoad No. 2 Banjara Hills, Hyderabad, Telangana
+                {COMPANY_NAME} Clinic Opposite Hotel Park HyattRoad No. 2 Banjara Hills, Hyderabad, Telangana
               </p>
             </div>
 
@@ -109,16 +110,16 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
               </h4>
               <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-[15px] text-[#cdd7cb]">
                 <div className="space-y-3">
-                  <p><a href="/about/" className="hover:text-white transition-colors">About us</a></p>
-                  <p><a href="/results/" className="hover:text-white transition-colors">Results</a></p>
-                  <p><a href="/medical-tourism/" className="hover:text-white transition-colors">Medical Tourism</a></p>
-                  <p><a href="/faq/" className="hover:text-white transition-colors">FAQ</a></p>
+                  <p><Link href="/about" className="hover:text-white transition-colors">About us</Link></p>
+                  <p><Link href="/results" className="hover:text-white transition-colors">Results</Link></p>
+                  <p><Link href="/medical-tourism" className="hover:text-white transition-colors">Medical Tourism</Link></p>
+                  <p><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></p>
                 </div>
                 <div className="space-y-3">
-                  <p><a href="/hair-transplant-cost-in-india/" className="hover:text-white transition-colors">Hair Transplant Cost</a></p>
-                  <p><a href="/contact-us/" className="hover:text-white transition-colors">Contact Us</a></p>
-                  <p><a href="/blogs/" className="hover:text-white transition-colors">Blogs</a></p>
-                  <p><a href="/career/" className="hover:text-white transition-colors">Career</a></p>
+                  <p><Link href="/hair-transplant-cost-in-india" className="hover:text-white transition-colors">Hair Transplant Cost</Link></p>
+                  <p><Link href="/contact-us" className="hover:text-white transition-colors">Contact Us</Link></p>
+                  <p><Link href="/blogs" className="hover:text-white transition-colors">Blogs</Link></p>
+                  <p><Link href="/career" className="hover:text-white transition-colors">Career</Link></p>
                 </div>
               </div>
             </div>
@@ -132,29 +133,29 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
               </h4>
               <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-[15px] text-[#cdd7cb]">
                 <div className="space-y-3">
-                  <p><a href="/services/afro-hair-transplant-in-india/" className="hover:text-white transition-colors">Afro Hair Transplant</a></p>
-                  <p><a href="/services/beard-hair-transplant-in-india/" className="hover:text-white transition-colors">Beard Hair Transplant</a></p>
-                  <p><a href="/services/caucasian-patients-hair-transplant/" className="hover:text-white transition-colors">Caucasian Patients Hair Transplant</a></p>
-                  <p><a href="/services/custom-hairline-transplant/" className="hover:text-white transition-colors">Custom Hairline Transplant</a></p>
-                  <p><a href="/services/female-hair-transplantation/" className="hover:text-white transition-colors">Female Hair Transplant</a></p>
-                  <p><a href="/services/hair-transplant-for-men/" className="hover:text-white transition-colors">Hair Transplant For Men</a></p>
-                  <p><a href="/services/hairline-reconstruction/" className="hover:text-white transition-colors">Hairline Reconstruction</a></p>
-                  <p><a href="/services/natural-look-hair-restoration/" className="hover:text-white transition-colors">Natural Look Hair Restoration</a></p>
-                  <p><a href="/services/fut-hair-transplant/" className="hover:text-white transition-colors">FUT Hair Transplant</a></p>
-                  <p><a href="/services/temple-hair-transplant/" className="hover:text-white transition-colors">Temple Hair Transplant</a></p>
-                  <p><a href="/services/unshaven-hair-transplant/" className="hover:text-white transition-colors">Unshaven Hair Transplant</a></p>
+                  <p><Link href="/services/afro-hair-transplant-in-india" className="hover:text-white transition-colors">Afro Hair Transplant</Link></p>
+                  <p><Link href="/services/beard-hair-transplant-in-india" className="hover:text-white transition-colors">Beard Hair Transplant</Link></p>
+                  <p><Link href="/services/caucasian-patients-hair-transplant" className="hover:text-white transition-colors">Caucasian Patients Hair Transplant</Link></p>
+                  <p><Link href="/services/custom-hairline-transplant" className="hover:text-white transition-colors">Custom Hairline Transplant</Link></p>
+                  <p><Link href="/services/female-hair-transplantation" className="hover:text-white transition-colors">Female Hair Transplant</Link></p>
+                  <p><Link href="/services/hair-transplant-for-men" className="hover:text-white transition-colors">Hair Transplant For Men</Link></p>
+                  <p><Link href="/services/hairline-reconstruction" className="hover:text-white transition-colors">Hairline Reconstruction</Link></p>
+                  <p><Link href="/services/natural-look-hair-restoration" className="hover:text-white transition-colors">Natural Look Hair Restoration</Link></p>
+                  <p><Link href="/services/fut-hair-transplant" className="hover:text-white transition-colors">FUT Hair Transplant</Link></p>
+                  <p><Link href="/services/temple-hair-transplant" className="hover:text-white transition-colors">Temple Hair Transplant</Link></p>
+                  <p><Link href="/services/unshaven-hair-transplant" className="hover:text-white transition-colors">Unshaven Hair Transplant</Link></p>
                 </div>
                 <div className="space-y-3">
-                  <p><a href="/services/bad-hair-transplant-correction/" className="hover:text-white transition-colors">Bad Hair Transplant Correction</a></p>
-                  <p><a href="/services/burn-hair-transplant/" className="hover:text-white transition-colors">Burn Hair Transplant</a></p>
-                  <p><a href="/services/crown-hair-transplant/" className="hover:text-white transition-colors">Crown Hair Transplant</a></p>
-                  <p><a href="/services/eyebrow-reconstruction-in-india/" className="hover:text-white transition-colors">Eyebrow Reconstruction</a></p>
-                  <p><a href="/services/best-fue-hair-transplant-in-india/" className="hover:text-white transition-colors">FUE Hair Transplant</a></p>
-                  <p><a href="/services/failed-hair-transplant-repair/" className="hover:text-white transition-colors">Hair Transplant Repair</a></p>
-                  <p><a href="/services/moustache-hair-transplant-in-india/" className="hover:text-white transition-colors">Moustache Hair Transplant</a></p>
-                  <p><a href="/services/quick-hair-transplant-in-india/" className="hover:text-white transition-colors">QHT Hair Transplant</a></p>
-                  <p><a href="/services/social-media-influencer-hair-transplant/" className="hover:text-white transition-colors">Social Media Influencer Hair</a></p>
-                  <p><a href="/services/ultra-dense-hair-transplant/" className="hover:text-white transition-colors">Ultra-Dense Hair Transplant</a></p>
+                  <p><Link href="/services/bad-hair-transplant-correction" className="hover:text-white transition-colors">Bad Hair Transplant Correction</Link></p>
+                  <p><Link href="/services/burn-hair-transplant" className="hover:text-white transition-colors">Burn Hair Transplant</Link></p>
+                  <p><Link href="/services/crown-hair-transplant" className="hover:text-white transition-colors">Crown Hair Transplant</Link></p>
+                  <p><Link href="/services/eyebrow-reconstruction-in-india" className="hover:text-white transition-colors">Eyebrow Reconstruction</Link></p>
+                  <p><Link href="/services/best-fue-hair-transplant-in-india" className="hover:text-white transition-colors">FUE Hair Transplant</Link></p>
+                  <p><Link href="/services/failed-hair-transplant-repair" className="hover:text-white transition-colors">Hair Transplant Repair</Link></p>
+                  <p><Link href="/services/moustache-hair-transplant-in-india" className="hover:text-white transition-colors">Moustache Hair Transplant</Link></p>
+                  <p><Link href="/services/quick-hair-transplant-in-india" className="hover:text-white transition-colors">{COMPANY_NAME} Hair Transplant</Link></p>
+                  <p><Link href="/services/social-media-influencer-hair-transplant" className="hover:text-white transition-colors">Social Media Influencer Hair</Link></p>
+                  <p><Link href="/services/ultra-dense-hair-transplant" className="hover:text-white transition-colors">Ultra-Dense Hair Transplant</Link></p>
                 </div>
               </div>
             </div>
@@ -168,30 +169,30 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
               </h4>
               <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-[15px] text-[#cdd7cb]">
                 <div className="space-y-3">
-                  <p><a href="/delhi/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Delhi</a></p>
-                  <p><a href="/bangalore/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Bangalore</a></p>
-                  <p><a href="/chennai/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Chennai</a></p>
-                  <p><a href="/ghaziabad/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Ghaziabad</a></p>
-                  <p><a href="/guwahati/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Guwahati</a></p>
-                  <p><a href="/hyderabad/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Hyderabad</a></p>
-                  <p><a href="/jaipur/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Jaipur</a></p>
-                  <p><a href="/kolkata/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Kolkata</a></p>
-                  <p><a href="/mumbai/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Mumbai</a></p>
-                  <p><a href="/noida/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Noida</a></p>
-                  <p><a href="/pune/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Pune</a></p>
+                  <p><Link href="/delhi/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Delhi</Link></p>
+                  <p><Link href="/bangalore/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Bangalore</Link></p>
+                  <p><Link href="/chennai/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Chennai</Link></p>
+                  <p><Link href="/ghaziabad/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Ghaziabad</Link></p>
+                  <p><Link href="/guwahati/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Guwahati</Link></p>
+                  <p><Link href="/hyderabad/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Hyderabad</Link></p>
+                  <p><Link href="/jaipur/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Jaipur</Link></p>
+                  <p><Link href="/kolkata/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Kolkata</Link></p>
+                  <p><Link href="/mumbai/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Mumbai</Link></p>
+                  <p><Link href="/noida/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Noida</Link></p>
+                  <p><Link href="/pune/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Pune</Link></p>
                 </div>
                 <div className="space-y-3">
-                  <p><a href="/ahmedabad/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Ahmedabad</a></p>
-                  <p><a href="/chandigarh/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Chandigarh</a></p>
-                  <p><a href="/dehradun/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Dehradun</a></p>
-                  <p><a href="/gurgaon/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Gurgaon</a></p>
-                  <p><a href="/haridwar/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Haridwar</a></p>
-                  <p><a href="/indore/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Indore</a></p>
-                  <p><a href="/kochi/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Kochi</a></p>
-                  <p><a href="/lucknow/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Lucknow</a></p>
-                  <p><a href="/nagpur/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Nagpur</a></p>
-                  <p><a href="/patna/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Patna</a></p>
-                  <p><a href="/surat/hair-transplant/" className="hover:text-white transition-colors">Hair Transplant in Surat</a></p>
+                  <p><Link href="/ahmedabad/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Ahmedabad</Link></p>
+                  <p><Link href="/chandigarh/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Chandigarh</Link></p>
+                  <p><Link href="/dehradun/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Dehradun</Link></p>
+                  <p><Link href="/gurgaon/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Gurgaon</Link></p>
+                  <p><Link href="/haridwar/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Haridwar</Link></p>
+                  <p><Link href="/indore/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Indore</Link></p>
+                  <p><Link href="/kochi/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Kochi</Link></p>
+                  <p><Link href="/lucknow/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Lucknow</Link></p>
+                  <p><Link href="/nagpur/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Nagpur</Link></p>
+                  <p><Link href="/patna/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Patna</Link></p>
+                  <p><Link href="/surat/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Surat</Link></p>
                 </div>
               </div>
             </div>
@@ -201,14 +202,14 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
         {/* Bottom Full-Width Line + Copyright & Appointment CTA */}
         <div className="border-t border-white/15 pt-8 mt-14 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm text-[#cdd7cb] font-normal">
-            © {currentYear} QHT Regrow Hair |{" "}
-            <a href="/privacy-policy/" className="hover:text-white underline">
+            © {currentYear} {COMPANY_NAME} Regrow Hair |{" "}
+            <Link href="/privacy-policy" className="hover:text-white underline">
               Privacy Policy
-            </a>{" "}
+            </Link>{" "}
             |{" "}
-            <a href="/terms-conditions/" className="hover:text-white underline">
+            <Link href="/terms-conditions" className="hover:text-white underline">
               Terms & Conditions
-            </a>
+            </Link>
           </p>
 
           <button

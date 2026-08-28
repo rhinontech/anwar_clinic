@@ -1,3 +1,5 @@
+import { COMPANY_NAME } from "@/config/constants";
+
 export interface NavDropdownItem {
   label: string;
   href: string;
@@ -134,7 +136,7 @@ export const NAV_SERVICES_LIST = [
   { label: "Unshaven Hair Transplant", href: "/services/unshaven-hair-transplant/" },
   { label: "Beard Hair Transplant", href: "/services/beard-hair-transplant-in-india/" },
   { label: "Ultra-Dense Hair Transplant", href: "/services/ultra-dense-hair-transplant/" },
-  { label: "QHT Hair Transplant", href: "/services/quick-hair-transplant-in-india/" },
+  { label: `${COMPANY_NAME} Hair Transplant`, href: "/services/quick-hair-transplant-in-india/" },
   { label: "FUE Hair Transplant", href: "/services/best-fue-hair-transplant-in-india/" },
   { label: "Moustache Hair Transplant", href: "/services/moustache-hair-transplant-in-india/" },
   { label: "Afro Hair Transplant", href: "/services/afro-hair-transplant-in-india/" },
@@ -210,7 +212,7 @@ export const BALD_TRUTH_ITEMS: TruthItem[] = [
   {
     id: 6,
     title: "Experience matters",
-    desc: "Only skilled surgeons, like those at QHT Clinic, deliver safe, lasting results.",
+    desc: `Only skilled surgeons, like those at ${COMPANY_NAME} Clinic, deliver safe, lasting results.`,
   },
 ];
 
@@ -224,12 +226,12 @@ export const PROMISES_LIST: PromiseItem[] = [
   {
     id: 2,
     title: "Safe Hair Transplant",
-    desc: "All procedures in world-class OTs by QHT-trained experts only, always.",
+    desc: `All procedures in world-class OTs by ${COMPANY_NAME}-trained experts only, always.`,
   },
   {
     id: 3,
-    title: "Advanced Tools & QHT Technique",
-    desc: "State-of-the-art tools and the QHT method ensure precise, quick & pain free recovery.",
+    title: `Advanced Tools & ${COMPANY_NAME} Technique`,
+    desc: `State-of-the-art tools and the ${COMPANY_NAME} method ensure precise, quick & pain free recovery.`,
   },
   {
     id: 4,
@@ -378,9 +380,9 @@ export const PRICING_PACKAGES: PricePackage[] = [
     link: "/services/best-fue-hair-transplant-in-india/",
   },
   {
-    technique: "QHT Technique",
-    fullName: "Quick Hair Transplant (Patented)",
-    desc: "QHT Clinic’s exclusive patented method. Simultaneous extraction and implantation reduces graft out-of-body time to under 2 hours for superior survival and density.",
+    technique: `${COMPANY_NAME} Technique`,
+    fullName: `Quick Hair Transplant (${COMPANY_NAME})`,
+    desc: `${COMPANY_NAME} Clinic’s exclusive patented method. Simultaneous extraction and implantation reduces graft out-of-body time to under 2 hours for superior survival and density.`,
     perGraft: 100,
     totalRange: "₹80,000 – ₹5,00,000",
     features: [
@@ -402,7 +404,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
     subtitle: "A surgical procedure used for treating receding hairlines or baldness in men.",
     paragraphs: [
       "Male pattern hair loss, also known as Androgenetic Alopecia, affects the temples and scalp, gradually causing hair loss and reduced density.",
-      "Male hair transplant treatment has become a reliable option for those seeking to restore hair and confidence. QHT Clinic offers the best affordable packages for male hair transplant procedures, providing denser, natural-looking hair. The results are permanent and long-lasting.",
+      `Male hair transplant treatment has become a reliable option for those seeking to restore hair and confidence. ${COMPANY_NAME} Clinic offers the best affordable packages for male hair transplant procedures, providing denser, natural-looking hair. The results are permanent and long-lasting.`,
     ],
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Hair-Transplant-for-men.jpg",
     link: "/services/hair-transplant-for-men/",
@@ -413,7 +415,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
     subtitle: "Hairline Reconstruction: The Art of Restoring a Natural, Youthful Look.",
     paragraphs: [
       "Hairline reconstruction is a hair transplant procedure that brings back a natural and balanced hairline. For many people, a receding hairline makes the face look older than it should.",
-      "This treatment is all about designing a hairline that looks real, blends well with your features, and stays permanent. At QHT Clinic, we use modern methods like FUE, DHI, and our own QHT approach to achieve high graft survival and natural results that patients can trust.",
+      `This treatment is all about designing a hairline that looks real, blends well with your features, and stays permanent. At ${COMPANY_NAME} Clinic, we use modern methods like FUE, DHI, and our own ${COMPANY_NAME} approach to achieve high graft survival and natural results that patients can trust.`,
     ],
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Hairline-Redesign-1.jpg",
     link: "/services/hairline-reconstruction/",
@@ -424,7 +426,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
     subtitle: "Correcting unnatural hairlines, visible scars, and low density from prior surgeries.",
     paragraphs: [
       "Hair Transplant Repair is a procedure that can be used to correct the results of a hair transplant that has not been successful. It helps restore hairline and density, as well as conceal scars caused by earlier procedures.",
-      "At QHT Clinic, our experts use advanced techniques and treatment is centered on nurturing natural growth, avoiding complications, and for long-lasting results.",
+      `At ${COMPANY_NAME} Clinic, our experts use advanced techniques and treatment is centered on nurturing natural growth, avoiding complications, and for long-lasting results.`,
     ],
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Failed-Hair-Transplant-Repair.jpg",
     link: "/services/failed-hair-transplant-repair/",
@@ -446,7 +448,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
     subtitle: "Beard hair transplant is a permanent solution to achieve a fuller, well-defined beard naturally.",
     paragraphs: [
       "Beard hair transplant refers to the cosmetic surgery in which hair follicles usually obtained on the scalp are implanted into sparse or bare bald spots on your beard. It can help men gain a fuller, more defined and naturally growing beard that can be styled, trimmed, and maintained identically to facial hair.",
-      "With QHT techniques, results are long-lasting, with minimal scarring and virtually invisible marks.",
+      `With ${COMPANY_NAME} techniques, results are long-lasting, with minimal scarring and virtually invisible marks.`,
     ],
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/10/Mask-group-3.webp",
     link: "/services/beard-hair-transplant-in-india/",
@@ -517,14 +519,14 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     name: "Abhishek Thapa",
     avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/abhishek_thapa.png",
     rating: 5,
-    review: "Really happy with my experience at QHT Clinic. The staff was polite and professional, and doctors explained everything properly.",
+    review: `Really happy with my experience at ${COMPANY_NAME} Clinic. The staff was polite and professional, and doctors explained everything properly.`,
   },
   {
     id: 2,
     name: "Sudhir Chandra",
     avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/sudhir_chandra.png",
     rating: 5,
-    review: "I had 5000 grafts done and my results are amazing! It really boosted my confidence. Highly recommend QHT Haridwar to family and friends.",
+    review: `I had 5000 grafts done and my results are amazing! It really boosted my confidence. Highly recommend ${COMPANY_NAME} Haridwar to family and friends.`,
   },
   {
     id: 3,
@@ -588,13 +590,13 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
 export const FAQ_ITEMS: FAQItem[] = [
   {
     id: "01",
-    question: "Is QHT Clinic the best hair transplant Clinic in India?",
-    answer: "Yes, with the best in class surgeons, natural and scar-free personalised care, QHT stands strong to be the best hair transplant clinic in India. We have successfully treated over 15,000 patients using our proprietary QHT (Quick Hair Transplant) technique with a 95%+ graft survival rate.",
+    question: `Is ${COMPANY_NAME} Clinic the best hair transplant Clinic in India?`,
+    answer: `Yes, with the best in class surgeons, natural and scar-free personalised care, ${COMPANY_NAME} stands strong to be the best hair transplant clinic in India. We have successfully treated over 15,000 patients using our proprietary ${COMPANY_NAME} (Quick Hair Transplant) technique with a 95%+ graft survival rate.`,
   },
   {
     id: "02",
-    question: "How is QHT Clinic different from others?",
-    answer: "Unlike many hair transplant clinics, QHT Clinic implants the extracted grafts immediately at the recipient site for higher survival and faster recovery. Our proprietary QHT technique uses specially engineered instruments enabling simultaneous extraction and implantation.",
+    question: `How is ${COMPANY_NAME} Clinic different from others?`,
+    answer: `Unlike many hair transplant clinics, ${COMPANY_NAME} Clinic implants the extracted grafts immediately at the recipient site for higher survival and faster recovery. Our proprietary ${COMPANY_NAME} technique uses specially engineered instruments enabling simultaneous extraction and implantation.`,
   },
   {
     id: "03",
@@ -609,7 +611,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: "05",
     question: "How long does it take to recover after a hair transplant in India?",
-    answer: "At QHT Clinic, the advanced technique makes recovery faster; just 7-10 days. Most patients can return to normal activities within a week. Full hair growth results are visible within 9 to 12 months post-surgery.",
+    answer: `At ${COMPANY_NAME} Clinic, the advanced technique makes recovery faster; just 7-10 days. Most patients can return to normal activities within a week. Full hair growth results are visible within 9 to 12 months post-surgery.`,
   },
 ];
 
@@ -617,31 +619,31 @@ export const FAQ_ITEMS: FAQItem[] = [
 export const CLINIC_BRANCHES: Branch[] = [
   {
     region: "North India Branch - Haridwar",
-    name: "QHT Clinic Haridwar",
+    name: `${COMPANY_NAME} Clinic Haridwar`,
     address: "521, Model Colony, Haridwar, Uttarakhand",
     mapLink: "https://maps.app.goo.gl/eHNZ67iJPGpmUrZx6",
   },
   {
     region: "North India Branch - Delhi",
-    name: "QHT Clinic Delhi",
+    name: `${COMPANY_NAME} Clinic Delhi`,
     address: "D -15, Outer Ring Rd, Opp. Prashant Vihar Metro Station, Sector 14, Rohini, New Delhi, Delhi, 110085",
     mapLink: "https://maps.app.goo.gl/v1tXP3y8oM1K58YN6",
   },
   {
     region: "North India Branch - Gurugram",
-    name: "QHT Clinic Gurugram",
+    name: `${COMPANY_NAME} Clinic Gurugram`,
     address: "Plot No. 3, opposite Huda Market, Sector 46, Gurugram, Haryana 122022",
     mapLink: "https://maps.app.goo.gl/WmKVvniW9erc3hmy8",
   },
   {
     region: "South India Branch - Hyderabad",
-    name: "QHT Clinic Hyderabad",
+    name: `${COMPANY_NAME} Clinic Hyderabad`,
     address: "Opposite Hotel Park Hyatt, Road No. 2 Banjara Hills, Hyderabad, Telangana",
     mapLink: "https://maps.app.goo.gl/NcNQH3MtLWponejy8",
   },
   {
     region: "Consultation Office - Kolkata",
-    name: "QHT Clinic Kolkata",
+    name: `${COMPANY_NAME} Clinic Kolkata`,
     address: "5th Floor, Prasad House, 16 Sudder Street, Kolkata, West Bengal 700016",
     mapLink: "https://share.google/fKyubEl5ZWPxBcpx3",
   },

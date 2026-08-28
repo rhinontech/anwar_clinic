@@ -24,6 +24,8 @@ import ServiceFAQSection from "./ServiceFAQSection";
 import GoogleReviews from "@/pages/homepage/GoogleReviews";
 import ContactSection from "@/components/common/ContactSection";
 import { ALL_SERVICES_LIST } from "@/data/allServicesData";
+import { COMPANY_NAME } from "@/config/constants";
+
 
 interface ServiceContent {
   slug: string;
@@ -68,7 +70,7 @@ export default function ServiceDetailPage({ slug, service }: ServiceDetailPagePr
   const heroFallbackSubtitle =
     service?.cardDescription ||
     matchedService?.desc ||
-    `${title} solutions tailored by experts at QHT Clinic.`;
+    `${title} solutions tailored by experts at ${COMPANY_NAME} Clinic.`;
 
   return (
     <div className="bg-white min-h-screen">
@@ -99,7 +101,7 @@ export default function ServiceDetailPage({ slug, service }: ServiceDetailPagePr
       {!hidden("results") && (
         <ServiceResultsSection
           title={title}
-          subtitle={`Corrective Hair Transplant at QHT Clinic focuses on hairline design, hair density, and no-scar growth, for long-term results in people with ${title}.`}
+          subtitle={`Corrective Hair Transplant at ${COMPANY_NAME} Clinic focuses on hairline design, hair density, and no-scar growth, for long-term results in people with ${title}.`}
           onOpenConsultation={openConsultation}
           {...sec("results")}
         />
@@ -109,7 +111,7 @@ export default function ServiceDetailPage({ slug, service }: ServiceDetailPagePr
       {!hidden("candidate") && (
         <ServiceCandidateSection
           title={title}
-          subtitle={`Customers with poor and unnatural hair density and scars from past surgeries, consider QHT Clinic for a ${title}.`}
+          subtitle={`Customers with poor and unnatural hair density and scars from past surgeries, consider ${COMPANY_NAME} Clinic for a ${title}.`}
           onOpenConsultation={openConsultation}
           {...sec("candidate")}
         />

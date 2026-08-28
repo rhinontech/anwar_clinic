@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ServiceDetailPage from "@/pages/services/ServiceDetailPage";
 import { ALL_SERVICES_LIST } from "@/data/allServicesData";
 import { fetchService, fetchServices, SERVICES_REVALIDATE } from "@/lib/services";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface PageProps {
   params: { slug: string };
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = await fetchService(params.slug);
   if (service) {
     return {
-      title: service.seoTitle || `${service.title} in India | QHT Clinic`,
+      title: service.seoTitle || `${service.title} in India | ${COMPANY_NAME} Clinic`,
       description: service.seoDescription || service.cardDescription,
     };
   }
@@ -36,8 +37,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     .replace(/-/g, " ")
     .replace(/\b\w/g, (c) => c.toUpperCase());
   return {
-    title: `${formattedTitle} in India | QHT Clinic`,
-    description: `Discover best ${formattedTitle} at QHT Clinic with advanced patented QHT techniques, natural hairline design, and affordable pricing.`,
+    title: `${formattedTitle} in India | ${COMPANY_NAME} Clinic`,
+    description: `Discover best ${formattedTitle} at ${COMPANY_NAME} Clinic with advanced patented ${COMPANY_NAME} techniques, natural hairline design, and affordable pricing.`,
   };
 }
 

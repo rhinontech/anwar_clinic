@@ -2,6 +2,7 @@
 
 import React from "react";
 import { HERO_SLIDES } from "@/data/qhtData";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface HeroSectionProps {
   onOpenConsultation: () => void;
@@ -18,7 +19,7 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
           Think the best hair transplant clinic in India,
           <br />
           <span className="text-[#52664d] font-[500] inline-block mt-1">
-            Think QHT
+            Think {COMPANY_NAME}
           </span>
         </h1>
 

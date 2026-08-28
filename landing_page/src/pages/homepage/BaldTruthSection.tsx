@@ -3,12 +3,13 @@
 import React, { useRef, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { BALD_TRUTH_ITEMS } from "@/data/qhtData";
+import { COMPANY_NAME } from "@/config/constants";
 
 const BASE_TRUTH_ITEMS = [
   BALD_TRUTH_ITEMS.find((item) => item.id === 6) || {
     id: 6,
     title: "Experience matters",
-    desc: "Only skilled surgeons, like those at QHT Clinic, deliver safe, lasting results.",
+    desc: `Only skilled surgeons, like those at ${COMPANY_NAME} Clinic, deliver safe, lasting results.`,
   },
   BALD_TRUTH_ITEMS.find((item) => item.id === 1) || {
     id: 1,

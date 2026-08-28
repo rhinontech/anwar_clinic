@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface FAQItem {
   id: string;
@@ -20,13 +21,13 @@ const COST_FAQ_ITEMS: FAQItem[] = [
     id: "02",
     question: "What is the cost per graft in India?",
     answer:
-      "In India, the cost per graft typically ranges between ₹50 and ₹120 depending on the surgical technique (FUT, FUE, or QHT) and surgeon expertise. QHT Clinic offers transparent per-graft pricing starting at ₹50 for FUT, ₹70 for FUE, and ₹100 for QHT.",
+      `In India, the cost per graft typically ranges between ₹50 and ₹120 depending on the surgical technique (FUT, FUE, or ${COMPANY_NAME}) and surgeon expertise. ${COMPANY_NAME} Clinic offers transparent per-graft pricing starting at ₹50 for FUT, ₹70 for FUE, and ₹100 for ${COMPANY_NAME}.`,
   },
   {
     id: "03",
     question: "Which hair transplant technique is best for me?",
     answer:
-      "The best technique depends on your Norwood baldness grade, donor hair density, lifestyle, and aesthetic expectations. FUE and QHT are ideal for minimal scarring and faster recovery, while FUT is effective for high-volume graft harvesting in advanced stages.",
+      `The best technique depends on your Norwood baldness grade, donor hair density, lifestyle, and aesthetic expectations. FUE and ${COMPANY_NAME} are ideal for minimal scarring and faster recovery, while FUT is effective for high-volume graft harvesting in advanced stages.`,
   },
   {
     id: "04",
@@ -36,9 +37,9 @@ const COST_FAQ_ITEMS: FAQItem[] = [
   },
   {
     id: "05",
-    question: "Are EMI options available at QHT Clinic?",
+    question: `Are EMI options available at ${COMPANY_NAME} Clinic?`,
     answer:
-      "Yes, QHT Clinic offers zero-cost EMI financing plans split across 3 to 24 months through leading banking and NBFC partners, ensuring quality hair restoration is accessible without financial strain.",
+      `Yes, ${COMPANY_NAME} Clinic offers zero-cost EMI financing plans split across 3 to 24 months through leading banking and NBFC partners, ensuring quality hair restoration is accessible without financial strain.`,
   },
 ];
 

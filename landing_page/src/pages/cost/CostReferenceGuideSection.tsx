@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Stethoscope } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 export default function CostReferenceGuideSection() {
   return (
@@ -44,7 +45,7 @@ export default function CostReferenceGuideSection() {
           {/* 2. QHT Clinic Cost per Graft */}
           <div className="space-y-3 pb-8 border-b border-gray-200/80">
             <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
-              QHT Clinic Cost per Graft
+              {COMPANY_NAME} Clinic Cost per Graft
             </h3>
             <p>
               In India, hair transplant cost is primarily calculated on a per-graft basis. A graft typically contains 1–4 hair follicles. The total cost is derived by multiplying the per-graft rate by the total number of grafts required for your specific case.
@@ -56,7 +57,7 @@ export default function CostReferenceGuideSection() {
               <ul className="space-y-0.5 text-xs text-gray-700">
                 <li>• FUT: ₹50/graft (most affordable)</li>
                 <li>• FUE: ₹70/graft (gold standard)</li>
-                <li>• QHT: ₹100/graft (highest graft survival)</li>
+                <li>• {COMPANY_NAME}: ₹100/graft (highest graft survival)</li>
               </ul>
             </div>
             <p>
@@ -117,7 +118,7 @@ export default function CostReferenceGuideSection() {
                 <strong className="text-gray-900">DHI (Direct Hair Implantation):</strong> A variation of FUE using a Choi implanter pen for direct placement without recipient site pre-creation. Higher cost, fewer grafts per session.
               </li>
               <li>
-                <strong className="text-gray-900">QHT (Quick Hair Transplant):</strong> QHT Clinic’s patented evolution of FUE — simultaneous extraction and implantation minimises graft out-of-body time for superior survival and density. Exclusive to QHT Clinic.
+                <strong className="text-gray-900">{COMPANY_NAME}:</strong> {COMPANY_NAME} Clinic’s patented evolution of FUE — simultaneous extraction and implantation minimises graft out-of-body time for superior survival and density. Exclusive to {COMPANY_NAME} Clinic.
               </li>
             </ul>
           </div>
@@ -140,30 +141,30 @@ export default function CostReferenceGuideSection() {
               <li><strong className="text-gray-900">Stage VII:</strong> Only narrow horseshoe band remains</li>
             </ul>
             <p className="text-xs pt-1 italic">
-              For women, the Ludwig Scale or Sinclair Scale is used instead. QHT Clinic treats both male and female pattern hair loss.
+              For women, the Ludwig Scale or Sinclair Scale is used instead. {COMPANY_NAME} Clinic treats both male and female pattern hair loss.
             </p>
           </div>
 
           {/* 7. QHT Clinic PRP Therapy */}
           <div className="space-y-3">
             <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
-              QHT Clinic PRP Therapy
+              {COMPANY_NAME} Clinic PRP Therapy
             </h3>
             <p>
               Platelet-Rich Plasma (PRP) therapy is frequently combined with hair transplant procedures to accelerate healing, improve graft survival and stimulate native hair follicles. PRP involves concentrating growth factors from the patient's own blood and injecting them into the scalp.
             </p>
             <p>
-              PRP sessions typically cost ₹3,000–₹8,000 per session in India. Some clinics bundle 2–3 PRP sessions with FUE packages as combo deals. QHT Clinic offers bundled FUE + PRP packages for maximum value.
+              PRP sessions typically cost ₹3,000–₹8,000 per session in India. Some clinics bundle 2–3 PRP sessions with FUE packages as combo deals. {COMPANY_NAME} Clinic offers bundled FUE + PRP packages for maximum value.
             </p>
           </div>
 
           {/* 8. QHT Clinic EMI Plan */}
           <div className="space-y-3">
             <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
-              QHT Clinic EMI Plan
+              {COMPANY_NAME} Clinic EMI Plan
             </h3>
             <p>
-              QHT Clinic offers flexible financing options to make hair transplant accessible regardless of budget:
+              {COMPANY_NAME} Clinic offers flexible financing options to make hair transplant accessible regardless of budget:
             </p>
             <ul className="space-y-1.5 list-disc list-inside">
               <li><strong className="text-gray-900">Zero-cost EMI:</strong> Split total procedure cost across 3–24 months with no interest</li>
@@ -184,7 +185,7 @@ export default function CostReferenceGuideSection() {
             <Stethoscope className="w-4 h-4" />
           </div>
           <p className="text-xs text-[#5c685f] leading-relaxed font-normal">
-            <strong className="text-[#1b221d] font-semibold">Medical Disclaimer:</strong> All pricing information on this page is indicative and based on per-graft rates. Final costs are determined only after a personalised scalp assessment by a qualified hair transplant surgeon at QHT Clinic. Individual results may vary based on hair characteristics, donor density, and candidacy factors. Hair transplant is a surgical procedure — choose your clinic and surgeon carefully.
+            <strong className="text-[#1b221d] font-semibold">Medical Disclaimer:</strong> All pricing information on this page is indicative and based on per-graft rates. Final costs are determined only after a personalised scalp assessment by a qualified hair transplant surgeon at {COMPANY_NAME} Clinic. Individual results may vary based on hair characteristics, donor density, and candidacy factors. Hair transplant is a surgical procedure — choose your clinic and surgeon carefully.
           </p>
         </div>
 

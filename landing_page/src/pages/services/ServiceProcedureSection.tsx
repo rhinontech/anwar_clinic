@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import { ArrowUpRight } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ProcedureStep {
   stepNumber: string;
@@ -19,7 +21,7 @@ const DEFAULT_STEPS: ProcedureStep[] = [
   {
     stepNumber: "01",
     title: "Assessment",
-    desc: "Evaluation of the previous transplant by the QHT Clinic team of experts.",
+    desc: `Evaluation of the previous transplant by the ${COMPANY_NAME} Clinic team of experts.`,
   },
   {
     stepNumber: "02",
@@ -29,7 +31,7 @@ const DEFAULT_STEPS: ProcedureStep[] = [
   {
     stepNumber: "03",
     title: "Redesigning the Hairline",
-    desc: "Experts at QHT Clinic work on a customised natural hairline by implanting grafts for a natural look.",
+    desc: `Experts at ${COMPANY_NAME} Clinic work on a customised natural hairline by implanting grafts for a natural look.`,
   },
   {
     stepNumber: "04",
@@ -44,7 +46,7 @@ export default function ServiceProcedureSection({
   steps = DEFAULT_STEPS,
   onOpenConsultation,
 }: ServiceProcedureSectionProps) {
-  const defaultSubtitle = `The procedure for a Failed Hair Transplant Correction mainly includes removing misplaced grafts and their re-implantation more naturally by experts at QHT Clinic.`;
+  const defaultSubtitle = `The procedure for a Failed Hair Transplant Correction mainly includes removing misplaced grafts and their re-implantation more naturally by experts at ${COMPANY_NAME} Clinic.`;
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">

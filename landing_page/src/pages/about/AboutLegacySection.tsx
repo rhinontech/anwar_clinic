@@ -1,0 +1,155 @@
+"use client";
+
+import React, { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
+
+interface LegacyMilestone {
+  id: number;
+  title: string;
+  desc: string;
+  year?: string;
+}
+
+export default function AboutLegacySection() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const LEGACY_MILESTONES: LegacyMilestone[] = [
+    {
+      id: 1,
+      year: "Phase 01",
+      title: "Pioneering Hair Transplant Clinic in Haridwar",
+      desc: "We started with just a small idea and vision to eventually create the first determined centre of hair restoration excellence in Uttarakhand, setting the foundation for ethical, patient-first care.",
+    },
+    {
+      id: 2,
+      year: "Phase 02",
+      title: `Advancement in technique – ${COMPANY_NAME} Hair Transplant Process`,
+      desc: `We pioneered and introduced the state-of-the-art ${COMPANY_NAME} hair transplant process using sapphire instruments with extremely fast simultaneous extraction and implantation for superior graft survival.`,
+    },
+    {
+      id: 3,
+      year: "Phase 03",
+      title: "Lives Transformed – 15,000+ Happy Patients Throughout India",
+      desc: "Whether you look at Delhi, Haridwar, Gurugram or Hyderabad, our clinic has transformed the lives of over 15,000+ happy clients with natural density and lifetime hairline growth.",
+    },
+    {
+      id: 4,
+      year: "Phase 04",
+      title: "Multi-City Expansion Across Major Indian Metros",
+      desc: "Expanded state-of-the-art sterile surgical suites and trichology consultation centres across Delhi NCR, Hyderabad, and Eastern India to bring world-class hair restoration closer to everyone.",
+    },
+    {
+      id: 5,
+      year: "Phase 05",
+      title: "Global Recognition & International Medical Tourism",
+      desc: "Established a dedicated international patient desk providing seamless airport concierge, luxury accommodation, and internationally certified surgeons for patients from over 25+ countries.",
+    },
+  ];
+
+  const handleScroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 380;
+      scrollContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <section className="py-12 sm:py-16 lg:py-20 bg-white">
+      <div className="qht-large-container">
+        
+        {/* Dark Olive Outer Container */}
+        <div className="bg-[#4a5c45] rounded-2xl sm:rounded-3xl lg:rounded-[32px] p-6 sm:p-10 lg:p-14 text-white relative overflow-hidden shadow-xl">
+          
+          {/* Top Header Row */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
+            
+            {/* Title & Subtitle */}
+            <div className="max-w-2xl">
+              <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-tight text-white leading-tight mb-3">
+                Our Legacy in Hair Restoration
+              </h2>
+              <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
+                Starting from humble beginnings to one of the most recognized names across the whole country, {COMPANY_NAME} Hair Transplant Clinic is focused on providing the innovative process of hair restoration whilst creating trust and proven results.
+              </p>
+            </div>
+
+            {/* Navigation Arrows */}
+            <div className="flex items-center gap-3 self-end md:self-auto flex-shrink-0">
+              <button
+                type="button"
+                onClick={() => handleScroll("left")}
+                aria-label="Previous milestone"
+                className="w-10 h-10 rounded-full bg-white text-[#1b221d] flex items-center justify-center hover:bg-gray-100 active:scale-95 transition-all shadow-md cursor-pointer"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                type="button"
+                onClick={() => handleScroll("right")}
+                aria-label="Next milestone"
+                className="w-10 h-10 rounded-full bg-white text-[#1b221d] flex items-center justify-center hover:bg-gray-100 active:scale-95 transition-all shadow-md cursor-pointer"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+          </div>
+
+          {/* Timeline & Carousel Cards Container */}
+          <div className="relative pt-6">
+            
+            {/* Horizontal Timeline Track */}
+            <div
+              ref={scrollContainerRef}
+              className="flex gap-6 sm:gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4 pt-2 snap-x snap-mandatory"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {LEGACY_MILESTONES.map((milestone) => (
+                <div
+                  key={milestone.id}
+                  className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-[340px] snap-start flex flex-col relative"
+                >
+                  {/* Top Diamond Indicator & Vertical Guide */}
+                  <div className="flex items-center mb-6">
+                    <div className="w-2.5 h-2.5 rotate-45 bg-white/90 shadow-sm flex-shrink-0" />
+                    <div className="h-[1px] bg-white/20 flex-grow ml-2" />
+                  </div>
+
+                  {/* Outlined Milestone Card */}
+                  <div className="border border-white/50 hover:border-white rounded-2xl sm:rounded-[22px] p-6 sm:p-7 flex flex-col justify-between h-[280px] sm:h-[300px] bg-white/[0.04] hover:bg-white/[0.08] transition-all duration-300 backdrop-blur-xs">
+                    
+                    {/* Content */}
+                    <div>
+                      <h3 className="text-base sm:text-lg font-bold text-[#bbf786] leading-snug mb-3">
+                        {milestone.title}
+                      </h3>
+                      <p className="text-xs sm:text-[13px] text-white/85 leading-relaxed font-normal line-clamp-6">
+                        {milestone.desc}
+                      </p>
+                    </div>
+
+                    {/* Footer Phase Indicator */}
+                    {milestone.year && (
+                      <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-semibold text-white/50 tracking-wider uppercase">
+                        <span>{milestone.year}</span>
+                      </div>
+                    )}
+
+                  </div>
+
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}

@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ComparisonCard {
   id: number;
@@ -69,7 +70,7 @@ const DEFAULT_COMPARISON_CARDS: ComparisonCard[] = [
   },
   {
     id: 7,
-    title: "QHT Patented Method",
+    title: `${COMPANY_NAME} Patented Method`,
     purpose: "Rapid transplant with <2 hour out-of-body time",
     effectiveness: ">98% graft survival & swift healing",
     risk: "Very low",

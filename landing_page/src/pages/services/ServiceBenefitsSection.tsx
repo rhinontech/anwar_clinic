@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface BenefitItem {
   id: number;
@@ -27,13 +28,13 @@ const DEFAULT_BENEFITS: BenefitItem[] = [
     id: 2,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-2.png",
     title: "Permanent Results",
-    desc: "The Corrective Hair Transplant procedures at QHT Clinic ensure natural and long-lasting results.",
+    desc: `The Corrective Hair Transplant procedures at ${COMPANY_NAME} Clinic ensure natural and long-lasting results.`,
   },
   {
     id: 3,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-3.png",
     title: "Using Advanced techniques",
-    desc: "The repair methods used by experts at QHT Clinic are safe and leave negligible scars.",
+    desc: `The repair methods used by experts at ${COMPANY_NAME} Clinic are safe and leave negligible scars.`,
   },
   {
     id: 4,
@@ -45,7 +46,7 @@ const DEFAULT_BENEFITS: BenefitItem[] = [
     id: 5,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-5.png",
     title: "Customised Repair",
-    desc: "QHT Clinic makes sure that the repair plan is tailored to the needs and satisfaction of the patient.",
+    desc: `${COMPANY_NAME} Clinic makes sure that the repair plan is tailored to the needs and satisfaction of the patient.`,
   },
 ];
 
@@ -55,7 +56,7 @@ export default function ServiceBenefitsSection({
   benefits = DEFAULT_BENEFITS,
   onOpenConsultation,
 }: ServiceBenefitsSectionProps) {
-  const defaultSubtitle = `The ${title} fixes transplant mistakes and gives a natural look.\nWe at QHT Clinic benefits patients in the following ways:`;
+  const defaultSubtitle = `The ${title} fixes transplant mistakes and gives a natural look.\nWe at ${COMPANY_NAME} Clinic benefits patients in the following ways:`;
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#38493a] text-white overflow-hidden">

@@ -1,63 +1,65 @@
 "use client";
 
 import React, { useState, useRef, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
-interface ServiceResultsSectionProps {
+export interface ResultCardItem {
+  id: number;
+  name?: string;
+  beforeImg: string;
+  afterImg: string;
+  grafts?: string;
+  age?: string;
+  technique?: string;
+  sessions?: string;
+  timeframe?: string;
+}
+
+export interface ServiceResultsSectionProps {
   title?: string;
   subtitle?: string;
-  results?: ResultPair[];
+  results?: ResultCardItem[];
   onOpenConsultation?: () => void;
 }
 
-interface ResultPair {
-  id: number;
-  name: string;
-  beforeImg: string;
-  afterImg: string;
-}
-
-const DEFAULT_RESULTS: ResultPair[] = [
+const DEFAULT_RESULTS: ResultCardItem[] = [
   {
     id: 1,
     name: "Irfan",
     beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
     afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+    grafts: "2800 Grafts",
+    age: "34 Years",
+    technique: `${COMPANY_NAME} Method`,
+    sessions: "1 Session",
+    timeframe: "8 Months",
   },
   {
     id: 2,
     name: "Kshitij Ahuja",
     beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
     afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+    grafts: "3200 Grafts",
+    age: "29 Years",
+    technique: "FUE Repair",
+    sessions: "1 Session",
+    timeframe: "9 Months",
   },
   {
     id: 3,
     name: "Pranav Meshram",
     beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
     afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
-  },
-  {
-    id: 4,
-    name: "Praveen Kumar",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
-  },
-  {
-    id: 5,
-    name: "Puneet Chandra",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
-  },
-  {
-    id: 6,
-    name: "Rishabh",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Rishabh-Grade-3-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Rishabh-Grade-3-Post.webp",
+    grafts: "2500 Grafts",
+    age: "38 Years",
+    technique: "Correction",
+    sessions: "1 Session",
+    timeframe: "6 Months",
   },
 ];
 
-function ServiceComparisonCard({ item }: { item: ResultPair }) {
-  const [position, setPosition] = useState(50);
+function ServiceComparisonCard({ item }: { item: ResultCardItem }) {
+  const [sliderPos, setSliderPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
 
@@ -66,7 +68,7 @@ function ServiceComparisonCard({ item }: { item: ResultPair }) {
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;
     const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-    setPosition(percentage);
+    setSliderPos(percentage);
   }, []);
 
   const handlePointerDown = (e: React.PointerEvent) => {
@@ -86,51 +88,67 @@ function ServiceComparisonCard({ item }: { item: ResultPair }) {
   };
 
   return (
-    <div
-      ref={containerRef}
-      onPointerDown={handlePointerDown}
-      onPointerMove={handlePointerMove}
-      onPointerUp={handlePointerUp}
-      className="relative w-full aspect-square sm:aspect-[4/3.8] overflow-hidden select-none bg-[#d4d8d6] cursor-ew-resize touch-none rounded-[28px] sm:rounded-[32px] shadow-md border border-white/10"
-    >
-      {/* After Image (Full Base - Right Side) */}
-      <img
-        src={item.afterImg}
-        alt={`${item.name} After`}
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        draggable={false}
-      />
-
-      {/* Before Image (Clipped with clip-path - Left Side, zero distortion) */}
+    <div className="bg-[#2d3b2e] rounded-3xl overflow-hidden border border-white/10 shadow-lg flex flex-col justify-between">
+      {/* Interactive Before/After Split Comparison View */}
       <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+        ref={containerRef}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        className="relative aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden select-none bg-black"
       >
+        {/* AFTER IMAGE (Base Layer) */}
         <img
-          src={item.beforeImg}
-          alt={`${item.name} Before`}
+          src={item.afterImg}
+          alt={item.name ? `${item.name} After` : "After Transformation"}
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           draggable={false}
         />
+
+        {/* BEFORE IMAGE (Clipped Layer) */}
+        <div
+          className="absolute inset-0 overflow-hidden pointer-events-none"
+          style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
+        >
+          <img
+            src={item.beforeImg}
+            alt={item.name ? `${item.name} Before` : "Before Transformation"}
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            draggable={false}
+          />
+        </div>
+
+        {/* Divider Handle */}
+        <div
+          className="absolute top-0 bottom-0 w-[2px] bg-white pointer-events-none shadow-md"
+          style={{ left: `${sliderPos}%` }}
+        >
+          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-black/80 backdrop-blur-xs text-white flex items-center justify-center border border-white/40 shadow-lg text-[10px]">
+            ‹›
+          </div>
+        </div>
+
+        {/* Labels */}
+        <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-semibold px-2 py-0.5 rounded-full pointer-events-none">
+          Before
+        </div>
+        <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-semibold px-2 py-0.5 rounded-full pointer-events-none">
+          After
+        </div>
       </div>
 
-      {/* Before & After Clean Labels */}
-      <span className="absolute top-4 left-5 sm:top-5 sm:left-6 text-xs sm:text-sm font-semibold text-gray-800 z-20 pointer-events-none drop-shadow-sm">
-        Before
-      </span>
-      <span className="absolute top-4 right-5 sm:top-5 sm:right-6 text-xs sm:text-sm font-semibold text-gray-800 z-20 pointer-events-none drop-shadow-sm">
-        After
-      </span>
-
-      {/* Center Black Handle Button */}
-      <div
-        className="absolute top-0 bottom-0 z-30 pointer-events-none -translate-x-1/2 flex items-center justify-center"
-        style={{ left: `${position}%` }}
-      >
-        <div className="relative z-40 w-10 h-10 sm:w-11 sm:h-11 bg-black rounded-xl text-white flex items-center justify-center shadow-2xl transition-transform active:scale-95">
-          <ChevronLeft className="w-3.5 h-3.5 -mr-1 text-white" />
-          <ChevronRight className="w-3.5 h-3.5 text-white" />
+      {/* Card Info Details */}
+      <div className="p-5 space-y-3">
+        <div className="flex items-center justify-between text-xs text-gray-300 font-medium">
+          <span>{item.grafts || item.name || "Hair Restoration"}</span>
+          {item.timeframe && <span className="text-emerald-400">{item.timeframe}</span>}
         </div>
+        {(item.technique || item.age) && (
+          <div className="flex items-center justify-between text-[11px] text-gray-400">
+            <span>{item.technique}</span>
+            <span>{item.age}</span>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -138,14 +156,14 @@ function ServiceComparisonCard({ item }: { item: ResultPair }) {
 
 export default function ServiceResultsSection({
   title = "Hair Transplant Repair",
-  subtitle = "Corrective Hair Transplant at QHT Clinic focuses on hairline design, hair density, and no-scar growth, for long-term results in people with failed Hair Transplants.",
+  subtitle = `Corrective Hair Transplant at ${COMPANY_NAME} Clinic focuses on hairline design, hair density, and no-scar growth, for long-term results in people with failed Hair Transplants.`,
   results = DEFAULT_RESULTS,
   onOpenConsultation,
 }: ServiceResultsSectionProps) {
   return (
     <section className="relative py-16 sm:py-20 lg:py-24 bg-[#38493a] text-white overflow-hidden">
       <div className="qht-large-container relative z-10">
-        
+
         {/* Top Header Row with Vector Logo Motif */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-12 lg:mb-16 relative">
           <div className="max-w-2xl space-y-3">
@@ -161,7 +179,7 @@ export default function ServiceResultsSection({
           <div className="flex-shrink-0 opacity-90">
             <img
               src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/sd-result-vector.webp"
-              alt="QHT Motif"
+              alt={`${COMPANY_NAME} Motif`}
               className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
             />
           </div>

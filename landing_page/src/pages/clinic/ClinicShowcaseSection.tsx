@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { MapPin, Phone, Mail, ChevronRight, ChevronLeft } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ClinicBranchData {
   id: string;
@@ -30,9 +31,9 @@ const CLINIC_BRANCHES: ClinicBranchData[] = [
         <path d="M8 21V11C8 9.5 16 9.5 16 11V21" strokeLinecap="round" />
       </svg>
     ),
-    title: "Hair transplant clinic - QHT Delhi",
+    title: `Hair transplant clinic - ${COMPANY_NAME} Delhi`,
     subtitle:
-      "QHT Delhi Hair Clinic offers advanced hair transplant solutions with expert care and natural-looking results.",
+      `${COMPANY_NAME} Delhi Hair Clinic offers advanced hair transplant solutions with expert care and natural-looking results.`,
     address:
       "D-15, Outer Ring Rd, Opp. Prashant Vihar Metro Station, Sector 14, Rohini, New Delhi, Delhi, 110085",
     phone: "+91 7217033844",
@@ -67,9 +68,9 @@ const CLINIC_BRANCHES: ClinicBranchData[] = [
         <path d="M3 6L12 2L21 6" strokeLinecap="round" />
       </svg>
     ),
-    title: "Hair transplant clinic - QHT Uttarakhand",
+    title: `Hair transplant clinic - ${COMPANY_NAME} Uttarakhand`,
     subtitle:
-      "QHT Haridwar flagship clinic features world-class operating suites and serene recovery surroundings.",
+      `${COMPANY_NAME} Haridwar flagship clinic features world-class operating suites and serene recovery surroundings.`,
     address:
       "Near Arya Samaj Mandir, Jwalapur, Haridwar, Uttarakhand - 249407",
     phone: "+91 9084726916",
@@ -99,9 +100,9 @@ const CLINIC_BRANCHES: ClinicBranchData[] = [
         <path d="M6 12C6 8 18 8 18 12V21H6V12Z" />
       </svg>
     ),
-    title: "Hair transplant clinic - QHT Hyderabad",
+    title: `Hair transplant clinic - ${COMPANY_NAME} Hyderabad`,
     subtitle:
-      "QHT Hyderabad clinic provides precision graft placement and personalized consultation for South India.",
+      `${COMPANY_NAME} Hyderabad clinic provides precision graft placement and personalized consultation for South India.`,
     address:
       "Road No. 36, Jubilee Hills, Hyderabad, Telangana - 500033",
     phone: "+91 9084726916",
@@ -127,9 +128,9 @@ const CLINIC_BRANCHES: ClinicBranchData[] = [
         <line x1="12" y1="3" x2="12" y2="21" />
       </svg>
     ),
-    title: "Hair transplant clinic - QHT Gurugram",
+    title: `Hair transplant clinic - ${COMPANY_NAME} Gurugram`,
     subtitle:
-      "QHT Gurugram clinic delivers state-of-the-art scalp analysis and premium hair restoration services.",
+      `${COMPANY_NAME} Gurugram clinic delivers state-of-the-art scalp analysis and premium hair restoration services.`,
     address:
       "Golf Course Extension Road, Sector 57, Gurugram, Haryana - 122003",
     phone: "+91 7217033844",
@@ -197,7 +198,7 @@ export default function ClinicShowcaseSection({
             clinic across in india.
           </h2>
           <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-4xl">
-            We have state-of-the-art hair transplant clinics across India, offering advanced treatments with the latest technology and highly experienced surgeons. Our clinics are equipped to provide safe, effective, and natural-looking results. Whether you're dealing with hair loss or looking for hair restoration, QHT Clinic ensures personalized care and exceptional outcomes in every major city across India.
+            We have state-of-the-art hair transplant clinics across India, offering advanced treatments with the latest technology and highly experienced surgeons. Our clinics are equipped to provide safe, effective, and natural-looking results. Whether you're dealing with hair loss or looking for hair restoration, {COMPANY_NAME} Clinic ensures personalized care and exceptional outcomes in every major city across India.
           </p>
         </div>
 

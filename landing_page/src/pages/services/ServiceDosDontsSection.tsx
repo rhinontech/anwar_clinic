@@ -3,6 +3,8 @@
 import React from "react";
 import { CheckCircle2, XCircle } from "lucide-react";
 
+import { COMPANY_NAME } from "@/config/constants";
+
 interface ServiceDosDontsSectionProps {
   title?: string;
   subtitle?: string;
@@ -10,18 +12,16 @@ interface ServiceDosDontsSectionProps {
   dos?: string[];
 }
 
-const DEFAULT_DONTS: string[] = [
-  "Do not smoke or take alcohol",
+const DEFAULT_DONTS = [
   "Do not scratch or rub the scalp",
-  "Do not skip therapy sessions",
-  "Do not lift heavy weights.",
-  "Avoid direct sunlight exposure.",
-  "Avoid using harsh hair products.",
+  "Avoid strenuous exercise",
+  "Avoid direct sun exposure",
+  "Do not smoke or consume alcohol",
+  "Avoid wearing tight caps/helmets",
 ];
 
-const DEFAULT_DOS: string[] = [
-  "Take prescribed medicines on time",
-  "Clean scalp properly and wash on time",
+const DEFAULT_DOS = [
+  "Take prescribed medications",
   "Eat a balanced, nutritious diet",
   "Sleep with an elevated head",
   "Wash hair gently at the advised time",
@@ -30,7 +30,7 @@ const DEFAULT_DOS: string[] = [
 
 export default function ServiceDosDontsSection({
   title = "Hair Transplant Repair",
-  subtitle = "After going through a hair transplant repair at QHT Clinic, it is mandatory to follow these guidelines to ensure proper results and recovery. By following these, a person can maximize graft survival, reduce complications, and yield long-term results.",
+  subtitle = `After going through a hair transplant repair at ${COMPANY_NAME} Clinic, it is mandatory to follow these guidelines to ensure proper results and recovery. By following these, a person can maximize graft survival, reduce complications, and yield long-term results.`,
   donts = DEFAULT_DONTS,
   dos = DEFAULT_DOS,
 }: ServiceDosDontsSectionProps) {

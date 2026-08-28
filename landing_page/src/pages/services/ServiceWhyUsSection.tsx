@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface WhyUsStat {
   title: string;
@@ -16,16 +17,16 @@ interface ServiceWhyUsSectionProps {
 
 const DEFAULT_WHY_US_STATS: WhyUsStat[] = [
   {
-    title: "5,000+ Successful Transplants",
-    desc: "Completed over 5,000+ Hair transplant Repairs with precision and proper care.",
+    title: "100% natural, undetectable hairline",
+    desc: "Achieve the look you always wished for naturally with precision.",
   },
   {
-    title: "100% Client Satisfaction",
-    desc: "Have a record of successful transplants and recoveries, with satisfied patients.",
+    title: "Patented SAVA implanters for maximum density",
+    desc: "Direct implanter pens ensuring zero root damage and up to 98% graft survival.",
   },
   {
-    title: "Clinics All Over India",
-    desc: "Provide proper patient care, we are available at 3 clinics all over India.",
+    title: "Fast recovery with minimal downtime",
+    desc: "Return to daily work within 48 to 72 hours safely.",
   },
   {
     title: "Over 15,000+ successful surgeries",
@@ -39,7 +40,7 @@ export default function ServiceWhyUsSection({
   stats = DEFAULT_WHY_US_STATS,
   onOpenConsultation,
 }: ServiceWhyUsSectionProps) {
-  const defaultSubtitle = `QHT Clinic is trusted for failed hair transplant correction with expert surgeons and techniques.\nWe have:`;
+  const defaultSubtitle = `${COMPANY_NAME} Clinic is trusted for failed hair transplant correction with expert surgeons and techniques.\nWe have:`;
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#596d53] text-white overflow-hidden">
@@ -67,7 +68,7 @@ export default function ServiceWhyUsSection({
             <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
               <img
                 src="https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-why-us-thumb.webp"
-                alt="Why Choose QHT Clinic"
+                alt={`Why Choose ${COMPANY_NAME} Clinic`}
                 className="w-full h-full object-contain"
               />
             </div>

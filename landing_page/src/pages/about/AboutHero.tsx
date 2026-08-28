@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 const STRIP_ITEMS = [
   "Proven results with natural hair line",
@@ -49,7 +50,7 @@ export default function AboutHero() {
 
           {/* Subtitle */}
           <p className="mt-4 sm:mt-5 text-xs sm:text-[13.5px] text-[#5c685f] leading-relaxed max-w-2xl mx-auto font-normal text-center">
-            At QHT Hair Transplant Clinic, our specialty is treating baldness, but beyond that, our goal is to transform lives with both natural and permanent results. We have taken hair restoration to a new level with a combination of technology, training, and experience all with care.
+            At {COMPANY_NAME} Hair Transplant Clinic, our specialty is treating baldness, but beyond that, our goal is to transform lives with both natural and permanent results. We have taken hair restoration to a new level with a combination of technology, training, and experience all with care.
           </p>
         </div>
 
@@ -57,7 +58,7 @@ export default function AboutHero() {
         <div className="max-w-5xl mx-auto rounded-3xl sm:rounded-[36px] overflow-hidden shadow-xl border border-gray-200/80 bg-white relative aspect-[16/10] sm:aspect-[1.85/1]">
           <img
             src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1600&q=80"
-            alt="QHT Clinic Experienced Surgical Team and Doctors"
+            alt={`${COMPANY_NAME} Clinic Experienced Surgical Team and Doctors`}
             className="w-full h-full object-cover object-top"
           />
         </div>

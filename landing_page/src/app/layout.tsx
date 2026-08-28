@@ -4,22 +4,23 @@ import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import FloatingActionBar from "@/components/common/FloatingActionBar";
 import { ConsultationProvider } from "@/context/ConsultationContext";
+import { COMPANY_NAME } from "@/config/constants";
 
 export const metadata: Metadata = {
-  title: "Best Hair Transplant Clinic In India | QHT Clinic",
-  description: "Discover India’s leading hair-transplant clinic. Advanced QHT technique & 15,000 + results. Book now.",
-  keywords: "hair transplant India, QHT clinic, best hair transplant Delhi, hair restoration, FUE hair transplant, celebrity hair transplant India",
+  title: `Best Hair Transplant Clinic In India | ${COMPANY_NAME} Clinic`,
+  description: `Discover India’s leading hair-transplant clinic. Advanced ${COMPANY_NAME} technique & 15,000+ results. Book now.`,
+  keywords: `hair transplant India, ${COMPANY_NAME} clinic, best hair transplant Delhi, hair restoration, FUE hair transplant, celebrity hair transplant India`,
   openGraph: {
-    title: "Best Hair Transplant Clinic In India | QHT Clinic",
-    description: "Discover India’s leading hair-transplant clinic. Advanced QHT technique & 15,000 + results. Book now.",
+    title: `Best Hair Transplant Clinic In India | ${COMPANY_NAME} Clinic`,
+    description: `Discover India’s leading hair-transplant clinic. Advanced ${COMPANY_NAME} technique & 15,000+ results. Book now.`,
     url: "https://www.qhtclinic.com",
-    siteName: "QHT Clinic",
+    siteName: `${COMPANY_NAME} Clinic`,
     images: [
       {
         url: "https://www.qhtclinic.com/wp-content/uploads/2026/03/delhi-6.jpg",
         width: 900,
         height: 560,
-        alt: "QHT Clinic Hair Restoration",
+        alt: `${COMPANY_NAME} Clinic Hair Restoration`,
       },
     ],
     locale: "en_US",

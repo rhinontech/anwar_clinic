@@ -8,6 +8,7 @@ import {
   MessageSquare,
   Plane,
 } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 export default function CostWhyIndiaSection() {
   return (
@@ -56,7 +57,7 @@ export default function CostWhyIndiaSection() {
                     Internationally Trained Surgeons
                   </h3>
                   <p className="text-xs text-[#5c685f] leading-relaxed font-normal">
-                    Procedures at QHT Clinic are performed by experienced, internationally trained surgeons - never delegated to technicians. With 15,000+ procedures completed at QHT Clinic across all Norwood grades, our team handles primary cases as well as complex repair and revision work.
+                    Procedures at {COMPANY_NAME} Clinic are performed by experienced, internationally trained surgeons - never delegated to technicians. With 15,000+ procedures completed at {COMPANY_NAME} Clinic across all Norwood grades, our team handles primary cases as well as complex repair and revision work.
                   </p>
                 </div>
               </div>
@@ -101,7 +102,7 @@ export default function CostWhyIndiaSection() {
                     Multi-City Clinic Network
                   </h3>
                   <p className="text-xs text-[#5c685f] leading-relaxed font-normal">
-                    QHT Clinic operates across 4 cities - Haridwar, Delhi, Gurugram and Hyderabad - making it accessible for both domestic and international patients to plan their procedure and follow-up care.
+                    {COMPANY_NAME} Clinic operates across 4 cities - Haridwar, Delhi, Gurugram and Hyderabad - making it accessible for both domestic and international patients to plan their procedure and follow-up care.
                   </p>
                 </div>
               </div>
@@ -115,7 +116,7 @@ export default function CostWhyIndiaSection() {
               
               <div className="pb-1">
                 <span className="text-xs sm:text-[13px] font-bold text-white/90 tracking-wide uppercase block">
-                  QHT Clinic By the Numbers
+                  {COMPANY_NAME} Clinic By the Numbers
                 </span>
               </div>
 

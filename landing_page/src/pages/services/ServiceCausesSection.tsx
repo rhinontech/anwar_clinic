@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface CauseItem {
   id: number;
@@ -26,7 +27,7 @@ const DEFAULT_CAUSES: CauseItem[] = [
     id: 2,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-icon-14.png",
     title: "Graft Survival",
-    desc: "Failed grafts make Hair Transplant Repair at QHT Clinic essential.",
+    desc: `Failed grafts make Hair Transplant Repair at ${COMPANY_NAME} Clinic essential.`,
   },
   {
     id: 3,
@@ -50,7 +51,7 @@ const DEFAULT_CAUSES: CauseItem[] = [
 
 export default function ServiceCausesSection({
   title = "Hair Transplant Repair",
-  subtitle = "People need early Hair Transplant Repair for proper treatment, and QHT Clinic offers expert care for lasting results.",
+  subtitle = `People need early Hair Transplant Repair for proper treatment, and ${COMPANY_NAME} Clinic offers expert care for lasting results.`,
   causes = DEFAULT_CAUSES,
 }: ServiceCausesSectionProps) {
   return (

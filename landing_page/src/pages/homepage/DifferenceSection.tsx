@@ -3,6 +3,7 @@
 import React from "react";
 import { Check, X, User, ShieldCheck, Sparkles, Infinity as InfinityIcon, Tag } from "lucide-react";
 import { DIFFERENCE_ITEMS } from "@/data/qhtData";
+import { COMPANY_NAME } from "@/config/constants";
 
 const FEATURE_ICONS: Record<string, React.ReactNode> = {
   "Natural Hairline": (
@@ -28,7 +29,7 @@ export default function DifferenceSection() {
             See the Difference that Matters
           </h2>
           <p className="mt-3 text-sm sm:text-lg text-[#5c685f] font-normal leading-relaxed">
-            Real results. Safe methods. Natural transformations. Only at QHT.
+            Real results. Safe methods. Natural transformations. Only at {COMPANY_NAME}.
           </p>
         </div>
 
@@ -61,7 +62,7 @@ export default function DifferenceSection() {
                 <div>
                   <div className="flex items-center gap-2 mb-1.5">
                     <span className="text-xs sm:text-[18px] font-bold text-[#1b221d] tracking-wide">
-                      QHT PROMISE
+                      {COMPANY_NAME} PROMISE
                     </span>
                     <span className="w-4 h-4 rounded-full bg-[#22c55e] text-white flex items-center justify-center flex-shrink-0 shadow-2xs">
                       <Check className="w-2.5 h-2.5 stroke-[3]" />

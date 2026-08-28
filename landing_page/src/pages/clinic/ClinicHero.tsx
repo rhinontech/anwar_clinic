@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 export default function ClinicHero() {
   return (
@@ -11,7 +12,7 @@ export default function ClinicHero() {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=80"
-          alt="QHT Clinic Interior Corridor"
+          alt={`${COMPANY_NAME} Clinic Interior Corridor`}
           className="w-full h-full object-cover object-center"
         />
         {/* Soft Warm/Dark Gradient Overlay for Optimal Text Readability */}
@@ -40,13 +41,13 @@ export default function ClinicHero() {
 
         {/* Main Title */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.12] drop-shadow-md max-w-4xl">
-          QHT Clinic Hair <br />
+          {COMPANY_NAME} Clinic Hair <br />
           Transplant Clinic India
         </h1>
 
         {/* Subtitle */}
         <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-white/95 font-medium drop-shadow max-w-2xl">
-          QHT Clinic advanced hair transplant solutions India
+          {COMPANY_NAME} Clinic advanced hair transplant solutions India
         </p>
 
       </div>

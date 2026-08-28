@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { ALL_SERVICES_LIST, ServiceCardItem } from "@/data/allServicesData";
 import type { ServiceCard } from "@/lib/services";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ServicesListingProps {
   services?: ServiceCard[] | null;
@@ -62,7 +63,7 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
             </h2>
           </div>
           <p className="max-w-xl text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-            At QHT Clinic, we provide advanced hair transplant services designed to restore natural hair density, improve hairlines, and boost confidence. Our expert surgeons deliver scarless, painless, and long-lasting results.
+            At {COMPANY_NAME} Clinic, we provide advanced hair transplant services designed to restore natural hair density, improve hairlines, and boost confidence. Our expert surgeons deliver scarless, painless, and long-lasting results.
           </p>
         </div>
 
@@ -117,18 +118,18 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
 
                 {/* Bottom Actions */}
                 <div className="mt-6 pt-5 border-t border-gray-100 flex items-center justify-between">
-                  <button
-                    onClick={onOpenConsultation}
-                    className="text-xs sm:text-sm font-semibold text-[#1b392b] hover:text-[#596d53] flex items-center gap-1 group/link transition-colors"
+                  <Link
+                    href={item.link}
+                    className="text-xs sm:text-sm font-semibold text-[#1b221d] hover:text-[#596d53] flex items-center gap-1 group/link transition-colors"
                   >
-                    <span>Book Consultation</span>
+                    <span>View Procedure</span>
                     <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                  </button>
+                  </Link>
 
                   <button
                     onClick={onOpenConsultation}
                     className="w-8 h-8 rounded-full bg-[#f4f7f4] group-hover:bg-[#1b392b] group-hover:text-white text-gray-700 flex items-center justify-center transition-colors duration-200"
-                    aria-label="Learn more"
+                    aria-label="Book consultation"
                   >
                     <ArrowUpRight className="w-4 h-4" />
                   </button>

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { SERVICES_ACCORDION } from "@/data/qhtData";
 import { ChevronDown, ArrowRight } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ServicesAccordionProps {
   onOpenConsultation: () => void;
@@ -12,10 +13,10 @@ interface ServicesAccordionProps {
 export default function ServicesAccordion({
   onOpenConsultation,
 }: ServicesAccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleAccordion = (idx: number) => {
-    setOpenIndex(openIndex === idx ? -1 : idx);
+    setOpenIndex(openIndex === idx ? null : idx);
   };
 
   return (
@@ -37,7 +38,7 @@ export default function ServicesAccordion({
             From Balding to Believing, because Hair restoration is about more than hair.
           </h3>
           <p className="md:col-span-6 text-xs sm:text-lg text-gray-600 leading-relaxed">
-            At QHT Clinic, our services are planned to help you regain confidence, identity, and the look you always wished for with proven clinical excellence.
+            At {COMPANY_NAME} Clinic, our services are planned to help you regain confidence, identity, and the look you always wished for with proven clinical excellence.
           </p>
         </div>
 

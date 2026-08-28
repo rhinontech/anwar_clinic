@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import { COMPANY_NAME } from "@/config/constants";
+
 export default function ImagePoster() {
   return (
     <section className="bg-white py-6 overflow-hidden">
@@ -14,7 +16,7 @@ export default function ImagePoster() {
             />
             <img
               src="https://www.qhtclinic.com/wp-content/uploads/2025/11/Banner-Homepage.webp"
-              alt="QHT Clinic Excellence Poster"
+              alt={`${COMPANY_NAME} Clinic Excellence Poster`}
               className="w-full h-auto object-cover block"
             />
           </picture>

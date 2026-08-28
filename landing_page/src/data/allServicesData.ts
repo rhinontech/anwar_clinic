@@ -1,3 +1,5 @@
+import { COMPANY_NAME } from "@/config/constants";
+
 export interface ServiceCardItem {
   id: string;
   title: string;
@@ -122,7 +124,7 @@ export const ALL_SERVICES_LIST: ServiceCardItem[] = [
   },
   {
     id: "quick-hair-transplant-in-india",
-    title: "QHT Hair Transplant",
+    title: `${COMPANY_NAME} Hair Transplant`,
     desc: "Patented simultaneous extraction and implantation with SAVA pen for maximum graft survival.",
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC6206-1568x1356.jpg",
     link: "/services/quick-hair-transplant-in-india/",

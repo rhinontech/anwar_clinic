@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ChevronRight, ChevronDown, CheckCircle2 } from "lucide-react";
 import { COUNTRY_CODES } from "@/data/qhtData";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ServiceDetailHeroProps {
   slug?: string;
@@ -18,7 +19,7 @@ interface ServiceDetailHeroProps {
 export default function ServiceDetailHero({
   slug = "best-fue-hair-transplant-in-india",
   title = "FUE Hair Transplant",
-  subtitle = "Advanced minimally invasive hair restoration solutions at QHT Clinic.",
+  subtitle = `Advanced minimally invasive hair restoration solutions at ${COMPANY_NAME} Clinic.`,
   bannerImage = "https://www.qhtclinic.com/wp-content/uploads/2025/08/456.png",
   pointerLabel = "Graft correction",
   onOpenConsultation,
@@ -41,7 +42,7 @@ export default function ServiceDetailHero({
     }, 700);
   };
 
-  const defaultSubtitle = `${title} solutions tailored by experts at QHT Clinic with affordability and advanced methods.`;
+  const defaultSubtitle = `${title} solutions tailored by experts at ${COMPANY_NAME} Clinic with affordability and advanced methods.`;
 
   return (
     <div className="relative w-full">

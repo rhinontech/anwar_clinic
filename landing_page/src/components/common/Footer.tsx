@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useConsultation } from "@/context/ConsultationContext";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface FooterProps {
   onOpenConsultation?: () => void;
@@ -24,7 +25,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
             <Link href="/" className="inline-block mb-3">
               <img
                 src="https://www.qhtclinic.com/wp-content/uploads/2025/08/header-logo.webp"
-                alt="QHT Clinic Logo"
+                alt={`${COMPANY_NAME} Clinic Logo`}
                 className="h-11 w-auto object-contain brightness-0 invert"
               />
             </Link>
@@ -35,7 +36,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
                 North India Branch
               </span>
               <p className="leading-relaxed">
-                QHT Clinic,521, Model Colony, Haridwar, Uttarakhand
+                {COMPANY_NAME} Clinic, 521, Model Colony, Haridwar, Uttarakhand
               </p>
             </div>
 
@@ -57,7 +58,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
                 South India Branch
               </span>
               <p className="leading-relaxed">
-                QHT Clinic Opposite Hotel Park HyattRoad No. 2 Banjara Hills, Hyderabad, Telangana
+                {COMPANY_NAME} Clinic Opposite Hotel Park HyattRoad No. 2 Banjara Hills, Hyderabad, Telangana
               </p>
             </div>
 
@@ -152,7 +153,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
                   <p><Link href="/services/best-fue-hair-transplant-in-india" className="hover:text-white transition-colors">FUE Hair Transplant</Link></p>
                   <p><Link href="/services/failed-hair-transplant-repair" className="hover:text-white transition-colors">Hair Transplant Repair</Link></p>
                   <p><Link href="/services/moustache-hair-transplant-in-india" className="hover:text-white transition-colors">Moustache Hair Transplant</Link></p>
-                  <p><Link href="/services/quick-hair-transplant-in-india" className="hover:text-white transition-colors">QHT Hair Transplant</Link></p>
+                  <p><Link href="/services/quick-hair-transplant-in-india" className="hover:text-white transition-colors">{COMPANY_NAME} Hair Transplant</Link></p>
                   <p><Link href="/services/social-media-influencer-hair-transplant" className="hover:text-white transition-colors">Social Media Influencer Hair</Link></p>
                   <p><Link href="/services/ultra-dense-hair-transplant" className="hover:text-white transition-colors">Ultra-Dense Hair Transplant</Link></p>
                 </div>
@@ -201,7 +202,7 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
         {/* Bottom Full-Width Line + Copyright & Appointment CTA */}
         <div className="border-t border-white/15 pt-8 mt-14 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm text-[#cdd7cb] font-normal">
-            © {currentYear} QHT Regrow Hair |{" "}
+            © {currentYear} {COMPANY_NAME} Regrow Hair |{" "}
             <Link href="/privacy-policy" className="hover:text-white underline">
               Privacy Policy
             </Link>{" "}

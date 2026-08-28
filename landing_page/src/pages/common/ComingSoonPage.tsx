@@ -16,6 +16,7 @@ import {
   Award,
 } from "lucide-react";
 import { useConsultation } from "@/context/ConsultationContext";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ComingSoonPageProps {
   title?: string;
@@ -177,7 +178,7 @@ export default function ComingSoonPage({
 
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href="https://wa.me/919084726916?text=Hi%20QHT%20Clinic,%20I%20would%20like%20to%20know%20more%20about%20hair%20transplant."
+                href={`https://wa.me/919084726916?text=Hi%20${encodeURIComponent(COMPANY_NAME)}%20Clinic,%20I%20would%20like%20to%20know%20more%20about%20hair%20transplant.`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-[#52664d] text-[#52664d] hover:bg-[#52664d] hover:text-white text-xs font-semibold transition-colors"

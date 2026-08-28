@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface CostTechniquesSectionProps {
   onOpenConsultation?: () => void;
@@ -14,17 +15,22 @@ export default function CostTechniquesSection({
     <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs sm:text-sm font-semibold text-[#5c685f] block mb-2 tracking-wide">
-            Technique-Wise Pricing
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1b221d] tracking-tight leading-tight">
-            Hair Transplant Cost in India <br />
-            by Technique
-          </h2>
-          <p className="text-xs sm:text-sm text-[#5c685f] mt-4 leading-relaxed font-normal max-w-2xl mx-auto">
-            Hair transplant cost in India depends on the technique used and the number of grafts required. The primary techniques are FUE, FUT and QHT. The number of grafts is determined based on the extent of baldness, commonly assessed using the Norwood scale.
+        {/* Top Header Row with Number 1 Badge */}
+        <div className="flex items-center justify-between pb-4 border-b border-gray-300 mb-10">
+          <div>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight">
+              Hair Transplant Cost by Technique
+            </h2>
+          </div>
+          <div className="hidden sm:flex items-center justify-center w-8 h-8 rounded border border-gray-400 text-xs font-semibold text-gray-700">
+            1
+          </div>
+        </div>
+
+        {/* Intro Subtitle */}
+        <div className="max-w-4xl mb-12">
+          <p className="text-sm sm:text-base text-[#5c685f] leading-relaxed font-normal">
+            Hair transplant cost in India depends on the technique used and the number of grafts required. The primary techniques are FUE, FUT and {COMPANY_NAME}. The number of grafts is determined based on the extent of baldness, commonly assessed using the Norwood scale.
           </p>
         </div>
 
@@ -165,13 +171,13 @@ export default function CostTechniquesSection({
           <div className="bg-white rounded-3xl p-7 sm:p-8 shadow-xs border border-gray-100/90 flex flex-col justify-between">
             <div>
               <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
-                QHT Technique
+                {COMPANY_NAME} Technique
               </span>
               <h3 className="text-lg sm:text-xl font-bold text-[#1b221d] mb-2">
                 Quick Hair Transplant
               </h3>
               <p className="text-xs text-[#5c685f] leading-relaxed font-normal min-h-[60px]">
-                QHT Clinic’s patented, proprietary technique – an advanced form of FUE. Simultaneous extraction and implantation reduces graft out-of-body time to under 2 hours for superior survival and density.
+                {COMPANY_NAME} Clinic’s patented, proprietary technique – an advanced form of FUE. Simultaneous extraction and implantation reduces graft out-of-body time to under 2 hours for superior survival and density.
               </p>
 
               {/* Price Row */}

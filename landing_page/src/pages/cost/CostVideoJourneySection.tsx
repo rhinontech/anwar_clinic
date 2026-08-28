@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Play } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface JourneyVideo {
   id: number;
@@ -15,42 +16,42 @@ const COST_JOURNEY_VIDEOS: JourneyVideo[] = [
   {
     id: 1,
     title: "Rajpal Yadav | Bollywood Actor Hair Transplant Journey",
-    channel: "QHT Hair Transplant Clinic",
+    channel: `${COMPANY_NAME} Hair Transplant Clinic`,
     youtubeId: "8Z0B660p7nU",
     thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-why-us-thumb.webp",
   },
   {
     id: 2,
     title: "FUE Hair Transplant Results | DAYA's FUE Hair Transplant 21-Days Review",
-    channel: "QHT Hair Transplant Clinic",
+    channel: `${COMPANY_NAME} Hair Transplant Clinic`,
     youtubeId: "WJ5c2z4kZGE",
     thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
   },
   {
     id: 3,
     title: "Hair Transplant in Mumbai (HX-LMAP) | Completely Hair Transplant",
-    channel: "QHT Hair Transplant Clinic",
+    channel: `${COMPANY_NAME} Hair Transplant Clinic`,
     youtubeId: "rK47G9_908Q",
     thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
   },
   {
     id: 4,
     title: "Hair Transplant in Indore | 2 PATIENTS AMAZING RESULTS",
-    channel: "QHT Hair Transplant Clinic",
+    channel: `${COMPANY_NAME} Hair Transplant Clinic`,
     youtubeId: "_7sxUwnt5UA",
     thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
   },
   {
     id: 5,
     title: "Hair Transplant in Ahmedabad | Best Results & High Density",
-    channel: "QHT Hair Transplant Clinic",
+    channel: `${COMPANY_NAME} Hair Transplant Clinic`,
     youtubeId: "_N3b69JjCpI",
     thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
   },
   {
     id: 6,
     title: "Hair Transplant in Dehradun | Best Results & Real Transformation",
-    channel: "QHT Hair Transplant Clinic",
+    channel: `${COMPANY_NAME} Hair Transplant Clinic`,
     youtubeId: "kk4TGEmal3Q",
     thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
   },
@@ -84,7 +85,7 @@ function VideoCard({ video }: { video: JourneyVideo }) {
           {/* Top Video Header Bar (Mimicking YouTube Player Top Bar) */}
           <div className="absolute inset-x-0 top-0 p-3.5 bg-gradient-to-b from-black/80 via-black/40 to-transparent flex items-start gap-2.5 pointer-events-none">
             <div className="w-7 h-7 rounded-full bg-white/20 border border-white/40 flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
-              QHT
+              {COMPANY_NAME}
             </div>
             <div className="flex-1 min-w-0">
               <h4 className="text-xs sm:text-sm font-semibold text-white truncate drop-shadow-sm leading-snug">

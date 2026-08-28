@@ -1,6 +1,7 @@
 import React from "react";
 import ComingSoonPage from "@/pages/common/ComingSoonPage";
 import { Metadata } from "next";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface PageProps {
   params: {
@@ -14,8 +15,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     .replace(/\b\w/g, (c) => c.toUpperCase());
 
   return {
-    title: `Hair Transplant in ${cityName} | QHT Clinic India`,
-    description: `Learn more about Hair Transplant in ${cityName} with QHT Clinic's certified surgeons, US-FDA approved technology, and transparent pricing.`,
+    title: `Hair Transplant in ${cityName} | ${COMPANY_NAME} Clinic India`,
+    description: `Learn more about Hair Transplant in ${cityName} with ${COMPANY_NAME} Clinic's certified surgeons, US-FDA approved technology, and transparent pricing.`,
   };
 }
 

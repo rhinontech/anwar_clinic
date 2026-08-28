@@ -2,27 +2,34 @@
 
 import React from "react";
 import { CheckCircle2, UserCheck } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
-const JOURNEY_PILLARS = [
+interface PillarItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const JOURNEY_PILLARS: PillarItem[] = [
   {
-    num: "01 /",
-    title: "Affordable access to expertise",
-    desc: "World-class hair transplants available with no compromise in quality.",
+    num: "01",
+    title: "15,000+ Procedures Completed",
+    desc: "A rich history of delivering exceptional results for patients across India and overseas.",
   },
   {
-    num: "02 /",
-    title: "Spacious, modern clinic",
-    desc: "Every aspect is designed for comfort, safety, and uses modern facilities.",
+    num: "02",
+    title: "Advanced Patented Techniques",
+    desc: "Utilising microscopic graft dissection and simultaneous implantation for maximum survival.",
   },
   {
-    num: "03 /",
-    title: "Doctor-led procedures",
-    desc: "Operative interventions performed only by skilled, trained surgeons.",
+    num: "03",
+    title: "Multi-City Footprint",
+    desc: "Clinics in Haridwar, Delhi, Gurugram and Hyderabad delivering uniform clinical excellence.",
   },
   {
-    num: "04 /",
-    title: "Clear Communication",
-    desc: "Direct and honest consultations, making it clear how much you are going to invest into yourself.",
+    num: "04",
+    title: "Strict Safety & Hygiene",
+    desc: "Single-use disposable punches and hospital-grade sterile operation theatres.",
   },
 ];
 
@@ -43,10 +50,10 @@ export default function AboutJourneySection() {
 
             <div className="space-y-4 text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-2xl pt-2">
               <p>
-                The journey of QHT Hair Transplant Clinic started with little more than a simple dream: to provide world-class hair restoration that would be truly transformational in India. What started as a dream has turned into one of the most trusted names in hair transplant in India, with thousands of happy clients who have restored not only their hair, but also their confidence.
+                The journey of {COMPANY_NAME} Hair Transplant Clinic started with little more than a simple dream: to provide world-class hair restoration that would be truly transformational in India. What started as a dream has turned into one of the most trusted names in hair transplant in India, with thousands of happy clients who have restored not only their hair, but also their confidence.
               </p>
               <p>
-                With each procedure, QHT Hair Transplant raises the standard on precision, safety, and natural results, validating their position as the most trusted and leading hair transplant clinic in India.
+                With each procedure, {COMPANY_NAME} Hair Transplant raises the standard on precision, safety, and natural results, validating their position as the most trusted and leading hair transplant clinic in India.
               </p>
             </div>
           </div>

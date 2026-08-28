@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface FeatureCard {
   id: number;
@@ -21,13 +22,13 @@ const DEFAULT_FEATURES: FeatureCard[] = [
     id: 1,
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp",
     title: "Celebrity Trusted",
-    desc: "QHT Clinic is trusted by celebrities for their Hair Transplant Repair.",
+    desc: `${COMPANY_NAME} Clinic is trusted by celebrities for their Hair Transplant Repair.`,
   },
   {
     id: 2,
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp",
     title: "Clinical Expertise",
-    desc: "With years of experience in handling Hair Transplant Repair cases, QHT Clinic delivers the best results.",
+    desc: `With years of experience in handling Hair Transplant Repair cases, ${COMPANY_NAME} Clinic delivers the best results.`,
   },
   {
     id: 3,
@@ -39,13 +40,13 @@ const DEFAULT_FEATURES: FeatureCard[] = [
     id: 4,
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp",
     title: "Best Facilities",
-    desc: "QHT clinic is equipped with the best technology and advanced techniques to yield a seamless experience.",
+    desc: `${COMPANY_NAME} Clinic is equipped with the best technology and advanced techniques to yield a seamless experience.`,
   },
 ];
 
 export default function ServiceWhyChooseQHTSection({
   title = "Hair Transplant Repair",
-  subtitle = "QHT Hair Transplants and Hair Transplant Repair services provide the right techniques, surgeons, natural results, the least recovery time, and proper aftercare to the patients for long-term success.",
+  subtitle = `${COMPANY_NAME} Hair Transplants and Hair Transplant Repair services provide the right techniques, surgeons, natural results, the least recovery time, and proper aftercare to the patients for long-term success.`,
   features = DEFAULT_FEATURES,
   onOpenConsultation,
 }: ServiceWhyChooseQHTSectionProps) {
@@ -56,7 +57,7 @@ export default function ServiceWhyChooseQHTSection({
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.18] max-w-xl">
-            Why Choose QHT for
+            Why Choose {COMPANY_NAME} for
             <br />
             {title}
           </h2>

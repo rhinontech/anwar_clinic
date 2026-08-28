@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Download, CheckCircle } from "lucide-react";
 import { COUNTRY_CODES } from "@/data/qhtData";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface EbookCatalogueFormProps {
   onOpenConsultation?: () => void;
@@ -44,7 +45,7 @@ export default function EbookCatalogueForm({
                   <div className="p-4 sm:p-5 bg-white text-[#1b221d] flex flex-col justify-between aspect-[3/4]">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center font-bold text-[10px]">
-                        QHT
+                        {COMPANY_NAME}
                       </div>
                     </div>
                     <div className="my-auto py-2">
@@ -60,7 +61,7 @@ export default function EbookCatalogueForm({
                     <div className="pt-2 border-t border-gray-100 flex items-center justify-center gap-1 opacity-80">
                       <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
                       <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
-                      <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[8px] flex items-center justify-center font-bold">QHT</div>
+                      <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[8px] flex items-center justify-center font-bold">{COMPANY_NAME}</div>
                     </div>
                   </div>
                 </div>
@@ -70,7 +71,7 @@ export default function EbookCatalogueForm({
                   <div className="p-4 sm:p-5 bg-white text-[#1b221d] flex flex-col justify-between aspect-[3/4]">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center font-bold text-[10px]">
-                        QHT
+                        {COMPANY_NAME}
                       </div>
                     </div>
                     <div className="my-auto py-2">
@@ -85,7 +86,7 @@ export default function EbookCatalogueForm({
                     {/* Illustration preview */}
                     <div className="pt-2 border-t border-gray-100 flex items-center justify-center gap-1 opacity-80">
                       <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
-                      <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[8px] flex items-center justify-center font-bold">QHT</div>
+                      <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[8px] flex items-center justify-center font-bold">{COMPANY_NAME}</div>
                       <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
                     </div>
                   </div>
@@ -138,7 +139,7 @@ export default function EbookCatalogueForm({
                     href="#download"
                     onClick={(e) => {
                       e.preventDefault();
-                      alert("Downloading QHT-Hair-Transplant-Guide.pdf");
+                      alert(`Downloading ${COMPANY_NAME}-Hair-Transplant-Guide.pdf`);
                     }}
                     className="inline-flex items-center gap-2 px-7 py-3 bg-white text-[#52664d] rounded-full text-xs font-bold hover:bg-gray-100 transition-colors shadow-md cursor-pointer"
                   >

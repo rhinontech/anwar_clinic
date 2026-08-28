@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface FAQItem {
   id: number;
@@ -23,17 +24,17 @@ const DEFAULT_FAQS: FAQItem[] = [
   {
     id: 2,
     question: "How long does Hair Transplant Repair last?",
-    answer: "The results are permanent when performed by expert surgeons like those at QHT Clinic.",
+    answer: `The results are permanent when performed by expert surgeons like those at ${COMPANY_NAME} Clinic.`,
   },
   {
     id: 3,
     question: "Can failed hair transplants be corrected completely?",
-    answer: "Yes, most of the failed procedures can be corrected at QHT Clinic with our advanced microscopic techniques and patented SAVA implanters.",
+    answer: `Yes, most of the failed procedures can be corrected at ${COMPANY_NAME} Clinic with our advanced microscopic techniques and patented SAVA implanters.`,
   },
   {
     id: 4,
-    question: "How is QHT better for corrective hair transplant?",
-    answer: "QHT has expert surgeons, advanced technology, minimal out-of-body graft time (<2 hours), and higher success rates exceeding 98%.",
+    question: `How is ${COMPANY_NAME} better for corrective hair transplant?`,
+    answer: `${COMPANY_NAME} has expert surgeons, advanced technology, minimal out-of-body graft time (<2 hours), and higher success rates exceeding 98%.`,
   },
 ];
 
@@ -65,7 +66,7 @@ export default function ServiceFAQSection({
             <div className="w-40 sm:w-48 aspect-square opacity-70 hover:opacity-100 transition-opacity">
               <img
                 src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/sd-faq-thumb.webp"
-                alt="QHT Clinic FAQ Vector"
+                alt={`${COMPANY_NAME} Clinic FAQ Vector`}
                 className="w-full h-full object-contain"
               />
             </div>

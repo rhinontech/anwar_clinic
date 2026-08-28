@@ -2,54 +2,77 @@
 
 import React, { useState, useRef, useCallback } from "react";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
-interface ResultCardItem {
+interface CostResultItem {
   id: number;
   name: string;
   beforeImg: string;
   afterImg: string;
+  grafts: string;
+  technique: string;
+  months: string;
 }
 
-const COST_RESULTS_CARDS: ResultCardItem[] = [
+const COST_RESULTS_CARDS: CostResultItem[] = [
   {
     id: 1,
-    name: "Devendra",
+    name: "Irfan",
     beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
     afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+    grafts: "3,200 Grafts",
+    technique: `${COMPANY_NAME} Technique`,
+    months: "9 Months Result",
   },
   {
     id: 2,
-    name: "Harsh Sharma",
+    name: "Kshitij Ahuja",
     beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
     afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+    grafts: "2,800 Grafts",
+    technique: `${COMPANY_NAME} Technique`,
+    months: "8 Months Result",
   },
   {
     id: 3,
-    name: "Probir Das",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+    name: "Puneet Chandra",
+    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
+    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+    grafts: "4,500 Grafts",
+    technique: `FUE + ${COMPANY_NAME}`,
+    months: "12 Months Result",
   },
   {
     id: 4,
-    name: "Ajay",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+    name: "Pranav Meshram",
+    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
+    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+    grafts: "4,000 Grafts",
+    technique: "FUE Technique",
+    months: "10 Months Result",
   },
   {
     id: 5,
-    name: "Dheerendra",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+    name: "Praveen Kumar",
+    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
+    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+    grafts: "3,500 Grafts",
+    technique: "DHI / FUE",
+    months: "9 Months Result",
   },
   {
     id: 6,
-    name: "Amit Kumar",
+    name: "Sagar Kumar",
     beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
     afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+    grafts: "2,600 Grafts",
+    technique: `${COMPANY_NAME} Technique`,
+    months: "7 Months Result",
   },
 ];
 
-function InteractiveComparisonCard({ item }: { item: ResultCardItem }) {
+function InteractiveComparisonCard({ item }: { item: CostResultItem }) {
   const [sliderPos, setSliderPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
@@ -79,54 +102,68 @@ function InteractiveComparisonCard({ item }: { item: ResultCardItem }) {
   };
 
   return (
-    <div
-      ref={containerRef}
-      onPointerDown={handlePointerDown}
-      onPointerMove={handlePointerMove}
-      onPointerUp={handlePointerUp}
-      className="relative w-full aspect-[4/3.3] overflow-hidden select-none bg-gray-900 cursor-ew-resize touch-none rounded-[28px] sm:rounded-[32px] shadow-lg border border-white/15 group"
-    >
-      {/* AFTER IMAGE (Right Base Layer) */}
-      <img
-        src={item.afterImg}
-        alt={`${item.name} After`}
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        draggable={false}
-      />
-
-      {/* BEFORE IMAGE (Left Clipped Layer) */}
+    <div className="bg-[#38493a] rounded-3xl overflow-hidden shadow-xl border border-white/10 flex flex-col justify-between">
+      
+      {/* Interactive Split Comparison Slider */}
       <div
-        className="absolute inset-0 overflow-hidden pointer-events-none"
-        style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
+        ref={containerRef}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        className="relative aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden select-none bg-black"
       >
+        {/* AFTER IMAGE (Base Layer) */}
         <img
-          src={item.beforeImg}
-          alt={`${item.name} Before`}
+          src={item.afterImg}
+          alt={`${item.name} After`}
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           draggable={false}
         />
-      </div>
 
-      {/* Divider Line */}
-      <div
-        className="absolute top-0 bottom-0 w-[2px] bg-white pointer-events-none shadow-md"
-        style={{ left: `${sliderPos}%` }}
-      >
-        {/* Central Slider Knob */}
-        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-7 h-7 rounded-md bg-black text-white flex items-center justify-center shadow-lg border border-white/20">
-          <span className="text-[10px] font-bold tracking-tight">
+        {/* BEFORE IMAGE (Clipped Layer) */}
+        <div
+          className="absolute inset-0 overflow-hidden pointer-events-none"
+          style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
+        >
+          <img
+            src={item.beforeImg}
+            alt={`${item.name} Before`}
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            draggable={false}
+          />
+        </div>
+
+        {/* Divider Handle */}
+        <div
+          className="absolute top-0 bottom-0 w-[2px] bg-white pointer-events-none shadow-md"
+          style={{ left: `${sliderPos}%` }}
+        >
+          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-black/80 backdrop-blur-xs text-white flex items-center justify-center border border-white/40 shadow-lg text-[10px]">
             ‹›
-          </span>
+          </div>
+        </div>
+
+        {/* Labels */}
+        <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-semibold px-2 py-0.5 rounded-full pointer-events-none">
+          Before
+        </div>
+        <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-semibold px-2 py-0.5 rounded-full pointer-events-none">
+          After
         </div>
       </div>
 
-      {/* Labels */}
-      <div className="absolute top-3.5 left-3.5 pointer-events-none text-white/90 text-xs font-semibold drop-shadow-sm">
-        Before
+      {/* Card Info Details */}
+      <div className="p-5 space-y-3">
+        <div className="flex items-center justify-between text-xs text-gray-200 font-medium">
+          <span className="font-bold text-white">{item.name}</span>
+          <span className="text-[#b1fc85] font-semibold">{item.grafts}</span>
+        </div>
+        <div className="flex items-center justify-between text-[11px] text-gray-300">
+          <span>{item.technique}</span>
+          <span>{item.months}</span>
+        </div>
       </div>
-      <div className="absolute top-3.5 right-3.5 pointer-events-none text-white/90 text-xs font-semibold drop-shadow-sm">
-        After
-      </div>
+
     </div>
   );
 }
@@ -143,7 +180,7 @@ export default function CostResultsSection() {
               Results of Hair Transplant
             </h2>
             <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-normal">
-              See real transformations delivered through QHT’s proprietary technique. Every result reflects precision graft handling, optimal density, and natural-looking outcomes - designed by experienced surgeons with attention to detail.
+              See real transformations delivered through {COMPANY_NAME}’s proprietary technique. Every result reflects precision graft handling, optimal density, and natural-looking outcomes - designed by experienced surgeons with attention to detail.
             </p>
           </div>
 
@@ -151,7 +188,7 @@ export default function CostResultsSection() {
           <div className="flex-shrink-0">
             <img
               src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/sd-result-vector.webp"
-              alt="QHT Motif"
+              alt={`${COMPANY_NAME} Motif`}
               className="w-24 h-24 lg:w-32 lg:h-32 object-contain opacity-90"
             />
           </div>

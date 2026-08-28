@@ -6,6 +6,8 @@ import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
 import { NAV_ABOUT_LIST } from "@/data/qhtData";
 import { useConsultation } from "@/context/ConsultationContext";
 
+import { COMPANY_NAME } from "@/config/constants";
+
 interface HeaderProps {
   onOpenConsultation?: () => void;
 }
@@ -14,7 +16,7 @@ const SERVICES_COL_1 = [
   { label: "Hair Transplant For Men", href: "/services/hair-transplant-for-men/" },
   { label: "Bad Hair Transplant Correction", href: "/services/bad-hair-transplant-correction/" },
   { label: "Beard Hair Transplant", href: "/services/beard-hair-transplant-in-india/" },
-  { label: "QHT Hair Transplant", href: "/services/quick-hair-transplant-in-india/" },
+  { label: `${COMPANY_NAME} Hair Transplant`, href: "/services/quick-hair-transplant-in-india/" },
   { label: "Moustache Hair Transplant", href: "/services/moustache-hair-transplant-in-india/" },
   { label: "Female Hair Transplant", href: "/services/female-hair-transplantation/" },
   { label: "Caucasian Patients Hair Transplant", href: "/services/caucasian-patients-hair-transplant/" },
@@ -45,6 +47,7 @@ interface HeaderBarProps {
   onOpenConsultation: () => void;
   onToggleMobileMenu: () => void;
   isMobileMenuOpen: boolean;
+  cliniUrl: string;
 }
 
 function HeaderBar({
@@ -55,6 +58,7 @@ function HeaderBar({
   onOpenConsultation,
   onToggleMobileMenu,
   isMobileMenuOpen,
+  cliniUrl
 }: HeaderBarProps) {
   return (
     <div className="w-full relative">
@@ -63,7 +67,7 @@ function HeaderBar({
         <Link href="/" className="flex items-center gap-2 relative z-10 flex-shrink-0">
           <img
             src="https://www.qhtclinic.com/wp-content/uploads/2025/08/header-logo.webp"
-            alt="QHT Clinic Logo"
+            alt={`${COMPANY_NAME} Clinic Logo`}
             className={`${isSticky ? "h-9 md:h-11" : "h-10 sm:h-12 md:h-13"} w-auto object-contain transition-all duration-200`}
           />
         </Link>
@@ -115,7 +119,7 @@ function HeaderBar({
 
             {/* Medicines */}
             <a
-              href="https://theuroots.com/collections/all"
+              href={cliniUrl}
               target="_blank"
               rel="noreferrer"
               className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors"
@@ -149,7 +153,7 @@ function HeaderBar({
 
           {/* CTA Button: Book your surgery */}
           <a
-            href="https://pages.razorpay.com/pl_R9xTz14IIPBGyE/view"
+            href="#"
             target="_blank"
             rel="noreferrer"
             className="bg-[#52664d] hover:bg-[#43543e] text-white px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl md:rounded-2xl text-[14px] sm:text-[15px] font-bold transition-colors duration-200 shadow-md whitespace-nowrap ml-1"
@@ -161,7 +165,7 @@ function HeaderBar({
         {/* Mobile Actions & Menu Toggle */}
         <div className="flex lg:hidden items-center gap-2">
           <a
-            href="https://pages.razorpay.com/pl_R9xTz14IIPBGyE/view"
+            href="#"
             target="_blank"
             rel="noreferrer"
             className="px-4 py-2 bg-[#52664d] text-white text-xs font-semibold rounded-xl shadow-xs"
@@ -328,11 +332,13 @@ function HeaderBar({
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
 export default function Header({ onOpenConsultation }: HeaderProps) {
+
+  const cliniUrl = process.env.NEXT_PUBLIC_CLINIC_URL || '#';
   const { openConsultation } = useConsultation();
   const handleOpenConsultation = onOpenConsultation || openConsultation;
 
@@ -375,6 +381,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
           onOpenConsultation={handleOpenConsultation}
           onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           isMobileMenuOpen={isMobileMenuOpen}
+          cliniUrl={cliniUrl}
         />
       </header>
 
@@ -393,6 +400,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
           onOpenConsultation={handleOpenConsultation}
           onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           isMobileMenuOpen={isMobileMenuOpen}
+          cliniUrl={cliniUrl}
         />
       </header>
 
@@ -473,7 +481,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
               </Link>
 
               <a
-                href="https://theuroots.com/collections/all"
+                href={cliniUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="block text-base font-semibold text-gray-800"

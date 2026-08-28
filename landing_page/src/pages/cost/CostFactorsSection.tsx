@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 const COST_FACTORS = [
   {
     num: "01",
-    title: "Technique Used\n(FUE / FUT / QHT)",
-    desc: "Different techniques vary in complexity and cost. FUT is the most affordable; FUE and QHT carry higher prices due to their minimally invasive approach and superior graft survival rates. The right choice depends on your baldness grade and expectations.",
+    title: `Technique Used\n(FUE / FUT / ${COMPANY_NAME})`,
+    desc: `Different techniques vary in complexity and cost. FUT is the most affordable; FUE and ${COMPANY_NAME} carry higher prices due to their minimally invasive approach and superior graft survival rates. The right choice depends on your baldness grade and expectations.`,
   },
   {
     num: "02",

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ServiceTypeItem {
   title: string;
@@ -27,7 +28,7 @@ const DEFAULT_TYPES: ServiceTypeItem[] = [
     ],
   },
   {
-    title: "QHT Technique",
+    title: `${COMPANY_NAME} Technique`,
     desc: "Superfine Cole Punches are used for extracting follicles, and use SAVA implanters for the best results and a recovery time of about 5 days.",
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
     points: [

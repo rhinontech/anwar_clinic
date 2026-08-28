@@ -1,9 +1,11 @@
 "use client";
 
 import React from "react";
+import { ArrowUpRight } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ServiceIntroSectionProps {
-  title: string;
+  title?: string;
   slug?: string;
   block1Heading?: string;
   block1Lead?: string;
@@ -11,6 +13,7 @@ interface ServiceIntroSectionProps {
   block1Image?: string;
   pointer1?: string;
   pointer2?: string;
+  block1Pointers?: { title: string; desc: string }[];
   block2Heading?: string;
   block2Paragraphs?: string[];
   block2Image?: string;
@@ -18,19 +21,20 @@ interface ServiceIntroSectionProps {
 }
 
 const DEFAULT_BLOCK1_IMAGE =
-  "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-1.jpg";
+  "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-why-us-thumb.webp";
 const DEFAULT_BLOCK2_IMAGE =
-  "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-2.jpg";
+  "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-why-us-thumb.webp";
 
 export default function ServiceIntroSection({
-  title,
-  slug,
+  title = "Bad Hair Transplant Correction",
+  slug = "bad-hair-transplant-correction",
   block1Heading,
   block1Lead,
   block1Paragraphs,
   block1Image = DEFAULT_BLOCK1_IMAGE,
   pointer1 = "Punch removal",
   pointer2 = "Graft correction",
+  block1Pointers,
   block2Heading,
   block2Paragraphs,
   block2Image = DEFAULT_BLOCK2_IMAGE,
@@ -45,15 +49,15 @@ export default function ServiceIntroSection({
       ? block1Paragraphs
       : [
           `${title} is a procedure that can be used to correct the results of a hair transplant that has not been successful. It helps restore hairline and density, as well as conceal scars caused by earlier procedures.`,
-          "At QHT Clinic, our experts use advanced techniques and treatment is centered on nurturing natural growth, avoiding complications, and for long-lasting results.",
+          `At ${COMPANY_NAME} Clinic, our experts use advanced techniques and treatment is centered on nurturing natural growth, avoiding complications, and for long-lasting results.`,
         ];
   const heading2 = block2Heading || `${title} in India`;
   const paras2 =
     block2Paragraphs && block2Paragraphs.length > 0
       ? block2Paragraphs
       : [
-          "Failed Hair transplants are prevalent due to unskilled surgeons, leading to unfavourable results. In India, the Failed Hair Transplant Correction is performed by experts using our own Quick Hair Transplant method. Because of such skilled surgeons, like those at QHT Clinic, and affordability, India is a trusted hub globally.",
-          "Opting for the QHT Clinic ensures long-term success and safe corrections.",
+          `Failed Hair transplants are prevalent due to unskilled surgeons, leading to unfavourable results. In India, the Failed Hair Transplant Correction is performed by experts using our own Quick Hair Transplant method. Because of such skilled surgeons, like those at ${COMPANY_NAME} Clinic, and affordability, India is a trusted hub globally.`,
+          `Opting for the ${COMPANY_NAME} Clinic ensures long-term success and safe corrections.`,
         ];
 
   return (

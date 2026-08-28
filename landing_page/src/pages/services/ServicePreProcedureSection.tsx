@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface PreProcedureTip {
   id: number;
@@ -32,7 +33,7 @@ const DEFAULT_TIPS: PreProcedureTip[] = [
     id: 3,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-1.webp",
     title: "Medical Evaluation",
-    desc: "Past transplant details, medications, and overall health of the customer are taken at QHT Clinic.",
+    desc: `Past transplant details, medications, and overall health of the customer are taken at ${COMPANY_NAME} Clinic.`,
   },
   {
     id: 4,

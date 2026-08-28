@@ -1,13 +1,14 @@
 import React from "react";
-import ComingSoonPage from "@/pages/common/ComingSoonPage";
+import ContactSection from "@/components/common/ContactSection";
 import { Metadata } from "next";
+import { COMPANY_NAME } from "@/config/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us | QHT Clinic India",
+  title: `Contact Us | ${COMPANY_NAME} Clinic India`,
   description:
-    "Get in touch with QHT Clinic branches across Delhi, Haridwar, Gurugram, Hyderabad, and Kolkata.",
+    `Get in touch with ${COMPANY_NAME} Clinic branches across Delhi, Haridwar, Gurugram, Hyderabad, and Kolkata.`,
 };
 
 export default function Page() {
-  return <ComingSoonPage title="Contact Us" />;
+  return <ContactSection />;
 }

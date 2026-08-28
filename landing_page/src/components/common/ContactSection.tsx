@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Mail, MapPin, CheckCircle2, ChevronDown } from "lucide-react";
 import { COUNTRY_CODES } from "@/data/qhtData";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface ClinicLocation {
   city: string;
@@ -13,7 +14,7 @@ interface ClinicLocation {
 const DEFAULT_CLINIC_LOCATIONS: ClinicLocation[] = [
   {
     city: "Haridwar",
-    address: "QHT Clinic, 521, Model Colony, Ranipur More, Haridwar, Uttarakhand.",
+    address: `${COMPANY_NAME} Clinic, 521, Model Colony, Ranipur More, Haridwar, Uttarakhand.`,
     mapLink: "https://maps.app.goo.gl/BtDzrvdu7hEDbBoJ9",
   },
   {
@@ -23,7 +24,7 @@ const DEFAULT_CLINIC_LOCATIONS: ClinicLocation[] = [
   },
   {
     city: "Hyderabad",
-    address: "QHT Clinic Opposite Hotel Park HyattRoad No. 2 Banjara Hills, Hyderabad, Telangana",
+    address: `${COMPANY_NAME} Clinic Opposite Hotel Park HyattRoad No. 2 Banjara Hills, Hyderabad, Telangana`,
     mapLink: "https://maps.app.goo.gl/NcNQH3MtLWponejy8",
   },
   {
@@ -210,7 +211,7 @@ export default function ContactSection({
                         onChange={(e) => setPrivacyAgreed(e.target.checked)}
                         className="w-4 h-4 rounded border-gray-300 text-[#596d53] focus:ring-[#596d53] accent-[#596d53] cursor-pointer"
                       />
-                      <span>You authorise QHT Clinic as per Privacy Policy</span>
+                      <span>You authorise {COMPANY_NAME} Clinic as per Privacy Policy</span>
                     </label>
                   </div>
 

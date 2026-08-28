@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface CityItem {
   id: string;
@@ -348,7 +349,7 @@ export default function CostByCitySection({
             Hair Transplant Cost by City in India
           </h2>
           <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-3xl">
-            Explore city-specific hair transplant pricing across India. Metropolitan cities may carry a small premium due to advanced clinic infrastructure, while QHT's transparent pricing ensures no surprise charges nationwide.
+            Explore city-specific hair transplant pricing across India. Metropolitan cities may carry a small premium due to advanced clinic infrastructure, while {COMPANY_NAME}'s transparent pricing ensures no surprise charges nationwide.
           </p>
         </div>
 

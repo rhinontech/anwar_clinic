@@ -3,6 +3,8 @@
 import React from "react";
 import { Check } from "lucide-react";
 
+import { COMPANY_NAME } from "@/config/constants";
+
 interface CandidatePoint {
   title: string;
   desc: string;
@@ -36,7 +38,7 @@ const DEFAULT_CANDIDATE_POINTS: CandidatePoint[] = [
 
 export default function ServiceCandidateSection({
   title = "Hair Transplant Repair",
-  subtitle = "Customers with poor and unnatural hair density and scars from past surgeries, consider QHT Clinic for a Hair Transplant Repair.",
+  subtitle = `Customers with poor and unnatural hair density and scars from past surgeries, consider ${COMPANY_NAME} Clinic for a Hair Transplant Repair.`,
   points = DEFAULT_CANDIDATE_POINTS,
   onOpenConsultation,
 }: ServiceCandidateSectionProps) {

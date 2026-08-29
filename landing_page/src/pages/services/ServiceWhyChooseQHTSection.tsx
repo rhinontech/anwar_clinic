@@ -4,7 +4,7 @@ import React from "react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface FeatureCard {
-  id: number;
+  id?: number;
   image: string;
   title: string;
   desc: string;
@@ -57,22 +57,22 @@ export default function ServiceWhyChooseQHTSection({
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18] max-w-xl">
-            Why Choose {COMPANY_NAME} for
-            <br />
-            {title}
+            {title.toLowerCase().includes("why choose")
+              ? title
+              : `Why Choose ${COMPANY_NAME} for ${title}`}
           </h2>
           <p className="text-sm sm:text-base text-gray-200 max-w-md leading-relaxed font-normal">
             {subtitle}
           </p>
         </div>
 
-        {/* 3-Column Card Grid (4 Photo Cards + 1 Lime Review CTA Card) */}
+        {/* 3-Column Card Grid (Photo Cards + Lime Review CTA Card) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-stretch">
           
           {/* Photo Cards */}
-          {features.map((item) => (
+          {features.map((item, idx) => (
             <div
-              key={item.id}
+              key={item.id ?? idx}
               className="relative aspect-[4/3.8] rounded-3xl overflow-hidden shadow-lg border border-white/10 group bg-black/20"
             >
               {/* Image */}

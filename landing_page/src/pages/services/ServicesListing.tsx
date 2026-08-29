@@ -23,9 +23,9 @@ const CATEGORIES = [
 export default function ServicesListing({ services, onOpenConsultation }: ServicesListingProps) {
   const [activeFilter, setActiveFilter] = useState("All Services");
 
-  // API content when available, otherwise the list bundled with the site.
+  // API content when available, otherwise fallback bundled list.
   const allServices: ServiceCardItem[] =
-    services && services.length > 0
+    services !== undefined && services !== null
       ? services.map((s) => ({
         id: s.slug,
         title: s.title,
@@ -39,7 +39,7 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
   const filteredServices = allServices.filter((item) => {
     if (activeFilter === "All Services") return true;
     if (activeFilter === "Popular")
-      return ["fut-hair-transplant", "best-fue-hair-transplant-in-india", "quick-hair-transplant-in-india", "hair-transplant-for-men"].includes(item.id);
+      return ["best-fue-hair-transplant-in-india", "quick-hair-transplant-in-india", "hair-transplant-for-men"].includes(item.id);
     if (activeFilter === "Hairline & Density")
       return ["hairline-reconstruction", "custom-hairline-transplant", "natural-look-hair-restoration", "ultra-dense-hair-transplant", "temple-hair-transplant", "crown-hair-transplant"].includes(item.id);
     if (activeFilter === "Facial Hair")

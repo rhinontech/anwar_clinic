@@ -5,7 +5,7 @@ import { ArrowDown } from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface CostFactor {
-  id: number;
+  id?: number;
   icon: string;
   title: string;
   desc: string;
@@ -59,101 +59,98 @@ const DEFAULT_FACTORS: CostFactor[] = [
 export default function ServiceCostSection({
   title = "Hair Transplant Repair",
   costOverview = DEFAULT_COST_OVERVIEW,
-  factorsSubtitle = `The Hair Transplant Repair in India and at ${COMPANY_NAME} Clinic offers a more affordable approach when compared to Western countries, making it a hub for Corrective Hair Surgery due to its affordable yet trustworthy expertise. The focus must be on getting the right expertise to avoid repeated failures.`,
+  factorsSubtitle = "The cost of hair transplant repairs can be affected by the expertise of surgeons, techniques used, the clinic’s location, and the severity of the damage.",
   factors = DEFAULT_FACTORS,
 }: ServiceCostSectionProps) {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#fafcfa] overflow-hidden">
       <div className="qht-large-container">
-        
-        {/* Top Header Row with Number 5 Badge */}
-        <div className="flex items-center justify-between pb-4 border-b border-gray-300">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight">
-            {title} Cost in India
-          </h2>
-          <div className="hidden sm:flex items-center justify-center w-8 h-8 rounded border border-gray-400 text-xs font-semibold text-gray-700">
-            5
-          </div>
-        </div>
 
-        {/* Upper Cost Description & Down Arrow */}
-        <div className="mt-8 max-w-3xl space-y-4">
-          {costOverview.map((para, idx) => (
-            <p key={idx} className="text-sm sm:text-base text-[#5c685f] leading-relaxed font-normal">
-              {para}
-            </p>
-          ))}
-
-          {/* Down Arrow Circle */}
-          <div className="pt-4 pb-12">
-            <div className="w-12 h-12 rounded-full border border-gray-400/80 flex items-center justify-center text-gray-600 hover:border-gray-800 transition-colors">
-              <ArrowDown className="w-5 h-5 stroke-[1.5]" />
+        {/* 1. TOP PART: Title + Cost Overview Paragraphs + Pricing Table */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start pb-14 sm:pb-16 border-b border-gray-200/90">
+          
+          {/* Left Column: Heading + Descriptive Text */}
+          <div className="lg:col-span-6 space-y-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
+              {title} Cost in India
+            </h2>
+            <div className="space-y-3.5 text-sm sm:text-base text-[#5c685f] leading-relaxed font-normal">
+              {costOverview.map((para, idx) => (
+                <p key={idx}>{para}</p>
+              ))}
+            </div>
+            {/* Gray scroll down indicator */}
+            <div className="pt-2 hidden sm:block">
+              <ArrowDown className="w-5 h-5 text-gray-400" />
             </div>
           </div>
+
+          {/* Right Column: Comparative Cost Table */}
+          <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 shadow-[0_6px_24px_rgba(0,0,0,0.05)] border border-gray-100/90">
+            <div className="divide-y divide-gray-100">
+              <div className="py-4 first:pt-0 flex items-center justify-between">
+                <span className="font-bold text-[#1b221d] text-base sm:text-lg">{COMPANY_NAME}</span>
+                <span className="text-xs sm:text-sm font-semibold text-[#596d53] bg-[#eef4ee] px-3 py-1 rounded-full">
+                  Highly Affordable, Mid-Ranged
+                </span>
+              </div>
+              <div className="py-4 flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal">
+                <span className="font-medium text-gray-800">FUE</span>
+                <span>INR 60,000 – INR 2,00,000</span>
+              </div>
+              <div className="py-4 flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal">
+                <span className="font-medium text-gray-800">FUT</span>
+                <span>INR 30,000 - INR 150,000</span>
+              </div>
+              <div className="py-4 last:pb-0 flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal">
+                <span className="font-medium text-gray-800">{COMPANY_NAME}</span>
+                <span className="font-bold text-[#1b221d]">INR 1,00,000 – INR 2,00,000 +</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        {/* Middle Subheading Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
-          <div className="lg:col-span-5">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#1b221d] tracking-tight leading-snug">
-              The factors affecting the {title} cost include:
+        {/* 2. BOTTOM PART: Factors Affecting Cost */}
+        <div className="pt-12 sm:pt-16">
+          <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12">
+            <h3 className="text-2xl sm:text-3xl font-[500] text-[#1b221d] tracking-tight leading-snug max-w-md">
+              Factors affecting the cost of {title}
             </h3>
-          </div>
-          <div className="lg:col-span-7">
-            <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-[#5c685f] max-w-xl leading-relaxed font-normal">
               {factorsSubtitle}
             </p>
           </div>
-        </div>
 
-        {/* Factors Grid (4 on top row with dividing lines + 1 on bottom row) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-gray-200/90 items-start">
-          {factors.slice(0, 4).map((f) => (
-            <div
-              key={f.id}
-              className="flex flex-col justify-start lg:px-6 xl:px-8 first:lg:pl-0 last:lg:pr-0 group"
-            >
-              {/* Factor Icon */}
-              <div className="w-12 h-12 flex items-center justify-start flex-shrink-0 group-hover:scale-110 transition-transform">
-                <img
-                  src={f.icon}
-                  alt={f.title}
-                  className="w-full h-full object-contain"
-                />
+          {/* Dynamic 4-Column Factors Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {factors.map((f, idx) => (
+              <div
+                key={f.id ?? idx}
+                className="flex flex-col justify-start group bg-white lg:bg-transparent p-5 lg:p-0 rounded-2xl lg:rounded-none border border-gray-100 lg:border-none shadow-sm lg:shadow-none"
+              >
+                {/* Factor Icon */}
+                <div className="w-12 h-12 flex items-center justify-start flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <img
+                    src={f.icon}
+                    alt={f.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
+                {/* Factor Title */}
+                <h4 className="text-lg sm:text-xl font-bold text-[#1b221d] mt-5 leading-snug tracking-tight">
+                  {f.title}
+                </h4>
+
+                {/* Factor Description */}
+                <p className="text-xs sm:text-sm text-[#5c685f] mt-2 leading-relaxed font-normal">
+                  {f.desc}
+                </p>
               </div>
-
-              {/* Factor Title */}
-              <h4 className="text-lg sm:text-xl font-bold text-[#1b221d] mt-5 leading-snug tracking-tight min-h-[48px]">
-                {f.title}
-              </h4>
-
-              {/* Factor Description */}
-              <p className="text-xs sm:text-sm text-[#5c685f] mt-2 leading-relaxed font-normal">
-                {f.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* 5th Factor: Multiple Sittings (Bottom Row) */}
-        {factors[4] && (
-          <div className="mt-12 max-w-sm">
-            <div className="w-12 h-12 flex items-center justify-start flex-shrink-0 group-hover:scale-110 transition-transform">
-              <img
-                src={factors[4].icon}
-                alt={factors[4].title}
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <h4 className="text-lg sm:text-xl font-bold text-[#1b221d] mt-5 leading-snug tracking-tight">
-              {factors[4].title}
-            </h4>
-            <p className="text-xs sm:text-sm text-[#5c685f] mt-2 leading-relaxed font-normal">
-              {factors[4].desc}
-            </p>
+            ))}
           </div>
-        )}
-
+        </div>
       </div>
     </section>
   );

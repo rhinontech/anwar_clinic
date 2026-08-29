@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface ComparisonCard {
-  id: number;
+  id?: number;
   title: string;
   purpose: string;
   effectiveness: string;
@@ -137,7 +137,9 @@ export default function ServiceComparisonSection({
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-14">
           <div className="max-w-3xl space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight">
-              Comparison of {title} Techniques
+              {title.toLowerCase().includes("comparison")
+                ? title
+                : `Comparison of ${title} Techniques`}
             </h2>
             <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
               {subtitle}
@@ -176,9 +178,9 @@ export default function ServiceComparisonSection({
           className="flex gap-6 overflow-x-auto no-scrollbar py-4 px-2 snap-x snap-mandatory scroll-smooth cursor-grab active:cursor-grabbing"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {cards.map((card) => (
+          {cards.map((card, idx) => (
             <div
-              key={card.id}
+              key={card.id ?? idx}
               className="flex-shrink-0 w-[275px] sm:w-[310px] md:w-[325px] bg-[#eff5f1] rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300 snap-start border border-gray-200/50"
             >
               {/* Header Title */}

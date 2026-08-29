@@ -7,37 +7,12 @@ import { NAV_ABOUT_LIST } from "@/data/qhtData";
 import { useConsultation } from "@/context/ConsultationContext";
 import TopOfferBanner from "./TopOfferBanner";
 import { COMPANY_NAME } from "@/config/constants";
+import type { ServiceCard } from "@/lib/services";
 
 interface HeaderProps {
   onOpenConsultation?: () => void;
+  initialServices?: ServiceCard[] | null;
 }
-
-const SERVICES_COL_1 = [
-  { label: "Hair Transplant For Men", href: "/services/hair-transplant-for-men/" },
-  { label: "Bad Hair Transplant Correction", href: "/services/bad-hair-transplant-correction/" },
-  { label: "Beard Hair Transplant", href: "/services/beard-hair-transplant-in-india/" },
-  { label: `${COMPANY_NAME} Hair Transplant`, href: "/services/quick-hair-transplant-in-india/" },
-  { label: "Moustache Hair Transplant", href: "/services/moustache-hair-transplant-in-india/" },
-  { label: "Female Hair Transplant", href: "/services/female-hair-transplantation/" },
-  { label: "Caucasian Patients Hair Transplant", href: "/services/caucasian-patients-hair-transplant/" },
-  { label: "Custom Hairline Transplant", href: "/services/custom-hairline-transplant/" },
-  { label: "Hairline Reconstruction", href: "/services/hairline-reconstruction/" },
-  { label: "Social Media Influencer Hair", href: "/services/social-media-influencer-hair-transplant/" },
-  { label: "FUT Hair Transplant", href: "/services/fut-hair-transplant/" },
-];
-
-const SERVICES_COL_2 = [
-  { label: "Hair Transplant Repair", href: "/services/failed-hair-transplant-repair/" },
-  { label: "Unshaven Hair Transplant", href: "/services/unshaven-hair-transplant/" },
-  { label: "Ultra-Dense Hair Transplant", href: "/services/ultra-dense-hair-transplant/" },
-  { label: "FUE Hair Transplant", href: "/services/best-fue-hair-transplant-in-india/" },
-  { label: "Afro Hair Transplant", href: "/services/afro-hair-transplant-in-india/" },
-  { label: "Burn Hair Transplant", href: "/services/burn-hair-transplant/" },
-  { label: "Crown Hair Transplant", href: "/services/crown-hair-transplant/" },
-  { label: "Eyebrow Reconstruction", href: "/services/eyebrow-reconstruction-in-india/" },
-  { label: "Natural Look Hair Restoration", href: "/services/natural-look-hair-restoration/" },
-  { label: "Temple Hair Transplant", href: "/services/temple-hair-transplant/" },
-];
 
 interface HeaderBarProps {
   isSticky?: boolean;
@@ -48,6 +23,7 @@ interface HeaderBarProps {
   onToggleMobileMenu: () => void;
   isMobileMenuOpen: boolean;
   cliniUrl: string;
+  services: ServiceCard[];
 }
 
 function HeaderBar({
@@ -58,8 +34,17 @@ function HeaderBar({
   onOpenConsultation,
   onToggleMobileMenu,
   isMobileMenuOpen,
-  cliniUrl
+  cliniUrl,
+  services,
 }: HeaderBarProps) {
+  const serviceItems = services.map((s) => ({
+    label: s.title,
+    href: `/services/${s.slug}`,
+  }));
+  const half = Math.ceil(serviceItems.length / 2);
+  const col1 = serviceItems.slice(0, half);
+  const col2 = serviceItems.slice(half);
+
   return (
     <div className="w-full relative">
       <div className="qht-large-container flex items-center justify-between relative">
@@ -209,28 +194,28 @@ function HeaderBar({
               <div className="lg:col-span-8 bg-[#586d52] rounded-2xl p-6 sm:p-7">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3.5">
                   <div className="space-y-3.5">
-                    {SERVICES_COL_1.map((item, idx) => (
-                      <a
+                    {col1.map((item, idx) => (
+                      <Link
                         key={idx}
                         href={item.href}
                         className="flex items-center gap-2 text-[13.5px] font-medium text-white/95 hover:text-[#d7fbd0] hover:translate-x-1 transition-all duration-150 leading-tight group"
                       >
                         <ArrowUpRight className="w-4 h-4 text-white/80 group-hover:text-white transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                         <span>{item.label}</span>
-                      </a>
+                      </Link>
                     ))}
                   </div>
 
                   <div className="space-y-3.5">
-                    {SERVICES_COL_2.map((item, idx) => (
-                      <a
+                    {col2.map((item, idx) => (
+                      <Link
                         key={idx}
                         href={item.href}
                         className="flex items-center gap-2 text-[13.5px] font-medium text-white/95 hover:text-[#d7fbd0] hover:translate-x-1 transition-all duration-150 leading-tight group"
                       >
                         <ArrowUpRight className="w-4 h-4 text-white/80 group-hover:text-white transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                         <span>{item.label}</span>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -336,17 +321,31 @@ function HeaderBar({
   );
 }
 
-export default function Header({ onOpenConsultation }: HeaderProps) {
-
-  const cliniUrl = process.env.NEXT_PUBLIC_CLINIC_URL || '#';
+export default function Header({ onOpenConsultation, initialServices }: HeaderProps) {
+  const cliniUrl = process.env.NEXT_PUBLIC_CLINIC_URL || "#";
   const { openConsultation } = useConsultation();
   const handleOpenConsultation = onOpenConsultation || openConsultation;
 
+  const [services, setServices] = useState<ServiceCard[]>(initialServices || []);
   const [isStickyVisible, setIsStickyVisible] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    if (initialServices && initialServices.length > 0) {
+      setServices(initialServices);
+    } else {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5050";
+      fetch(`${apiUrl}/public/services`)
+        .then((res) => (res.ok ? res.json() : []))
+        .then((data) => {
+          if (Array.isArray(data)) setServices(data);
+        })
+        .catch(() => {});
+    }
+  }, [initialServices]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -396,6 +395,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
           onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           isMobileMenuOpen={isMobileMenuOpen}
           cliniUrl={cliniUrl}
+          services={services}
         />
       </header>
 
@@ -415,6 +415,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
           onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           isMobileMenuOpen={isMobileMenuOpen}
           cliniUrl={cliniUrl}
+          services={services}
         />
       </header>
 
@@ -477,10 +478,15 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                     >
                       View All Services →
                     </Link>
-                    {SERVICES_COL_1.concat(SERVICES_COL_2).map((srv, idx) => (
-                      <a key={idx} href={srv.href} className="block py-1">
-                        {srv.label}
-                      </a>
+                    {services.map((srv) => (
+                      <Link
+                        key={srv.slug}
+                        href={`/services/${srv.slug}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block py-1"
+                      >
+                        {srv.title}
+                      </Link>
                     ))}
                   </div>
                 )}

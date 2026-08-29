@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Play } from "lucide-react";
 
 interface JourneyVideo {
-  id: number;
+  id?: number;
   title: string;
   youtubeId: string;
   thumbnail?: string;
@@ -126,8 +126,8 @@ export default function ServiceJourneySection({
 
         {/* 3-Column Video Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {videos.map((video) => (
-            <VideoCard key={video.id} video={video} />
+          {videos.map((video, idx) => (
+            <VideoCard key={video.id ?? video.youtubeId ?? idx} video={video} />
           ))}
         </div>
 

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 
 interface TimelineWeek {
-  id: number;
+  id?: number;
   label: string;
   image: string;
   expectations: string[];
@@ -79,9 +79,9 @@ export default function ServiceRecoveryTimelineSection({
         {/* Header */}
         <div className="max-w-3xl mb-12 sm:mb-16 space-y-3">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
-            Recovery Time and Aftercare of
-            <br />
-            {title}
+            {title.toLowerCase().includes("recovery")
+              ? title
+              : `Recovery Time and Aftercare of ${title}`}
           </h2>
           <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
             {subtitle}
@@ -97,7 +97,7 @@ export default function ServiceRecoveryTimelineSection({
               const isActive = idx === activeWeekIndex;
               return (
                 <button
-                  key={w.id}
+                  key={w.id ?? idx}
                   onClick={() => setActiveWeekIndex(idx)}
                   className={`px-6 py-3 rounded-full text-xs font-bold transition-all text-center whitespace-nowrap ${
                     isActive

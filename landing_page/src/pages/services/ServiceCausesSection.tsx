@@ -4,7 +4,7 @@ import React from "react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface CauseItem {
-  id: number;
+  id?: number;
   icon: string;
   title: string;
   desc: string;
@@ -64,11 +64,17 @@ export default function ServiceCausesSection({
           {/* Cell 1: Section Heading & Subtitle */}
           <div className="flex flex-col justify-center space-y-4 pr-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
-              Cause of Early
-              <br />
-              {title}
-              <br />
-              Loss
+              {title.toLowerCase().startsWith("cause") ? (
+                title
+              ) : (
+                <>
+                  Cause of Early
+                  <br />
+                  {title}
+                  <br />
+                  Loss
+                </>
+              )}
             </h2>
             <p className="text-sm sm:text-base text-[#5c685f] leading-relaxed font-normal">
               {subtitle}
@@ -76,9 +82,9 @@ export default function ServiceCausesSection({
           </div>
 
           {/* Cells 2 to 6: Pale Mint Rounded Cards */}
-          {causes.map((cause) => (
+          {causes.map((cause, idx) => (
             <div
-              key={cause.id}
+              key={cause.id ?? idx}
               className="bg-[#eff5f1] rounded-3xl p-7 sm:p-8 flex flex-col justify-start hover:shadow-md transition-shadow duration-200 group"
             >
               {/* Minimalist Outline Icon */}

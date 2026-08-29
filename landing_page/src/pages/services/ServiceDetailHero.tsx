@@ -79,7 +79,9 @@ export default function ServiceDetailHero({
 
               {/* Title */}
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
-                Best {title} Clinic In India
+                {title.toLowerCase().includes("best") || title.toLowerCase().includes("clinic")
+                  ? title
+                  : `Best ${title} Clinic In India`}
               </h1>
 
               {/* Subtitle */}

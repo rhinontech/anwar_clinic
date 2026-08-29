@@ -41,7 +41,9 @@ export default function ServiceDosDontsSection({
         {/* Centered Heading & Subtitle */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 space-y-3">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-tight">
-            Do’s and Don’ts after {title}
+            {title.toLowerCase().includes("do") || title.toLowerCase().includes("don")
+              ? title
+              : `Do’s and Don’ts after ${title}`}
           </h2>
           <p className="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
             {subtitle}

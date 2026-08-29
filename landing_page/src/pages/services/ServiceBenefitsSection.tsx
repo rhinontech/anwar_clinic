@@ -4,7 +4,7 @@ import React from "react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface BenefitItem {
-  id: number;
+  id?: number;
   icon: string;
   title: string;
   desc: string;
@@ -74,9 +74,9 @@ export default function ServiceBenefitsSection({
 
         {/* Benefits List with Dividers */}
         <div className="border-t border-white/20">
-          {benefits.map((item) => (
+          {benefits.map((item, index) => (
             <div
-              key={item.id}
+              key={item.id ?? index}
               className="py-7 sm:py-9 border-b border-white/20 flex flex-col md:flex-row md:items-center justify-between gap-6 sm:gap-8 group"
             >
               {/* Left & Middle: Circular Outline Icon + Title */}

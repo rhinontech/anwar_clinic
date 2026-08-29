@@ -4,7 +4,7 @@ import React from "react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface PreProcedureTip {
-  id: number;
+  id?: number;
   icon: string;
   title: string;
   desc: string;
@@ -57,20 +57,20 @@ export default function ServicePreProcedureSection({
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] max-w-lg">
-            Pre-Procedure Tips for
-            <br />
-            {title}
+            {title.toLowerCase().includes("pre")
+              ? title
+              : `Pre-Procedure Tips for ${title}`}
           </h2>
           <p className="text-sm sm:text-base text-[#5c685f] max-w-md leading-relaxed font-normal">
             {subtitle || defaultSubtitle}
           </p>
         </div>
 
-        {/* 4-Column Tips with Vertical Dividers */}
+        {/* 4-Column Tips Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-gray-200">
-          {tips.map((tip) => (
+          {tips.map((tip, idx) => (
             <div
-              key={tip.id}
+              key={tip.id ?? idx}
               className="flex flex-col justify-start lg:px-6 xl:px-8 first:lg:pl-0 last:lg:pr-0 group"
             >
               {/* Minimalist Outline Icon */}

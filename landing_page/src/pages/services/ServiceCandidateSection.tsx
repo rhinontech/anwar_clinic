@@ -49,9 +49,15 @@ export default function ServiceCandidateSection({
         {/* Top Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] max-w-2xl">
-            Who is an Ideal Candidate for
-            <br />
-            {title}?
+            {title.toLowerCase().startsWith("who is") ? (
+              title
+            ) : (
+              <>
+                Who is an Ideal Candidate for
+                <br />
+                {title}?
+              </>
+            )}
           </h2>
           <p className="text-sm sm:text-lg text-[#5c685f] max-w-md leading-relaxed font-normal">
             {subtitle}

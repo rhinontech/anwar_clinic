@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface FAQItem {
-  id: number;
+  id?: number;
   question: string;
   answer: string;
 }
@@ -58,7 +58,9 @@ export default function ServiceFAQSection({
           <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-8">
             <div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
-                FAQ on {title}
+                {title.toLowerCase().includes("faq") || title.toLowerCase().includes("question")
+                  ? title
+                  : `FAQ on ${title}`}
               </h2>
             </div>
 
@@ -78,7 +80,7 @@ export default function ServiceFAQSection({
               const isOpen = openIndex === idx;
 
               return (
-                <div key={faq.id} className="transition-colors">
+                <div key={faq.id ?? idx} className="transition-colors">
                   {/* Accordion Trigger Head */}
                   <button
                     onClick={() => toggleAccordion(idx)}

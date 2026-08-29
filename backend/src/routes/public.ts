@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
-import { Service } from "../models";
+import { Service, Lead } from "../models";
+import { LEAD_SOURCES, LeadSource } from "../models/Lead";
 import { SEED_SECTIONS_BY_SLUG } from "../config/serviceSeedData";
 
 // Open, credential-less API consumed by the landing page at build/revalidate
@@ -59,6 +60,66 @@ router.get("/services/:slug", async (req: Request, res: Response) => {
   }
 
   res.json(service);
+});
+
+
+// Naive in-memory throttle: one IP can file a handful of enquiries a minute.
+// Enough to blunt an accidental double-submit or a trivial bot; a real WAF or
+// captcha belongs in front of this if abuse ever becomes a problem.
+const SUBMIT_WINDOW_MS = 60_000;
+const SUBMIT_MAX = 5;
+const recentSubmits = new Map<string, number[]>();
+
+function isRateLimited(ip: string) {
+  const now = Date.now();
+  const hits = (recentSubmits.get(ip) || []).filter((t) => now - t < SUBMIT_WINDOW_MS);
+  hits.push(now);
+  recentSubmits.set(ip, hits);
+  // The map only ever holds active IPs — prune anything that aged out.
+  if (recentSubmits.size > 5000) {
+    for (const [key, times] of recentSubmits) {
+      if (times.every((t) => now - t >= SUBMIT_WINDOW_MS)) recentSubmits.delete(key);
+    }
+  }
+  return hits.length > SUBMIT_MAX;
+}
+
+const trim = (v: unknown, max: number) =>
+  typeof v === "string" && v.trim() ? v.trim().slice(0, max) : null;
+
+// Lead capture for every public form on the landing page. Deliberately open and
+// credential-less — the response carries no data back, only an acknowledgement.
+router.post("/leads", async (req: Request, res: Response) => {
+  if (isRateLimited(req.ip || "unknown")) {
+    res.status(429).json({ message: "Too many requests — please try again in a minute." });
+    return;
+  }
+
+  const fullName = trim(req.body?.fullName, 120);
+  const phone = trim(req.body?.phone, 20)?.replace(/[^\d]/g, "") || null;
+
+  if (!fullName || !phone || phone.length < 7) {
+    res.status(400).json({ message: "A name and a valid phone number are required." });
+    return;
+  }
+
+  const source = req.body?.source as LeadSource;
+
+  await Lead.create({
+    fullName,
+    countryCode: trim(req.body?.countryCode, 8) || "+91",
+    phone,
+    email: trim(req.body?.email, 160),
+    city: trim(req.body?.city, 80),
+    branch: trim(req.body?.branch, 80),
+    message: trim(req.body?.message, 2000),
+    whatsappOptIn: Boolean(req.body?.whatsappOptIn),
+    source: LEAD_SOURCES.includes(source) && source !== "manual" ? source : "consultation_modal",
+    pageUrl: trim(req.body?.pageUrl, 500),
+    status: "new",
+  });
+
+  res.status(201).json({ message: "Thanks — our team will reach out shortly." });
 });
 
 export default router;

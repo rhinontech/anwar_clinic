@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { X, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
 import { COUNTRY_CODES, CLINIC_BRANCHES } from "@/data/qhtData";
 import { COMPANY_NAME } from "@/config/constants";
+import { submitLead } from "@/lib/leads";
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -20,24 +21,39 @@ export default function ConsultationModal({
   const [branch, setBranch] = useState("Delhi");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || phone.length < 7) return;
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError(null);
+    try {
+      await submitLead({
+        fullName: name,
+        countryCode,
+        phone,
+        branch,
+        source: "consultation_modal",
+      });
       setIsSubmitted(true);
-    }, 800);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleResetAndClose = () => {
     setName("");
     setPhone("");
     setIsSubmitted(false);
+    setError(null);
     onClose();
   };
 
@@ -158,6 +174,12 @@ export default function ConsultationModal({
                   <option value="Online">Online Video Consultation</option>
                 </select>
               </div>
+
+              {error && (
+                <p className="rounded-lg bg-red-50 px-3 py-2 text-xs text-red-600">
+                  {error}
+                </p>
+              )}
 
               <div className="pt-2">
                 <button

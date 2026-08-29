@@ -11,6 +11,7 @@ import {
   TbChartHistogram,
   TbPhoto,
   TbClipboardText,
+  TbUserPlus,
   TbSettings,
 } from "react-icons/tb";
 
@@ -36,6 +37,7 @@ export const NAV_ITEMS: NavItem[] = [
   { title: "Inventory",     icon: <TbPackage className="h-5 w-5 shrink-0" />,         path: "/inventory",     permissions: ["inventory:read"] },
   { title: "Staff",         icon: <TbUserCog className="h-5 w-5 shrink-0" />,         path: "/staff",         permissions: ["staff:read"] },
   { title: "Reports",       icon: <TbChartHistogram className="h-5 w-5 shrink-0" />,  path: "/reports",       permissions: ["reports:read"] },
+  { title: "Leads",         icon: <TbUserPlus className="h-5 w-5 shrink-0" />,        path: "/leads",         permissions: ["leads:read"] },
   { title: "Services",      icon: <TbClipboardText className="h-5 w-5 shrink-0" />,   path: "/services",      permissions: ["services:read"] },
   { title: "Media",         icon: <TbPhoto className="h-5 w-5 shrink-0" />,           path: "/media",         permissions: ["media:read"] },
   { title: "Settings",      icon: <TbSettings className="h-5 w-5 shrink-0" />,        path: "/settings",      permissions: ["settings:read"] },
@@ -60,6 +62,8 @@ export const PERMISSION_LABELS: Record<string, string> = {
   "staff:read": "View staff directory",
   "staff:write": "Add, edit & deactivate staff",
   "reports:read": "View clinic reports",
+  "leads:read": "View website enquiries",
+  "leads:write": "Update, assign & delete enquiries",
   "services:read": "View website services",
   "services:write": "Create, edit & publish service pages",
   "media:read": "View the media library",
@@ -80,9 +84,10 @@ export const RESOURCE_META: { key: string; label: string; order: number }[] = [
   { key: "inventory", label: "Inventory", order: 6 },
   { key: "staff", label: "Staff", order: 7 },
   { key: "reports", label: "Reports", order: 8 },
-  { key: "services", label: "Website Services", order: 9 },
-  { key: "media", label: "Media Library", order: 10 },
-  { key: "settings", label: "Settings", order: 11 },
+  { key: "leads", label: "Leads", order: 9 },
+  { key: "services", label: "Website Services", order: 10 },
+  { key: "media", label: "Media Library", order: 11 },
+  { key: "settings", label: "Settings", order: 12 },
 ];
 
 export function resourceLabel(resource: string) {

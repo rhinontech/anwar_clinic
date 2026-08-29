@@ -21,6 +21,8 @@ export const PERMISSION_CATALOG = [
   { name: "staff:read",         resource: "staff",         action: "read"  },
   { name: "staff:write",        resource: "staff",         action: "write" },
   { name: "reports:read",       resource: "reports",       action: "read"  },
+  { name: "leads:read",         resource: "leads",         action: "read"  },
+  { name: "leads:write",        resource: "leads",         action: "write" },
   { name: "services:read",      resource: "services",      action: "read"  },
   { name: "services:write",     resource: "services",      action: "write" },
   { name: "media:read",         resource: "media",         action: "read"  },
@@ -39,6 +41,7 @@ export const DEFAULT_ROLE_GRANTS: Record<string, string[]> = {
     "patients:read", "patients:write",
     "prescriptions:read", "prescriptions:write",
     "reports:read",
+    "leads:read",
   ],
   receptionist: [
     "dashboard:read",
@@ -46,6 +49,7 @@ export const DEFAULT_ROLE_GRANTS: Record<string, string[]> = {
     "patients:read", "patients:write",
     "doctors:read",
     "billing:read", "billing:write",
+    "leads:read", "leads:write",
   ],
   pharmacist: [
     "dashboard:read",

@@ -5,6 +5,7 @@ import Footer from "@/components/common/Footer";
 import FloatingActionBar from "@/components/common/FloatingActionBar";
 import { ConsultationProvider } from "@/context/ConsultationContext";
 import { COMPANY_NAME } from "@/config/constants";
+import ChatbotWrapper from "@/components/Chatbot/ChatbotWrapper";
 
 import { fetchServices } from "@/lib/services";
 
@@ -32,7 +33,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/cropped-Fav-Icon-192x192.png",
-    apple: "https://www.qhtclinic.com/wp-content/uploads/2025/11/cropped-Fav-Icon-180x180.png",
+    apple:
+      "https://www.qhtclinic.com/wp-content/uploads/2025/11/cropped-Fav-Icon-180x180.png",
   },
 };
 
@@ -53,6 +55,8 @@ export default async function RootLayout({
             <Footer initialServices={services} />
             <FloatingActionBar />
           </div>
+
+          <ChatbotWrapper />
         </ConsultationProvider>
       </body>
     </html>

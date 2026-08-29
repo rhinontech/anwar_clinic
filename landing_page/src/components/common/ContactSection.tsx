@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Mail, MapPin, CheckCircle2, ChevronDown } from "lucide-react";
 import { COUNTRY_CODES } from "@/data/qhtData";
 import { COMPANY_NAME } from "@/config/constants";
+import { submitLead } from "@/lib/leads";
 
 interface ClinicLocation {
   city: string;
@@ -54,16 +55,32 @@ export default function ContactSection({
   const [privacyAgreed, setPrivacyAgreed] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName.trim() || phone.length < 7) return;
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError(null);
+    try {
+      await submitLead({
+        fullName,
+        countryCode,
+        phone,
+        email,
+        city,
+        whatsappOptIn,
+        source: "contact_form",
+      });
       setIsSubmitted(true);
-    }, 700);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
@@ -72,6 +89,7 @@ export default function ContactSection({
     setEmail("");
     setCity("");
     setIsSubmitted(false);
+    setError(null);
   };
 
   return (
@@ -214,6 +232,12 @@ export default function ContactSection({
                       <span>You authorise {COMPANY_NAME} Clinic as per Privacy Policy</span>
                     </label>
                   </div>
+
+                  {error && (
+                    <p className="rounded-lg bg-red-50 px-3 py-2 text-xs text-red-600">
+                      {error}
+                    </p>
+                  )}
 
                   {/* Submit Button */}
                   <div className="pt-2">

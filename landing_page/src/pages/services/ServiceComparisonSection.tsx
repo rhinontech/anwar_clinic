@@ -136,7 +136,7 @@ export default function ServiceComparisonSection({
         {/* Header with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-14">
           <div className="max-w-3xl space-y-3">
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight">
               Comparison of {title} Techniques
             </h2>
             <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">

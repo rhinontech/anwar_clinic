@@ -63,7 +63,7 @@ export default function ServiceCausesSection({
           
           {/* Cell 1: Section Heading & Subtitle */}
           <div className="flex flex-col justify-center space-y-4 pr-4">
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-[1.18]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
               Cause of Early
               <br />
               {title}

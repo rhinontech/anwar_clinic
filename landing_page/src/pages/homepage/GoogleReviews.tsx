@@ -43,7 +43,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
   return (
     <section className={`py-16 sm:py-20 lg:py-24 bg-[#f8faf8] overflow-hidden ${className}`}>
       <div className="qht-large-container">
-        
+
         {/* Header Row */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 sm:mb-16">
           <div>
@@ -68,7 +68,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
               </svg>
               <span>Verified Google Reviews</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#1b221d] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight">
               Reviews on Google
             </h2>
           </div>

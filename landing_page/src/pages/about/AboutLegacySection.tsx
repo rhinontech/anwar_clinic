@@ -69,7 +69,7 @@ export default function AboutLegacySection() {
             
             {/* Title & Subtitle */}
             <div className="max-w-2xl">
-              <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-tight text-white leading-tight mb-3">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] tracking-tight text-white leading-tight mb-3">
                 Our Legacy in Hair Restoration
               </h2>
               <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
@@ -124,7 +124,7 @@ export default function AboutLegacySection() {
                     
                     {/* Content */}
                     <div>
-                      <h3 className="text-base sm:text-lg font-bold text-[#bbf786] leading-snug mb-3">
+                      <h3 className="text-base sm:text-lg font-[500] text-[#bbf786] leading-snug mb-3">
                         {milestone.title}
                       </h3>
                       <p className="text-xs sm:text-[13px] text-white/85 leading-relaxed font-normal line-clamp-6">

@@ -14,11 +14,11 @@ export default function CostTechniquesSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Top Header Row with Number 1 Badge */}
         <div className="flex items-center justify-between pb-4 border-b border-gray-300 mb-10">
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight">
               Hair Transplant Cost by Technique
             </h2>
           </div>
@@ -29,21 +29,21 @@ export default function CostTechniquesSection({
 
         {/* Intro Subtitle */}
         <div className="max-w-4xl mb-12">
-          <p className="text-sm sm:text-base text-[#5c685f] leading-relaxed font-normal">
+          <p className="text-sm sm:text-lg text-[#5c685f] leading-relaxed font-normal">
             Hair transplant cost in India depends on the technique used and the number of grafts required. The primary techniques are FUE, FUT and {COMPANY_NAME}. The number of grafts is determined based on the extent of baldness, commonly assessed using the Norwood scale.
           </p>
         </div>
 
         {/* 3 Pricing Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch max-w-6xl mx-auto">
-          
+
           {/* 1. FUT Technique (White Card) */}
           <div className="bg-white rounded-3xl p-7 sm:p-8 shadow-xs border border-gray-100/90 flex flex-col justify-between">
             <div>
               <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
                 FUT Technique
               </span>
-              <h3 className="text-lg sm:text-xl font-bold text-[#1b221d] mb-2">
+              <h3 className="text-lg sm:text-xl font-[500] text-[#1b221d] mb-2">
                 Follicular Unit Transplantation
               </h3>
               <p className="text-xs text-[#5c685f] leading-relaxed font-normal min-h-[60px]">
@@ -108,7 +108,7 @@ export default function CostTechniquesSection({
               <span className="text-[11px] font-bold text-[#b1fc85] uppercase tracking-wider block mb-1">
                 FUE Technique
               </span>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+              <h3 className="text-lg sm:text-xl font-[500] text-white mb-2">
                 Follicular Unit Extraction
               </h3>
               <p className="text-xs text-white/85 leading-relaxed font-normal min-h-[60px]">
@@ -173,7 +173,7 @@ export default function CostTechniquesSection({
               <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
                 {COMPANY_NAME} Technique
               </span>
-              <h3 className="text-lg sm:text-xl font-bold text-[#1b221d] mb-2">
+              <h3 className="text-lg sm:text-xl font-[500] text-[#1b221d] mb-2">
                 Quick Hair Transplant
               </h3>
               <p className="text-xs text-[#5c685f] leading-relaxed font-normal min-h-[60px]">

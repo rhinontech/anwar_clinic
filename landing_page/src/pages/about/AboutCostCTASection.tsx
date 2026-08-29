@@ -61,7 +61,7 @@ export default function AboutCostCTASection({
 
             {/* Text */}
             <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight">
+              <h3 className="text-2xl sm:text-3xl font-[500] text-white tracking-tight leading-tight">
                 Interested in costs?
               </h3>
               <p className="text-xs sm:text-sm text-white/80 font-normal mt-1 leading-normal">

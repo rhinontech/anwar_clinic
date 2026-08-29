@@ -51,7 +51,7 @@ export default function ServiceTypesSection({
         
         {/* Centered Heading & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1b221d] tracking-tight leading-[1.18]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
             Types of {title}
           </h2>
           <p className="text-sm sm:text-base text-[#5c685f] mt-3.5 leading-relaxed font-normal">

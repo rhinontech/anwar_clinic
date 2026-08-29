@@ -64,7 +64,7 @@ export default function ServiceBenefitsSection({
         
         {/* Section Heading & Subtitle */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.18]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
             Benefits of {title}
           </h2>
           <p className="text-sm sm:text-base text-gray-300 mt-3.5 leading-relaxed font-normal whitespace-pre-line">

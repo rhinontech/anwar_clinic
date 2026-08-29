@@ -193,7 +193,7 @@ export default function ClinicShowcaseSection({
         
         {/* Heading & Intro */}
         <div className="max-w-5xl mb-8 sm:mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#1b221d] tracking-tight leading-[1.14] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14] mb-4">
             We have state of the art hair transplant <br />
             clinic across in india.
           </h2>
@@ -279,7 +279,7 @@ export default function ClinicShowcaseSection({
               <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-[#b1fc85]/15 rounded-full blur-2xl pointer-events-none" />
 
               <div className="relative z-10">
-                <h3 className="text-2xl sm:text-[26px] font-bold text-white leading-tight mb-2 tracking-tight">
+                <h3 className="text-2xl sm:text-[26px] font-[500] text-white leading-tight mb-2 tracking-tight">
                   Get An Expert <br />
                   Assistance.
                 </h3>
@@ -304,7 +304,7 @@ export default function ClinicShowcaseSection({
             
             {/* Branch Showcase Header */}
             <div className="mb-6">
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#1b221d] mb-2 tracking-tight">
+              <h3 className="text-2xl sm:text-3xl font-[500] text-[#1b221d] mb-2 tracking-tight">
                 {currentBranch.title}
               </h3>
               <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed max-w-2xl">

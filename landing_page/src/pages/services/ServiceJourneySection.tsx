@@ -119,7 +119,7 @@ export default function ServiceJourneySection({
         
         {/* Section Heading */}
         <div className="max-w-2xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1b221d] tracking-tight leading-[1.18] whitespace-pre-line">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] whitespace-pre-line">
             {title}
           </h2>
         </div>

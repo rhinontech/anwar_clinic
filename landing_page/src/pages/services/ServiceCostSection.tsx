@@ -68,7 +68,7 @@ export default function ServiceCostSection({
         
         {/* Top Header Row with Number 5 Badge */}
         <div className="flex items-center justify-between pb-4 border-b border-gray-300">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1b221d] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight">
             {title} Cost in India
           </h2>
           <div className="hidden sm:flex items-center justify-center w-8 h-8 rounded border border-gray-400 text-xs font-semibold text-gray-700">

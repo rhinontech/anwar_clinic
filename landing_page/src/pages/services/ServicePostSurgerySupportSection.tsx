@@ -47,7 +47,7 @@ export default function ServicePostSurgerySupportSection({
         
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-[1.18] max-w-xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] max-w-xl">
             Post-Surgery Support for
             <br />
             {title}

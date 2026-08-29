@@ -176,7 +176,7 @@ export default function CostResultsSection() {
         {/* Header Row with Vector Motif */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-12 lg:mb-16">
           <div className="max-w-2xl space-y-3">
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.15]">
               Results of Hair Transplant
             </h2>
             <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-normal">

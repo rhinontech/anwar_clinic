@@ -19,7 +19,7 @@ export default function ServiceBookingBar({
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
           
           {/* Left Title */}
-          <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight text-center lg:text-left max-w-xl">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-[500] text-white tracking-tight leading-tight text-center lg:text-left max-w-xl">
             {title}
           </h2>
 

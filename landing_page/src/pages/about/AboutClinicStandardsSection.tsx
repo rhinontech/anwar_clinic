@@ -118,7 +118,7 @@ export default function AboutClinicStandardsSection() {
           
           {/* Left Column: Heading & City Pills */}
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-[1.12] mb-5">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.12] mb-5">
               International Standards, <br />
               Local Care
             </h2>

@@ -77,13 +77,13 @@ export default function ContactSection({
   return (
     <section className={`py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden ${className}`}>
       <div className="qht-large-container">
-        
+
         {/* Top Half: Contact Info (Left) + Lead Form (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Left Column: Heading, Info, Email */}
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-[#1b221d] leading-[1.18] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] leading-[1.18] tracking-tight">
               Get in touch with us
               <br />
               or you can visit us.
@@ -107,7 +107,7 @@ export default function ContactSection({
           {/* Right Column: Lead Form */}
           <div className="lg:col-span-6">
             <div className="w-full">
-              <h3 className="text-2xl sm:text-[28px] font-bold text-[#596d53] mb-6">
+              <h3 className="text-2xl sm:text-[28px] font-[500] text-[#596d53] mb-6">
                 Book a Consultation Today
               </h3>
 
@@ -249,7 +249,7 @@ export default function ContactSection({
                 </div>
 
                 {/* City Name */}
-                <h4 className="text-lg sm:text-xl font-bold text-[#1b221d] mt-4 tracking-tight leading-snug">
+                <h4 className="text-lg sm:text-xl font-[500] text-[#1b221d] mt-4 tracking-tight leading-snug">
                   {loc.city}
                 </h4>
 

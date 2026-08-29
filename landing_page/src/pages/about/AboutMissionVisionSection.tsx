@@ -17,7 +17,7 @@ export default function AboutMissionVisionSection() {
               <span className="text-xs sm:text-sm font-semibold text-[#bbf786] tracking-wide uppercase">
                 Mission
               </span>
-              <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-white leading-snug tracking-tight">
+              <h3 className="text-xl sm:text-2xl lg:text-[28px] font-[500] text-white leading-snug tracking-tight">
                 To provide safe, effective, and natural hair transplantation methods, creating a new industry standard nationally and internationally.
               </h3>
             </div>
@@ -40,7 +40,7 @@ export default function AboutMissionVisionSection() {
               <span className="text-xs sm:text-sm font-semibold text-[#bbf786] tracking-wide uppercase">
                 Vision
               </span>
-              <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-white leading-snug tracking-tight">
+              <h3 className="text-xl sm:text-2xl lg:text-[28px] font-[500] text-white leading-snug tracking-tight">
                 To be the most advanced hair transplant clinic in the world, where innovation and compassion go hand in hand.
               </h3>
             </div>

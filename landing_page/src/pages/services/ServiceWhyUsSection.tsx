@@ -48,7 +48,7 @@ export default function ServiceWhyUsSection({
         
         {/* Header Row */}
         <div className="max-w-3xl mb-12 sm:mb-16 space-y-3">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.18]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
             Why We Are Amongst the Most
             <br />
             Trusted {title} Clinics

@@ -27,7 +27,7 @@ export function ConsultationProvider({ children }: { children: ReactNode }) {
     // 2. Open recurringly every 1 minute
     const intervalTimer = setInterval(() => {
       setIsConsultationOpen(true);
-    }, 60000); // 60,000ms = 1 min
+    }, 600000); // 60,000ms = 1 min
 
     return () => {
       clearTimeout(initialLoadTimer);

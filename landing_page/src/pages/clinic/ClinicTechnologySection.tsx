@@ -69,7 +69,7 @@ export default function ClinicTechnologySection() {
           
           {/* Left Column: Heading, Description & CTA */}
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-[1.12]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.12]">
               All Our Clinics Feature <br />
               Cutting-Edge Technology & <br />
               Skilled Professionals
@@ -100,7 +100,7 @@ export default function ClinicTechnologySection() {
 
                 {/* Text */}
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold text-white mb-1">
+                  <h3 className="text-base sm:text-lg font-[500] text-white mb-1">
                     {feature.title}
                   </h3>
                   <p className="text-xs sm:text-[13px] text-white/80 leading-relaxed font-normal">

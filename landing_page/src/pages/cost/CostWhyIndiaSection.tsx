@@ -20,7 +20,7 @@ export default function CostWhyIndiaSection() {
           {/* Left Column: Why India Benefits */}
           <div className="lg:col-span-7 space-y-8">
             <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-[1.12] mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.12] mb-4">
                 Why India is the Smartest Choice <br />
                 for Hair Transplant
               </h2>

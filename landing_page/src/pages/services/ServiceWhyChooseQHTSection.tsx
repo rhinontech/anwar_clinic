@@ -56,7 +56,7 @@ export default function ServiceWhyChooseQHTSection({
         
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.18] max-w-xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18] max-w-xl">
             Why Choose {COMPANY_NAME} for
             <br />
             {title}

@@ -81,10 +81,10 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
                 +91-9084726916
               </a>
               <a
-                href="mailto:care@qhtclinic.com"
+                href="mailto:care@clinic.com"
                 className="hover:text-[#baf788] transition-colors"
               >
-                care@qhtclinic.com
+                care@clinic.com
               </a>
             </div>
 

@@ -31,7 +31,7 @@ export default function ResultsMarqueeStripe({
             key={idx}
             className="flex items-center gap-6 sm:gap-8 px-3 sm:px-4 flex-shrink-0"
           >
-            <span className="text-xs sm:text-sm font-medium text-white/95 tracking-wide whitespace-nowrap">
+            <span className="text-xs sm:text-lg font-medium text-white/95 tracking-wide whitespace-nowrap">
               {item}
             </span>
             <span className="text-[9px] text-[#b1fc85] opacity-90 select-none">

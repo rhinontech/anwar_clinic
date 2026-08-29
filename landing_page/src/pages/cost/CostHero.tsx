@@ -37,14 +37,14 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-white tracking-tight leading-[1.12]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-[500] text-white tracking-tight leading-[1.12]">
               Hair Transplant Cost <br className="hidden sm:block" />
               <span className="text-[#b1fc85]">in India</span> | Transparent <br className="hidden sm:block" />
               Pricing, Real Results.
             </h1>
 
             {/* Overview Paragraph */}
-            <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-normal max-w-xl">
+            <p className="text-xs sm:text-lg text-white/85 leading-relaxed font-normal max-w-xl">
               Hair transplant cost in India varies based on your stage of hair loss and the technique used. At {COMPANY_NAME} Clinic, pricing starts from ₹50/graft (FUT), ₹70/graft (FUE), and ₹100/graft with our patented {COMPANY_NAME} technique — performed under expert surgeon supervision, with 15,000+ procedures completed over 10+ years and transparent, upfront pricing.
             </p>
 

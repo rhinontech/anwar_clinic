@@ -45,7 +45,7 @@ export default function AboutComparisonTableSection() {
         
         {/* Centered Heading & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight mb-3">
             How {COMPANY_NAME} Differs from <br className="hidden sm:inline" />
             Other Clinics?
           </h2>

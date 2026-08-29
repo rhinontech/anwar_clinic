@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface SupportItem {
-  id: number;
+  id?: number;
   title: string;
   desc: string;
 }
@@ -47,10 +47,10 @@ export default function ServicePostSurgerySupportSection({
         
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-[1.18] max-w-xl">
-            Post-Surgery Support for
-            <br />
-            {title}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] max-w-xl">
+            {title.toLowerCase().includes("post")
+              ? title
+              : `Post-Surgery Support for ${title}`}
           </h2>
           <p className="text-sm sm:text-base text-[#5c685f] max-w-md leading-relaxed font-normal">
             {subtitle}
@@ -73,8 +73,8 @@ export default function ServicePostSurgerySupportSection({
 
           {/* Right Column: Support Items with Dividers */}
           <div className="lg:col-span-7 flex flex-col divide-y divide-gray-200/90 border-y border-gray-200/90">
-            {supportItems.map((item) => (
-              <div key={item.id} className="py-6 sm:py-8 flex items-start gap-4 sm:gap-5 group">
+            {supportItems.map((item, idx) => (
+              <div key={item.id ?? idx} className="py-6 sm:py-8 flex items-start gap-4 sm:gap-5 group">
                 {/* Sage/Olive Circle Checkmark */}
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs group-hover:scale-110 transition-transform">
                   <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />

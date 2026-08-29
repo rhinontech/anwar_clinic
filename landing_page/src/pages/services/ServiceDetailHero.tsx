@@ -48,7 +48,7 @@ export default function ServiceDetailHero({
     <div className="relative w-full">
       {/* 1. Main Hero Banner */}
       <section
-        className="relative w-full bg-slate-900 bg-cover bg-center overflow-hidden min-h-[500px] sm:min-h-[580px] lg:min-h-[660px] flex items-center pt-28 sm:pt-36 lg:pt-40 pb-20 sm:pb-24"
+        className="relative w-full bg-slate-900 bg-cover bg-center overflow-hidden min-h-[500px] sm:min-h-[580px] lg:min-h-[660px] flex items-center pt-28 sm:pt-36 lg:pt-20 pb-20 sm:pb-24"
         style={{
           backgroundImage: `url('${bannerImage}')`,
           backgroundPosition: "center 30%",
@@ -59,7 +59,7 @@ export default function ServiceDetailHero({
 
         <div className="qht-large-container relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Left Content: Breadcrumbs + Title + Description */}
             <div className="lg:col-span-7 space-y-4">
               {/* Breadcrumb Navigation */}
@@ -78,8 +78,10 @@ export default function ServiceDetailHero({
               </nav>
 
               {/* Title */}
-              <h1 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-white tracking-tight leading-[1.18]">
-                Best {title} Clinic In India
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
+                {title.toLowerCase().includes("best") || title.toLowerCase().includes("clinic")
+                  ? title
+                  : `Best ${title} Clinic In India`}
               </h1>
 
               {/* Subtitle */}

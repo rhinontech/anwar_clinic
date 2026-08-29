@@ -19,7 +19,7 @@ export default function AboutHero() {
         
         {/* Title with Inline Rounded Pill Image Capsules */}
         <div className="text-center max-w-4xl mx-auto mb-6">
-          <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-bold text-[#1b221d] tracking-tight leading-[1.2] flex flex-col items-center justify-center">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-[1.2] flex flex-col items-center justify-center">
             
             {/* Line 1: Redefining [pill 1] Hair */}
             <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">

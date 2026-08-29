@@ -169,7 +169,7 @@ function InteractivePatientCard({
 
   return (
     <div className="bg-[#eff5f1] rounded-3xl overflow-hidden border border-gray-200/70 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
-      
+
       {/* Top: Interactive Before/After Split Comparison Box */}
       <div
         ref={containerRef}
@@ -223,7 +223,7 @@ function InteractivePatientCard({
 
       {/* Bottom Info Details */}
       <div className="p-5 sm:p-6 space-y-3.5 text-xs sm:text-[13px] text-gray-700 flex-1 flex flex-col justify-between">
-        
+
         <div className="space-y-3">
           {/* Name */}
           <div className="flex items-center text-gray-900 font-semibold">
@@ -301,10 +301,10 @@ export default function ResultsBrowseSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Header Title + Counter */}
         <div className="flex items-center justify-between gap-4 pb-6">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-tight">
             Browse Transformation Like Yours
           </h2>
           <div className="hidden sm:flex w-8 h-8 rounded-lg border border-gray-200 items-center justify-center text-xs font-bold text-gray-500">
@@ -315,7 +315,7 @@ export default function ResultsBrowseSection({
         {/* Filter Bar */}
         <div className="border-b border-gray-200/90 pb-4 mb-10 overflow-x-auto no-scrollbar">
           <div className="flex items-center gap-4 sm:gap-6 min-w-max text-xs sm:text-sm text-gray-700">
-            
+
             {/* Filters Label */}
             <div className="flex items-center gap-2 font-bold text-[#1b221d] pr-2">
               <SlidersHorizontal className="w-4 h-4 text-[#596d53]" />

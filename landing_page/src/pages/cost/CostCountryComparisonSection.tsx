@@ -63,7 +63,7 @@ export default function CostCountryComparisonSection() {
         
         {/* Header */}
         <div className="max-w-4xl mb-10 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-tight mb-4">
             Hair Transplant Cost: India vs Other Countries
           </h2>
           <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-normal max-w-3xl">

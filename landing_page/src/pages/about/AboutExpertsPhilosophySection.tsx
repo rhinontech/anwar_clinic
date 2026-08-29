@@ -107,7 +107,7 @@ export default function AboutExpertsPhilosophySection({
         {/* Header: Title on Left, Subtitle on Right */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-xl">
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-[1.12]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.12]">
               Meet the Experts at {COMPANY_NAME}
             </h2>
           </div>
@@ -131,7 +131,7 @@ export default function AboutExpertsPhilosophySection({
               </div>
 
               {/* Title */}
-              <h3 className="text-lg sm:text-[19px] font-bold text-[#1b221d] leading-snug tracking-tight mb-3">
+              <h3 className="text-lg sm:text-[19px] font-[500] text-[#1b221d] leading-snug tracking-tight mb-3">
                 {card.title}
               </h3>
 

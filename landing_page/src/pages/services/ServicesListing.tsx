@@ -23,23 +23,23 @@ const CATEGORIES = [
 export default function ServicesListing({ services, onOpenConsultation }: ServicesListingProps) {
   const [activeFilter, setActiveFilter] = useState("All Services");
 
-  // API content when available, otherwise the list bundled with the site.
+  // API content when available, otherwise fallback bundled list.
   const allServices: ServiceCardItem[] =
-    services && services.length > 0
+    services !== undefined && services !== null
       ? services.map((s) => ({
-          id: s.slug,
-          title: s.title,
-          desc: s.cardDescription,
-          image: s.cardImage || "",
-          link: `/services/${s.slug}/`,
-          badge: s.badge || undefined,
-        }))
+        id: s.slug,
+        title: s.title,
+        desc: s.cardDescription,
+        image: s.cardImage || "",
+        link: `/services/${s.slug}/`,
+        badge: s.badge || undefined,
+      }))
       : ALL_SERVICES_LIST;
 
   const filteredServices = allServices.filter((item) => {
     if (activeFilter === "All Services") return true;
     if (activeFilter === "Popular")
-      return ["fut-hair-transplant", "best-fue-hair-transplant-in-india", "quick-hair-transplant-in-india", "hair-transplant-for-men"].includes(item.id);
+      return ["best-fue-hair-transplant-in-india", "quick-hair-transplant-in-india", "hair-transplant-for-men"].includes(item.id);
     if (activeFilter === "Hairline & Density")
       return ["hairline-reconstruction", "custom-hairline-transplant", "natural-look-hair-restoration", "ultra-dense-hair-transplant", "temple-hair-transplant", "crown-hair-transplant"].includes(item.id);
     if (activeFilter === "Facial Hair")
@@ -58,11 +58,11 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
             <span className="inline-flex items-center gap-1.5 bg-[#eaf4e8] text-[#1b392b] text-xs font-bold px-3 py-1 rounded-full mb-3">
               <Sparkles className="w-3.5 h-3.5 text-[#596d53]" /> Comprehensive Procedures
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1b221d] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-[500] text-[#1b221d] tracking-tight">
               Hair Transplant Services in India
             </h2>
           </div>
-          <p className="max-w-xl text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+          <p className="max-w-xl text-sm sm:text-lg text-gray-600 leading-relaxed font-normal">
             At {COMPANY_NAME} Clinic, we provide advanced hair transplant services designed to restore natural hair density, improve hairlines, and boost confidence. Our expert surgeons deliver scarless, painless, and long-lasting results.
           </p>
         </div>
@@ -73,11 +73,10 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap shadow-sm ${
-                activeFilter === cat
-                  ? "bg-[#1b392b] text-white shadow-[#1b392b]/20"
-                  : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
-              }`}
+              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap shadow-sm ${activeFilter === cat
+                ? "bg-[#1b392b] text-white shadow-[#1b392b]/20"
+                : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+                }`}
             >
               {cat}
             </button>
@@ -108,7 +107,7 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
               {/* Content Body */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#1b221d] group-hover:text-[#596d53] transition-colors leading-snug mb-2.5">
+                  <h3 className="text-lg sm:text-xl font-[500] text-[#1b221d] group-hover:text-[#596d53] transition-colors leading-snug mb-2.5">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-3">

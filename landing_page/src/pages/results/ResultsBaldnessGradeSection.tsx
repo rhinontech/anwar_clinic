@@ -33,39 +33,39 @@ export default function ResultsBaldnessGradeSection({
           <div className="lg:col-span-7 space-y-6">
 
             {/* Heading */}
-            <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-white leading-tight tracking-tight">
+            <h3 className="text-2xl sm:text-3xl lg:text-5xl font-[500] text-white leading-tight tracking-tight">
               Finally, get the right treatment <br className="hidden sm:block" />
               for your hair loss.
             </h3>
 
             {/* Time Badge */}
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-white/85 font-medium">
+            <div className="flex items-center gap-2 text-xs sm:text-lg text-white/85 font-medium">
               <Clock className="w-4 h-4 text-white/75" />
               <span>Takes approximately 1 min</span>
             </div>
 
             {/* Description */}
-            <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal max-w-lg">
+            <p className="text-xs sm:text-lg text-white/80 leading-relaxed font-normal max-w-lg">
               Answer a few questions to see if {COMPANY_NAME} is right for you and we’ll recommend a personalized plan based on your results.
             </p>
 
             {/* 3 Key Features List */}
             <div className="pt-2 space-y-3.5">
-              <div className="flex items-center gap-3 text-xs sm:text-sm text-white/90">
+              <div className="flex items-center gap-3 text-xs sm:text-lg text-white/90">
                 <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white/80">
                   <FlaskConical className="w-4 h-4 stroke-[1.8]" />
                 </div>
                 <span>Clinically proven formula & high graft survival</span>
               </div>
 
-              <div className="flex items-center gap-3 text-xs sm:text-sm text-white/90">
+              <div className="flex items-center gap-3 text-xs sm:text-lg text-white/90">
                 <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white/80">
                   <Stethoscope className="w-4 h-4 stroke-[1.8]" />
                 </div>
                 <span>Guidance from hair loss experts & surgeons</span>
               </div>
 
-              <div className="flex items-center gap-3 text-xs sm:text-sm text-white/90">
+              <div className="flex items-center gap-3 text-xs sm:text-lg text-white/90">
                 <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white/80">
                   <BadgePercent className="w-4 h-4 stroke-[1.8]" />
                 </div>

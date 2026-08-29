@@ -48,29 +48,29 @@ export default function ServiceIntroSection({
     block1Paragraphs && block1Paragraphs.length > 0
       ? block1Paragraphs
       : [
-          `${title} is a procedure that can be used to correct the results of a hair transplant that has not been successful. It helps restore hairline and density, as well as conceal scars caused by earlier procedures.`,
-          `At ${COMPANY_NAME} Clinic, our experts use advanced techniques and treatment is centered on nurturing natural growth, avoiding complications, and for long-lasting results.`,
-        ];
+        `${title} is a procedure that can be used to correct the results of a hair transplant that has not been successful. It helps restore hairline and density, as well as conceal scars caused by earlier procedures.`,
+        `At ${COMPANY_NAME} Clinic, our experts use advanced techniques and treatment is centered on nurturing natural growth, avoiding complications, and for long-lasting results.`,
+      ];
   const heading2 = block2Heading || `${title} in India`;
   const paras2 =
     block2Paragraphs && block2Paragraphs.length > 0
       ? block2Paragraphs
       : [
-          `Failed Hair transplants are prevalent due to unskilled surgeons, leading to unfavourable results. In India, the Failed Hair Transplant Correction is performed by experts using our own Quick Hair Transplant method. Because of such skilled surgeons, like those at ${COMPANY_NAME} Clinic, and affordability, India is a trusted hub globally.`,
-          `Opting for the ${COMPANY_NAME} Clinic ensures long-term success and safe corrections.`,
-        ];
+        `Failed Hair transplants are prevalent due to unskilled surgeons, leading to unfavourable results. In India, the Failed Hair Transplant Correction is performed by experts using our own Quick Hair Transplant method. Because of such skilled surgeons, like those at ${COMPANY_NAME} Clinic, and affordability, India is a trusted hub globally.`,
+        `Opting for the ${COMPANY_NAME} Clinic ensures long-term success and safe corrections.`,
+      ];
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
       <div className="qht-large-container space-y-20 lg:space-y-28">
-        
+
         {/* ========================================================================= */}
         {/* BLOCK 1: Text on Left, Image with pointer labels on Right */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left Column: Text Content */}
           <div className="lg:col-span-6 space-y-5">
-            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-[#1b221d] tracking-tight leading-[1.18]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
               {heading1}
             </h2>
 
@@ -141,7 +141,7 @@ export default function ServiceIntroSection({
 
           {/* Right Column: Text Content */}
           <div className="lg:col-span-6 space-y-5 order-1 lg:order-2">
-            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-[#1b221d] tracking-tight leading-[1.18]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
               {heading2}
             </h2>
 

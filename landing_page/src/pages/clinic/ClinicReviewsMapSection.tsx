@@ -18,7 +18,7 @@ export default function ClinicReviewsMapSection({
           
           {/* Left Column: Heading, Subtitle & Action Buttons */}
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-[1.14]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14]">
               Reviews & Testimonials <br />
               by our clients.
             </h2>

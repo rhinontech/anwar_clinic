@@ -4,15 +4,41 @@ import React from "react";
 import Link from "next/link";
 import { useConsultation } from "@/context/ConsultationContext";
 import { COMPANY_NAME } from "@/config/constants";
+import type { ServiceCard } from "@/lib/services";
 
 interface FooterProps {
   onOpenConsultation?: () => void;
+  initialServices?: ServiceCard[] | null;
 }
 
-export default function Footer({ onOpenConsultation }: FooterProps) {
+export default function Footer({ onOpenConsultation, initialServices }: FooterProps) {
   const { openConsultation } = useConsultation();
   const handleOpenConsultation = onOpenConsultation || openConsultation;
   const currentYear = new Date().getFullYear();
+
+  const [services, setServices] = React.useState<ServiceCard[]>(initialServices || []);
+
+  React.useEffect(() => {
+    if (initialServices && initialServices.length > 0) {
+      setServices(initialServices);
+    } else {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5050";
+      fetch(`${apiUrl}/public/services`)
+        .then((res) => (res.ok ? res.json() : []))
+        .then((data) => {
+          if (Array.isArray(data)) setServices(data);
+        })
+        .catch(() => {});
+    }
+  }, [initialServices]);
+
+  const serviceItems = services.map((s) => ({
+    label: s.title,
+    href: `/services/${s.slug}`,
+  }));
+  const half = Math.ceil(serviceItems.length / 2);
+  const col1 = serviceItems.slice(0, half);
+  const col2 = serviceItems.slice(half);
 
   return (
     <footer className="bg-[#3b493a] text-white pt-16 pb-14">
@@ -81,10 +107,10 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
                 +91-9084726916
               </a>
               <a
-                href="mailto:care@qhtclinic.com"
+                href="mailto:care@clinic.com"
                 className="hover:text-[#baf788] transition-colors"
               >
-                care@qhtclinic.com
+                care@clinic.com
               </a>
             </div>
 
@@ -133,29 +159,22 @@ export default function Footer({ onOpenConsultation }: FooterProps) {
               </h4>
               <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-[15px] text-[#cdd7cb]">
                 <div className="space-y-3">
-                  <p><Link href="/services/afro-hair-transplant-in-india" className="hover:text-white transition-colors">Afro Hair Transplant</Link></p>
-                  <p><Link href="/services/beard-hair-transplant-in-india" className="hover:text-white transition-colors">Beard Hair Transplant</Link></p>
-                  <p><Link href="/services/caucasian-patients-hair-transplant" className="hover:text-white transition-colors">Caucasian Patients Hair Transplant</Link></p>
-                  <p><Link href="/services/custom-hairline-transplant" className="hover:text-white transition-colors">Custom Hairline Transplant</Link></p>
-                  <p><Link href="/services/female-hair-transplantation" className="hover:text-white transition-colors">Female Hair Transplant</Link></p>
-                  <p><Link href="/services/hair-transplant-for-men" className="hover:text-white transition-colors">Hair Transplant For Men</Link></p>
-                  <p><Link href="/services/hairline-reconstruction" className="hover:text-white transition-colors">Hairline Reconstruction</Link></p>
-                  <p><Link href="/services/natural-look-hair-restoration" className="hover:text-white transition-colors">Natural Look Hair Restoration</Link></p>
-                  <p><Link href="/services/fut-hair-transplant" className="hover:text-white transition-colors">FUT Hair Transplant</Link></p>
-                  <p><Link href="/services/temple-hair-transplant" className="hover:text-white transition-colors">Temple Hair Transplant</Link></p>
-                  <p><Link href="/services/unshaven-hair-transplant" className="hover:text-white transition-colors">Unshaven Hair Transplant</Link></p>
+                  {col1.map((item, idx) => (
+                    <p key={idx}>
+                      <Link href={item.href} className="hover:text-white transition-colors">
+                        {item.label}
+                      </Link>
+                    </p>
+                  ))}
                 </div>
                 <div className="space-y-3">
-                  <p><Link href="/services/bad-hair-transplant-correction" className="hover:text-white transition-colors">Bad Hair Transplant Correction</Link></p>
-                  <p><Link href="/services/burn-hair-transplant" className="hover:text-white transition-colors">Burn Hair Transplant</Link></p>
-                  <p><Link href="/services/crown-hair-transplant" className="hover:text-white transition-colors">Crown Hair Transplant</Link></p>
-                  <p><Link href="/services/eyebrow-reconstruction-in-india" className="hover:text-white transition-colors">Eyebrow Reconstruction</Link></p>
-                  <p><Link href="/services/best-fue-hair-transplant-in-india" className="hover:text-white transition-colors">FUE Hair Transplant</Link></p>
-                  <p><Link href="/services/failed-hair-transplant-repair" className="hover:text-white transition-colors">Hair Transplant Repair</Link></p>
-                  <p><Link href="/services/moustache-hair-transplant-in-india" className="hover:text-white transition-colors">Moustache Hair Transplant</Link></p>
-                  <p><Link href="/services/quick-hair-transplant-in-india" className="hover:text-white transition-colors">{COMPANY_NAME} Hair Transplant</Link></p>
-                  <p><Link href="/services/social-media-influencer-hair-transplant" className="hover:text-white transition-colors">Social Media Influencer Hair</Link></p>
-                  <p><Link href="/services/ultra-dense-hair-transplant" className="hover:text-white transition-colors">Ultra-Dense Hair Transplant</Link></p>
+                  {col2.map((item, idx) => (
+                    <p key={idx}>
+                      <Link href={item.href} className="hover:text-white transition-colors">
+                        {item.label}
+                      </Link>
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>

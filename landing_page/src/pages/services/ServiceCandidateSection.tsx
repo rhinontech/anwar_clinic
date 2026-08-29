@@ -45,22 +45,28 @@ export default function ServiceCandidateSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Top Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1b221d] tracking-tight leading-[1.18] max-w-xl">
-            Who is an Ideal Candidate for
-            <br />
-            {title}?
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] max-w-2xl">
+            {title.toLowerCase().startsWith("who is") ? (
+              title
+            ) : (
+              <>
+                Who is an Ideal Candidate for
+                <br />
+                {title}?
+              </>
+            )}
           </h2>
-          <p className="text-sm sm:text-base text-[#5c685f] max-w-md leading-relaxed font-normal">
+          <p className="text-sm sm:text-lg text-[#5c685f] max-w-md leading-relaxed font-normal">
             {subtitle}
           </p>
         </div>
 
         {/* Main 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          
+
           {/* Left Column: Silhouette Graphic */}
           <div className="lg:col-span-4 flex justify-center lg:justify-start items-center">
             <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
@@ -74,7 +80,7 @@ export default function ServiceCandidateSection({
 
           {/* Right Column: 2x2 Cards Grid + Still Confused Banner */}
           <div className="lg:col-span-8 space-y-6">
-            
+
             {/* 2x2 Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {points.map((point, idx) => (
@@ -111,7 +117,7 @@ export default function ServiceCandidateSection({
                   <span className="text-xs sm:text-sm font-medium text-gray-200">
                     Still Confused?
                   </span>
-                  <h4 className="text-2xl sm:text-[28px] font-bold text-white tracking-tight mt-0.5">
+                  <h4 className="text-2xl sm:text-3xl font-[500] text-white tracking-tight mt-0.5">
                     Talk to our experts
                   </h4>
                 </div>

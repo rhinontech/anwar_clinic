@@ -4,7 +4,7 @@ import React from "react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface BenefitItem {
-  id: number;
+  id?: number;
   icon: string;
   title: string;
   desc: string;
@@ -64,7 +64,7 @@ export default function ServiceBenefitsSection({
         
         {/* Section Heading & Subtitle */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.18]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
             Benefits of {title}
           </h2>
           <p className="text-sm sm:text-base text-gray-300 mt-3.5 leading-relaxed font-normal whitespace-pre-line">
@@ -74,9 +74,9 @@ export default function ServiceBenefitsSection({
 
         {/* Benefits List with Dividers */}
         <div className="border-t border-white/20">
-          {benefits.map((item) => (
+          {benefits.map((item, index) => (
             <div
-              key={item.id}
+              key={item.id ?? index}
               className="py-7 sm:py-9 border-b border-white/20 flex flex-col md:flex-row md:items-center justify-between gap-6 sm:gap-8 group"
             >
               {/* Left & Middle: Circular Outline Icon + Title */}

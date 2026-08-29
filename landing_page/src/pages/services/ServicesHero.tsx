@@ -21,9 +21,9 @@ export default function ServicesHero({ onOpenConsultation }: ServicesHeroProps) 
       <div className="qht-large-container relative z-10 w-full pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-20 lg:pb-24">
         <div className="max-w-2xl">
           {/* Main Hero Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-[62px] font-bold text-[#1f2721] tracking-tight leading-[1.12]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[500] text-[#1f2721] tracking-tight leading-[1.12]">
             Best{" "}
-            <span className="text-[#596d53] font-bold">
+            <span className="text-[#596d53] font-[500]">
               Hair transplant
             </span>
             <br />

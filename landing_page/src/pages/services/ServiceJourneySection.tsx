@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Play } from "lucide-react";
 
 interface JourneyVideo {
-  id: number;
+  id?: number;
   title: string;
   youtubeId: string;
   thumbnail?: string;
@@ -119,15 +119,15 @@ export default function ServiceJourneySection({
         
         {/* Section Heading */}
         <div className="max-w-2xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1b221d] tracking-tight leading-[1.18] whitespace-pre-line">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] whitespace-pre-line">
             {title}
           </h2>
         </div>
 
         {/* 3-Column Video Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {videos.map((video) => (
-            <VideoCard key={video.id} video={video} />
+          {videos.map((video, idx) => (
+            <VideoCard key={video.id ?? video.youtubeId ?? idx} video={video} />
           ))}
         </div>
 

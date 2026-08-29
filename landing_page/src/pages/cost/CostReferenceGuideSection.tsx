@@ -14,7 +14,7 @@ export default function CostReferenceGuideSection() {
           <span className="text-xs sm:text-sm font-semibold text-[#5c685f] block mb-2 tracking-wide">
             Complete Reference Guide
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-[1.14] mb-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14] mb-3">
             Everything You Need to Know About Hair <br />
             Transplant Cost in India
           </h2>

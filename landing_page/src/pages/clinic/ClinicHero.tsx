@@ -40,7 +40,7 @@ export default function ClinicHero() {
         </nav>
 
         {/* Main Title */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.12] drop-shadow-md max-w-4xl">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[500] text-white tracking-tight leading-[1.12] drop-shadow-md max-w-4xl">
           {COMPANY_NAME} Clinic Hair <br />
           Transplant Clinic India
         </h1>

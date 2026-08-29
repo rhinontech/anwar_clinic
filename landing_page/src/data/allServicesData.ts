@@ -11,14 +11,6 @@ export interface ServiceCardItem {
 
 export const ALL_SERVICES_LIST: ServiceCardItem[] = [
   {
-    id: "fut-hair-transplant",
-    title: "FUT Hair Transplant",
-    desc: "A proven strip technique that delivers maximum graft yield, exceptional density, and long-lasting hair restoration.",
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/b739906161.jpg",
-    link: "/services/fut-hair-transplant/",
-    badge: "Maximum Density",
-  },
-  {
     id: "hairline-reconstruction",
     title: "Hairline Reconstruction",
     desc: "Restoring Confidence with the Most natural-looking and geometrically balanced hairline in India.",

@@ -8,9 +8,8 @@ interface PageProps {
   params: { slug: string };
 }
 
-// Statically generated at build, refreshed in the background on this interval —
-// a service published in the admin panel appears without a redeploy.
-export const revalidate = SERVICES_REVALIDATE;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 // A slug added after the build still renders on first request, then is cached.
 export const dynamicParams = true;
 

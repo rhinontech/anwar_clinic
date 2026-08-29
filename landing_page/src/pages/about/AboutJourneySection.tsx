@@ -43,7 +43,7 @@ export default function AboutJourneySection() {
           
           {/* Left Column: Headline & Story */}
           <div className="lg:col-span-7 space-y-5">
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-[1.14]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14]">
               Our Journey - Transforming Hair <br />
               Restoration in India
             </h2>
@@ -66,7 +66,7 @@ export default function AboutJourneySection() {
                   {pillar.num}
                 </span>
                 <div>
-                  <h3 className="text-sm sm:text-base font-bold text-[#1b221d] mb-1">
+                  <h3 className="text-sm sm:text-base font-[500] text-[#1b221d] mb-1">
                     {pillar.title}
                   </h3>
                   <p className="text-xs text-[#5c685f] leading-relaxed font-normal">

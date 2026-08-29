@@ -45,7 +45,7 @@ export default function ResultDetailHero({
   return (
     <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 bg-[#eff5f1] overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* 1. Breadcrumb */}
         <nav className="flex items-center gap-1.5 text-xs text-gray-500 font-normal mb-8">
           <Link href="/" className="hover:text-black transition-colors">
@@ -61,10 +61,10 @@ export default function ResultDetailHero({
 
         {/* 2. Patient Header Title & Location */}
         <div className="text-center space-y-2 mb-10">
-          <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-[#1b221d] tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-tight">
             {patient.name}
           </h1>
-          <p className="text-xs sm:text-sm text-gray-600 font-normal">
+          <p className="text-xs sm:text-lg text-gray-600 font-normal">
             {patient.location}
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function ResultDetailHero({
         {/* 3. Four-Column Stats White Pill Card */}
         <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xs border border-gray-200/60 max-w-4xl mx-auto mb-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center divide-y md:divide-y-0 md:divide-x divide-gray-100 text-left">
-            
+
             {/* Col 1: Baldness Grade */}
             <div className="pt-3 md:pt-0 md:px-4 first:pt-0 first:pl-0">
               <span className="text-[11px] font-medium text-gray-400 block mb-1">
@@ -118,7 +118,7 @@ export default function ResultDetailHero({
 
         {/* 4. Two Large Side-by-Side Comparison Photos */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch mb-12">
-          
+
           {/* Left: Full Before Photo */}
           <div className="relative aspect-[4/3.2] rounded-3xl overflow-hidden bg-gray-200 shadow-sm border border-gray-200/80 group">
             <img
@@ -148,10 +148,10 @@ export default function ResultDetailHero({
         {/* 5. Treatment Snapshot (Dark Olive Green Card with Split Interactive Slider) */}
         <div className="bg-[#485942] rounded-3xl p-7 sm:p-10 lg:p-12 text-white shadow-xl border border-white/10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
+
             {/* Left Snapshot Stats */}
             <div className="lg:col-span-5 space-y-6 sm:space-y-8">
-              <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-[500] text-white tracking-tight">
                 Treatment Snapshot
               </h2>
 

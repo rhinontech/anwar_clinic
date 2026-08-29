@@ -46,7 +46,7 @@ export default function CostQHTTableSection() {
           <span className="text-xs sm:text-sm font-semibold text-[#5c685f] block mb-2 tracking-wide">
             {COMPANY_NAME} Proprietary Technique
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight mb-4">
             {COMPANY_NAME} (Quick Hair Transplant) <br />
             Cost in India
           </h2>

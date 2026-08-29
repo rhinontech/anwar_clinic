@@ -1,9 +1,47 @@
 import app from "./app";
 import { env } from "./config/env";
 import { sequelize } from "./config/database";
-import { syncDatabase } from "./models";
+import { syncDatabase, Service } from "./models";
 import { syncPermissionCatalog } from "./config/permissions";
 import { storage } from "./services/storage";
+import { ALL_SERVICES_SEED, SEED_SECTIONS_BY_SLUG } from "./config/serviceSeedData";
+
+async function syncServicesOnBoot() {
+  try {
+    for (const [slug, sections] of Object.entries(SEED_SECTIONS_BY_SLUG)) {
+      const service = await Service.findOne({ where: { slug } });
+      const meta = ALL_SERVICES_SEED.find((s) => s.slug === slug);
+      if (service) {
+        await service.update({
+          sections: {
+            ...(service.sections || {}),
+            ...sections,
+          },
+          ...(meta?.desc && !service.cardDescription ? { cardDescription: meta.desc } : {}),
+          ...(meta?.image && !service.cardImage ? { cardImage: meta.image } : {}),
+          ...(meta?.badge && !service.badge ? { badge: meta.badge } : {}),
+        });
+      } else if (meta) {
+        await Service.create({
+          slug: meta.slug,
+          title: meta.title,
+          cardDescription: meta.desc,
+          cardImage: meta.image,
+          badge: meta.badge ?? null,
+          sortOrder: ALL_SERVICES_SEED.indexOf(meta),
+          status: "published",
+          seoTitle: `${meta.title} in India | QHT Clinic`,
+          seoDescription: meta.desc,
+          sections: sections ?? {},
+          hiddenSections: [],
+        });
+      }
+    }
+    console.log("[Services] Synced seed sections to DB");
+  } catch (err: any) {
+    console.error("[Services] Sync error:", err.message);
+  }
+}
 
 async function start() {
   await sequelize.authenticate();
@@ -20,6 +58,8 @@ async function start() {
     console.error("[Permissions] Catalog sync failed:", err.message);
   }
 
+  await syncServicesOnBoot();
+
   console.log(`[Storage] Driver: ${storage.name}`);
 
   app.listen(env.port, () => {
@@ -31,3 +71,4 @@ start().catch((err) => {
   console.error("Failed to start server:", err);
   process.exit(1);
 });
+

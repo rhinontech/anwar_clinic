@@ -13,7 +13,7 @@ async function seedServices() {
   let skipped = 0;
 
   for (const [index, item] of ALL_SERVICES_SEED.entries()) {
-    const [, wasCreated] = await Service.findOrCreate({
+    const [service, wasCreated] = await Service.findOrCreate({
       where: { slug: item.slug },
       defaults: {
         slug: item.slug,
@@ -29,6 +29,16 @@ async function seedServices() {
         hiddenSections: [],
       },
     });
+
+    if (!wasCreated && SEED_SECTIONS_BY_SLUG[item.slug]) {
+      await service.update({
+        sections: {
+          ...(service.sections || {}),
+          ...SEED_SECTIONS_BY_SLUG[item.slug],
+        },
+      });
+    }
+
     wasCreated ? created++ : skipped++;
   }
 

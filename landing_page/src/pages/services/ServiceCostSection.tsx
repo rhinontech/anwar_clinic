@@ -11,9 +11,17 @@ interface CostFactor {
   desc: string;
 }
 
+export interface CostTableRow {
+  type: string;
+  cost: string;
+  badge?: string;
+  isHighlight?: boolean;
+}
+
 interface ServiceCostSectionProps {
   title?: string;
   costOverview?: string[];
+  tableRows?: CostTableRow[];
   factorsSubtitle?: string;
   factors?: CostFactor[];
 }
@@ -59,6 +67,7 @@ const DEFAULT_FACTORS: CostFactor[] = [
 export default function ServiceCostSection({
   title = "Hair Transplant Repair",
   costOverview = DEFAULT_COST_OVERVIEW,
+  tableRows,
   factorsSubtitle = "The cost of hair transplant repairs can be affected by the expertise of surgeons, techniques used, the clinic’s location, and the severity of the damage.",
   factors = DEFAULT_FACTORS,
 }: ServiceCostSectionProps) {
@@ -72,7 +81,7 @@ export default function ServiceCostSection({
           {/* Left Column: Heading + Descriptive Text */}
           <div className="lg:col-span-6 space-y-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
-              {title} Cost in India
+              {title.toLowerCase().includes("cost") ? title : `${title} Cost in India`}
             </h2>
             <div className="space-y-3.5 text-sm sm:text-base text-[#5c685f] leading-relaxed font-normal">
               {costOverview.map((para, idx) => (
@@ -88,24 +97,55 @@ export default function ServiceCostSection({
           {/* Right Column: Comparative Cost Table */}
           <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 shadow-[0_6px_24px_rgba(0,0,0,0.05)] border border-gray-100/90">
             <div className="divide-y divide-gray-100">
-              <div className="py-4 first:pt-0 flex items-center justify-between">
-                <span className="font-bold text-[#1b221d] text-base sm:text-lg">{COMPANY_NAME}</span>
-                <span className="text-xs sm:text-sm font-semibold text-[#596d53] bg-[#eef4ee] px-3 py-1 rounded-full">
-                  Highly Affordable, Mid-Ranged
-                </span>
-              </div>
-              <div className="py-4 flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal">
-                <span className="font-medium text-gray-800">FUE</span>
-                <span>INR 60,000 – INR 2,00,000</span>
-              </div>
-              <div className="py-4 flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal">
-                <span className="font-medium text-gray-800">FUT</span>
-                <span>INR 30,000 - INR 150,000</span>
-              </div>
-              <div className="py-4 last:pb-0 flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal">
-                <span className="font-medium text-gray-800">{COMPANY_NAME}</span>
-                <span className="font-bold text-[#1b221d]">INR 1,00,000 – INR 2,00,000 +</span>
-              </div>
+              {tableRows && tableRows.length > 0 ? (
+                tableRows.map((row, idx) => (
+                  <div
+                    key={idx}
+                    className={`py-4 ${idx === 0 ? "first:pt-0" : ""} ${
+                      idx === tableRows.length - 1 ? "last:pb-0" : ""
+                    } flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`font-medium ${
+                          row.isHighlight ? "font-bold text-[#1b221d]" : "text-gray-800"
+                        }`}
+                      >
+                        {row.type}
+                      </span>
+                      {row.badge && (
+                        <span className="text-xs font-semibold text-[#596d53] bg-[#eef4ee] px-2.5 py-0.5 rounded-full">
+                          {row.badge}
+                        </span>
+                      )}
+                    </div>
+                    <span className={row.isHighlight ? "font-bold text-[#1b221d]" : ""}>
+                      {row.cost}
+                    </span>
+                  </div>
+                ))
+              ) : (
+                <>
+                  <div className="py-4 first:pt-0 flex items-center justify-between">
+                    <span className="font-bold text-[#1b221d] text-base sm:text-lg">{COMPANY_NAME}</span>
+                    <span className="text-xs sm:text-sm font-semibold text-[#596d53] bg-[#eef4ee] px-3 py-1 rounded-full">
+                      Highly Affordable, Mid-Ranged
+                    </span>
+                  </div>
+                  <div className="py-4 flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal">
+                    <span className="font-medium text-gray-800">FUE</span>
+                    <span>INR 60,000 – INR 2,00,000</span>
+                  </div>
+                  <div className="py-4 flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal">
+                    <span className="font-medium text-gray-800">FUT</span>
+                    <span>INR 30,000 - INR 150,000</span>
+                  </div>
+                  <div className="py-4 last:pb-0 flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal">
+                    <span className="font-medium text-gray-800">{COMPANY_NAME}</span>
+                    <span className="font-bold text-[#1b221d]">INR 1,00,000 – INR 2,00,000 +</span>
+                  </div>
+                </>
+              )}
             </div>
           </div>
 

@@ -65,7 +65,11 @@ export default function ServiceBenefitsSection({
         {/* Section Heading & Subtitle */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
-            Benefits of {title}
+            {title.toLowerCase().startsWith("benefits of") ||
+            title.toLowerCase().startsWith("benefit of") ||
+            title.toLowerCase().startsWith("benefits")
+              ? title
+              : `Benefits of ${title}`}
           </h2>
           <p className="text-sm sm:text-base text-gray-300 mt-3.5 leading-relaxed font-normal whitespace-pre-line">
             {subtitle || defaultSubtitle}

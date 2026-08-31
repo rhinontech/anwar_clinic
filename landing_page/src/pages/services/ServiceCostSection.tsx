@@ -81,7 +81,7 @@ export default function ServiceCostSection({
           {/* Left Column: Heading + Descriptive Text */}
           <div className="lg:col-span-6 space-y-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
-              {title} Cost in India
+              {title.toLowerCase().includes("cost") ? title : `${title} Cost in India`}
             </h2>
             <div className="space-y-3.5 text-sm sm:text-base text-[#5c685f] leading-relaxed font-normal">
               {costOverview.map((para, idx) => (

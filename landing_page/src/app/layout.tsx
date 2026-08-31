@@ -3,9 +3,9 @@ import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import FloatingActionBar from "@/components/common/FloatingActionBar";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 import { ConsultationProvider } from "@/context/ConsultationContext";
 import { COMPANY_NAME } from "@/config/constants";
-import ChatbotWrapper from "@/components/Chatbot/ChatbotWrapper";
 
 import { fetchServices } from "@/lib/services";
 
@@ -56,7 +56,7 @@ export default async function RootLayout({
             <FloatingActionBar />
           </div>
 
-          <ChatbotWrapper />
+          <WhatsAppButton />
         </ConsultationProvider>
       </body>
     </html>

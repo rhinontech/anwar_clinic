@@ -57,7 +57,9 @@ export default function ServiceProcedureSection({
           {/* Title & Subtitle */}
           <div className="max-w-xl space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
-              Procedure used for {title} in India
+              {title.toLowerCase().startsWith("procedure")
+                ? title
+                : `Procedure used for ${title} in India`}
             </h2>
             <p className="text-sm sm:text-base text-[#5c685f] leading-relaxed font-normal">
               {subtitle || defaultSubtitle}

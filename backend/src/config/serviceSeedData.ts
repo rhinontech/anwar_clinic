@@ -6171,7 +6171,6 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
   },
-  // "natural-look-hair-restoration": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/grooming-perfection-handsome-european-bearded-mid-2025-03-18-19-02-49-utc-1568x1045.jpg", subtitle: "Reclaim your confidence with hair that looks, feels, and moves completely naturally at every angle." } },
   "social-media-influencer-hair-transplant": {
     hero: {
       title: "Best Clinic for Social Media Influencer Hair Transplant",

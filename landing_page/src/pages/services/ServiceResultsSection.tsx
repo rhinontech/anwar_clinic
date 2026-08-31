@@ -168,7 +168,11 @@ export default function ServiceResultsSection({
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-12 lg:mb-16 relative">
           <div className="max-w-2xl space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
-              {title.toLowerCase().startsWith("result of") ? title : `Result of ${title}`}
+              {title.toLowerCase().startsWith("result of") ||
+              title.toLowerCase().startsWith("results of") ||
+              title.toLowerCase().startsWith("result")
+                ? title
+                : `Result of ${title}`}
             </h2>
             <p className="text-sm sm:text-lg text-gray-300 leading-relaxed font-normal">
               {subtitle}

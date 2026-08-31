@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
 import { NAV_ABOUT_LIST } from "@/data/qhtData";
 import { useConsultation } from "@/context/ConsultationContext";
@@ -19,6 +20,7 @@ interface HeaderBarProps {
   activeDropdown: string | null;
   onMouseEnter: (menu: string) => void;
   onMouseLeave: () => void;
+  onCloseDropdown: () => void;
   onOpenConsultation: () => void;
   onToggleMobileMenu: () => void;
   isMobileMenuOpen: boolean;
@@ -31,6 +33,7 @@ function HeaderBar({
   activeDropdown,
   onMouseEnter,
   onMouseLeave,
+  onCloseDropdown,
   onOpenConsultation,
   onToggleMobileMenu,
   isMobileMenuOpen,
@@ -49,7 +52,11 @@ function HeaderBar({
     <div className="w-full relative">
       <div className="qht-large-container flex items-center justify-between relative">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2 relative z-10 flex-shrink-0">
+        <Link
+          href="/"
+          onClick={onCloseDropdown}
+          className="flex items-center gap-2 relative z-10 flex-shrink-0"
+        >
           <img
             src="https://www.qhtclinic.com/wp-content/uploads/2025/08/header-logo.webp"
             alt={`${COMPANY_NAME} Clinic Logo`}
@@ -63,6 +70,7 @@ function HeaderBar({
             {/* Home */}
             <Link
               href="/"
+              onClick={onCloseDropdown}
               className="font-semibold text-[#52664d] hover:text-[#384c3c] transition-colors"
             >
               Home
@@ -71,6 +79,7 @@ function HeaderBar({
             {/* Results */}
             <Link
               href="/results"
+              onClick={onCloseDropdown}
               className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors py-1"
             >
               Results
@@ -84,6 +93,7 @@ function HeaderBar({
             >
               <Link
                 href="/services"
+                onClick={onCloseDropdown}
                 className="flex items-center gap-1.5 font-medium text-[#2b302c] hover:text-[#52664d] transition-colors py-1"
               >
                 <span>Services</span>
@@ -97,6 +107,7 @@ function HeaderBar({
             {/* Hair Transplant Cost */}
             <Link
               href="/hair-transplant-cost-in-india"
+              onClick={onCloseDropdown}
               className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors whitespace-nowrap"
             >
               Hair Transplant Cost
@@ -107,6 +118,7 @@ function HeaderBar({
               href={cliniUrl}
               target="_blank"
               rel="noreferrer"
+              onClick={onCloseDropdown}
               className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors"
             >
               Medicines
@@ -130,6 +142,7 @@ function HeaderBar({
             {/* Our Clinic */}
             <Link
               href="/our-clinic"
+              onClick={onCloseDropdown}
               className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors whitespace-nowrap"
             >
               Our Clinic
@@ -198,6 +211,7 @@ function HeaderBar({
                       <Link
                         key={idx}
                         href={item.href}
+                        onClick={onCloseDropdown}
                         className="flex items-center gap-2 text-[13.5px] font-medium text-white/95 hover:text-[#d7fbd0] hover:translate-x-1 transition-all duration-150 leading-tight group"
                       >
                         <ArrowUpRight className="w-4 h-4 text-white/80 group-hover:text-white transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -211,6 +225,7 @@ function HeaderBar({
                       <Link
                         key={idx}
                         href={item.href}
+                        onClick={onCloseDropdown}
                         className="flex items-center gap-2 text-[13.5px] font-medium text-white/95 hover:text-[#d7fbd0] hover:translate-x-1 transition-all duration-150 leading-tight group"
                       >
                         <ArrowUpRight className="w-4 h-4 text-white/80 group-hover:text-white transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -242,8 +257,11 @@ function HeaderBar({
 
                 <div className="relative z-10 pt-6">
                   <button
-                    onClick={onOpenConsultation}
-                    className="bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm py-2.5 px-7 rounded-full shadow-lg transition-transform active:scale-95 duration-150 inline-block text-center"
+                    onClick={() => {
+                      onCloseDropdown();
+                      onOpenConsultation();
+                    }}
+                    className="bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm py-2.5 px-7 rounded-full shadow-lg transition-transform active:scale-95 duration-150 inline-block text-center cursor-pointer"
                   >
                     Start Journey
                   </button>
@@ -274,9 +292,10 @@ function HeaderBar({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {NAV_ABOUT_LIST.map((item, idx) => (
-                <a
+                <Link
                   key={idx}
                   href={item.href}
+                  onClick={onCloseDropdown}
                   className="group relative rounded-2xl overflow-hidden h-[260px] flex flex-col justify-between p-5 bg-black shadow-md border border-white/5 transition-transform duration-300 hover:-translate-y-1"
                 >
                   <img
@@ -298,7 +317,7 @@ function HeaderBar({
                       <ArrowUpRight className="w-3.5 h-3.5 text-gray-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -308,8 +327,11 @@ function HeaderBar({
               </p>
 
               <button
-                onClick={onOpenConsultation}
-                className="bg-[#566c50] hover:bg-[#465b41] text-white text-sm font-semibold px-7 py-2.5 rounded-full shadow-md transition-all active:scale-95 whitespace-nowrap flex-shrink-0"
+                onClick={() => {
+                  onCloseDropdown();
+                  onOpenConsultation();
+                }}
+                className="bg-[#566c50] hover:bg-[#465b41] text-white text-sm font-semibold px-7 py-2.5 rounded-full shadow-md transition-all active:scale-95 whitespace-nowrap flex-shrink-0 cursor-pointer"
               >
                 Book Appointment
               </button>
@@ -317,11 +339,12 @@ function HeaderBar({
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 }
 
 export default function Header({ onOpenConsultation, initialServices }: HeaderProps) {
+  const pathname = usePathname();
   const cliniUrl = process.env.NEXT_PUBLIC_CLINIC_URL || "#";
   const { openConsultation } = useConsultation();
   const handleOpenConsultation = onOpenConsultation || openConsultation;
@@ -332,6 +355,15 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Close any open dropdowns or mobile menu whenever route/page changes
+  useEffect(() => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setActiveDropdown(null);
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     if (initialServices && initialServices.length > 0) {
@@ -370,6 +402,13 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
     }, 150);
   };
 
+  const handleCloseDropdown = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setActiveDropdown(null);
+  };
+
   return (
     <>
       {/* 0. Top Announcement & Offer Banner */}
@@ -391,6 +430,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
           activeDropdown={!isStickyVisible ? activeDropdown : null}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onCloseDropdown={handleCloseDropdown}
           onOpenConsultation={handleOpenConsultation}
           onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           isMobileMenuOpen={isMobileMenuOpen}
@@ -411,6 +451,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
           activeDropdown={isStickyVisible ? activeDropdown : null}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onCloseDropdown={handleCloseDropdown}
           onOpenConsultation={handleOpenConsultation}
           onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           isMobileMenuOpen={isMobileMenuOpen}

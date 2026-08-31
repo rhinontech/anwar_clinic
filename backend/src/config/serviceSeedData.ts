@@ -37,6 +37,2268 @@ export const ALL_SERVICES_SEED: ServiceSeedItem[] = [
 ];
 
 export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string, unknown>>> = {
+  "temple-hair-transplant": {
+    hero: {
+      title: "Best Clinic for Temple Hair Transplant",
+      subtitle: "QHT Clinic provides the best Temple Hair Transplant solutions, designed by experts with advanced methods for natural results and affordable care.",
+      bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/79a11a05a3.jpg",
+      tagline: "Natural Temporal Triangle & Facial Framing",
+      pointerLabel: "Acute Angle Direction",
+    },
+    intro: {
+      block1Heading: "What is Temple Hair Transplant?",
+      block1Lead: "Regain your confidence and hairline naturally with our expert solutions.",
+      block1Paragraphs: [
+        "A Temple Hair Transplant is a specialized microsurgical hair restoration procedure where hair follicles are extracted from the safe donor zone and meticulously implanted into the temporal peaks and temporal angles.",
+        "Restoring the temples frames the face and creates a balanced, youthful aesthetic. At QHT Clinic, our senior surgeons utilize superfine Cole punches and SAVA implanters to place single-hair grafts at flat, acute angles, ensuring authentic facial framing with lifelong permanence.",
+      ],
+      block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-1-3.jpg",
+      pointer1: "Flat 10–15° Acute Temporal Angles",
+      pointer2: "Single-Hair Feathered Edge Placement",
+      block2Heading: "Temple Hair Transplant Cost in India",
+      block2Paragraphs: [
+        "In India, temple hairline restoration has become one of the most requested aesthetic procedures for patients dealing with receding temporal points or wide forehead profiles.",
+        "At QHT Clinic, we offer affordable, cutting-edge QHT techniques providing painless extraction, maximum graft survival, and natural density tailored for both domestic and international patients.",
+      ],
+      block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-2-3.jpg",
+    },
+    results: {
+      title: "Result of Temple Hair Transplant",
+      subtitle: "Temple hair transplant in India provides long-term, natural-looking results at QHT Clinic by restoring density at the temple region and providing desired hairlines with visible growth within 3-4 months.",
+      results: [
+        {
+          name: "Irfan - Grade 5A Temple Definition",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+        },
+        {
+          name: "Kshitij Ahuja - Grade 4 Temporal Peak Restoration",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+        },
+        {
+          name: "Pranav Meshram - Grade 6 Full Temple & Frontal",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+        },
+        {
+          name: "Praveen Kumar - DHI Temple Angle Crafting",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+        },
+        {
+          name: "Puneet Chandra - Grade 6 Temple Recession Case",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+        },
+        {
+          name: "Sagar Kumar - Grade 4A Temporal Triangle",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+        },
+      ],
+    },
+    candidate: {
+      title: "Who is an Ideal Candidate for Temple Hair Transplant",
+      subtitle: "The procedure at QHT Clinic is ideal for individuals experiencing temple recession seeking natural facial balance:",
+      points: [
+        {
+          title: "Receding Temple Hairline",
+          desc: "Individuals with receding or hollowed temple points desiring forward projection and youthful closure.",
+        },
+        {
+          title: "Aesthetic Facial Enhancement",
+          desc: "People seeking to narrow a wide forehead profile and enhance overall facial symmetry.",
+        },
+        {
+          title: "Temple Hair Thinning",
+          desc: "Patients with diffuse miniaturization at the temporal angles suitable for high-density QHT packing.",
+        },
+      ],
+    },
+    types: {
+      title: "Types of Temple Hair Transplant",
+      subtitle: "Advanced surgical methodologies tailored for delicate temporal angle reconstruction:",
+      types: [
+        {
+          title: "QHT Technique for Temples",
+          desc: "Combines Cole punch extraction with SAVA pen implantation, placing fine single hairs at flat angles with minimal downtime.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
+          points: [
+            "Advanced technique combining FUE precision with customized graft handling.",
+            "Focuses on high survival rate of grafts with minimal follicle damage.",
+            "Personalized treatment plan based on individual hair type and scalp condition.",
+            "Rapid 5-day recovery with virtually undetectable scarless healing.",
+          ],
+        },
+        {
+          title: "FUE Hair Transplant",
+          desc: "Individual follicle unit extraction and manual slit placement ensuring angle and direction control.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/FUE.webp",
+          points: [
+            "Offers precise control over angle, depth, and direction of each hair follicle.",
+            "Minimally invasive, reducing trauma to the scalp.",
+            "Faster healing and less visible scarring compared to traditional methods.",
+          ],
+        },
+      ],
+    },
+    benefits: {
+      title: "Benefits of Temple Hair Transplant",
+      subtitle: "Reconstructing the temporal peaks delivers transformative facial framing and confidence:",
+      benefits: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-1-3.png",
+          title: "Natural Appearance",
+          desc: "Personalized hairline design with improved hair density calibrated precisely to your facial contours.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-2-3.png",
+          title: "Permanent Hair Growth",
+          desc: "Transplanted follicles harvested from DHT-resistant zones provide lifelong, natural growth.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-3-3.png",
+          title: "Quick Recovery",
+          desc: "Minimally invasive techniques ensure fast 5–7 day healing with zero visible linear scarring.",
+        },
+      ],
+    },
+    procedure: {
+      title: "Procedure used for Temple Hair Transplant in India",
+      subtitle: "A 5-step precision surgical protocol ensuring maximum graft survival and acute angle alignment:",
+      steps: [
+        {
+          stepNumber: "01",
+          title: "Assessment & Temple Planning",
+          desc: "Detailed evaluation of donor capacity and precise geometric drawing of the temporal peaks.",
+        },
+        {
+          stepNumber: "02",
+          title: "Graft Extraction",
+          desc: "Superfine Cole punches harvest delicate single-hair follicular units from the safe donor zone.",
+        },
+        {
+          stepNumber: "03",
+          title: "Graft Preservation",
+          desc: "Follicles are preserved in specialized hypothermic solution with minimal out-of-body holding time.",
+        },
+        {
+          stepNumber: "04",
+          title: "Acute Angle Implantation",
+          desc: "SAVA implanters place grafts at flat 10–15° acute angles matching natural downward temple growth.",
+        },
+        {
+          stepNumber: "05",
+          title: "Post-Transplant Aftercare",
+          desc: "Structured post-operative instructions and wash protocols to promote rapid, comfortable recovery.",
+        },
+      ],
+    },
+    preProcedure: {
+      title: "Pre-Procedure Tips for Temple Hair Transplant",
+      subtitle: "Essential preparation steps to ensure optimal surgery and graft rooting:",
+      tips: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-3.webp",
+          title: "Avoid Alcohol & Smoking",
+          desc: "Stop smoking and drinking 7 days before surgery to improve blood flow, graft survival, and recovery.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-5.png",
+          title: "Avoid Blood Thinners",
+          desc: "Discontinue aspirin and blood thinners under medical supervision to prevent bleeding during surgery.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-6-1.png",
+          title: "Medical Evaluation",
+          desc: "Review medical history and medication use with your surgeon to ensure complete surgical safety.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-9.png",
+          title: "Scalp & Hair Hygiene",
+          desc: "Wash your scalp with mild antiseptic shampoo on procedure morning for a clean surgical field.",
+        },
+      ],
+    },
+    cost: {
+      title: "Temple Hair Transplant Cost in India",
+      costOverview: [
+        "Temple hair transplant in India typically ranges from ₹40,000 to ₹90,000 depending on graft requirement (500 – 1,500 single-hair grafts), technique selected, and facial symmetry needs.",
+        "At QHT Clinic, all-inclusive packages with specialized SAVA implanters ensure accessible pricing with zero hidden charges.",
+      ],
+      tableRows: [
+        { type: "Bilateral Temple Peak Touch-up (500 – 800 Grafts)", cost: "₹40,000 – ₹65,000" },
+        { type: "Advanced QHT Temporal Reconstruction (800 – 1,500 Grafts)", cost: "₹65,000 – ₹95,000", badge: "Most Popular", isHighlight: true },
+        { type: "Combined Temple & Frontal Hairline (1,500 – 2,500 Grafts)", cost: "₹95,000 – ₹1,45,000" },
+      ],
+      factorsSubtitle: "The factors affecting Temple Hair Transplant cost include:",
+      factors: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-4-3.png",
+          title: "Size of the Bald Patch",
+          desc: "Larger temporal recession requires higher graft counts, impacting the overall cost.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-5-2.png",
+          title: "Number of Grafts",
+          desc: "Total single-hair follicular units harvested to create soft, natural temporal density.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-6-3.png",
+          title: "Treatment Method Chosen",
+          desc: "Advanced QHT with SAVA pens offers superior angle control compared to standard FUE.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-7-3.png",
+          title: "Clinical Expertise at QHT Clinic",
+          desc: "Experienced surgeons ensure acute angle accuracy and natural facial balance.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-8-3.png",
+          title: "Multiple Sittings",
+          desc: "Multi-stage procedures for mega-sessions or revision cases influence the overall investment.",
+        },
+      ],
+    },
+    whyUs: {
+      title: "Why We Are Amongst the Most Trusted Temple Hair Transplant Clinic in India",
+      subtitle: "QHT Clinic is trusted for temple hair transplant with expert surgeons and advanced techniques:",
+      stats: [
+        { title: "High Success Rate", desc: "Completed thousands of Temple Hair transplants with acute angle precision and proper care." },
+        { title: "100% Client Satisfaction", desc: "Proven track record of successful temporal restorations and satisfied patients." },
+        { title: "Clinics All Over India", desc: "State-of-the-art facilities across 3 prime metropolitan centers in India." },
+        { title: "Over 15,000+ Successful Surgeries", desc: "Delivered by our senior surgical team with decades of collective experience." },
+      ],
+    },
+    journey: {
+      title: "Watch The Incredible Journey & Transformation.",
+      videos: [
+        { title: "Youtuber Bilal Rajput 6 Month Result | Transformation", youtubeId: "A6I29UR_1Q0", thumbnail: "https://img.youtube.com/vi/A6I29UR_1Q0/maxresdefault.jpg" },
+        { title: "Youtuber Nadeem Bunny Five Months Result | QHT Clinic", youtubeId: "aUcTotzYYXI", thumbnail: "https://img.youtube.com/vi/aUcTotzYYXI/maxresdefault.jpg" },
+        { title: "Grade 3 Baldness Temple & Frontal Result | Delhi", youtubeId: "z3DFH5rnmQ0", thumbnail: "https://img.youtube.com/vi/z3DFH5rnmQ0/maxresdefault.jpg" },
+        { title: "Hair Transplant in Bhopal | Best Results & Cost", youtubeId: "mCI8WvJ-7rI", thumbnail: "https://img.youtube.com/vi/mCI8WvJ-7rI/maxresdefault.jpg" },
+        { title: "Hair Transplant Result | Patient Journey", youtubeId: "R4DYeCqCJEM", thumbnail: "https://img.youtube.com/vi/R4DYeCqCJEM/maxresdefault.jpg" },
+        { title: "Grade 2 Baldness Temple & Hairline Result", youtubeId: "vTSsqvEoZt4", thumbnail: "https://img.youtube.com/vi/vTSsqvEoZt4/maxresdefault.jpg" },
+      ],
+    },
+    causes: {
+      title: "Causes of Early Temple Hair Loss",
+      subtitle: "Key factors causing premature thinning and recession at the temporal peaks:",
+      causes: [
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-9-2.png", title: "Personal & Family History", desc: "Hereditary sensitivity to androgenetic alopecia causing early temporal recession." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-10-3.png", title: "Stress & Lifestyle", desc: "Irregular sleep, chronic stress, and nutritional deficiencies triggering thinning." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-11-3.png", title: "Social Appearance Demand", desc: "Desire for sharp, youthful hairline definition for personal and professional presence." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-12-3.png", title: "Hormonal Imbalance", desc: "Fluctuations in hormonal levels affecting follicle anchoring at temporal angles." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-13-2.png", title: "Medical Conditions", desc: "Underlying scalp ailments or medications leading to premature hair loss." },
+      ],
+    },
+    whyChooseQHT: {
+      title: "Why Choose QHT for Temple Hair Transplant?",
+      subtitle: "We combine precision temporal artistry with patented transplantation methods:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and influencers for undetectable temporal hairline framing." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "Clinical Expertise", desc: "Decades of experience managing complex acute hair exit angles." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp", title: "Natural Results", desc: "Soft feathered temporal margins providing authentic, harmonious facial proportions." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp", title: "Best Facilities", desc: "Equipped with state-of-the-art optical systems and sterile operating suites." },
+      ],
+    },
+    postSurgerySupport: {
+      title: "Post-Surgery Support for Temple Hair Transplant",
+      subtitle: "QHT Clinic provides structured aftercare to ensure smooth healing and natural temporal growth.",
+      image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3-3.jpg",
+      supportItems: [
+        { title: "Regular Follow-ups", desc: "Routine clinical visits to track recovery and graft rooting." },
+        { title: "Medication Prescribing", desc: "Post-transplant medications to accelerate healing and minimize discomfort." },
+        { title: "Customized Therapy", desc: "Tailored PRP/GFC therapy for enhanced follicular revitalization." },
+        { title: "Customized Lifestyle Guidance", desc: "Personalized instructions on diet, sleep positioning, and gentle hair care." },
+      ],
+    },
+    dosDonts: {
+      title: "Do’s and Don’ts after Temple Hair Transplant",
+      subtitle: "Guidelines to ensure optimal healing and protect your transplanted temporal grafts:",
+      donts: [
+        "Avoid direct sunlight and UV exposure during the initial recovery weeks.",
+        "Avoid heavy exercise or activities causing excessive sweating.",
+        "Do not touch, scratch, or pick at the temporal hairline scabs.",
+        "Avoid using styling gels, chemical sprays, or hair dyes for at least 2–3 weeks.",
+      ],
+      dos: [
+        "Follow all post-surgery instructions as advised by your lead surgeon.",
+        "Wash and keep your scalp clean using recommended gentle cleansers.",
+        "Eat nutrient-rich food and stay well hydrated to support regrowth.",
+        "Take prescribed medications on time to manage comfort and prevent infection.",
+      ],
+    },
+    recoveryTimeline: {
+      title: "Recovery Time & Aftercare of Temple Hair Transplant",
+      subtitle: "Understanding your temporal hair restoration journey over time:",
+      weeks: [
+        {
+          label: "Week 1-2",
+          expectations: ["Mild redness, slight swelling, and sensitive skin around the temporal peaks."],
+          careGuidelines: ["Keep head elevated, follow QHT wash routine, and avoid scratching grafts."],
+        },
+        {
+          label: "Week 2-6",
+          expectations: ["Scabs fall off naturally and transplanted hairs enter the resting shed phase."],
+          careGuidelines: ["Avoid strong sunlight and heavy workouts; resume normal routine."],
+        },
+        {
+          label: "Month 3-12",
+          expectations: ["New growth starts from month 3, growing thicker and denser over months 6–9."],
+          careGuidelines: ["Continue gentle hair care and attend milestone clinical reviews."],
+        },
+        {
+          label: "After 1 Year",
+          expectations: ["Full mature temporal density with seamless, lifelong facial framing."],
+          careGuidelines: ["Enjoy natural styling, cutting, and normal grooming routines."],
+        },
+      ],
+    },
+    bookingBar: {
+      title: "Your Most Trusted Hair Restoration Experts — Consult Today",
+      patientCountText: "4.9K patients booked their sessions",
+    },
+    comparison: {
+      title: "Comparison of Temple Hair Transplant Techniques",
+      subtitle: "Key differences between advanced QHT and traditional FUE for temple reconstruction:",
+      cards: [
+        {
+          title: "QHT Temple Hair Transplant",
+          purpose: "Precision acute hair exit angle placement & high density using SAVA pens.",
+          effectiveness: "Natural temporal margins, 98% graft survival, seamless blending.",
+          risk: "Minimally invasive, rapid 5–7 day recovery, zero visible scars.",
+          cost: "Affordable Precision (₹65,000 – ₹95,000)",
+        },
+        {
+          title: "Traditional FUE Temple Hair Transplant",
+          purpose: "Forceps implantation into premade slits with standard punch extraction.",
+          effectiveness: "Moderate density with higher risk of misdirected temporal angles.",
+          risk: "Standard 7–10 day healing time with micro-dot marks.",
+          cost: "Standard Tier (₹50,000 – ₹80,000)",
+        },
+      ],
+    },
+    faq: {
+      title: "FAQs on Temple Hairline Transplant",
+      faqs: [
+        {
+          question: "What is the best method for temple hairline transplant?",
+          answer: "The Advanced QHT Technique is the gold standard because it ensures acute 10–15° hair exit angles, high density, and rapid 5–7 day recovery.",
+        },
+        {
+          question: "Is temple hair transplant permanent?",
+          answer: "Yes. Follicles harvested from the permanent safe donor zone are DHT-resistant and grow naturally for a lifetime.",
+        },
+        {
+          question: "Can failed temple transplants be corrected at QHT?",
+          answer: "Yes. QHT Clinic specializes in revision repair, extracting poorly angled grafts and reconstructing natural temporal symmetry.",
+        },
+      ],
+    },
+  },
+  "natural-look-hair-restoration": {
+    hero: {
+      title: "Natural Hair Transplant in India",
+      subtitle: "Reclaim your confidence with hair that looks as natural as it feels — undetectable, dense, and permanent results.",
+      bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/grooming-perfection-handsome-european-bearded-mid-2025-03-18-19-02-49-utc-1568x1045.jpg",
+      tagline: "100% Real Feel & Undetectable Blending",
+      pointerLabel: "Artistic Hairline Geometry",
+    },
+    intro: {
+      block1Heading: "What is Natural Look Hair Restoration?",
+      block1Lead: "Advanced methods developed to blend in flawlessly to your hair with long-lasting, natural results.",
+      block1Paragraphs: [
+        "Natural Look Hair Restoration is an advanced cosmetic treatment designed to restore thinning or bald scalp areas with complete aesthetic realism. At QHT Clinic, our objective is to create natural hair transplant results that seamlessly integrate with your existing hair geometry.",
+        "By employing ultra-refined micro-slit tools and calibrating root placement for angle, depth, and curl orientation, we guarantee an authentic, undetectable hairline without pluggy patterns or surgical telltales.",
+      ],
+      block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
+      pointer1: "Precise Angle & Direction Alignment",
+      pointer2: "Undetectable Single-Hair Transition",
+      block2Heading: "Natural Hair Transplant in India",
+      block2Paragraphs: [
+        "India has emerged as the premier global hub for undetectable hair restoration. At QHT Clinic, we combine sapphire micro-incision technology with senior trichology surgeons to provide permanent, naturalistic density.",
+        "Thousands of patients across India and worldwide trust our clinical expertise to deliver camera-ready hair restoration with minimal downtime.",
+      ],
+      block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
+    },
+    results: {
+      title: "Results of Natural Hair Transplant",
+      subtitle: "Undetectable hair restoration produces natural, permanent results that blend flawlessly with native hair — allowing you to wash, cut, and style with complete freedom.",
+      results: [
+        {
+          name: "Irfan - Grade 5A Natural Blending",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+        },
+        {
+          name: "Kshitij Ahuja - Grade 4 Frontal Soft Hairline",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+        },
+        {
+          name: "Pranav Meshram - Grade 6 Full Scalp Coverage",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+        },
+        {
+          name: "Praveen Kumar - DHI Natural Density",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+        },
+        {
+          name: "Puneet Chandra - Grade 6 Undetectable Transition",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+        },
+        {
+          name: "Sagar Kumar - Grade 4A Feathered Hairline",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+        },
+      ],
+    },
+    candidate: {
+      title: "Who is an Ideal Candidate For Natural Hair Transplant?",
+      subtitle: "Ideal for patients desiring authentic, undetectable hair restoration with healthy donor supply:",
+      points: [
+        {
+          title: "Coverage for Thinned or Bald Areas",
+          desc: "Individuals with visible scalp thinning or receding zones who desire dense, natural-looking coverage.",
+        },
+        {
+          title: "Restoring a Receding Hairline",
+          desc: "Patients seeking an age-appropriate, soft feathered frontal hairline that frames the face naturally.",
+        },
+        {
+          title: "Preference for Minimal Scarring",
+          desc: "Those who prefer sub-millimeter micro-incisions and zero visible linear surgical scars.",
+        },
+        {
+          title: "Good Health & Donor Supply",
+          desc: "Candidates with stable general health and adequate DHT-resistant donor reserves on the occipital scalp.",
+        },
+      ],
+    },
+    types: {
+      title: "Types of Natural Hair Transplant",
+      subtitle: "Advanced surgical methodologies tailored for undetectable hair restoration:",
+      types: [
+        {
+          title: "Quick Hair Transplant (QHT)",
+          desc: "Patented simultaneous extraction and placement using Cole punches and SAVA implanters for maximum graft survival and undetectable density.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
+          points: [
+            "Delivers higher density restoration in fewer sittings.",
+            "Ultra-precise custom micro-slits control exact angle and direction.",
+            "Rapid 5-day recovery with virtually undetectable healing.",
+          ],
+        },
+        {
+          title: "Follicular Unit Excision (FUE)",
+          desc: "Individual graft harvesting with micro-motorized punches and precision forceps placement.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/FUE.webp",
+          points: [
+            "Transplants each follicle unit individually for minimal scarring.",
+            "Quicker healing than traditional strip surgery.",
+            "Maintains lifelong permanent hair growth.",
+          ],
+        },
+      ],
+    },
+    benefits: {
+      title: "Benefits of a Natural Hair Transplant",
+      subtitle: "Definitive aesthetic, psychological, and lifestyle advantages of undetectable restoration:",
+      benefits: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-1.webp",
+          title: "100% Natural Appearance & Feel",
+          desc: "Guarantees hair that looks, feels, and moves completely real, blending seamlessly with native follicles.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-3.webp",
+          title: "Long-Lasting Permanent Results",
+          desc: "Transplanted roots are DHT-resistant and continue growing naturally for a lifetime.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-4.webp",
+          title: "Safe & Minimally Invasive Procedure",
+          desc: "Microscopic sapphire incisions heal rapidly without linear scarring, ensuring prompt return to routine.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-2.webp",
+          title: "Increased Confidence & Self-Esteem",
+          desc: "Restores a youthful, authentic look that boosts self-assurance in social and professional life.",
+        },
+      ],
+    },
+    procedure: {
+      title: "Procedure for Undetectable Hair Restoration",
+      subtitle: "A 4-step precision surgical protocol designed for completely natural aesthetics:",
+      steps: [
+        {
+          stepNumber: "01",
+          title: "Consultation & Hairline Design",
+          desc: "Artistic hairline mapping tailored to facial proportions, temple angles, and future hair aging patterns.",
+        },
+        {
+          stepNumber: "02",
+          title: "Extraction of Healthy Donor Follicles",
+          desc: "Superfine Cole punches harvest robust follicular units with <5% transection and preserved graft tissue.",
+        },
+        {
+          stepNumber: "03",
+          title: "Precise Implantation",
+          desc: "Grafts implanted with SAVA pens at precise acute angles and density gradients for seamless restoration.",
+        },
+        {
+          stepNumber: "04",
+          title: "Comprehensive Post-Procedure Care",
+          desc: "Personalized aftercare routines, antiseptic wash guidelines, and clinical monitoring to maximize growth.",
+        },
+      ],
+    },
+    preProcedure: {
+      title: "Pre-Procedure Tips For Natural Hair Transplant",
+      subtitle: "Proper preparation ensures optimal surgical safety and graft vascularization:",
+      tips: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-3.webp",
+          title: "Don't Smoke or Drink Alcohol",
+          desc: "Stop smoking and drinking for at least 7 days before surgery to avoid compromised scalp perfusion.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-1.webp",
+          title: "Stop Medications If Advised",
+          desc: "Pause blood-thinning drugs and aspirin only under direct clinical recommendation.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-4.webp",
+          title: "Clean Your Scalp",
+          desc: "Wash hair with mild antiseptic shampoo on the surgery morning to keep the donor bed sterile.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-2.webp",
+          title: "Maintain A Balanced Diet",
+          desc: "Nourish your body with protein and vitamin-rich meals to promote rapid post-operative wound healing.",
+        },
+      ],
+    },
+    cost: {
+      title: "Hair Restoration Cost in India",
+      costOverview: [
+        "The cost of natural hair restoration in India typically ranges from ₹60,000 to ₹1,80,000 based on graft requirement (1,500 – 4,000+ grafts), technique selected, and surgeon experience.",
+        "At QHT Clinic, we offer transparent all-inclusive packages with zero hidden fees and complimentary post-op PRP sessions.",
+      ],
+      tableRows: [
+        { type: "Standard FUE Natural Restoration (1,500 – 2,500 Grafts)", cost: "₹60,000 – ₹1,10,000" },
+        { type: "Advanced QHT Natural Look Transplant (2,500 – 3,500 Grafts)", cost: "₹1,10,000 – ₹1,70,000", badge: "Most Popular", isHighlight: true },
+        { type: "Mega-Session Undetectable Full Scalp (3,500+ Grafts)", cost: "₹1,70,000 – ₹2,50,000" },
+      ],
+      factorsSubtitle: "Factors Affecting The Cost of Natural Hair Transplant",
+      factors: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
+          title: "Grafts Required",
+          desc: "Higher graft volumes require extended surgical precision and specialized team coordination.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-4.webp",
+          title: "Technique Chosen (QHT vs FUE)",
+          desc: "Patented QHT with simultaneous SAVA pen placement utilizes premium sapphire micro-blades.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
+          title: "Experienced Surgeon",
+          desc: "Senior trichology surgeons with proven artistic hairline recreation command professional fees.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-2.webp",
+          title: "Clinic Structure & Technology",
+          desc: "World-class OT facilities, stereo-microscopic graft handling, and high safety standards.",
+        },
+      ],
+    },
+    whyUs: {
+      title: "Why We Are Amongst the Most Trusted Undetectable Hair Restoration Clinics in India",
+      subtitle: "QHT Clinic combines clinical expertise, cutting-edge tools, and personalized aesthetic planning:",
+      stats: [
+        { title: "5000+ Undetectable Surgeries", desc: "Successful natural hair restorations performed with seamless hairline artistry." },
+        { title: "97%+ Graft Survival", desc: "Achieved through sapphire blades, hypothermic preservation, and SAVA implanters." },
+        { title: "100% Customized Plans", desc: "Tailored to patient facial structure, age, and natural hair growth angles." },
+        { title: "Top Rated Nationwide", desc: "Trusted by over 15,000 satisfied patients across India and abroad." },
+      ],
+    },
+    journey: {
+      title: "Watch The Incredible Journey & Transformation.",
+      videos: [
+        { title: "Hair Transplant in Ghaziabad | Best Results & Cost", youtubeId: "PwHvhKrSLt0", thumbnail: "https://img.youtube.com/vi/PwHvhKrSLt0/maxresdefault.jpg" },
+        { title: "Hair Transplant in Bangalore | Best Results", youtubeId: "tnIpajH5cBE", thumbnail: "https://img.youtube.com/vi/tnIpajH5cBE/maxresdefault.jpg" },
+        { title: "Hair Transplant in Amravati | Transformation", youtubeId: "EO76F1pgncw", thumbnail: "https://img.youtube.com/vi/EO76F1pgncw/maxresdefault.jpg" },
+        { title: "Hair Transplant in Delhi | Natural Hairline", youtubeId: "Q_3pLuOavwQ", thumbnail: "https://img.youtube.com/vi/Q_3pLuOavwQ/maxresdefault.jpg" },
+        { title: "My Hair Transplant Results 6 Months Post-Op", youtubeId: "1jF4-P1mMJA", thumbnail: "https://img.youtube.com/vi/1jF4-P1mMJA/maxresdefault.jpg" },
+        { title: "Hair Transplant in Delhi | Case Study", youtubeId: "eepNNhmOfJ4", thumbnail: "https://img.youtube.com/vi/eepNNhmOfJ4/maxresdefault.jpg" },
+      ],
+    },
+    causes: {
+      title: "Common Causes of Hair Loss",
+      subtitle: "Understanding the underlying etiology helps determine the optimal restoration strategy:",
+      causes: [
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-1.webp", title: "Genetics (Androgenetic Alopecia)", desc: "Hereditary sensitivity to DHT leading to gradual follicle miniaturization." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-2.webp", title: "Aging & Follicular Slowdown", desc: "Natural decline in follicle growth rate and hair shaft diameter over time." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-3.webp", title: "Lifestyle Factors", desc: "Chronic stress, poor nutrition, irregular sleep, and smoking exacerbating shedding." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-5.webp", title: "Diseases & Disorders", desc: "Thyroid dysfunctions, autoimmune issues, and medication side-effects causing diffuse loss." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-1.webp", title: "Environmental Factors", desc: "Hard water, heavy pollution, and intense UV exposure weakening the scalp barrier." },
+      ],
+    },
+    whyChooseQHT: {
+      title: "Why Choose QHT for Natural Hair Transplant?",
+      subtitle: "Experience, surgical precision, and patient-centered protocols that set us apart:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Trustworthy Expertise", desc: "Senior surgeons specializing in undetectable single-hair micro transitions." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Faster Recovery & Comfort", desc: "Minimally invasive sapphire micro-slits minimize downtime and discomfort." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Natural-Looking Results", desc: "Custom hairline designs that integrate seamlessly with your native hair flow." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Trusted & Reliable Care", desc: "Uncompromising clinical standards backed by thousands of verified reviews." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Advanced Technology & Tools", desc: "Patented SAVA implanters and sapphire blades maximizing follicle survival." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Customized Treatment Plans", desc: "Personalized density planning tailored to your exact hair loss pattern." },
+      ],
+    },
+    postSurgerySupport: {
+      title: "Post-Surgery Support For Natural Hair Transplant",
+      subtitle: "Dedicated post-operative care ensuring smooth healing and maximum density.",
+      image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-post-surgery-thumb.webp",
+      supportItems: [
+        { title: "Ongoing Clinical Follow-Ups", desc: "Regular check-ins to monitor healing and graft rooting progression." },
+        { title: "Journey of Growth Monitoring", desc: "Trichology specialists track emergence and density milestones over 12 months." },
+        { title: "Customized Aftercare Guidelines", desc: "Detailed step-by-step instructions for washing, sleeping, and sun protection." },
+        { title: "Dedicated Support Team", desc: "Instant communication channels for any post-operative queries or guidance." },
+        { title: "Lasting Return on Investment", desc: "Lifelong natural results backed by open communication and clinical excellence." },
+      ],
+    },
+    dosDonts: {
+      title: "Do’s and Don’ts After a Natural Hair Transplant",
+      subtitle: "Essential recovery instructions to protect your newly planted follicles:",
+      donts: [
+        "Do not scratch, touch, or pick at transplanted grafts or scabs.",
+        "Do not expose scalp to direct sunlight; wear a loose cap when outdoors.",
+        "Avoid heavy gym workouts, running, or activities causing excessive sweating for 2–3 weeks.",
+        "Do not smoke or consume alcohol for the first few weeks to maintain proper blood perfusion.",
+      ],
+      dos: [
+        "Take all prescribed antibiotics, pain relievers, and follicle vitamins on time.",
+        "Keep your scalp clean using only recommended gentle cleansers.",
+        "Attend all scheduled clinical follow-up appointments to track healing.",
+        "Sleep with your head elevated on pillows for the first 3–5 nights to minimize swelling.",
+      ],
+    },
+    recoveryTimeline: {
+      title: "Recovery Time & Aftercare For Natural Hair Transplant",
+      subtitle: "A clear timeline of what to expect during your post-operative restoration journey:",
+      weeks: [
+        {
+          label: "Week 1",
+          expectations: ["Mild redness, slight swelling, and small protective scabs around the grafts."],
+          careGuidelines: ["Keep scalp clean, avoid touching grafts, and sleep with head elevated."],
+        },
+        {
+          label: "Week 2",
+          expectations: ["Grafts firmly anchor and temporary shedding (shock loss) begins."],
+          careGuidelines: ["Stay calm — shedding is a normal part of the follicle renewal cycle."],
+        },
+        {
+          label: "Week 3",
+          expectations: ["Shedding continues; follicles enter dormant resting phase below skin."],
+          careGuidelines: ["Resume gentle daily washing; do not scratch or use harsh styling products."],
+        },
+        {
+          label: "Week 4",
+          expectations: ["Scalp redness completely subsides; initial fine hair sprouts may appear."],
+          careGuidelines: ["Continue gentle care with prescribed shampoo and healthy nutrition."],
+        },
+        {
+          label: "Week 5–6",
+          expectations: ["New hair growth cycle activates; progressive thickening begins over coming months."],
+          careGuidelines: ["Maintain balanced diet, light exercise, and attend milestone reviews."],
+        },
+      ],
+    },
+    bookingBar: {
+      title: "Your Most Trusted Hair Restoration Experts — Consult Today",
+      patientCountText: "4.9K patients booked their sessions",
+    },
+    comparison: {
+      title: "Comparison Of Natural Hair Transplant",
+      subtitle: "How QHT's undetectable restoration compares against conventional hair transplant methods:",
+      cards: [
+        {
+          title: "Natural Hair Transplant (QHT)",
+          purpose: "Simultaneous extraction & placement with SAVA pens into sapphire micro-slits.",
+          effectiveness: "Undetectable natural hairline, 97%+ graft survival, seamless density blending.",
+          risk: "Scarless, minimal downtime, fast 5-day healing.",
+          cost: "Affordable Precision (₹1,10,000 – ₹1,70,000)",
+        },
+        {
+          title: "Conventional Hair Transplant Methods",
+          purpose: "Standard extraction with delayed forceps insertion into larger slits.",
+          effectiveness: "Inconsistent density, pluggy hairline appearance, longer out-of-body graft time.",
+          risk: "Visible scarring, prolonged swelling, slower recovery.",
+          cost: "Standard Tier (₹60,000 – ₹1,20,000)",
+        },
+      ],
+    },
+    faq: {
+      title: "FAQ on Natural Look Hair Restoration",
+      faqs: [
+        {
+          question: "Is a Natural Hair Transplant a Permanent Solution?",
+          answer: "Yes. Once the grafts are successfully transplanted from the DHT-resistant donor zone, the hair will continue to grow naturally for a lifetime.",
+        },
+        {
+          question: "Will I be able to style my transplanted hair normally?",
+          answer: "Yes. Once the transplanted follicles mature, you can cut, dye, trim, and style your new hair normally, just like native hair.",
+        },
+        {
+          question: "Will I feel pain during the procedure?",
+          answer: "Not at all. The procedure is performed under gentle local anesthesia, eliminating discomfort during surgery and providing smooth post-operative recovery.",
+        },
+      ],
+    },
+  },
+  "eyebrow-reconstruction-in-india": {
+    hero: {
+      title: "Eyebrow Reconstruction: A Guide to Perfect Brows",
+      subtitle: "Affordable and effective naturally looking denser eyebrow reconstruction treatment in India with single-hair micro precision.",
+      bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/microblading-eyebrows-semi-permanent-makeup-proce-2024-10-22-11-42-00-utc-1568x1045.jpg",
+      tagline: "Single-Hair Follicle Implantation & Arch Symmetry",
+      pointerLabel: "Micro-Angulation Design",
+    },
+    intro: {
+      block1Heading: "What is an Eyebrow Reconstruction?",
+      block1Lead: "Restoration or creation of fuller, naturally looking eyebrows.",
+      block1Paragraphs: [
+        "An Eyebrow Reconstruction is a delicate cosmetic and reconstructive hair restoration procedure designed to recreate natural density, arch curvature, and fuller framing for sparse, damaged, or absent eyebrows.",
+        "Using our patented QHT (Quick Hair Transplant) technique, fine single-hair grafts extracted from the safe donor zone are implanted along the exact acute angles of natural brow hair, delivering permanent, trimmable, and smudge-proof results without relying on daily makeup or cosmetic tattoos.",
+      ],
+      block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-1-4.jpg",
+      pointer1: "Flat 10–15° Acute Implantation",
+      pointer2: "Single-Hair Micro Selection",
+      block2Heading: "Eyebrow Reconstruction in India",
+      block2Paragraphs: [
+        "India is globally renowned for precision eyebrow transplantation. At QHT Clinic, our specialized facial hair surgeons utilize custom micro-slit blades and SAVA pen implanters to ensure imperceptible scars and high graft survival.",
+        "With pan-India clinic facilities and transparent pricing, patients achieve symmetrical, face-framing brows at highly affordable costs.",
+      ],
+      block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-2-4.jpg",
+    },
+    results: {
+      title: "Results of Eyebrow Reconstruction",
+      subtitle: "At QHT Clinic, eyebrow reconstruction delivers lifelong natural brows that grow continuously, framing the eyes with balanced symmetry and youthful facial harmony.",
+      results: [
+        {
+          name: "Irfan - Grade 5A Brow Reconstruction",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+        },
+        {
+          name: "Kshitij Ahuja - Grade 4 Brow Tail Definition",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+        },
+        {
+          name: "Pranav Meshram - Grade 6 Full Brow Restoration",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+        },
+        {
+          name: "Praveen Kumar - DHI Eyebrow Technique",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+        },
+        {
+          name: "Puneet Chandra - Grade 6 Eyebrow Arch Density",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+        },
+        {
+          name: "Sagar Kumar - Grade 4A Brow Shaping",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+        },
+      ],
+    },
+    candidate: {
+      title: "Who is an Ideal Candidate?",
+      subtitle: "Eyebrow reconstruction is ideal for individuals dealing with sparse, damaged, or absent brows due to various factors:",
+      points: [
+        {
+          title: "Burns or Unintentional Injuries",
+          desc: "Accidental trauma or facial thermal burns causing patchy or lost eyebrow hair.",
+        },
+        {
+          title: "Scarring from Trauma or Surgery",
+          desc: "Cicatricial scars from past injuries, cuts, or surgical incisions requiring hair camouflage.",
+        },
+        {
+          title: "Genetically Thin Eyebrows",
+          desc: "Individuals with sparse baseline eyebrow density seeking bold, defined, permanent arches.",
+        },
+        {
+          title: "Excessive Over-Plucking",
+          desc: "Permanent follicle death caused by chronic tweezing, threading, or microblading fading.",
+        },
+      ],
+    },
+    types: {
+      title: "Types of Eyebrow Reconstruction",
+      subtitle: "Specialized microsurgical harvesting and implantation techniques for eyebrow restoration:",
+      types: [
+        {
+          title: "QHT Technique for Eyebrow",
+          desc: "Simultaneous micro-slit creation and instant single-hair implantation ensuring precise flat angles and rapid recovery.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
+          points: [
+            "Customizable ultra-fine slits matched to single-hair caliber.",
+            "Complete directional control mimicking natural eyebrow feathering.",
+            "Fast 4–5 day healing with zero visible donor scarring.",
+          ],
+        },
+        {
+          title: "Follicular Unit Excision (FUE)",
+          desc: "Individual micro-grafts harvested sub-millimetrically and placed one by one into the brow shape.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/FUE.webp",
+          points: [
+            "Ensures precision and natural growth with minimal scarring.",
+            "Graft-by-graft selection of fine hairs from behind the ears/nape.",
+            "Short downtime with smooth recovery.",
+          ],
+        },
+        {
+          title: "Follicular Unit Transplant (FUT)",
+          desc: "A small strip harvested from the donor area to dissect individual follicular units for large brow restorations.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-types-thumb-2.webp",
+          points: [
+            "Delivers fuller brows for extensive reconstructive trauma cases.",
+            "Leaves a thin linear donor scar concealed under scalp hair.",
+            "Requires slightly longer recovery time.",
+          ],
+        },
+      ],
+    },
+    benefits: {
+      title: "Benefits of Eyebrow Reconstruction",
+      subtitle: "Restoring your natural brows provides permanent aesthetic, emotional, and practical benefits:",
+      benefits: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-1-4.png",
+          title: "A Natural Look",
+          desc: "Eyebrows appear denser, fuller, and completely realistic with natural hair texture.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-2-4.png",
+          title: "Self-Esteem Boost",
+          desc: "Eliminates insecurity caused by sparse brows, restoring youthful facial framing.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-3-4.png",
+          title: "Promising Permanent Results",
+          desc: "Transplanted follicles grow permanently, saving hours from daily makeup or recurring microblading sessions.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-4-4.png",
+          title: "Improved Facial Symmetry",
+          desc: "Bespoke arch and tail alignment enhances eye contour and facial balance.",
+        },
+      ],
+    },
+    procedure: {
+      title: "Procedure Used for Eyebrow Hair Transplant in India",
+      subtitle: "A 4-step precision microsurgical protocol tailored for delicate facial restoration:",
+      steps: [
+        {
+          stepNumber: "01",
+          title: "Initial Consultation & Brow Mapping",
+          desc: "Artistic drawing of the ideal eyebrow arch, body, and tail aligned to golden-ratio facial dimensions.",
+        },
+        {
+          stepNumber: "02",
+          title: "Selecting Donor Hair",
+          desc: "Harvesting fine, single-hair follicles from the lower occipital or post-auricular region matching brow texture.",
+        },
+        {
+          stepNumber: "03",
+          title: "Selection of Techniques",
+          desc: "Utilizing advanced QHT simultaneous pen placement or micro-FUE depending on case requirements.",
+        },
+        {
+          stepNumber: "04",
+          title: "Careful Acute Placement",
+          desc: "Grafts implanted one by one at flat 10–15° acute angles following natural eyebrow feathering vectors.",
+        },
+      ],
+    },
+    preProcedure: {
+      title: "Pre-Procedure Tips for Eyebrow Reconstruction",
+      subtitle: "Key guidelines to follow prior to your eyebrow restoration procedure:",
+      tips: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-3.webp",
+          title: "Skip Alcohol & Smoking",
+          desc: "Refrain from smoking and alcohol for at least 7 days before and after surgery to optimize microcirculation.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-8.png",
+          title: "Avoid Certain Medications",
+          desc: "Pause blood-thinners, multivitamins, and aspirin under medical direction to avoid bruising.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-6-4.png",
+          title: "Keep Skin Clean",
+          desc: "Do not apply makeup, brow pencils, lotions, or oils on or around the eyebrows on procedure day.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-10-1.png",
+          title: "Medical Disclosure",
+          desc: "Inform your specialist about thyroid levels, diabetes, or skin sensitivities for personalized surgical planning.",
+        },
+      ],
+    },
+    cost: {
+      title: "Eyebrow Reconstruction Cost in India",
+      costOverview: [
+        "In India, eyebrow hair transplant costs typically range from ₹25,000 to ₹65,000 depending on graft count (200–600 single hairs), technique used, and surgeon expertise.",
+        "At QHT Clinic, all-inclusive packages with specialized single-hair SAVA implanters ensure accessible pricing and zero hidden charges.",
+      ],
+      tableRows: [
+        { type: "QHT Technique (Patented Micro-Slit)", cost: "₹25,000 – ₹55,000", badge: "Most Popular", isHighlight: true },
+        { type: "Standard FUE Eyebrow Transplant", cost: "₹20,000 – ₹50,000" },
+        { type: "FUT Strip Eyebrow Restoration", cost: "₹25,000 – ₹60,000" },
+      ],
+      factorsSubtitle: "Factors Affecting Eyebrow Reconstruction Cost",
+      factors: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-8-1.png",
+          title: "Number of Grafts Implanted",
+          desc: "Partial tail touch-ups (150–250 grafts) cost less than full bilateral brow reconstruction (400–700 grafts).",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-6-3.png",
+          title: "Techniques Used",
+          desc: "Advanced QHT with SAVA pens provides acute angle control and minimal trauma compared to standard methods.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/Vector-2.png",
+          title: "Clinic Location",
+          desc: "Metropolitan clinic centers in Delhi, Mumbai, and Bangalore offer world-class infrastructure.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-11-1.png",
+          title: "Clinic's Reputation & Experience",
+          desc: "Senior facial hair surgeons ensure precise single-hair separation and natural growth direction.",
+        },
+      ],
+    },
+    whyUs: {
+      title: "Why QHT is Amongst the Most Trusted Eyebrow Reconstruction Clinics in India",
+      subtitle: "QHT Clinic combines microsurgical precision, aesthetic artistry, and pan-India presence:",
+      stats: [
+        { title: "High Precision", desc: "Patented SAVA implanters ensure flat 10–15° angle placement matching natural brow feathering." },
+        { title: "Highly Affordable", desc: "Transparent, accessible packages with full post-procedure care included." },
+        { title: "10+ Years of Knowledge", desc: "Experienced trichology specialists with thousands of successful facial hair restorations." },
+        { title: "5+ Clinics in India", desc: "Pan-India presence making world-class eyebrow restoration easily accessible." },
+      ],
+    },
+    journey: {
+      title: "Watch The Incredible Journey & Transformation.",
+      videos: [
+        { title: "Best Hair Transplant Result 2022 | Grade 4 Case Study", youtubeId: "dmgijrtXI7A", thumbnail: "https://img.youtube.com/vi/dmgijrtXI7A/maxresdefault.jpg" },
+        { title: "Grade 2 Hairline & Facial Recreate | QHT Clinic", youtubeId: "yttewGbQkQM", thumbnail: "https://img.youtube.com/vi/yttewGbQkQM/maxresdefault.jpg" },
+        { title: "Hair Transplant in India | Best Results & Cost", youtubeId: "wGyq-pwqA3Q", thumbnail: "https://img.youtube.com/vi/wGyq-pwqA3Q/maxresdefault.jpg" },
+        { title: "Hair Transplant Result | Patient Experience", youtubeId: "BBgXW7AxgsQ", thumbnail: "https://img.youtube.com/vi/BBgXW7AxgsQ/maxresdefault.jpg" },
+        { title: "Grade 5 Hair Transplant Result", youtubeId: "FYtBkggUuBg", thumbnail: "https://img.youtube.com/vi/FYtBkggUuBg/maxresdefault.jpg" },
+        { title: "Hair Transplant Timelapse | Delhi Clinic", youtubeId: "_9EezQGMgK0", thumbnail: "https://img.youtube.com/vi/_9EezQGMgK0/maxresdefault.jpg" },
+      ],
+    },
+    causes: {
+      title: "Causes of Early Eyebrow Loss & Thinning",
+      subtitle: "Key factors causing sparse, uneven, or absent eyebrow hair:",
+      causes: [
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-8-4.png", title: "Initial Post-Op Shedding", desc: "Normal temporary shedding during weeks 2–6 as roots transition into resting phase." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-9-3.png", title: "Improper Aftercare", desc: "Rubbing, scratching, or applying makeup too early damaging delicate graft anchors." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-10-4.png", title: "Lifestyle Factors", desc: "Chronic stress, smoking, and nutritional deficiencies impairing brow root vitality." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-11-4.png", title: "Medical Conditions", desc: "Thyroid imbalances, alopecia areata, and hormonal fluctuations affecting brow growth." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-12-4.png", title: "Genetic Predisposition", desc: "Naturally thin, sparse eyebrow patterns running across family genetics." },
+      ],
+    },
+    whyChooseQHT: {
+      title: "Why Choose QHT Clinic for Eyebrow Reconstruction",
+      subtitle: "Comprehensive counselling, world-class precision, and dedicated patient care:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Proper Analysis & Counselling", desc: "Personalized brow mapping aligned to golden ratio facial proportions." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "World-Class Techniques", desc: "Single-hair micro implanters delivering natural acute angles and zero scars." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp", title: "Proper Support", desc: "Pre- and post-procedure guidance with compassionate patient coordination." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp", title: "Affordability", desc: "Transparent, cost-effective packages with easy EMI options." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/5-img-1.webp", title: "Comprehensive Care", desc: "Continuous healing monitoring and long-term trimming guidance." },
+      ],
+    },
+    postSurgerySupport: {
+      title: "Post-Surgery Support For Eyebrow Reconstruction",
+      subtitle: "QHT Clinic provides structured post-operative protocols for smooth eyebrow healing and optimal density.",
+      image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3-3.jpg",
+      supportItems: [
+        { title: "Proper Guidance", desc: "Detailed cleansing and sanitization routines to prevent irritation or infection." },
+        { title: "Multiple Follow-Ups", desc: "Regular check-ups to track graft alignment, skin healing, and new sprout growth." },
+        { title: "Emergency Support", desc: "Direct access to our medical team for any post-op questions or immediate guidance." },
+        { title: "Lifestyle Recommendations", desc: "Guidance on sleep positioning, gentle face washing, and nutritional care." },
+      ],
+    },
+    dosDonts: {
+      title: "Do's and Don'ts After Eyebrow Reconstruction",
+      subtitle: "Follow these rules to protect your newly implanted eyebrow grafts:",
+      donts: [
+        "Do not touch, rub, or scratch the eyebrow area with unwashed hands.",
+        "Avoid swimming, saunas, steam rooms, and heavy gym workouts for 2 weeks.",
+        "Avoid direct sunlight and UV exposure on the brow area during recovery.",
+        "Do not apply makeup, eyebrow pencils, gels, or dyes until cleared by your doctor.",
+      ],
+      dos: [
+        "Follow all surgeon recommendations and apply prescribed ointments diligently.",
+        "Keep the transplanted brow region clean and gently moisturized as instructed.",
+        "Sleep on your back with head slightly elevated to prevent pillow friction.",
+        "Attend all scheduled clinical follow-up visits to monitor progress.",
+      ],
+    },
+    recoveryTimeline: {
+      title: "Recovery Time and Aftercare of Eyebrow Reconstruction",
+      subtitle: "Step-by-step healing progression from initial grafting to full arch maturity:",
+      weeks: [
+        {
+          label: "Days 1-3",
+          expectations: ["Minimal tenderness and mild redness around the delicate brow area."],
+          careGuidelines: ["Avoid strenuous exercise, keep area dry, and do not touch the grafts."],
+        },
+        {
+          label: "Week 1-2",
+          expectations: ["Mild swelling subsides and tiny protective scabs form around single hairs."],
+          careGuidelines: ["Do not pick at scabs; use prescribed saline spray gently."],
+        },
+        {
+          label: "Week 3-4",
+          expectations: ["Scabs fall off naturally and transplanted hairs enter temporary resting shed."],
+          careGuidelines: ["Be gentle when cleansing face; avoid rubbing brows."],
+        },
+        {
+          label: "Month 1",
+          expectations: ["Skin appearance normalizes as the initial healing phase completes."],
+          careGuidelines: ["Keep skin clean and hydrated with recommended gentle products."],
+        },
+        {
+          label: "Month 2-3",
+          expectations: ["Fine baby hairs start emerging along the designed eyebrow arch."],
+          careGuidelines: ["Avoid tweezing or plucking newly emerging hairs."],
+        },
+        {
+          label: "Months 6-9",
+          expectations: ["Noticeable hair growth and visible density expansion."],
+          careGuidelines: ["Maintain balanced nutrition and begin gentle grooming/trimming."],
+        },
+        {
+          label: "Months 9-12",
+          expectations: ["Full mature brow density, natural texture, and permanent facial framing."],
+          careGuidelines: ["Enjoy natural trimming, styling, and long-lasting confidence."],
+        },
+      ],
+    },
+    bookingBar: {
+      title: "Your Most Trusted Hair Restoration Experts — Consult Today",
+      patientCountText: "4.9K patients booked their sessions",
+    },
+    comparison: {
+      title: "Comparison of QHT, FUE, and FUT Techniques for Eyebrow Reconstruction",
+      subtitle: "Key differences in invasiveness, scarring, discomfort, and recovery across brow techniques:",
+      cards: [
+        {
+          title: "QHT Technique (Patented)",
+          purpose: "Simultaneous micro-slit creation & single-hair SAVA pen placement.",
+          effectiveness: "Scarless, natural acute feathering, 98% graft survival.",
+          risk: "Minimally invasive with rapid 4–5 day recovery.",
+          cost: "Mid-range, Highly Affordable (₹25,000 – ₹55,000)",
+        },
+        {
+          title: "FUE Technique",
+          purpose: "Individual micro-punch extraction and forceps insertion.",
+          effectiveness: "Natural growth with minimal pin-point donor marks.",
+          risk: "Minimally invasive, 7–10 day healing.",
+          cost: "Standard (₹20,000 – ₹50,000)",
+        },
+        {
+          title: "FUT Strip Technique",
+          purpose: "Strip harvest for large reconstructive scar repair.",
+          effectiveness: "Fuller coverage for extensive trauma reconstruction.",
+          risk: "Linear donor scar, higher discomfort, longer downtime.",
+          cost: "Surgical Reconstructive (₹25,000 – ₹60,000)",
+        },
+      ],
+    },
+    faq: {
+      title: "FAQ – Eyebrow Reconstruction in India",
+      faqs: [
+        {
+          question: "What is an eyebrow hair transplant?",
+          answer: "It is a precision cosmetic procedure that transplants fine, single-hair donor follicles into the eyebrows to restore density, reshape the arch, or camouflage scars permanently.",
+        },
+        {
+          question: "Is the cost of eyebrow hair transplant variable across the country?",
+          answer: "Yes. Costs typically range from ₹25,000 to ₹60,000 depending on graft numbers, surgeon expertise, clinic reputation, and geographic location.",
+        },
+        {
+          question: "What is the importance of choosing the right clinic?",
+          answer: "Eyebrow hair grows at very flat, acute angles. Choosing an experienced clinic like QHT Clinic ensures accurate angle placement, preventing misdirected hairs and delivering natural results.",
+        },
+        {
+          question: "Is the procedure affordable?",
+          answer: "Yes. QHT Clinic offers transparent, highly affordable packages with world-class microsurgical precision and zero hidden costs.",
+        },
+        {
+          question: "Can I continue taking blood thinners post-treatment?",
+          answer: "You should consult your surgeon before resuming any blood-thinning medications to prevent unnecessary bruising or bleeding.",
+        },
+        {
+          question: "Can I resume work post-procedure?",
+          answer: "Most patients can resume light work within 2–3 days, with complete comfort and normal routine resumption after 5–7 days.",
+        },
+      ],
+    },
+  },
+  "crown-hair-transplant": {
+    hero: {
+      title: "Best Crown Hair Transplant Clinic in India",
+      subtitle: "Crown Hair Transplant solutions at QHT Clinic are tailored by experts with affordability, artistic spiral whorl design, and advanced methods.",
+      bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/8ce953a5b0.jpg",
+      tagline: "Natural Spiral Whorl Reconstruction & Vertex Density",
+      pointerLabel: "Spiral Whorl Alignment",
+    },
+    intro: {
+      block1Heading: "What is Crown Hair Transplant?",
+      block1Lead: "Restore your crown hair naturally with expert transplant solutions.",
+      block1Paragraphs: [
+        "A crown hair transplant restores hair density in the bald region or thinning vertex spots at the back of the scalp, commonly referred to as the crown. Because the crown features a complex spiral (whorl) growth pattern and experiences progressive hair loss, restoration requires artistic angle mapping, precise micro-incisions, and senior surgical intervention.",
+        "At QHT Clinic, our trichology team analyzes vertex baldness extent and future thinning trajectories to craft an authentic whorl design with natural multi-directional angles, preventing pluggy or unnatural appearance.",
+      ],
+      block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
+      pointer1: "Artistic Spiral Angle Crafting",
+      pointer2: "High-Density Vertex Packing",
+      block2Heading: "Crown Hair Transplant in India",
+      block2Paragraphs: [
+        "Crown hair transplant in India is a trusted solution for patients experiencing thinning or complete baldness at the vertex. At QHT Clinic, patented QHT methods, ultra-fine Cole punches, and SAVA implanters ensure realistic spiral patterns and rapid healing.",
+        "With world-class clinical infrastructure and transparent affordable pricing, QHT Clinic is the preferred choice for international and domestic patients seeking crown restoration.",
+      ],
+      block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
+    },
+    results: {
+      title: "Result of Crown Hair Transplant",
+      subtitle: "At QHT Clinic, crown hair transplant restores natural vertex density with an authentic spiral pattern, providing seamless blending with native hair and permanent coverage.",
+      results: [
+        {
+          name: "Irfan - Grade 5A Crown Restoration",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+        },
+        {
+          name: "Kshitij Ahuja - Grade 4 Vertex Case",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+        },
+        {
+          name: "Pranav Meshram - Grade 6 Full Crown Coverage",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+        },
+        {
+          name: "Praveen Kumar - DHI Vertex Spiral",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+        },
+        {
+          name: "Puneet Chandra - Grade 6 Vertex Restoration",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+        },
+        {
+          name: "Sagar Kumar - Grade 4A Hairline & Crown",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+        },
+      ],
+    },
+    candidate: {
+      title: "Who is an Ideal Candidate for a Crown Hair Transplant?",
+      subtitle: "Not everyone with crown thinning needs surgery; eligibility depends on age, pattern progression, and donor capacity:",
+      points: [
+        {
+          title: "Thinning of Hair at Crown Region",
+          desc: "Individuals with prominent bald spots or diffuse thinning at the vertex seeking dense coverage.",
+        },
+        {
+          title: "Healthy Donor Hair for Extraction",
+          desc: "Patients possessing dense, DHT-resistant follicle reserves in the occipital and parietal donor zones.",
+        },
+        {
+          title: "Previous Unsuccessful Transplants",
+          desc: "Individuals needing repair or secondary densification after an incomplete crown procedure elsewhere.",
+        },
+        {
+          title: "Seeking Natural-Looking Hair Density",
+          desc: "Patients who desire a realistic spiral whorl recreation that blends imperceptibly with surrounding hair.",
+        },
+      ],
+    },
+    types: {
+      title: "Types of Crown Hair Transplant",
+      subtitle: "Advanced surgical methodologies tailored for vertex spiral reconstruction:",
+      types: [
+        {
+          title: "FUE Hair Transplant for Crown",
+          desc: "Individual follicular units extracted and implanted at calibrated vertex angles, ensuring natural directional growth.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/FUE.webp",
+          points: [
+            "Follicles implanted at precise 15–20 degree spiral inclinations.",
+            "Delivers controlled density across the vertex whorl centre.",
+            "10-day healing with minimal micro-dot marks.",
+          ],
+        },
+        {
+          title: "QHT Technique for Crown",
+          desc: "Superfine Cole punches and SAVA implanters deliver simultaneous extraction and placement with superior graft survival.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
+          points: [
+            "High graft survival with <30 min out-of-body holding time.",
+            "Patented spiral micro-slit geometry creates authentic hair swirl.",
+            "Rapid 5-day recovery with dense aesthetic volume.",
+          ],
+        },
+      ],
+    },
+    benefits: {
+      title: "Benefits of Crown Hair Transplant",
+      subtitle: "Restoring vertex hair provides transformative aesthetic and confidence benefits:",
+      benefits: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-1.webp",
+          title: "Realistic Hair Density",
+          desc: "Recreates natural crown hair thickness with authentic multi-directional spiral whorl patterns.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-3.webp",
+          title: "Long-Lasting Permanent Results",
+          desc: "Harvested from DHT-resistant safe donor zones, transplanted roots grow permanently for life.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-4.webp",
+          title: "Minimally Invasive Techniques",
+          desc: "Sub-millimeter micro-incisions heal cleanly with zero visible scarring or linear stitches.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-2.webp",
+          title: "Customized Artistic Approach",
+          desc: "Tailored to patient age, skull curvature, and future hair loss stabilization plans.",
+        },
+      ],
+    },
+    procedure: {
+      title: "Procedure Used for Crown Hair Transplant in India",
+      subtitle: "A meticulous 4-stage surgical process for permanent natural vertex restoration:",
+      steps: [
+        {
+          stepNumber: "01",
+          title: "Consultation & Assessment",
+          desc: "Comprehensive trichoscopic mapping of vertex whorl center, root density, and donor longevity.",
+        },
+        {
+          stepNumber: "02",
+          title: "Grafts Extraction",
+          desc: "Superfine punches harvest healthy follicular units from the occipital region with minimal trauma.",
+        },
+        {
+          stepNumber: "03",
+          title: "Grafts Preparation & Preservation",
+          desc: "Grafts are sorted under magnification and preserved in hypothermic holding solution before instant loading.",
+        },
+        {
+          stepNumber: "04",
+          title: "Implantation in the Crown Area",
+          desc: "Implanted with SAVA pens into micro-slits mimicking the natural expanding spiral angles of the crown.",
+        },
+      ],
+    },
+    preProcedure: {
+      title: "Pre-Procedure Tips for Crown Hair Transplant",
+      subtitle: "Essential preparation to ensure optimal surgery and graft vascularization:",
+      tips: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-1.webp",
+          title: "Avoid Alcohol & Smoking",
+          desc: "Refrain from smoking and alcohol for at least 7 days prior to prevent compromised blood perfusion.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-2.webp",
+          title: "Stop Blood Thinners when Advised",
+          desc: "Pause aspirin, vitamins, or blood thinners under clinical guidance to minimize bleeding.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-3.webp",
+          title: "Wash Hair on Surgery Day",
+          desc: "Cleanse scalp with mild antiseptic shampoo on the morning of surgery to minimize infection risks.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-2.webp",
+          title: "Discuss Crown Whorl Design",
+          desc: "Review vertex swirl geometry, density distribution, and hairline alignment with your lead surgeon.",
+        },
+      ],
+    },
+    cost: {
+      title: "Crown Hair Transplant Cost in India",
+      costOverview: [
+        "Crown Hair Transplant in India typically ranges from ₹80,000 to ₹1,50,000 for moderate vertex baldness, and ₹1,50,000 to ₹2,80,000 for extensive high-graft cases.",
+        "At QHT Clinic, we offer all-inclusive transparent packages with advanced SAVA implanter pens, sapphire blades, and zero hidden charges.",
+      ],
+      tableRows: [
+        { type: "Moderate Crown Thinning (1,500 – 2,500 Grafts)", cost: "₹80,000 – ₹1,30,000" },
+        { type: "Advanced QHT Crown Reconstruction (2,500 – 3,500 Grafts)", cost: "₹1,30,000 – ₹1,90,000", badge: "Most Popular", isHighlight: true },
+        { type: "Mega Session Crown & Mid-Scalp (3,500+ Grafts)", cost: "₹1,90,000 – ₹2,80,000" },
+      ],
+      factorsSubtitle: "Factors Affecting The Cost of Crown Hair Transplant",
+      factors: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
+          title: "Size of Bald Patch",
+          desc: "Larger vertex bald zones require significantly higher graft numbers for natural density.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-4.webp",
+          title: "Number of Sittings",
+          desc: "Extensive baldness requiring multi-stage or mega-session surgeries influences total procedure cost.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
+          title: "Technique Used (FUE vs. QHT)",
+          desc: "Advanced QHT simultaneous extraction and placement with Cole punches requires specialized tooling.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-2.webp",
+          title: "Number of Grafts Required",
+          desc: "Total follicular count harvested to create dense spiral coverage.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
+          title: "Surgeon’s Experience & Reputation",
+          desc: "Mastery in vertex angle placement ensures lifelong natural appearance with zero misdirected hairs.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Gurugram-.webp",
+          title: "Clinic Location & Infrastructure",
+          desc: "State-of-the-art OT suites and advanced optical microscopes in prime healthcare hubs.",
+        },
+      ],
+    },
+    whyUs: {
+      title: "Why We Are Amongst the Most Trusted Crown Hair Transplant Clinics in India",
+      subtitle: "QHT Clinic is trusted for crown hair restoration with expert surgeons and patented techniques:",
+      stats: [
+        { title: "5000+ Crown Surgeries", desc: "Completed with artistic swirl accuracy and natural aesthetic density." },
+        { title: "100% Client Satisfaction", desc: "Proven track record of successful vertex transformations and satisfied patients." },
+        { title: "3 State-of-the-Art Clinics", desc: "Centrally located world-class surgical facilities across India." },
+        { title: "15,000+ Surgeries Experience", desc: "Performed by our senior surgical team with decades of collective experience." },
+      ],
+    },
+    journey: {
+      title: "Watch The Incredible Journey & Transformation.",
+      videos: [
+        { title: "Crown Hair Transplant Result | QHT Clinic", youtubeId: "5VJwjA1HBQw", thumbnail: "https://img.youtube.com/vi/5VJwjA1HBQw/maxresdefault.jpg" },
+        { title: "Diffuse Grade 4 Hair Transplant Case Study", youtubeId: "Z_oxd0zU1xY", thumbnail: "https://img.youtube.com/vi/Z_oxd0zU1xY/maxresdefault.jpg" },
+        { title: "Hair Transplant in Mangalore | Results & Cost", youtubeId: "RwsW0bGqkVo", thumbnail: "https://img.youtube.com/vi/RwsW0bGqkVo/maxresdefault.jpg" },
+        { title: "Hair Transplant in Bangalore | Patient Journey", youtubeId: "T9d-l8a4GA8", thumbnail: "https://img.youtube.com/vi/T9d-l8a4GA8/maxresdefault.jpg" },
+        { title: "Hair Transplant in Mumbai | Best Results", youtubeId: "G49-40gh5RY", thumbnail: "https://img.youtube.com/vi/G49-40gh5RY/maxresdefault.jpg" },
+        { title: "Hair Transplant in Mumbai | Case Study", youtubeId: "Sh54wA9chBM", thumbnail: "https://img.youtube.com/vi/Sh54wA9chBM/maxresdefault.jpg" },
+      ],
+    },
+    causes: {
+      title: "Causes of Early Crown Hair Loss",
+      subtitle: "Key biological and lifestyle factors contributing to thinning at the vertex:",
+      causes: [
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-1.webp", title: "Shock Loss & Trauma", desc: "Shedding triggered by physical, emotional, or physiological trauma." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-2.webp", title: "Poor Post-Transplant Care", desc: "Inadequate aftercare or improper hygiene leading to poor graft retention." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-3.webp", title: "Weak Donor Grafts", desc: "Compromised donor density or harvesting outside the safe donor zone." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-5.webp", title: "Infections or Scalp Issues", desc: "Dermatological scalp conditions affecting follicular anchoring." },
+      ],
+    },
+    whyChooseQHT: {
+      title: "Why Choose QHT for Crown Hair Transplant?",
+      subtitle: "We combine precision spiral artistry with patented quick transplantation:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and celebrities for undetectable vertex restoration." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Clinical Expertise", desc: "Decades of surgical mastery managing complex whorl geometries." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Natural Results", desc: "Expert multi-angle placement recreating your original spiral hair whorl." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Best Facilities", desc: "Equipped with advanced optical magnification and sterile operating suites." },
+      ],
+    },
+    postSurgerySupport: {
+      title: "Post-Surgery Support for Crown Hair Transplant",
+      subtitle: "Comprehensive post-operative protocols to ensure smooth healing and maximum density.",
+      image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-post-surgery-thumb.webp",
+      supportItems: [
+        { title: "Regular Follow-Ups", desc: "Scheduled clinical visits to monitor whorl healing and graft growth." },
+        { title: "Medication Prescriptions", desc: "Tailored medications to minimize post-operative discomfort and swelling." },
+        { title: "Customized Therapy", desc: "Personalized PRP/GFC therapy and scalp wash routines for enhanced follicle health." },
+      ],
+    },
+    dosDonts: {
+      title: "Do’s and Don’ts After Crown Hair Transplant",
+      subtitle: "Important guidelines to protect your transplanted vertex grafts:",
+      donts: [
+        "Avoid direct sunlight and UV exposure during the initial weeks.",
+        "Avoid heavy exercise, gym workouts, or activities causing excessive sweating.",
+        "Do not touch, scratch, or pick at scabs in the crown region.",
+        "Avoid using styling gels, chemical sprays, or hair dyes for at least 3–4 weeks.",
+      ],
+      dos: [
+        "Follow all surgeon instructions and take prescribed medications on time.",
+        "Wash and keep your scalp clean using recommended gentle cleansers.",
+        "Maintain a nutrient-dense diet and stay well hydrated to support regrowth.",
+        "Sleep with your head elevated on pillows for the first week to reduce swelling.",
+      ],
+    },
+    recoveryTimeline: {
+      title: "Recovery Time & Aftercare of Crown Hair Transplant",
+      subtitle: "Understanding your vertex restoration journey over time:",
+      weeks: [
+        {
+          label: "Week 1-2",
+          expectations: ["Mild redness, slight swelling, and sensitive skin around the vertex whorl."],
+          careGuidelines: ["Keep head elevated, follow QHT wash routine, and avoid touching the grafts."],
+        },
+        {
+          label: "Week 2-6",
+          expectations: ["Scabs shed naturally and transplanted hairs enter the temporary resting/shedding phase."],
+          careGuidelines: ["Avoid strong sunlight and heavy workouts; resume light daily activities."],
+        },
+        {
+          label: "Month 3-12",
+          expectations: ["New hair growth initiates around month 3, progressively thickening over months 6–9."],
+          careGuidelines: ["Continue gentle hair care and attend milestone clinical reviews."],
+        },
+        {
+          label: "After 1 Year",
+          expectations: ["Full mature density with seamless spiral whorl integration and permanent coverage."],
+          careGuidelines: ["Enjoy natural styling and follow long-term maintenance recommendations."],
+        },
+      ],
+    },
+    bookingBar: {
+      title: "Your Most Trusted Hair Restoration Experts — Consult Today",
+      patientCountText: "4.9K patients booked their sessions",
+    },
+    comparison: {
+      title: "Comparison of Crown Hair Transplant Techniques",
+      subtitle: "Key technical differences between advanced QHT and traditional FUE for crown restoration:",
+      cards: [
+        {
+          title: "QHT Crown Hair Transplant",
+          purpose: "Simultaneous extraction & placement with SAVA pens into micro-slits.",
+          effectiveness: "Natural spiral whorl geometry, 95%+ graft survival, maximum vertex density.",
+          risk: "Minimally invasive, rapid 5–7 day healing, zero visible scars.",
+          cost: "Affordable Precision (₹80,000 – ₹1,90,000)",
+        },
+        {
+          title: "Traditional FUE Crown Hair Transplant",
+          purpose: "Standard FUE extraction with delayed forceps insertion into premade slits.",
+          effectiveness: "Moderate density with longer out-of-body graft exposure time.",
+          risk: "Standard 7–10 day healing time with micro-dot marks.",
+          cost: "Standard Tier (₹70,000 – ₹1,50,000)",
+        },
+      ],
+    },
+    faq: {
+      title: "FAQ on Crown Hair Transplant",
+      faqs: [
+        {
+          question: "How effective is a crown hair transplant?",
+          answer: "QHT Clinic offers crown hair transplants with natural-looking spiral whorl designs and permanent, dense regrowth.",
+        },
+        {
+          question: "Which technique is better for crown hair transplant?",
+          answer: "The QHT technique is superior because it allows artistic multi-directional spiral slit creation, higher follicle survival, and faster recovery.",
+        },
+        {
+          question: "How much time does recovery take after crown hair transplant surgery?",
+          answer: "Initial healing takes only 5–7 days. New hair starts emerging at 3 months, with full density achieved between 9 to 12 months.",
+        },
+        {
+          question: "Are the crown hair transplant results permanent?",
+          answer: "Yes. Grafts harvested from the permanent donor zone are DHT-resistant and grow naturally for a lifetime.",
+        },
+        {
+          question: "Does a crown hair transplant leave scars after surgery?",
+          answer: "The QHT technique uses micro-punch harvesting leaving virtually undetectable pin-point marks that are fully concealed by surrounding hair.",
+        },
+      ],
+    },
+  },
+  "burn-hair-transplant": {
+    hero: {
+      title: "Burn Hair Transplant in India",
+      subtitle: "From scars to strength, with a natural restoration that restores both hair and confidence across scalp, facial, or beard burn areas.",
+      bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/789.png",
+      tagline: "Reconstructive Scar Camouflage & Follicle Re-vascularization",
+      pointerLabel: "Scar Camouflage",
+    },
+    intro: {
+      block1Heading: "What is Burn Hair Transplant?",
+      block1Lead: "Restoring more than hair! Restoring confidence.",
+      block1Paragraphs: [
+        "Burns often cause lifelong scars that remain below the surface, impacting not just physical appearance, but self-esteem as well. Burn Hair Transplant helps safely restore natural hair patterns to areas affected by thermal, chemical, or radiation burns—including the scalp, eyebrows, beard, and mustache.",
+        "At QHT Clinic, our senior surgical team specializes in reconstructive restoration over fibrotic scar tissue. Utilizing specialized sapphire micro-incisions and patented SAVA implanters, we maximize graft vascularization and anchoring in damaged tissue.",
+      ],
+      block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
+      pointer1: "Scar Tissue Re-vascularization",
+      pointer2: "High-Survival Micro Grafting",
+      block2Heading: "Burn Hair Transplant in India",
+      block2Paragraphs: [
+        "At QHT Clinic in India, we understand the emotional and psychological impact of burn-related hair loss. Our compassionate team combines advanced reconstructive surgical mastery with gentle care to achieve optimal graft survival in challenging scarred dermis.",
+        "With specialized sapphire punches and high magnification, we deliver natural-looking coverage that camouflages burn markings permanently at transparent and affordable costs.",
+      ],
+      block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
+    },
+    results: {
+      title: "Result of Burn Hair Transplant",
+      subtitle: "After a Burn Hair Transplant at QHT Clinic, patients experience natural regrowth over scarred tissue that blends seamlessly with existing hair, restoring facial harmony and self-assurance.",
+      results: [
+        {
+          name: "Irfan - Grade 5A Scar Restoration",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+        },
+        {
+          name: "Kshitij Ahuja - Grade 4 Frontal Hairline",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+        },
+        {
+          name: "Pranav Meshram - Grade 6 Scalp Coverage",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+        },
+        {
+          name: "Praveen Kumar - DHI Burn Camouflage",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+        },
+        {
+          name: "Puneet Chandra - Grade 6 Vertex Restoration",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+        },
+        {
+          name: "Sagar Kumar - Grade 4A Hairline Redefinition",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+        },
+      ],
+    },
+    candidate: {
+      title: "Who is an Ideal Candidate for a Burn Hair Transplant?",
+      subtitle: "Burn Hair Transplant Surgery provides permanent, natural-looking restoration for individuals who have lost hair due to thermal, chemical, or physical trauma:",
+      points: [
+        {
+          title: "Burn Scars in High Visibility Areas",
+          desc: "Individuals with burn scars in the scalp, eyebrows, beard, or mustache seeking natural aesthetic camouflage.",
+        },
+        {
+          title: "Patchy or Complete Hair Loss",
+          desc: "Patients with permanent hair loss in burned tissue with zero spontaneous regrowth potential.",
+        },
+        {
+          title: "Healthy Donor Hair Available",
+          desc: "Candidates possessing adequate healthy follicle density in the safe permanent donor zone.",
+        },
+        {
+          title: "Aesthetic & Confidence Goals",
+          desc: "Individuals seeking to conceal visible scar tissue and regain self-assurance in personal and social settings.",
+        },
+      ],
+    },
+    types: {
+      title: "Types of Burn Hair Transplant Surgery",
+      subtitle: "Tailored reconstructive surgical procedures based on scar location and depth:",
+      types: [
+        {
+          title: "Scalp Burn Hair Transplant",
+          desc: "Restores hair growth across scarred scalp patches with natural density, blending seamlessly with adjacent unaffected hair.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/FUE.webp",
+          points: [
+            "Provides dense coverage with specialized micro-incisions into scar tissue.",
+            "Perfectly matches natural angle and direction of surrounding hair.",
+            "Lifelong permanent growth over previously bare scarred zones.",
+          ],
+        },
+        {
+          title: "Facial Burn Restoration",
+          desc: "Reconstructs eyebrows, mustache, and beard areas injured in burns with microscopic single-hair graft precision.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-types-thumb-2.webp",
+          points: [
+            "Restores natural facial symmetry and masculine framing.",
+            "Micro-implantation delivers natural contour and growth angles.",
+            "Permanent, undetectable outcome that can be trimmed and groomed naturally.",
+          ],
+        },
+      ],
+    },
+    benefits: {
+      title: "Benefits of Burn Hair Transplant",
+      subtitle: "Reconstructive transplantation delivers both vital aesthetic and emotional renewal:",
+      benefits: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-1.webp",
+          title: "Natural and Permanent Outcomes",
+          desc: "High graft survival rates ensure newly grown hair integrates with surrounding native hair permanently.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-3.webp",
+          title: "Camouflaging Scars & Appearance Improvement",
+          desc: "Follicles placed strategically within and around scar borders mask visibility and improve skin texture.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-4.webp",
+          title: "Restoration of a Youthful Appearance",
+          desc: "Restores balanced facial proportions and hairline definition lost due to burns.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-1.webp",
+          title: "Minimally Invasive, Faster Recovery",
+          desc: "Gentle micro-punch FUE technique minimizes trauma to sensitive scar tissue with minimal downtime.",
+        },
+      ],
+    },
+    procedure: {
+      title: "Procedure Used for Burn Hair Transplant in India",
+      subtitle: "Structured 6-step clinical protocol designed for scar tissue re-vascularization:",
+      steps: [
+        {
+          stepNumber: "01",
+          title: "Consultation & Planning",
+          desc: "Thorough assessment of scar thickness, blood supply, donor availability, and aesthetic objectives.",
+        },
+        {
+          stepNumber: "02",
+          title: "Evaluation of Donor Area",
+          desc: "Microscopic analysis of healthy follicles to select optimal single and multi-hair grafts.",
+        },
+        {
+          stepNumber: "03",
+          title: "Extraction with QHT Technique",
+          desc: "Gentle sub-millimeter punch harvesting ensuring minimal donor trauma and maximum graft survival.",
+        },
+        {
+          stepNumber: "04",
+          title: "Scar Camouflage Preparation",
+          desc: "Careful microscopic slit creation to stimulate microcirculation in fibrotic scar tissue.",
+        },
+        {
+          stepNumber: "05",
+          title: "Precision Implantation",
+          desc: "Grafts placed with SAVA implanters at precise angles, depth, and density for natural aesthetic flow.",
+        },
+        {
+          stepNumber: "06",
+          title: "Post-Operative Instructions",
+          desc: "Specialized scar aftercare and topical hydration guidelines to promote rapid healing and anchoring.",
+        },
+      ],
+    },
+    preProcedure: {
+      title: "Pre-Procedure Tips for Burn Hair Transplant",
+      subtitle: "Essential preparatory steps to enhance graft uptake in scarred tissue:",
+      tips: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-3.webp",
+          title: "Do Not Smoke, Drink, or Take Blood Thinners",
+          desc: "Avoid alcohol, tobacco, and blood thinners for 10–14 days prior to maximize microvascular blood supply.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-1.webp",
+          title: "Keep Donor Hair Long",
+          desc: "Allow donor hair to grow sufficiently so the surgeon can evaluate follicular density and direction.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-2.webp",
+          title: "Follow Food & Hydration Guidelines",
+          desc: "Maintain a protein-rich diet and stay well hydrated to support cellular proliferation and recovery.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-2.webp",
+          title: "Keep Scalp Healthy",
+          desc: "Cleanse and nourish the scar area with prescribed dermatological cleansers prior to surgery.",
+        },
+      ],
+    },
+    cost: {
+      title: "Burn Hair Transplant Cost in India",
+      costOverview: [
+        "Burn Hair Transplant Cost in India is significantly more affordable than in Western countries, ranging from ₹45,000 to ₹1,60,000 depending on scar size, vascularity, and graft requirements.",
+        "QHT Clinic offers transparent, all-inclusive packages with specialized sapphire punches and zero hidden charges.",
+      ],
+      tableRows: [
+        { type: "Localized Facial Burn Restoration (Eyebrow / Beard)", cost: "₹45,000 – ₹75,000" },
+        { type: "Scalp Burn Scar Camouflage (1,500 – 3,000 Grafts)", cost: "₹80,000 – ₹1,40,000", badge: "Most Requested", isHighlight: true },
+        { type: "Extensive Reconstructive Scalp Coverage (3,000+ Grafts)", cost: "₹1,40,000 – ₹2,00,000" },
+      ],
+      factorsSubtitle: "Factors Affecting The Cost of Burn Hair Transplant",
+      factors: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
+          title: "Size & Severity of Burn Area",
+          desc: "Larger or deeper fibrotic scars require more grafts and specialized vascularization techniques.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-4.webp",
+          title: "Type of Procedure",
+          desc: "Scalp restoration, facial hair reconstruction, or eyebrow refinement vary in surgical complexity.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
+          title: "Surgeon's Skill & Experience",
+          desc: "Transplanting into scarred tissue demands reconstructive surgical mastery to ensure high graft take.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-2.webp",
+          title: "Technology & Equipment Used",
+          desc: "Sapphire micro-blades and high-magnification optical systems ensure precise placement in compromised skin.",
+        },
+      ],
+    },
+    whyUs: {
+      title: "Why We Are Amongst the Most Trusted Burn Hair Transplant Clinics in India?",
+      subtitle: "At QHT Clinic, we blend reconstructive expertise, advanced technology, and compassionate care for burn survivors:",
+      stats: [
+        { title: "5000+ Reconstructions", desc: "Successful burn and scar hair restoration procedures performed with clinical excellence." },
+        { title: "95%+ Graft Survival", desc: "High graft survival achieved using sapphire punches and SAVA implanter technology." },
+        { title: "100% Transparent Care", desc: "Full pricing transparency, compassionate consultations, and dedicated aftercare." },
+        { title: "Top-Rated Clinic", desc: "Trusted globally by burn survivors for safe, permanent, and scar-camouflaging results." },
+      ],
+    },
+    journey: {
+      title: "Watch The Incredible Journey & Transformation.",
+      videos: [
+        { title: "Hair Transplant in Kochi | Best Results & Cost", youtubeId: "n42k98-0Fr0", thumbnail: "https://img.youtube.com/vi/n42k98-0Fr0/maxresdefault.jpg" },
+        { title: "Best Hair Transplant Result | Grade 4 Case Study", youtubeId: "dmgijrtXI7A", thumbnail: "https://img.youtube.com/vi/dmgijrtXI7A/maxresdefault.jpg" },
+        { title: "Hairline Recreate | QHT Clinic Case Study", youtubeId: "yttewGbQkQM", thumbnail: "https://img.youtube.com/vi/yttewGbQkQM/maxresdefault.jpg" },
+        { title: "Hair Transplant in India | Best Results & Cost", youtubeId: "wGyq-pwqA3Q", thumbnail: "https://img.youtube.com/vi/wGyq-pwqA3Q/maxresdefault.jpg" },
+        { title: "Hair Transplant Result | Patient Experience", youtubeId: "BBgXW7AxgsQ", thumbnail: "https://img.youtube.com/vi/BBgXW7AxgsQ/maxresdefault.jpg" },
+        { title: "Grade 5 Hair Transplant Result", youtubeId: "FYtBkggUuBg", thumbnail: "https://img.youtube.com/vi/FYtBkggUuBg/maxresdefault.jpg" },
+      ],
+    },
+    causes: {
+      title: "Causes of Hair Loss After a Burn",
+      subtitle: "Understanding the biological causes of hair loss in burn and scarred skin:",
+      causes: [
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-1.webp", title: "Follicle Destruction", desc: "Thermal or deep burns destroy the follicular stem cells and dermal papillae permanently." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-2.webp", title: "Scar Tissue Formation", desc: "Fibrotic, collagen-dense scar tissue creates an avascular barrier preventing spontaneous hair emergence." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-3.webp", title: "Compromised Blood Supply", desc: "Burned dermal tissue often has reduced microvascular perfusion requiring delicate surgical slit creation." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-1.webp", title: "Chemical Exposure", desc: "Exposure to caustic industrial chemicals destroying cutaneous hair roots across large areas." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-4.webp", title: "Systemic Health Factors", desc: "Underlying metabolic conditions that delay wound healing and impair follicle revitalization." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-5.webp", title: "Repetitive Friction & Trauma", desc: "Chronic mechanical pressure on sensitive scarred tissue exacerbating alopecia." },
+      ],
+    },
+    whyChooseQHT: {
+      title: "Why Choose QHT for Burn Hair Transplant?",
+      subtitle: "QHT Clinic specializes in turning scars into stories of strength with compassionate care:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Expertise in Burn Cases", desc: "Senior surgeons with extensive experience in reconstructive grafting on fibrotic tissue." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Safe & Sterile Procedures", desc: "Carried out in ultra-sterile hospital-grade OT suites with strict infection control." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Leading Technology & Global Standards", desc: "Sapphire blades and SAVA implanters ensure high survival and natural density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Personalized Treatment Plan", desc: "Customized protocols factoring in scar depth, skin elasticity, and patient goals." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Transparent Pricing", desc: "Clear upfront quotes with no hidden fees and accessible EMI payment plans." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Restoring Confidence", desc: "Rebuilding self-esteem, dignity, and a positive outlook for burn survivors." },
+      ],
+    },
+    postSurgerySupport: {
+      title: "Post-Surgery Support for Burn Hair Transplant",
+      subtitle: "Dedicated post-operative care ensuring continuous monitoring and optimal healing for scarred skin.",
+      image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-post-surgery-thumb.webp",
+      supportItems: [
+        { title: "Scheduled Follow-Ups", desc: "Regular clinical reviews to track scar softening, graft uptake, and new growth." },
+        { title: "Longevity of Results", desc: "Guidance on preserving transplanted hair and maintaining scalp health for decades." },
+        { title: "Direct Access to Surgeons", desc: "Direct communication with your surgeon for reassurance and personalized advice." },
+        { title: "Personalized Aftercare Plans", desc: "Tailored wash, topical moisturizing, and nutrition plans for sensitive scarred skin." },
+      ],
+    },
+    dosDonts: {
+      title: "Do’s and Don'ts After Burn Hair Transplant",
+      subtitle: "Follow these critical guidelines to safeguard transplanted grafts in scarred tissue:",
+      donts: [
+        "Do not scratch, rub, or pick at scabs on the healing scar tissue.",
+        "Do not smoke or drink alcohol during the recovery phase.",
+        "Avoid heavy lifting, gym workouts, and excessive sweating for 2 weeks.",
+        "Do not apply hair styling products, gels, or dyes until cleared by your surgeon.",
+        "Avoid saunas, steam baths, and hot showers during the initial weeks.",
+      ],
+      dos: [
+        "Follow all surgeon instructions and take prescribed medications on time.",
+        "Wash the scalp gently using prescribed mild, non-irritating shampoo.",
+        "Drink plenty of water and maintain a protein- and vitamin-rich diet.",
+        "Wear a loose, breathable cap or scarf to protect the scalp from direct sunlight.",
+        "Attend all scheduled clinical follow-up evaluations.",
+      ],
+    },
+    recoveryTimeline: {
+      title: "Recovery Time & Aftercare for Burn Hair Transplant",
+      subtitle: "A step-by-step healing progression from initial grafting to mature hair density:",
+      weeks: [
+        {
+          label: "Week 1",
+          expectations: ["Mild swelling, redness, and protective scabbing over the graft sites."],
+          careGuidelines: ["Wash scalp gently as instructed; avoid touching or scratching the grafts."],
+        },
+        {
+          label: "Week 2",
+          expectations: ["Temporary shed of transplanted hairs as roots settle into the resting phase."],
+          careGuidelines: ["Stay calm as roots remain healthy in the scarred dermis; continue gentle washing."],
+        },
+        {
+          label: "Weeks 3–4",
+          expectations: ["Scabs fall off naturally, redness subsides, and grafts firmly integrate."],
+          careGuidelines: ["Allow scabs to shed on their own; apply prescribed soothing lotions."],
+        },
+        {
+          label: "Week 5+",
+          expectations: ["Fine, new hair sprouts begin to emerge from the transplanted follicles."],
+          careGuidelines: ["Keep scalp protected from sun and maintain consistent aftercare routines."],
+        },
+        {
+          label: "Month 3–6",
+          expectations: ["Thicker, denser hair emerges, camouflaging the underlying burn scars seamlessly."],
+          careGuidelines: ["Attend follow-up reviews and enjoy the natural aesthetic transformation."],
+        },
+      ],
+    },
+    bookingBar: {
+      title: "Your Most Trusted Hair Restoration Experts — Consult Today",
+      patientCountText: "4.9K patients booked their sessions",
+    },
+    comparison: {
+      title: "Comparison of Burn Hair Transplant Procedures",
+      subtitle: "Selecting between localized patch correction and full reconstructive scalp coverage:",
+      cards: [
+        {
+          title: "Partial Burn Hair Transplant",
+          purpose: "Targets localized burn patches on eyebrows, mustache, beard, or small scalp areas.",
+          effectiveness: "Blends seamlessly with existing hair to mask visible scar patches.",
+          risk: "Minimally invasive with rapid 5–7 day recovery.",
+          cost: "Affordable (₹45,000 – ₹75,000)",
+        },
+        {
+          title: "Full Burn Hair Transplant",
+          purpose: "Addresses extensive burn trauma across large scalp surfaces and hairline.",
+          effectiveness: "Rebuilds complete hairline and restores uniform thickness over scar tissue.",
+          risk: "Requires advanced vascularization technique and higher graft counts.",
+          cost: "Comprehensive Reconstructive (₹80,000 – ₹1,60,000)",
+        },
+      ],
+    },
+    faq: {
+      title: "FAQ – Burn Hair Transplant",
+      faqs: [
+        {
+          question: "What is Burn Hair Transplant?",
+          answer: "It is a specialized reconstructive surgical procedure that transplants healthy donor hair into scarred skin tissue (scalp, eyebrows, beard, mustache) caused by thermal, chemical, or accidental burns.",
+        },
+        {
+          question: "When will I see results after a Burn Hair Transplant?",
+          answer: "New hair growth begins around month 3, with visible scar camouflage developing by months 6–8 and full mature density achieved between 9 to 12 months.",
+        },
+        {
+          question: "Are the results permanent?",
+          answer: "Yes. Grafts harvested from the permanent safe donor zone continue to grow naturally for a lifetime, providing permanent scar concealment.",
+        },
+      ],
+    },
+  },
+  "afro-hair-transplant-in-india": {
+    hero: {
+      title: "Afro Hair Transplant In India",
+      subtitle: "Specialized hair transplant services that honour the individuality and curved follicular anatomy of Afro-textured hair.",
+      bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/young-black-man-holding-his-head-and-looking-downw-2025-02-13-11-30-40-utc-1568x1062.jpg",
+      tagline: "Curved Punch Extraction & Zero Curl Transection",
+      pointerLabel: "Afro-Curl Precision",
+    },
+    intro: {
+      block1Heading: "What is Afro Hair Transplant?",
+      block1Lead: "Advanced procedures that limit loss of grafts and raise your natural density for Afro hair.",
+      block1Paragraphs: [
+        "An Afro Hair Transplant in India is a specialized hair restoration procedure designed specifically for people with curly or tightly coiled hair textures. Afro hair requires specialized care because the hair follicles are curved beneath the scalp dermis and require extra precision during extraction and placement.",
+        "Afro hair is delicate and highly curly, where most conventional clinics experience up to 20% graft transection. At QHT Clinic, our advanced curved-punch extraction keeps transection rates below 5%, preserving every curl intact and delivering fuller, natural results.",
+      ],
+      block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/3.webp",
+      pointer1: "Transection Rate < 5%",
+      pointer2: "Preserves Natural Curl Architecture",
+      block2Heading: "Affordable Afro Hair Transplant India",
+      block2Paragraphs: [
+        "India has emerged as a premier global destination for advanced Afro hair restoration due to senior surgical expertise, state-of-the-art facilities, and accessible pricing.",
+        "At QHT Clinic, international patients receive world-class care utilizing specialized sapphire punches, curved micro-punches, and 10x optical magnification tools with 100% transparent pricing and no hidden costs.",
+      ],
+      block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4.webp",
+    },
+    results: {
+      title: "Result of Afro Hair Transplant In India",
+      subtitle: "After a successful Afro Hair Transplant at QHT Clinic, you will enjoy restored natural density, authentic coiled curl patterns, camouflaged scalp scars, and a lifelong confidence boost.",
+      results: [
+        {
+          name: "Irfan - Grade 5A Afro Restoration",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+        },
+        {
+          name: "Kshitij Ahuja - Grade 4 Frontal Hairline",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+        },
+        {
+          name: "Pranav Meshram - Grade 6 Full Scalp Restoration",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+        },
+        {
+          name: "Praveen Kumar - DHI Afro Technique",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+        },
+        {
+          name: "Puneet Chandra - Grade 6 Vertex Packing",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+        },
+        {
+          name: "Sagar Kumar - Grade 4A Hairline Definition",
+          beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
+          afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+        },
+      ],
+    },
+    candidate: {
+      title: "Who is an Ideal Candidate for Afro Hair Transplant in India?",
+      subtitle: "Afro Hair Transplant in India is available for individuals experiencing bald patches, density loss, or trauma scars:",
+      points: [
+        {
+          title: "People with Patchy Baldness",
+          desc: "Individuals with patchy or diffuse thinning requiring authentic coiled hair restoration.",
+        },
+        {
+          title: "People with Hairline Problems",
+          desc: "Patients with receding or unnatural front lines seeking a natural, age-appropriate sharp hairline.",
+        },
+        {
+          title: "People with Burn or Injury Scars",
+          desc: "Those needing to camouflage scarred scalp zones with densely packed Afro follicles.",
+        },
+        {
+          title: "People with Low-Density Hair",
+          desc: "Patients with low baseline density or traction alopecia from tight braiding and protective styling.",
+        },
+      ],
+    },
+    types: {
+      title: "Types of Afro Hair Transplant",
+      subtitle: "Specialized precision techniques designed for Afro-textured curly hair:",
+      types: [
+        {
+          title: "Follicular Unit Excision (FUE) for Afro Hair",
+          desc: "Curved Afro follicles are harvested individually using specialized trumpet and flared punches to accommodate sub-dermal root curvature.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/FUE.webp",
+          points: [
+            "Extracts curved follicles without transecting subterranean curls.",
+            "Minimal micro-dot scarring with high natural density.",
+            "Lifelong permanent and natural results.",
+          ],
+        },
+        {
+          title: "QHT Technique for Afro Hair",
+          desc: "A rapid simultaneous extraction and implantation workflow ensuring minimal out-of-body holding time and superior graft survival.",
+          image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
+          points: [
+            "Combines speed, curved punch precision, and SAVA implanters.",
+            "Transection rate kept below 5% for maximum curl integrity.",
+            "Fast 4-week recovery with natural aesthetic density.",
+          ],
+        },
+      ],
+    },
+    benefits: {
+      title: "Benefits of Afro Hair Transplant",
+      subtitle: "Restoring Afro-textured hair provides substantial aesthetic, psychological, and lifestyle advantages:",
+      benefits: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-1.webp",
+          title: "Natural Hairline Design",
+          desc: "Produces an authentic hairline contour that balances your facial symmetry and African ethnic aesthetics.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-3.webp",
+          title: "Minimal Scarring",
+          desc: "Sapphire micro-punches prevent keloid formation and leave virtually invisible healing marks.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-4.webp",
+          title: "Increased Confidence",
+          desc: "Restores a sharp, well-defined hairline and youthful framing to boost personal and social confidence.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-2.webp",
+          title: "Increased Thickness & Density",
+          desc: "Added volume and curl density expand your styling and grooming options.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-4.webp",
+          title: "Minimal Recovery Time",
+          desc: "Gentle extraction allows rapid return to everyday activities and work routines.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-3.webp",
+          title: "Permanent & Natural Results",
+          desc: "Transplanted follicles grow permanently, seamlessly blending with existing curls.",
+        },
+      ],
+    },
+    procedure: {
+      title: "Procedure Used for Afro Hair Transplant in India",
+      subtitle: "Structured 4-step specialized surgical protocol for curved Afro follicles:",
+      steps: [
+        {
+          stepNumber: "01",
+          title: "Evaluation & Planning",
+          desc: "Comprehensive trichoscopic mapping of curl angle, root depth, scalp elasticity, and aesthetic expectations.",
+        },
+        {
+          stepNumber: "02",
+          title: "Donor Area Selection",
+          desc: "Identification of the safe permanent zone at the occipital scalp with optimal curl density.",
+        },
+        {
+          stepNumber: "03",
+          title: "Extraction with QHT Technique",
+          desc: "Specialized curved punches extract subterranean coiled roots while maintaining transection rates under 5%.",
+        },
+        {
+          stepNumber: "04",
+          title: "Precision Implantation",
+          desc: "Follicles are implanted at precise natural angles and orientations to honor authentic Afro curl formation.",
+        },
+      ],
+    },
+    preProcedure: {
+      title: "Pre-Procedure Tips for Afro Hair Transplant In India",
+      subtitle: "Essential preparatory steps to ensure smooth surgery and maximum graft viability:",
+      tips: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-1.webp",
+          title: "Avoid Smoking & Alcohol",
+          desc: "Refrain from alcohol and tobacco for at least 2 weeks prior to surgery to ensure optimal scalp microcirculation.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-2.webp",
+          title: "Grow Donor Hair",
+          desc: "Allow donor hair to grow slightly to give an accurate assessment of curl direction and facilitate gentle harvesting.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-3.webp",
+          title: "Follow Nutrition Guidelines",
+          desc: "Eat a protein- and mineral-rich diet and stay well hydrated to fortify follicle anchoring.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-2.webp",
+          title: "Stop Medications (If Instructed)",
+          desc: "Pause blood-thinning supplements under clinical guidance to minimize intra-operative bleeding.",
+        },
+      ],
+    },
+    cost: {
+      title: "Afro Hair Transplant Cost in India",
+      costOverview: [
+        "Afro Hair Transplant in India ranges from ₹50,000 to ₹1,80,000 depending on graft numbers, curl curvature complexity, and surgeon expertise.",
+        "At QHT Clinic, specialized curved punch instruments and sapphire tools are provided with complete transparent pricing and no hidden costs.",
+      ],
+      tableRows: [
+        { type: "Partial Afro Hairline Restoration", cost: "₹50,000 – ₹85,000" },
+        { type: "Advanced QHT Afro Restoration (2,000 – 3,500 Grafts)", cost: "₹90,000 – ₹1,60,000", badge: "Specialized Choice", isHighlight: true },
+        { type: "Mega Session Afro Coverage (3,500+ Grafts)", cost: "₹1,60,000 – ₹2,20,000" },
+      ],
+      factorsSubtitle: "Factors Affecting The Cost of Afro Hair Transplant",
+      factors: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
+          title: "Number of Grafts Needed",
+          desc: "Greater coverage and density requirements increase the total number of harvested follicles.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-8.png",
+          title: "Method (FUE vs. QHT)",
+          desc: "Advanced QHT technique with specialized curved punches preserves curl integrity with <5% transection.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
+          title: "Surgeon's Expertise",
+          desc: "Operating on curved Afro follicles requires dedicated senior surgical mastery and microscopic precision.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-4.webp",
+          title: "Case Complexity & Traction Alopecia",
+          desc: "Managing scarred tissue from chronic traction or prior injury influences overall surgical time.",
+        },
+      ],
+    },
+    whyUs: {
+      title: "Why Are We Amongst the Best Clinics for Afro Hair Transplant in India?",
+      subtitle: "QHT Clinic integrates artistry, curved punch technology, and individualized care for authentic Afro results:",
+      stats: [
+        { title: "500+ Afro Transplants", desc: "Successfully completed with authentic coiled texture and natural aesthetic density." },
+        { title: "95%+ Graft Survival", desc: "Achieved via patented QHT rapid simultaneous extraction and placement." },
+        { title: "<5% Transection Rate", desc: "Specialized curved punches preserve subterranean curl architecture." },
+        { title: "100% Patient-Centric Care", desc: "Top-rated clinical protocols preventing keloids and hyperpigmentation." },
+      ],
+    },
+    journey: {
+      title: "Watch The Incredible Journey & Transformation.",
+      videos: [
+        { title: "Best Hair Transplant Result | Grade 4 Case Study", youtubeId: "dmgijrtXI7A", thumbnail: "https://img.youtube.com/vi/dmgijrtXI7A/maxresdefault.jpg" },
+        { title: "Hairline Recreate | QHT Clinic Case Study", youtubeId: "yttewGbQkQM", thumbnail: "https://img.youtube.com/vi/yttewGbQkQM/maxresdefault.jpg" },
+        { title: "Hair Transplant in India | Best Results & Cost", youtubeId: "wGyq-pwqA3Q", thumbnail: "https://img.youtube.com/vi/wGyq-pwqA3Q/maxresdefault.jpg" },
+        { title: "Hair Transplant Result | Patient Experience", youtubeId: "BBgXW7AxgsQ", thumbnail: "https://img.youtube.com/vi/BBgXW7AxgsQ/maxresdefault.jpg" },
+        { title: "Grade 5 Hair Transplant Result", youtubeId: "FYtBkggUuBg", thumbnail: "https://img.youtube.com/vi/FYtBkggUuBg/maxresdefault.jpg" },
+        { title: "Hair Transplant Timelapse | Delhi Clinic", youtubeId: "_9EezQGMgK0", thumbnail: "https://img.youtube.com/vi/_9EezQGMgK0/maxresdefault.jpg" },
+      ],
+    },
+    causes: {
+      title: "Causes of Afro Hair Loss",
+      subtitle: "Understanding the underlying factors responsible for thinning and traction hair loss:",
+      causes: [
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-1.webp", title: "Genetics & Pattern Baldness", desc: "Hereditary androgenetic alopecia affecting hairline recession and vertex thinning." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-2.webp", title: "Cicatricial Alopecia (CCCA)", desc: "Inflammatory scarring conditions that permanently destroy hair roots requiring surgical restoration." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-3.webp", title: "Hormones & Stress", desc: "Elevated cortisol and hormonal fluctuations disrupting the natural anagen growth cycle." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-5.webp", title: "Nutritional Deficiency", desc: "Inadequate iron, zinc, and protein intake depleting follicle strength." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-4.webp", title: "Traction Alopecia", desc: "Chronic mechanical tension from tight braids, cornrows, weaves, or dreadlocks weakening roots." },
+      ],
+    },
+    whyChooseQHT: {
+      title: "Why Choose QHT for Afro Hair Transplant?",
+      subtitle: "QHT Clinic provides dedicated expertise and specialized equipment for Afro-textured hair:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Delhi-7-1.webp", title: "Specialists in Afro Hair Cases", desc: "Surgeons trained in handling coiled root structures with zero transection." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Gfc-Tretment@2x.webp", title: "Surgical Tools for Precision", desc: "Curved sapphire punches and high-power magnification systems ensure graft survival." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Haridwar-1.webp", title: "Affordable Afro Hair Transplant in India", desc: "Transparent international patient packages with no hidden surcharges." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/1000-1200-1-1.webp", title: "Restore Confidence", desc: "Recreate natural ethnic hairline framing that looks authentic and youthful." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Thorough Aftercare", desc: "Personalized scalp hydration and anti-keloid care protocols." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Worldwide Trust", desc: "Patients travel globally to QHT Clinic for reliable Afro hair restoration." },
+      ],
+    },
+    postSurgerySupport: {
+      title: "Post-Surgery Support for Afro Hair Transplant",
+      subtitle: "Comprehensive post-operative protocols tailored to Afro scalp recovery and curl emergence.",
+      image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-post-surgery-thumb.webp",
+      supportItems: [
+        { title: "Regular Checks", desc: "Structured progress reviews to monitor graft stability, curl formation, and scalp health." },
+        { title: "Direct Access to Surgeons", desc: "Direct consultation channels with your surgical team for immediate reassurance." },
+        { title: "24/7 Access to Support", desc: "Dedicated patient care coordinators available round-the-clock." },
+        { title: "Personalized Care Plans", desc: "Customized scalp wash, moisturization, and nutrition plans to promote dense growth." },
+      ],
+    },
+    dosDonts: {
+      title: "Dos and Don’ts After Afro Hair Transplant In India",
+      subtitle: "Follow these clinical instructions to safeguard your newly transplanted curls:",
+      donts: [
+        "Do not scratch or rub the transplanted grafts to prevent dislodgement.",
+        "Avoid direct sunlight exposure to protect newly healing scalp tissue.",
+        "Do not smoke, consume alcohol, or engage in heavy gym workouts for the first 2 weeks.",
+        "Do not use harsh chemical relaxers, tight braiding, or heavy styling gels during recovery.",
+      ],
+      dos: [
+        "Take all prescribed medications and anti-inflammatory tablets on schedule.",
+        "Keep your scalp clean and gently hydrated using prescribed mild cleansers.",
+        "Sleep with your head elevated on pillows for the first week to reduce swelling.",
+        "Attend all scheduled clinical follow-up visits.",
+      ],
+    },
+    recoveryTimeline: {
+      title: "Recovery Time & Aftercare of Afro Hair Transplant In India",
+      subtitle: "A detailed timeline of healing, shed phase, and curl regrowth:",
+      weeks: [
+        {
+          label: "Week 1",
+          expectations: ["Mild swelling, slight redness, and protective scabs form around transplanted curls."],
+          careGuidelines: ["Clean scalp gently as instructed, take prescribed medications, and keep head elevated."],
+        },
+        {
+          label: "Week 2",
+          expectations: ["Temporary shock loss may begin as transplanted hairs enter a brief resting cycle."],
+          careGuidelines: ["Stay calm as roots are firmly anchored; continue gentle washing without scratching."],
+        },
+        {
+          label: "Week 3-4",
+          expectations: ["Scabs fall off completely; grafts feel secure and scalp returns to normal appearance."],
+          careGuidelines: ["Resume daily activities; avoid abrasive styling products and harsh friction."],
+        },
+        {
+          label: "Week 5",
+          expectations: ["Fine new hair sprouts begin to emerge from the awakened follicular roots."],
+          careGuidelines: ["Maintain routine gentle scalp care and follow personalized nutritional guidance."],
+        },
+        {
+          label: "Months 3–6",
+          expectations: ["Volume and curl density steadily increase, blending seamlessly with existing Afro hair."],
+          careGuidelines: ["Attend milestone reviews, enjoy progressive styling, and celebrate fuller hair."],
+        },
+      ],
+    },
+    bookingBar: {
+      title: "Your Most Trusted Hair Restoration Experts — Consult Today",
+      patientCountText: "4.9K patients booked their sessions",
+    },
+    comparison: {
+      title: "Comparison of the Afro Hair Transplant Procedure",
+      subtitle: "Choose between focused hairline adjustment and comprehensive full-scalp restoration:",
+      cards: [
+        {
+          title: "Partial Afro Hair Transplant",
+          purpose: "Targeted hairline lowering, temple reconstruction, or traction alopecia touch-up.",
+          effectiveness: "Natural density in targeted areas with quick recovery.",
+          risk: "Minimally invasive, fewer grafts, rapid 3–5 day healing.",
+          cost: "Affordable (₹50,000 – ₹85,000)",
+        },
+        {
+          title: "Full Afro Hair Transplant",
+          purpose: "Complete crown and frontal restoration for advanced diffuse thinning or large bald areas.",
+          effectiveness: "Maximum density and complete coverage with intact curl architecture.",
+          risk: "Requires extensive curved-punch harvesting by senior experts.",
+          cost: "Premium Precision (₹90,000 – ₹1,80,000)",
+        },
+      ],
+    },
+    faq: {
+      title: "FAQ – Afro Hair Transplant In India",
+      faqs: [
+        {
+          question: "What is Afro Hair Transplant in India?",
+          answer: "It is a specialized surgical procedure tailored specifically for curved, coiled hair follicles, utilizing customized micro-punches to prevent root transection.",
+        },
+        {
+          question: "Who is the right candidate for Afro Hair Transplant in India?",
+          answer: "Anyone with curly or Afro-textured hair experiencing receding hairlines, traction alopecia, crown thinning, or scalp trauma scars is an ideal candidate.",
+        },
+        {
+          question: "Is it painful?",
+          answer: "No. The entire procedure is performed under local anesthesia, ensuring a virtually painless experience with only mild, brief tenderness post-op.",
+        },
+      ],
+    },
+  },
   "best-fue-hair-transplant-in-india": {
     hero: {
       title: "Best Clinic for FUE Hair Transplant in India",
@@ -3909,7 +6171,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
   },
-  "natural-look-hair-restoration": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/grooming-perfection-handsome-european-bearded-mid-2025-03-18-19-02-49-utc-1568x1045.jpg", subtitle: "Reclaim your confidence with hair that looks, feels, and moves completely naturally at every angle." } },
+  // "natural-look-hair-restoration": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/grooming-perfection-handsome-european-bearded-mid-2025-03-18-19-02-49-utc-1568x1045.jpg", subtitle: "Reclaim your confidence with hair that looks, feels, and moves completely naturally at every angle." } },
   "social-media-influencer-hair-transplant": {
     hero: {
       title: "Best Clinic for Social Media Influencer Hair Transplant",
@@ -4288,8 +6550,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
   },
-  "burn-hair-transplant": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/789.png", subtitle: "From scars to strength — reconstructive restoration that restores hair density over damaged skin tissue." } },
-  "temple-hair-transplant": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/79a11a05a3.jpg", subtitle: "Reconstruct temporal points and temporal angles to frame your face and achieve a youthful aesthetic." } },
+  // "temple-hair-transplant": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/79a11a05a3.jpg", subtitle: "Reconstruct temporal points and temporal angles to frame your face and achieve a youthful aesthetic." } },
   "bad-hair-transplant-correction": {
     hero: {
       title: "Bad Hair Transplant Correction in India",
@@ -4677,9 +6938,6 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
   },
-  "crown-hair-transplant": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/8ce953a5b0.jpg", subtitle: "Artistic spiral whirl reconstruction providing dense coverage and natural swirl pattern on vertex baldness." } },
-  "afro-hair-transplant-in-india": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/young-black-man-holding-his-head-and-looking-downw-2025-02-13-11-30-40-utc-1568x1062.jpg", subtitle: "Specialized curved punch extraction honoring the unique curl curvature of Afro-textured hair follicles." } },
-  "eyebrow-reconstruction-in-india": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/microblading-eyebrows-semi-permanent-makeup-proce-2024-10-22-11-42-00-utc-1568x1045.jpg", subtitle: "Affordable and effective naturally dense eyebrow restoration with single-hair microscopic graft placement." } },
   "moustache-hair-transplant-in-india": {
     hero: {
       title: "Mustache Reconstruction in India",
@@ -5072,7 +7330,6 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
   },
-  // "best-fue-hair-transplant-in-india": { hero: { bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC03566-1568x2352.jpg", subtitle: "Advanced Follicular Unit Extraction delivering individual graft harvesting with zero linear stitches." } },
   "quick-hair-transplant-in-india": {
     hero: {
       title: "QHT Hair Transplant Technique - An Overview",

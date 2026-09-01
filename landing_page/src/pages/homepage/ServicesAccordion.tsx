@@ -25,7 +25,7 @@ export default function ServicesAccordion({
         {/* Section Header */}
         <div className="flex items-center justify-between pb-4 mb-8 border-b border-black/50">
           <h2 className="text-3xl sm:text-6xl font-[500] text-[#162418]">
-            Our Services
+            Comprehensive Restoration Services
           </h2>
           <span className="w-10 h-10 rounded-lg border-[0.1px] border-black font-bold flex items-center justify-center text-base">
             2
@@ -35,10 +35,10 @@ export default function ServicesAccordion({
         {/* Intro Text */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center mb-10">
           <h3 className="md:col-span-6 text-xl sm:text-3xl font-[400] text-[#162418] leading-snug">
-            From Balding to Believing, because Hair restoration is about more than hair.
+            Tailored Medical & Surgical Therapies for Every Stage of Hair Loss
           </h3>
           <p className="md:col-span-6 text-xs sm:text-lg text-gray-600 leading-relaxed">
-            At {COMPANY_NAME} Clinic, our services are planned to help you regain confidence, identity, and the look you always wished for with proven clinical excellence.
+            At {COMPANY_NAME}, our clinical offerings are designed to restore natural density, youthful framing, and lasting confidence through evidence-based surgical precision.
           </p>
         </div>
 

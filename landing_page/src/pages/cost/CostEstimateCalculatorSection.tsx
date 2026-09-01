@@ -160,8 +160,8 @@ export default function CostEstimateCalculatorSection({
         {/* Heading */}
         <div className="max-w-4xl mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.12]">
-            Get an Estimate of Your <br />
-            Hair Transplant
+            Calculate Your Estimated <br />
+            Hair Restoration Cost
           </h2>
         </div>
 
@@ -335,9 +335,9 @@ export default function CostEstimateCalculatorSection({
             <div className="flex justify-end pt-4">
               <button
                 type="submit"
-                className="bg-[#52664d] hover:bg-[#43543e] text-white font-bold text-sm sm:text-base py-3.5 px-10 rounded-full shadow-lg transition-all active:scale-95 duration-150"
+                className="bg-[#52664d] hover:bg-[#43543e] text-white font-bold text-sm sm:text-base py-3.5 px-10 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
               >
-                Get Estimate
+                Calculate My Estimate
               </button>
             </div>
 

@@ -76,7 +76,7 @@ export default function ClinicTechnologySection() {
             </h2>
 
             <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-normal max-w-xl">
-              All our clinics are equipped with the latest machinery and advanced technology to ensure the highest standards in hair transplant procedures. We combine innovation with a skilled team of experienced professionals dedicated to delivering excellent results. Our clinics maintain strict hygiene, safety, and quality protocols. With access to cutting-edge tools and techniques, we aim to provide personalized solutions for every patient. The talented staff at each {COMPANY_NAME} Clinic ensures a seamless, comfortable experience and natural-looking, lasting hair restoration outcomes across India.
+              Every {COMPANY_NAME} surgical suite is engineered to hospital-grade sterility standards, equipped with precision optical magnification and micro-instrumentation. By pairing clinical innovation with seasoned hair restoration surgeons, we deliver consistent, natural-looking density across our nationwide centers.
             </p>
 
             <div className="pt-2">

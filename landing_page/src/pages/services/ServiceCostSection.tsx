@@ -27,48 +27,48 @@ interface ServiceCostSectionProps {
 }
 
 const DEFAULT_COST_OVERVIEW = [
-  `The Hair Transplant Repair in India costs differently for different grades of severity of the problem, the chosen method, the number of grafts that will be required, and the clinical expertise. The average costs at ${COMPANY_NAME} Clinic range between Rs. 60,000 to Rs. 1,20,000 for minor repairs, whereas those for major corrections cost about Rs. 1,50,000 to Rs. 3,00,000.`,
-  `The cost of a hair transplant at a clinic depends on several factors, including the clinic’s reputation, the surgeon’s experience, the clinic’s location, and the specific type of procedure performed (such as ${COMPANY_NAME}, FUE or FUT).`,
+  `The cost of hair restoration in India varies depending on the degree of baldness, total graft count, technique chosen, and surgeon expertise. At ${COMPANY_NAME}, we prioritize upfront, transparent estimates tailored to your Norwood stage without hidden surgical fees.`,
+  `Every procedure package includes comprehensive diagnostic evaluation, sterile surgical suite use, motorized micro-extraction, and dedicated post-op follow-up care.`,
 ];
 
 const DEFAULT_FACTORS: CostFactor[] = [
   {
     id: 1,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-7.png",
-    title: "Size of the Bald Patch",
-    desc: "The larger the bald area, the higher the number of grafts required, which increases the overall cost of the hair transplant.",
+    title: "Degree of Hair Loss",
+    desc: "The total surface area requiring density determines the overall graft count and surgical duration.",
   },
   {
     id: 2,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
-    title: "Number of Grafts",
-    desc: "The total number of grafts needed for full coverage directly impacts the procedure cost. More grafts mean higher expenses.",
+    title: "Total Follicular Unit Count",
+    desc: "Graft requirements directly impact procedural scale and microscopic follicular sorting complexity.",
   },
   {
     id: 3,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-8.png",
-    title: "Treatment Method Chosen",
-    desc: `Different techniques like FUE or ${COMPANY_NAME} have varying costs depending on their complexity and precision.`,
+    title: "Surgical Technique Selected",
+    desc: `Techniques such as Motorized FUE and ${COMPANY_NAME} Direct Implantation vary by instrumentation and precision requirements.`,
   },
   {
     id: 4,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
-    title: `Clinical Expertise at ${COMPANY_NAME} Clinic`,
-    desc: `${COMPANY_NAME} Clinic’s experienced specialists provide safe, natural-looking results, ensuring that the cost reflects high-quality care and realistic outcomes.`,
+    title: `Surgeon Expertise at ${COMPANY_NAME}`,
+    desc: `Senior surgeon-led design and implantation ensure natural angulation, soft transitions, and lasting follicle survival.`,
   },
   {
     id: 5,
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-10.png",
-    title: "Multiple Sittings",
-    desc: "If the procedure requires multiple sessions to achieve the desired result, the total cost increases accordingly.",
+    title: "Donor Reserve & Session Scale",
+    desc: "Extensive Norwood cases requiring mega-sessions or staged procedures are structured for optimal donor preservation.",
   },
 ];
 
 export default function ServiceCostSection({
-  title = "Hair Transplant Repair",
+  title = "Hair Restoration",
   costOverview = DEFAULT_COST_OVERVIEW,
   tableRows,
-  factorsSubtitle = "The cost of hair transplant repairs can be affected by the expertise of surgeons, techniques used, the clinic’s location, and the severity of the damage.",
+  factorsSubtitle = "Procedure pricing is determined by graft volume, technique selection, surgeon expertise, and personalized hairline design requirements.",
   factors = DEFAULT_FACTORS,
 }: ServiceCostSectionProps) {
   return (

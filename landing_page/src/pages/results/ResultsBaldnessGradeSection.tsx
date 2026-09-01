@@ -34,8 +34,8 @@ export default function ResultsBaldnessGradeSection({
 
             {/* Heading */}
             <h3 className="text-2xl sm:text-3xl lg:text-5xl font-[500] text-white leading-tight tracking-tight">
-              Finally, get the right treatment <br className="hidden sm:block" />
-              for your hair loss.
+              Discover the Ideal Treatment Plan <br className="hidden sm:block" />
+              for Your Hair Loss.
             </h3>
 
             {/* Time Badge */}
@@ -46,7 +46,7 @@ export default function ResultsBaldnessGradeSection({
 
             {/* Description */}
             <p className="text-xs sm:text-lg text-white/80 leading-relaxed font-normal max-w-lg">
-              Answer a few questions to see if {COMPANY_NAME} is right for you and we’ll recommend a personalized plan based on your results.
+              Complete a quick assessment to understand your graft requirements and receive a personalized treatment roadmap from {COMPANY_NAME}.
             </p>
 
             {/* 3 Key Features List */}
@@ -55,21 +55,21 @@ export default function ResultsBaldnessGradeSection({
                 <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white/80">
                   <FlaskConical className="w-4 h-4 stroke-[1.8]" />
                 </div>
-                <span>Clinically proven formula & high graft survival</span>
+                <span>Evidence-based graft calculations & 95%+ follicle survival</span>
               </div>
 
               <div className="flex items-center gap-3 text-xs sm:text-lg text-white/90">
                 <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white/80">
                   <Stethoscope className="w-4 h-4 stroke-[1.8]" />
                 </div>
-                <span>Guidance from hair loss experts & surgeons</span>
+                <span>Direct clinical guidance from senior restoration surgeons</span>
               </div>
 
               <div className="flex items-center gap-3 text-xs sm:text-lg text-white/90">
                 <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white/80">
                   <BadgePercent className="w-4 h-4 stroke-[1.8]" />
                 </div>
-                <span>Affordable treatment options with transparent pricing</span>
+                <span>Transparent, itemized pricing with flexible EMI options</span>
               </div>
             </div>
 
@@ -77,9 +77,9 @@ export default function ResultsBaldnessGradeSection({
             <div className="pt-4">
               <button
                 onClick={onOpenConsultation}
-                className="bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-sm sm:text-base py-3.5 px-10 rounded-full shadow-lg transition-all active:scale-95 duration-150"
+                className="bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-sm sm:text-base py-3.5 px-10 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
               >
-                Get Started
+                Start Your Free Scalp Evaluation
               </button>
             </div>
 

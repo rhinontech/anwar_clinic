@@ -18,24 +18,24 @@ interface ServiceTypesSectionProps {
 
 const DEFAULT_TYPES: ServiceTypeItem[] = [
   {
-    title: "FUE Hair Transplant",
-    desc: "Hair follicles are implanted directly with the help of a Choi Pen, with a recovery time of about 10 days.",
+    title: "Motorized FUE Hair Transplant",
+    desc: "Follicles are individually harvested with precision micro-punches, offering minimal tissue trauma and rapid healing.",
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/FUE.webp",
     points: [
-      "Offers precise control over angle, depth, and direction of each hair follicle.",
-      "Minimally invasive, reducing trauma to the scalp.",
-      "Faster healing and less visible scarring compared to traditional methods.",
+      "Precise control over depth, angle, and natural direction of every follicle.",
+      "Minimally invasive individual harvesting with zero linear donor scarring.",
+      "Accelerated recovery with minimal post-procedural downtime.",
     ],
   },
   {
-    title: `${COMPANY_NAME} Technique`,
-    desc: "Superfine Cole Punches are used for extracting follicles, and use SAVA implanters for the best results and a recovery time of about 5 days.",
+    title: `${COMPANY_NAME} Advanced Technique`,
+    desc: "Direct micro-implantation protocol minimizing out-of-body holding time for maximum follicle viability and high density.",
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
     points: [
-      "Advanced technique combining FUE precision with customized graft handling.",
-      "Focuses on high survival rate of grafts with minimal follicle damage.",
-      "Personalized treatment plan based on individual hair type and scalp condition.",
-      "Suitable for individuals seeking safe, long-lasting, and natural restoration.",
+      "Immediate implantation protecting delicate follicular dermal papilla.",
+      "Ultra-fine implanter pens ensuring soft, natural hairline transitions.",
+      "High graft survival rate (>95%) across all Norwood balding stages.",
+      "Customized procedural planning based on your unique scalp elasticity.",
     ],
   },
 ];

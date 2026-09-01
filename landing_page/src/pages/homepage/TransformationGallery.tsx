@@ -108,7 +108,7 @@ function ComparisonCard({ item, onOpenConsultation }: ComparisonCardProps) {
           onClick={onOpenConsultation}
           className="text-xs font-bold text-[#596d53] hover:text-[#384c3c] transition-colors"
         >
-          Get Similar Result →
+          Request Similar Hairline Plan →
         </button>
       </div>
     </div>
@@ -124,19 +124,19 @@ export default function TransformationGallery({
         {/* Section Header */}
         <div className="flex items-center justify-between pb-4 mb-6 border-b border-gray-200">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-[500] text-[#162418]">
-            Transformation Gallery
+            Real Transformations, Undeniable Results
           </h2>
           <a
             href="/results/"
             className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-[#596d53] hover:text-[#384c3c] transition-colors"
           >
-            <span>Explore All 15,000+ Results</span>
+            <span>Explore All Patient Results</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 
-        <p className="text-xs sm:text-2xl  max-w-xl mb-8 sm:mb-10">
-          Real patient before and after results. Drag the slider on any card to see the full transformation.
+        <p className="text-xs sm:text-2xl max-w-2xl mb-8 sm:mb-10 text-gray-600">
+          Explore verified patient outcomes. Slide the handle on any card to inspect graft density, natural hairline integration, and donor area healing.
         </p>
 
         {/* Before / After Grid */}

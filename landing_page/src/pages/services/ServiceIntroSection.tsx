@@ -42,22 +42,22 @@ export default function ServiceIntroSection({
 }: ServiceIntroSectionProps) {
   // Defaults are interpolated from the service title so an unedited service
   // still reads correctly; any field set in the admin panel wins.
-  const heading1 = block1Heading || `What is ${title}?`;
-  const lead1 = block1Lead || `Restore your confidence by getting the right ${title} solutions.`;
+  const heading1 = block1Heading || `Understanding ${title}`;
+  const lead1 = block1Lead || `Tailored clinical care designed for lasting aesthetic results.`;
   const paras1 =
     block1Paragraphs && block1Paragraphs.length > 0
       ? block1Paragraphs
       : [
-        `${title} is a procedure that can be used to correct the results of a hair transplant that has not been successful. It helps restore hairline and density, as well as conceal scars caused by earlier procedures.`,
-        `At ${COMPANY_NAME} Clinic, our experts use advanced techniques and treatment is centered on nurturing natural growth, avoiding complications, and for long-lasting results.`,
+        `${title} is a specialized clinical procedure designed to restore natural aesthetic balance, density, and facial framing.`,
+        `At ${COMPANY_NAME}, our senior surgeons employ advanced micro-instrumentation and customized surgical plans to ensure high graft survival and undetectable results.`,
       ];
-  const heading2 = block2Heading || `${title} in India`;
+  const heading2 = block2Heading || `Advanced ${title} Protocols`;
   const paras2 =
     block2Paragraphs && block2Paragraphs.length > 0
       ? block2Paragraphs
       : [
-        `Failed Hair transplants are prevalent due to unskilled surgeons, leading to unfavourable results. In India, the Failed Hair Transplant Correction is performed by experts using our own Quick Hair Transplant method. Because of such skilled surgeons, like those at ${COMPANY_NAME} Clinic, and affordability, India is a trusted hub globally.`,
-        `Opting for the ${COMPANY_NAME} Clinic ensures long-term success and safe corrections.`,
+        `High-quality hair restoration requires specialized surgical artistry, anatomical knowledge, and strict sterile protocols. At ${COMPANY_NAME}, procedures are surgeon-led in hospital-grade suites to deliver permanent, natural-looking density.`,
+        `Choosing ${COMPANY_NAME} guarantees transparent guidance, individualized surgical care, and dedicated post-operative recovery support.`,
       ];
 
   return (

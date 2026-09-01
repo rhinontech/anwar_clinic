@@ -62,10 +62,10 @@ export default function AboutCostCTASection({
             {/* Text */}
             <div>
               <h3 className="text-2xl sm:text-3xl font-[500] text-white tracking-tight leading-tight">
-                Interested in costs?
+                Curious About Procedure Pricing?
               </h3>
               <p className="text-xs sm:text-sm text-white/80 font-normal mt-1 leading-normal">
-                View transparent, obligation-free, all-inclusive {COMPANY_NAME} costs by procedure.
+                Explore transparent, itemized procedure costs and flexible financing options at {COMPANY_NAME}.
               </p>
             </div>
 

@@ -270,7 +270,7 @@ function InteractivePatientCard({
             className="w-full py-2.5 px-4 rounded-full border border-gray-400/80 hover:border-[#1b392b] hover:bg-white text-gray-800 hover:text-[#1b392b] transition-all flex items-center justify-center gap-2 text-xs font-semibold shadow-2xs group"
           >
             <span className="group-hover:translate-x-0.5 transition-transform">
-              → &nbsp; Click to see full growth timeline
+              → &nbsp; View Complete Growth Timeline
             </span>
           </Link>
         </div>
@@ -305,7 +305,7 @@ export default function ResultsBrowseSection({
         {/* Header Title + Counter */}
         <div className="flex items-center justify-between gap-4 pb-6">
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-tight">
-            Browse Transformation Like Yours
+            Discover Transformations Tailored to Your Case
           </h2>
           <div className="hidden sm:flex w-8 h-8 rounded-lg border border-gray-200 items-center justify-center text-xs font-bold text-gray-500">
             {filteredPatients.length}

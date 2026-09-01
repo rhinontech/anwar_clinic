@@ -22,11 +22,11 @@ export default function BottomBanner({ onOpenConsultation }: BottomBannerProps) 
         </span> */}
 
         <h2 className="text-3xl sm:text-7xl font-[500] leading-tight tracking-tight">
-          Ready for a Hairline that lasts a lifetime?
+          Ready to Restore Your Natural Hairline for Life?
         </h2>
 
         <p className="mt-4 text-sm sm:text-lg text-gray-200 leading-relaxed max-w-2xl mx-auto">
-          The longer you wait, the harder it gets to look younger. Don’t let hair loss decide how you look. Choose results that last a lifetime.
+          Early action preserves more of your natural donor reserves. Book a confidential consultation with our senior restoration team today.
         </p>
 
         <div className="mt-8 flex justify-center">
@@ -34,7 +34,7 @@ export default function BottomBanner({ onOpenConsultation }: BottomBannerProps) 
             onClick={onOpenConsultation}
             className="px-8 py-4 bg-white text-[#1b392b] font-bold text-sm sm:text-base rounded-full hover:bg-[#b1fc85] hover:text-[#162418] transition-all shadow-xl flex items-center gap-2"
           >
-            <span>Get Started Now</span>
+            <span>Book Your Consultation Now</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

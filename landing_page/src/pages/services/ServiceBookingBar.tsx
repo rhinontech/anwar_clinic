@@ -9,8 +9,8 @@ interface ServiceBookingBarProps {
 }
 
 export default function ServiceBookingBar({
-  title = "Your Most Trusted Hair Restoration Experts — Consult Today",
-  patientCountText = "4.9K patients booked their sessions",
+  title = "Trusted Hair Restoration Experts — Schedule Your Evaluation Today",
+  patientCountText = "Over 4,500+ successful restorations performed",
   onOpenConsultation,
 }: ServiceBookingBarProps) {
   return (

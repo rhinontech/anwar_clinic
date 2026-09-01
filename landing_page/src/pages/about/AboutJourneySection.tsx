@@ -18,8 +18,8 @@ const JOURNEY_PILLARS: PillarItem[] = [
   },
   {
     num: "02",
-    title: "Advanced Patented Techniques",
-    desc: "Utilising microscopic graft dissection and simultaneous implantation for maximum survival.",
+    title: "Direct Micro-Implantation Protocol",
+    desc: "Utilizing microscopic graft sorting and precision implanter pens for maximum follicle survival.",
   },
   {
     num: "03",
@@ -44,16 +44,16 @@ export default function AboutJourneySection() {
           {/* Left Column: Headline & Story */}
           <div className="lg:col-span-7 space-y-5">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14]">
-              Our Journey - Transforming Hair <br />
+              Our Journey — Transforming Hair <br />
               Restoration in India
             </h2>
 
             <div className="space-y-4 text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-2xl pt-2">
               <p>
-                The journey of {COMPANY_NAME} Hair Transplant Clinic started with little more than a simple dream: to provide world-class hair restoration that would be truly transformational in India. What started as a dream has turned into one of the most trusted names in hair transplant in India, with thousands of happy clients who have restored not only their hair, but also their confidence.
+                The founding vision of {COMPANY_NAME} was simple yet resolute: to make world-class, ethical hair restoration accessible and predictable. Over the years, that commitment has grown into a trusted medical practice with thousands of documented patient success stories.
               </p>
               <p>
-                With each procedure, {COMPANY_NAME} Hair Transplant raises the standard on precision, safety, and natural results, validating their position as the most trusted and leading hair transplant clinic in India.
+                With every procedure, {COMPANY_NAME} advances clinical standards in natural hairline design, patient safety, and high graft viability — empowering patients with permanent density and lifelong confidence.
               </p>
             </div>
           </div>

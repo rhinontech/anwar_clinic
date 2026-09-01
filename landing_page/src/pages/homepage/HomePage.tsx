@@ -56,7 +56,7 @@ export default function HomePage() {
       <GoogleReviews />
 
       {/* 12. Frequently Asked Questions */}
-      <FAQSection title={"FAQs"} />
+      <FAQSection title={"Frequently Asked Questions"} />
 
       {/* 13. Bottom CTA Banner */}
       <BottomBanner onOpenConsultation={openConsultation} />

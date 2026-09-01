@@ -8,7 +8,7 @@ interface ResultsAboutClinicSectionProps {
 }
 
 export default function ResultsAboutClinicSection({
-  title = "Best Hair Transplant Clinic in India",
+  title = `Excellence in Hair Restoration at ${COMPANY_NAME}`,
 }: ResultsAboutClinicSectionProps) {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
@@ -22,35 +22,35 @@ export default function ResultsAboutClinicSection({
 
           {/* Paragraph 1 */}
           <p className="text-xs sm:text-[18px] text-[#5c685f] leading-relaxed font-normal">
-            When it comes to choosing the best hair transplant clinic in India, {COMPANY_NAME} Clinic consistently ranks at the top. Renowned for its advanced techniques, highly experienced surgeons, and exceptional patient outcomes, {COMPANY_NAME} Clinic has become a trusted name in the field of hair restoration.
+            When seeking genuine, transformative hair restoration, {COMPANY_NAME} delivers unmatched surgical precision and aesthetic excellence. Driven by doctor-led protocols, advanced micro-instrumentation, and high graft viability, our clinic is committed to natural, permanent results.
           </p>
 
           {/* Paragraph 2 */}
           <p className="text-xs sm:text-[18px] text-[#5c685f] leading-relaxed font-normal">
-            At {COMPANY_NAME} Clinic, patients benefit from the latest innovations such as FUE (Follicular Unit Extraction) and DHI (Direct Hair Implantation), combined with personalized care and state-of-the-art facilities. Whether you’re dealing with male pattern baldness, thinning hair, or seeking beard and eyebrow transplants, {COMPANY_NAME} Clinic offers customized solutions designed to deliver natural, permanent results.
+            Patients at {COMPANY_NAME} receive individualized treatment plans using advanced techniques including precision Micro-FUE and Direct Hair Implantation. Whether correcting early temple recession, addressing advanced vertex thinning, or performing beard and eyebrow reconstruction, our surgical team prioritizes soft, age-appropriate hairline architecture and lifelong permanence.
           </p>
 
           {/* Subheading & Bullet Points */}
           <div className="pt-3 space-y-3">
             <h3 className="text-sm sm:text-2xl font-[500] text-[#1b221d]">
-              Why {COMPANY_NAME} Clinic is the Best
+              The {COMPANY_NAME} Standard of Excellence
             </h3>
 
             <ul className="space-y-2 text-xs sm:text-[18px] text-[#5c685f] list-disc list-inside">
               <li>
-                <span className="font-normal">Board-certified hair transplant specialists</span>
+                <span className="font-normal">Board-certified hair restoration surgeons leading every procedure</span>
               </li>
               <li>
-                <span className="font-normal">High graft survival rate and natural hairline design</span>
+                <span className="font-normal">High follicle survival rates with natural exit-angle alignment</span>
               </li>
               <li>
-                <span className="font-normal">Thousands of satisfied clients from India and abroad</span>
+                <span className="font-normal">Extensive portfolio of verified patient outcomes across all Norwood grades</span>
               </li>
               <li>
-                <span className="font-normal">Hygienic, fully equipped operating suites</span>
+                <span className="font-normal">Ultra-sterile, hospital-grade surgical suites</span>
               </li>
               <li>
-                <span className="font-normal">Transparent pricing with no hidden charges</span>
+                <span className="font-normal">Upfront, transparent per-graft pricing with zero hidden charges</span>
               </li>
             </ul>
           </div>

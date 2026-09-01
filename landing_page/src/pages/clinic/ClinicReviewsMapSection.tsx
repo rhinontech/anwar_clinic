@@ -19,12 +19,12 @@ export default function ClinicReviewsMapSection({
           {/* Left Column: Heading, Subtitle & Action Buttons */}
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14]">
-              Reviews & Testimonials <br />
-              by our clients.
+              Verified Outcomes & <br />
+              Patient Experiences
             </h2>
 
             <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-md">
-              Read genuine reviews and testimonials from our satisfied clients who experienced successful hair restoration results.
+              Discover authentic patient feedback and documented hair restoration journeys from clients across our nationwide centers.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">

@@ -22,19 +22,17 @@ export default function ServicesHero({ onOpenConsultation }: ServicesHeroProps) 
         <div className="max-w-2xl">
           {/* Main Hero Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[500] text-[#1f2721] tracking-tight leading-[1.12]">
-            Best{" "}
+            Advanced{" "}
             <span className="text-[#596d53] font-[500]">
-              Hair transplant
+              Hair Restoration
             </span>
             <br />
-            Clinic In India.
+            & Aesthetic Excellence.
           </h1>
 
           {/* Subtitle */}
           <p className="mt-5 text-base sm:text-lg lg:text-[19px] text-[#556358] font-normal leading-relaxed max-w-xl">
-            Affordable and effective hair transplant solutions{" "}
-            <br className="hidden sm:inline" />
-            for men across India with expert care.
+            Doctor-led surgical precision, bespoke hairline architecture, and permanent density with expert care.
           </p>
         </div>
       </div>

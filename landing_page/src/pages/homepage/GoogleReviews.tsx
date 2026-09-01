@@ -66,10 +66,10 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
                   d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.7 1.27 6.61l4.01 3.15c.95-2.85 3.6-4.96 6.72-4.96z"
                 />
               </svg>
-              <span>Verified Google Reviews</span>
+              <span>Verified Google Ratings</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight">
-              Reviews on Google
+              Patient Experiences & Feedback
             </h2>
           </div>
 
@@ -77,7 +77,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3 bg-white px-5 py-2.5 rounded-2xl border border-gray-200 shadow-xs">
               <span className="text-3xl font-extrabold text-[#1b221d] font-mono">
-                4.8
+                4.9
               </span>
               <div>
                 <div className="flex text-amber-400 text-sm">
@@ -86,7 +86,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
                   ))}
                 </div>
                 <span className="text-[11px] text-gray-500 font-medium">
-                  3,184+ Verified Patient Reviews
+                  Verified Patient Reviews
                 </span>
               </div>
             </div>

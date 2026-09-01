@@ -17,30 +17,30 @@ interface ServiceWhyUsSectionProps {
 
 const DEFAULT_WHY_US_STATS: WhyUsStat[] = [
   {
-    title: "100% natural, undetectable hairline",
-    desc: "Achieve the look you always wished for naturally with precision.",
+    title: "Natural, Undetectable Hairline Architecture",
+    desc: "Crafted to complement your personal facial geometry and natural hair exit angles.",
   },
   {
-    title: "Patented SAVA implanters for maximum density",
-    desc: "Direct implanter pens ensuring zero root damage and up to 98% graft survival.",
+    title: "Advanced Direct Implanter Technology",
+    desc: "Ultra-fine direct implanter pens ensuring minimal root trauma and 95%+ follicle viability.",
   },
   {
-    title: "Fast recovery with minimal downtime",
-    desc: "Return to daily work within 48 to 72 hours safely.",
+    title: "Rapid Tissue Recovery with Minimal Downtime",
+    desc: "Return to everyday activities within 5 to 7 days safely with structured healing care.",
   },
   {
-    title: "Over 15,000+ successful surgeries",
-    desc: "With a team of experts with a collective 15000+ surgical experience.",
+    title: "Extensive Portfolio of Documented Success",
+    desc: "Led by senior certified hair restoration surgeons with thousands of successful cases.",
   },
 ];
 
 export default function ServiceWhyUsSection({
-  title = "Hair Transplant Repair",
+  title = "Hair Restoration",
   subtitle,
   stats = DEFAULT_WHY_US_STATS,
   onOpenConsultation,
 }: ServiceWhyUsSectionProps) {
-  const defaultSubtitle = `${COMPANY_NAME} Clinic is trusted for failed hair transplant correction with expert surgeons and techniques.\nWe have:`;
+  const defaultSubtitle = `At ${COMPANY_NAME}, our clinical protocols combine surgical artistry, sterile theater standards, and dedicated patient care.\nKey clinical strengths:`;
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#596d53] text-white overflow-hidden">

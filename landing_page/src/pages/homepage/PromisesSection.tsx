@@ -28,7 +28,7 @@ export default function PromisesSection() {
         {/* Section Header */}
         <div className="flex items-center justify-between pb-4 mb-8 border-b border-black/50">
           <h2 className="text-3xl sm:text-6xl font-[500] text-[#162418]">
-            Our Promises
+            Our Clinical Commitments
           </h2>
           <span className="w-10 h-10 rounded-lg border-[0.1px] border-black font-bold flex items-center justify-center text-base">
             1
@@ -42,12 +42,12 @@ export default function PromisesSection() {
             <div className="rounded-2xl overflow-hidden shadow-md border border-gray-100">
               <img
                 src="https://www.qhtclinic.com/wp-content/uploads/2025/11/Our-Promise.webp"
-                alt="Our Promise"
+                alt="Our Clinical Commitments"
                 className="w-full h-auto object-cover"
               />
             </div>
             <h3 className="text-xl sm:text-3xl font-[400] text-[#162418] leading-snug">
-              Natural. Safe. Permanent Results You’ll Wear with Confidence for Life.
+              Artistic Hairline Architecture. Zero-Compromise Safety. Permanent Follicular Vitality.
             </h3>
           </div>
 

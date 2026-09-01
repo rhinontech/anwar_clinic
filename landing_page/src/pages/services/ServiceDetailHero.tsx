@@ -19,7 +19,7 @@ interface ServiceDetailHeroProps {
 export default function ServiceDetailHero({
   slug = "best-fue-hair-transplant-in-india",
   title = "FUE Hair Transplant",
-  subtitle = `Advanced minimally invasive hair restoration solutions at ${COMPANY_NAME} Clinic.`,
+  subtitle = `Advanced minimally invasive hair restoration solutions at ${COMPANY_NAME}.`,
   bannerImage = "https://www.qhtclinic.com/wp-content/uploads/2025/08/456.png",
   pointerLabel = "Graft correction",
   onOpenConsultation,
@@ -42,7 +42,7 @@ export default function ServiceDetailHero({
     }, 700);
   };
 
-  const defaultSubtitle = `${title} solutions tailored by experts at ${COMPANY_NAME} Clinic with affordability and advanced methods.`;
+  const defaultSubtitle = `${title} procedures tailored by specialists at ${COMPANY_NAME} with clinical precision and natural results.`;
 
   return (
     <div className="relative w-full">

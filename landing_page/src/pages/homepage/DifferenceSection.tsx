@@ -26,10 +26,10 @@ export default function DifferenceSection() {
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#162418] tracking-tight">
-            See the Difference that Matters
+            The Standard of Care That Sets Us Apart
           </h2>
           <p className="mt-3 text-sm sm:text-lg text-[#5c685f] font-normal leading-relaxed">
-            Real results. Safe methods. Natural transformations. Only at {COMPANY_NAME}.
+            Comparing precision surgical artistry at {COMPANY_NAME} against standard commercial clinics.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function DifferenceSection() {
                 <div>
                   <div className="flex items-center gap-2 mb-1.5">
                     <span className="text-xs sm:text-[18px] font-bold text-[#1b221d] tracking-wide">
-                      {COMPANY_NAME} PROMISE
+                      {COMPANY_NAME} STANDARD
                     </span>
                     <span className="w-4 h-4 rounded-full bg-[#22c55e] text-white flex items-center justify-center flex-shrink-0 shadow-2xs">
                       <Check className="w-2.5 h-2.5 stroke-[3]" />

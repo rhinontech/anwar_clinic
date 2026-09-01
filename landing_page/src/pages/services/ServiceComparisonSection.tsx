@@ -70,11 +70,11 @@ const DEFAULT_COMPARISON_CARDS: ComparisonCard[] = [
   },
   {
     id: 7,
-    title: `${COMPANY_NAME} Patented Method`,
-    purpose: "Rapid transplant with <2 hour out-of-body time",
-    effectiveness: ">98% graft survival & swift healing",
+    title: `${COMPANY_NAME} Advanced Protocol`,
+    purpose: "Rapid micro-implantation with minimized out-of-body holding time",
+    effectiveness: "95%+ graft viability & rapid tissue recovery",
     risk: "Very low",
-    cost: "Affordable & Value-driven",
+    cost: "Value-driven package",
   },
   {
     id: 8,

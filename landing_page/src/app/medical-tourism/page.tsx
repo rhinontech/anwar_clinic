@@ -1,5 +1,5 @@
 import React from "react";
-import ComingSoonPage from "@/pages/common/ComingSoonPage";
+import MedicalTourismPage from "@/pages/medical-tourism/MedicalTourismPage";
 import { Metadata } from "next";
 import { COMPANY_NAME } from "@/config/constants";
 
@@ -10,5 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ComingSoonPage title="Medical Tourism" />;
+  return <MedicalTourismPage />;
 }
+

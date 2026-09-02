@@ -1,5 +1,5 @@
 import React from "react";
-import ComingSoonPage from "@/pages/common/ComingSoonPage";
+import FAQPage from "@/pages/faq/FAQPage";
 import { Metadata } from "next";
 import { COMPANY_NAME } from "@/config/constants";
 
@@ -9,5 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ComingSoonPage title="Frequently Asked Questions (FAQ)" />;
+  return <FAQPage />;
 }
+

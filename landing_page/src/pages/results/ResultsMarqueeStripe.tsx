@@ -7,14 +7,14 @@ interface ResultsMarqueeStripeProps {
 }
 
 const DEFAULT_MARQUEE_ITEMS = [
-  "Personalized Hairline Design",
-  "Real Results",
-  "Confidence Restored",
-  "100% Natural Look",
-  "Graft By Graft Procedure",
-  "No Visible Scarring",
-  "Expert Surgeons",
-  "High Density Growth",
+  "Bespoke Hairline Architecture",
+  "95%+ Follicle Viability",
+  "Surgeon-Led Precision",
+  "Lifelong Natural Density",
+  "Micro-Graft Direct Implantation",
+  "Zero Linear Scarring",
+  "Ultra-Sterile Surgical Suites",
+  "Undetectable Aesthetic Finish",
 ];
 
 export default function ResultsMarqueeStripe({

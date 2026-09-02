@@ -171,13 +171,13 @@ export default function CostTechniquesSection({
           <div className="bg-white rounded-3xl p-7 sm:p-8 shadow-xs border border-gray-100/90 flex flex-col justify-between">
             <div>
               <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
-                {COMPANY_NAME} Technique
+                {COMPANY_NAME} Advanced Technique
               </span>
               <h3 className="text-lg sm:text-xl font-[500] text-[#1b221d] mb-2">
-                Quick Hair Transplant
+                Direct Follicular Implantation
               </h3>
               <p className="text-xs text-[#5c685f] leading-relaxed font-normal min-h-[60px]">
-                {COMPANY_NAME} Clinic’s patented, proprietary technique – an advanced form of FUE. Simultaneous extraction and implantation reduces graft out-of-body time to under 2 hours for superior survival and density.
+                {COMPANY_NAME}’s specialized direct micro-implantation protocol reduces out-of-body holding time for maximum graft viability, accelerated recovery, and seamless hairline density.
               </p>
 
               {/* Price Row */}
@@ -202,31 +202,31 @@ export default function CostTechniquesSection({
                   <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </div>
-                  <span>Optimised graft survival through reduced out-of-body time</span>
+                  <span>Optimized graft viability via minimal out-of-body holding time</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </div>
-                  <span>Simultaneous extraction + implantation</span>
+                  <span>Surgeon-guided rapid extraction and direct implantation</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </div>
-                  <span>SAVA implanter pen precision</span>
+                  <span>Precision micro-implanter depth and angle control</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </div>
-                  <span>Faster procedure duration</span>
+                  <span>Rapid recovery with minimal post-op downtime</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </div>
-                  <span>High-density, natural-looking results</span>
+                  <span>Maximum follicular density and natural soft-edge hairline</span>
                 </li>
               </ul>
             </div>

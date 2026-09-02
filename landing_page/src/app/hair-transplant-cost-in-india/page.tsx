@@ -3,9 +3,9 @@ import CostPage from "@/pages/cost/CostPage";
 import { COMPANY_NAME } from "@/config/constants";
 
 export const metadata: Metadata = {
-  title: `Hair Transplant Cost in India | Transparent Pricing & Packages | ${COMPANY_NAME} Clinic`,
+  title: `Hair Transplant Cost in India | Transparent Pricing & Packages | ${COMPANY_NAME}`,
   description:
-    `Check transparent hair transplant cost in India starting from ₹50/graft (FUT), ₹70/graft (FUE), and ₹100/graft with patented ${COMPANY_NAME} technique. Calculate your estimated cost now.`,
+    `Explore transparent hair transplant cost in India starting from ₹50/graft (FUT), ₹70/graft (Motorized FUE), and ₹100/graft with the ${COMPANY_NAME} Advanced Technique. Calculate your estimated cost now.`,
 };
 
 export default function Page() {

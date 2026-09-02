@@ -13,33 +13,33 @@ interface FAQItem {
 const COST_FAQ_ITEMS: FAQItem[] = [
   {
     id: "01",
-    question: "What is the average hair transplant cost in India?",
+    question: "What is the expected hair transplant cost in India?",
     answer:
-      "The hair transplant price in India varies according to the city. Metropolitan cities like Mumbai, Bangalore, and Pune have higher rates as compared to Tier 2 cities. The average range lies between ₹40,000 and ₹5,00,000. Consultation and scalp assessment are necessary to get a personalised estimate for the treatment.",
+      `Hair restoration costs depend primarily on the number of grafts required and the surgical technique selected. At ${COMPANY_NAME}, we offer itemized, transparent per-graft estimates without surprise theatre or post-op charges, ensuring complete financial clarity prior to your procedure.`,
   },
   {
     id: "02",
-    question: "What is the cost per graft in India?",
+    question: `How are per-graft prices determined at ${COMPANY_NAME}?`,
     answer:
-      `In India, the cost per graft typically ranges between ₹50 and ₹120 depending on the surgical technique (FUT, FUE, or ${COMPANY_NAME}) and surgeon expertise. ${COMPANY_NAME} Clinic offers transparent per-graft pricing starting at ₹50 for FUT, ₹70 for FUE, and ₹100 for ${COMPANY_NAME}.`,
+      `Per-graft pricing reflects the precision instrumentation and surgeon involvement required. We provide clear pricing structures starting from ₹50/graft for FUT, ₹70/graft for Motorized FUE, and ₹100/graft for ${COMPANY_NAME} Micro-Direct Implantation.`,
   },
   {
     id: "03",
-    question: "Which hair transplant technique is best for me?",
+    question: "Which hair restoration technique provides the most natural outcome?",
     answer:
-      `The best technique depends on your Norwood baldness grade, donor hair density, lifestyle, and aesthetic expectations. FUE and ${COMPANY_NAME} are ideal for minimal scarring and faster recovery, while FUT is effective for high-volume graft harvesting in advanced stages.`,
+      `Naturalness depends on surgeon artistry, hairline geometry, and follicle handling. Micro-FUE and Direct Implantation allow precise control over graft insertion angle, depth, and direction, delivering seamlessly blended, undetectable results.`,
   },
   {
     id: "04",
-    question: "Is a hair transplant a permanent solution?",
+    question: "Are transplanted hair follicles truly permanent?",
     answer:
-      "Yes. The transplanted hair follicles are harvested from the DHT-resistant donor area (back and sides of the head). Once rooted in the recipient area, they retain their genetic properties and continue to grow naturally for a lifetime.",
+      "Yes. Follicles extracted from the safe occipital donor zone are biologically immune to DHT (the hormone responsible for genetic balding). Once implanted, they maintain their lifelong growth cycle.",
   },
   {
     id: "05",
-    question: `Are EMI options available at ${COMPANY_NAME} Clinic?`,
+    question: `Are flexible EMI payment options available at ${COMPANY_NAME}?`,
     answer:
-      `Yes, ${COMPANY_NAME} Clinic offers zero-cost EMI financing plans split across 3 to 24 months through leading banking and NBFC partners, ensuring quality hair restoration is accessible without financial strain.`,
+      `Yes, ${COMPANY_NAME} provides 0% interest EMI financing plans across 3 to 24 months through partnered healthcare financial institutions to ensure smooth accessibility.`,
   },
 ];
 

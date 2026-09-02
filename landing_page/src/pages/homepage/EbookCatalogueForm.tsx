@@ -99,12 +99,12 @@ export default function EbookCatalogueForm({
           <div className="lg:col-span-6 space-y-6">
             <div>
               <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-[500] text-white tracking-tight leading-[1.16]">
-                Thinking about Hair <br />
-                Transplant? Read this First.
+                Considering Hair Restoration? <br />
+                Download the Essential Guide.
               </h2>
 
               <p className="mt-4 text-xs sm:text-[14.5px] text-white/90 leading-relaxed font-normal max-w-xl">
-                A free experts curated guide that clears all your doubts about Costs, Results, Pain, Recovery and much more.
+                A doctor-curated roadmap covering realistic graft calculations, healing timelines, pain management, and transparent pricing.
               </p>
             </div>
 
@@ -112,15 +112,15 @@ export default function EbookCatalogueForm({
             <ul className="space-y-3 pt-2 text-xs sm:text-[14px] text-white font-normal">
               <li className="flex items-start gap-2.5">
                 <span className="text-white text-base leading-none">•</span>
-                <span>Look at the real transformation results</span>
+                <span>Understand realistic graft requirements for your Norwood stage</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-white text-base leading-none">•</span>
-                <span>Know what comes next: a step-by-step guide</span>
+                <span>Step-by-step day-by-day healing and aftercare protocol</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-white text-base leading-none">•</span>
-                <span>Learn tips to prevent bad results.</span>
+                <span>Critical quality standards to verify before choosing any clinic</span>
               </li>
             </ul>
 

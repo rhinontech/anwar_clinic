@@ -15,22 +15,22 @@ interface ClinicLocation {
 const DEFAULT_CLINIC_LOCATIONS: ClinicLocation[] = [
   {
     city: "Haridwar",
-    address: `${COMPANY_NAME} Clinic, 521, Model Colony, Ranipur More, Haridwar, Uttarakhand.`,
+    address: `${COMPANY_NAME}, 521, Model Colony, Ranipur More, Haridwar, Uttarakhand.`,
     mapLink: "https://maps.app.goo.gl/BtDzrvdu7hEDbBoJ9",
   },
   {
     city: "Delhi",
-    address: "D -15, Outer Ring Rd, above Federal Bank, Prashant Vihar, Sector 14, Rohini, New Delhi, Delhi, 110085",
+    address: "D -15, Outer Ring Rd, Prashant Vihar, Sector 14, Rohini, New Delhi, Delhi, 110085",
     mapLink: "https://maps.app.goo.gl/mnvSFb9vCh5QGe7A8",
   },
   {
     city: "Hyderabad",
-    address: `${COMPANY_NAME} Clinic Opposite Hotel Park HyattRoad No. 2 Banjara Hills, Hyderabad, Telangana`,
+    address: `${COMPANY_NAME}, Road No. 2, Banjara Hills, Hyderabad, Telangana`,
     mapLink: "https://maps.app.goo.gl/NcNQH3MtLWponejy8",
   },
   {
-    city: "Gurugram Clinic",
-    address: "Nursing Home Bearing plot No 3, Sector 46, Gurugram, Haryana 122022",
+    city: "Gurugram",
+    address: "Plot No 3, Sector 46, Gurugram, Haryana 122022",
     mapLink: "https://maps.app.goo.gl/kbHcpPe1jS8xJHMD9",
   },
 ];
@@ -102,22 +102,22 @@ export default function ContactSection({
           {/* Left Column: Heading, Info, Email */}
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] leading-[1.18] tracking-tight">
-              Get in touch with us
+              Connect with Our Specialists
               <br />
-              or you can visit us.
+              or Visit Our Centers.
             </h2>
 
             <p className="text-sm sm:text-base text-[#5c685f] leading-relaxed max-w-md font-normal">
-              Reach out anytime or visit us directly for personalized assistance, expert guidance, and seamless support experience.
+              Reach out directly for a comprehensive graft assessment, surgeon consultation, and tailored treatment roadmap.
             </p>
 
             {/* Email link */}
             <div className="pt-2">
               <a
-                href="mailto:care@qhtclinic.com"
+                href={`mailto:care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`}
                 className="text-base sm:text-lg font-bold text-[#1b221d] hover:text-[#596d53] transition-colors"
               >
-                care@qhtclinic.com
+                care@{COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com
               </a>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function ContactSection({
           <div className="lg:col-span-6">
             <div className="w-full">
               <h3 className="text-2xl sm:text-[28px] font-[500] text-[#596d53] mb-6">
-                Book a Consultation Today
+                Schedule a Consultation
               </h3>
 
               {isSubmitted ? (
@@ -229,7 +229,7 @@ export default function ContactSection({
                         onChange={(e) => setPrivacyAgreed(e.target.checked)}
                         className="w-4 h-4 rounded border-gray-300 text-[#596d53] focus:ring-[#596d53] accent-[#596d53] cursor-pointer"
                       />
-                      <span>You authorise {COMPANY_NAME} Clinic as per Privacy Policy</span>
+                      <span>You authorise {COMPANY_NAME} as per Privacy Policy</span>
                     </label>
                   </div>
 

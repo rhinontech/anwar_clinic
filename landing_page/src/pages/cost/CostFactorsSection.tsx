@@ -6,8 +6,8 @@ import { COMPANY_NAME } from "@/config/constants";
 const COST_FACTORS = [
   {
     num: "01",
-    title: `Technique Used\n(FUE / FUT / ${COMPANY_NAME})`,
-    desc: `Different techniques vary in complexity and cost. FUT is the most affordable; FUE and ${COMPANY_NAME} carry higher prices due to their minimally invasive approach and superior graft survival rates. The right choice depends on your baldness grade and expectations.`,
+    title: `Surgical Technique Selected\n(FUT / FUE / ${COMPANY_NAME} Protocol)`,
+    desc: `Different techniques vary in surgical instrumentation and procedural duration. Strip FUT is the most economical; Motorized FUE and ${COMPANY_NAME} Direct Implantation provide scarless healing and higher follicle survival rates.`,
   },
   {
     num: "02",
@@ -32,7 +32,7 @@ const COST_FACTORS = [
   {
     num: "06",
     title: "Graft Survival Rate\nand Technology",
-    desc: "Clinics using advanced extraction protocols, SAVA implanter pens and reduced graft out-of-body time achieve superior graft survival rates – meaning fewer wasted grafts, better density per session, and stronger long-term value.",
+    desc: "Clinics utilizing precision micro-punches, direct implanter pens, and minimal out-of-body holding protocols achieve superior follicle survival — preserving your finite donor bank and delivering maximum visual density.",
   },
 ];
 

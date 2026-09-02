@@ -4,9 +4,9 @@ import { Metadata } from "next";
 import { COMPANY_NAME } from "@/config/constants";
 
 export const metadata: Metadata = {
-  title: `About Us - ${COMPANY_NAME} Hair Transplant Clinic India`,
+  title: `About Us — ${COMPANY_NAME} Hair Restoration India`,
   description:
-    `Learn more about ${COMPANY_NAME} Clinic, our expert surgical team, and our mission in redefining hair restoration across India.`,
+    `Learn about ${COMPANY_NAME}, our board-certified surgical team, sterile hospital suites, and our commitment to natural, permanent hair restoration across India.`,
 };
 
 export default function Page() {

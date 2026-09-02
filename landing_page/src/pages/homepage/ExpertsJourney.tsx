@@ -15,14 +15,14 @@ export default function ExpertsJourney() {
         {/* Heading */}
         <div className="text-center max-w-7xl mx-auto mb-14">
           <h2 className="text-3xl sm:text-5xl font-[500] text-[#162418]">
-            A Team of Experts, Focused on You
+            A Dedicated Medical Team at Every Step
           </h2>
           <p className="mt-2 text-sm sm:text-lg text-gray-600">
             At {COMPANY_NAME}, hair restoration{" "}
             <strong className="text-gray-900">
-              isn’t a one-person job — it’s a team effort.
+              is a meticulous, multidisciplinary discipline.
             </strong>{" "}
-            Our specialists work together to design a natural, safe, and lasting hairline with zero compromise.
+            Our specialists collaborate to design a natural, safe, and enduring hairline with zero compromise on quality.
           </p>
         </div>
 

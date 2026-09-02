@@ -21,32 +21,32 @@ const DEFAULT_FEATURES: FeatureCard[] = [
   {
     id: 1,
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp",
-    title: "Celebrity Trusted",
-    desc: `${COMPANY_NAME} Clinic is trusted by celebrities for their Hair Transplant Repair.`,
+    title: "Surgical Mastery",
+    desc: `Surgeon-led procedures adhering to international medical protocols at ${COMPANY_NAME}.`,
   },
   {
     id: 2,
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp",
-    title: "Clinical Expertise",
-    desc: `With years of experience in handling Hair Transplant Repair cases, ${COMPANY_NAME} Clinic delivers the best results.`,
+    title: "Artistic Hairline Geometry",
+    desc: "Handcrafted angle and depth alignment ensuring soft, undetectable transitions.",
   },
   {
     id: 3,
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-2.jpg",
-    title: "Natural Results.",
-    desc: "Our expert surgeons and methods give natural hairlines and improved density in cases of Hair Transplant Repair.",
+    title: "Maximum Follicle Viability",
+    desc: "Ultra-fine micro-instrumentation designed to preserve 95%+ graft survival.",
   },
   {
     id: 4,
     image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp",
-    title: "Best Facilities",
-    desc: `${COMPANY_NAME} Clinic is equipped with the best technology and advanced techniques to yield a seamless experience.`,
+    title: "Hospital-Grade Theaters",
+    desc: `${COMPANY_NAME} operates in ultra-sterile surgical suites equipped with modern micro-restoration technology.`,
   },
 ];
 
 export default function ServiceWhyChooseQHTSection({
-  title = "Hair Transplant Repair",
-  subtitle = `${COMPANY_NAME} Hair Transplants and Hair Transplant Repair services provide the right techniques, surgeons, natural results, the least recovery time, and proper aftercare to the patients for long-term success.`,
+  title = "Hair Restoration",
+  subtitle = `At ${COMPANY_NAME}, our clinical protocols combine surgeon artistry, advanced micro-instruments, and structured aftercare for permanent, natural results.`,
   features = DEFAULT_FEATURES,
   onOpenConsultation,
 }: ServiceWhyChooseQHTSectionProps) {

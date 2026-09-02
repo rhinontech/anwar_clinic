@@ -18,10 +18,10 @@ export default function PricingTechniques({
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-5xl font-[500] text-[#162418] tracking-tight">
-            Hair Transplant Cost by Technique
+            Transparent Procedure Options & Pricing
           </h2>
           <p className="mt-3 text-sm sm:text-lg text-[#5c685f] font-normal leading-relaxed">
-            Discover three proven hair transplant techniques at three different price points, each delivering permanent, natural-looking hair restoration.
+            Explore proven, physician-administered restoration techniques tailored to your degree of hair loss, aesthetic vision, and budget.
           </p>
         </div>
 

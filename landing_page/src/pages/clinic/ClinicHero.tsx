@@ -41,13 +41,13 @@ export default function ClinicHero() {
 
         {/* Main Title */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[500] text-white tracking-tight leading-[1.12] drop-shadow-md max-w-4xl">
-          {COMPANY_NAME} Clinic Hair <br />
-          Transplant Clinic India
+          State-of-the-Art Facilities & <br />
+          Clinical Excellence
         </h1>
 
         {/* Subtitle */}
         <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-white/95 font-medium drop-shadow max-w-2xl">
-          {COMPANY_NAME} Clinic advanced hair transplant solutions India
+          Explore {COMPANY_NAME}’s modern surgical suites, sterile operating theaters, and patient-first medical infrastructure across India.
         </p>
 
       </div>

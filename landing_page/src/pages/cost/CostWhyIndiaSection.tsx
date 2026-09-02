@@ -57,7 +57,7 @@ export default function CostWhyIndiaSection() {
                     Internationally Trained Surgeons
                   </h3>
                   <p className="text-xs text-[#5c685f] leading-relaxed font-normal">
-                    Procedures at {COMPANY_NAME} Clinic are performed by experienced, internationally trained surgeons - never delegated to technicians. With 15,000+ procedures completed at {COMPANY_NAME} Clinic across all Norwood grades, our team handles primary cases as well as complex repair and revision work.
+                    Procedures at {COMPANY_NAME} are performed by experienced, certified hair restoration surgeons — never delegated to uncertified staff. With extensive cases completed at {COMPANY_NAME} across all Norwood grades, our medical team handles primary restorations as well as complex corrective and revision surgeries.
                   </p>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function CostWhyIndiaSection() {
                     Multi-City Clinic Network
                   </h3>
                   <p className="text-xs text-[#5c685f] leading-relaxed font-normal">
-                    {COMPANY_NAME} Clinic operates across 4 cities - Haridwar, Delhi, Gurugram and Hyderabad - making it accessible for both domestic and international patients to plan their procedure and follow-up care.
+                    {COMPANY_NAME} operates centers across 4 strategic hubs — Haridwar, Delhi, Gurugram, and Hyderabad — making it accessible for both domestic and international patients to plan their procedure and follow-up care.
                   </p>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function CostWhyIndiaSection() {
               
               <div className="pb-1">
                 <span className="text-xs sm:text-[13px] font-bold text-white/90 tracking-wide uppercase block">
-                  {COMPANY_NAME} Clinic By the Numbers
+                  {COMPANY_NAME} By the Numbers
                 </span>
               </div>
 

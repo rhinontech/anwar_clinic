@@ -28,8 +28,8 @@ export default function AboutExpertsPhilosophySection({
           <path d="M10 21L16 21" strokeLinecap="round" />
         </svg>
       ),
-      title: "Our Philosophy: Redefining Hair Restoration Care",
-      desc: `At ${COMPANY_NAME} Hair Transplant Clinic, we combine advanced technology and expert precision to deliver personalized, natural, and lasting results—restoring not just hair, but confidence and self-expression.`,
+      title: "Our Philosophy: Redefining Hair Restoration",
+      desc: `At ${COMPANY_NAME}, we combine advanced technology and surgeon precision to deliver personalized, natural, and lasting results — restoring not just hair, but confidence and facial harmony.`,
     },
     {
       id: 2,
@@ -40,8 +40,8 @@ export default function AboutExpertsPhilosophySection({
           <circle cx="6" cy="18" r="2" />
         </svg>
       ),
-      title: "Technology Behind the Natural Transformations",
-      desc: `At ${COMPANY_NAME} Hair Transplant, we use advanced technology and sapphire punches for precise, minimally invasive procedures—maximizing graft survival, natural density, and lasting comfort.`,
+      title: "Technology Behind Natural Density",
+      desc: `At ${COMPANY_NAME}, we utilize sapphire-tipped instruments and micro-punches for precise, minimally invasive harvesting — maximizing graft survival and natural growth direction.`,
     },
     {
       id: 3,
@@ -55,7 +55,7 @@ export default function AboutExpertsPhilosophySection({
         </svg>
       ),
       title: "Quality & Training of Medical Staff",
-      desc: "The highest quality starts with the people delivering the service. Our surgeons, specialists, and support staff undergo continuous global training, staying updated with advances in hair restoration. Committed to precision, safety, and care, they ensure natural results and provide patients with lasting peace of mind.",
+      desc: "Clinical excellence begins with our surgical team. Our surgeons, trichologists, and nursing staff undergo rigorous ongoing medical training, staying at the forefront of international hair restoration advancements to ensure patient safety and natural aesthetics.",
     },
     {
       id: 4,
@@ -68,8 +68,8 @@ export default function AboutExpertsPhilosophySection({
           <path d="M17.5 16.5V20" />
         </svg>
       ),
-      title: "Our Hair Transplant Process",
-      desc: `Our hair transplant process at ${COMPANY_NAME} begins with a personalized consultation and planning. Donor grafts are carefully extracted using FUE and ${COMPANY_NAME} techniques, prepared under magnification, implanted naturally, and followed by recovery support for lasting growth.`,
+      title: "Our Clinical Procedure Protocol",
+      desc: `Our surgical process at ${COMPANY_NAME} begins with personalized hairline planning. Donor follicles are harvested using Motorized FUE and direct implanter techniques, sorted under high-power stereomicroscopes, and implanted for permanent density.`,
     },
     {
       id: 5,
@@ -81,8 +81,8 @@ export default function AboutExpertsPhilosophySection({
           <path d="M5 9L11 4L17 8L21 3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
-      title: "Milestones That Define Us",
-      desc: `With over 15,000 successful transplants, 20+ years of combined expertise, 95% graft survival, and patients from 30+ countries, ${COMPANY_NAME} Hair Transplant Clinic delivers trusted global results.`,
+      title: "Milestones That Define Our Standard",
+      desc: `With over 15,000 completed restorations, 20+ years of collective surgical experience, 95%+ follicle viability, and international patients from 30+ countries, ${COMPANY_NAME} delivers verified clinical results.`,
     },
     {
       id: 6,
@@ -95,8 +95,8 @@ export default function AboutExpertsPhilosophySection({
           <path d="M12.5 3C14.5 6 15.5 9 15.5 12C15.5 15 14.5 18 12.5 21" />
         </svg>
       ),
-      title: "Global Patients & Global Care",
-      desc: `${COMPANY_NAME} Hair Transplant Clinic is a name you can trust, and it is known all over the world, with patients coming from all continents - Asia, the Middle East, and Europe. We provide Hair Transplant Treatments with seamless service and world-class personalized procedures and long-term results delivered to international standards.`,
+      title: "Global Patients & International Care",
+      desc: `${COMPANY_NAME} welcomes patients from Asia, the Middle East, Europe, and North America. We provide dedicated medical tourism support with seamless concierge, transparent billing, and world-class surgical care.`,
     },
   ];
 
@@ -113,7 +113,7 @@ export default function AboutExpertsPhilosophySection({
           </div>
           <div className="max-w-md lg:pb-1">
             <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
-              There are many experts behind every successful treatment. At {COMPANY_NAME} Hair Transplant Clinic, our highly skilled doctors and educated professionals have one goal in mind, to empower you with outstanding results.
+              Behind every transformative outcome is a dedicated medical team. At {COMPANY_NAME}, our experienced surgeons and trichology specialists are united in delivering natural, undetectable results.
             </p>
           </div>
         </div>

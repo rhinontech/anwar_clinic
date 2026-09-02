@@ -13,15 +13,15 @@ interface ServicesListingProps {
 }
 
 const CATEGORIES = [
-  "All Services",
-  "Popular",
-  "Hairline & Density",
-  "Facial Hair",
-  "Specialized & Repair",
+  "All Procedures",
+  "Most Requested",
+  "Hairline & Crown",
+  "Facial Hair Restoration",
+  "Corrective & Specialized",
 ];
 
 export default function ServicesListing({ services, onOpenConsultation }: ServicesListingProps) {
-  const [activeFilter, setActiveFilter] = useState("All Services");
+  const [activeFilter, setActiveFilter] = useState("All Procedures");
 
   // API content when available, otherwise fallback bundled list.
   const allServices: ServiceCardItem[] =
@@ -37,14 +37,14 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
       : ALL_SERVICES_LIST;
 
   const filteredServices = allServices.filter((item) => {
-    if (activeFilter === "All Services") return true;
-    if (activeFilter === "Popular")
+    if (activeFilter === "All Procedures") return true;
+    if (activeFilter === "Most Requested")
       return ["best-fue-hair-transplant-in-india", "quick-hair-transplant-in-india", "hair-transplant-for-men"].includes(item.id);
-    if (activeFilter === "Hairline & Density")
+    if (activeFilter === "Hairline & Crown")
       return ["hairline-reconstruction", "custom-hairline-transplant", "natural-look-hair-restoration", "ultra-dense-hair-transplant", "temple-hair-transplant", "crown-hair-transplant"].includes(item.id);
-    if (activeFilter === "Facial Hair")
+    if (activeFilter === "Facial Hair Restoration")
       return ["beard-hair-transplant-in-india", "moustache-hair-transplant-in-india", "eyebrow-reconstruction-in-india"].includes(item.id);
-    if (activeFilter === "Specialized & Repair")
+    if (activeFilter === "Corrective & Specialized")
       return ["bad-hair-transplant-correction", "failed-hair-transplant-repair", "burn-hair-transplant", "afro-hair-transplant-in-india", "caucasian-patients-hair-transplant", "unshaven-hair-transplant", "female-hair-transplantation"].includes(item.id);
     return true;
   });
@@ -59,11 +59,11 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
               <Sparkles className="w-3.5 h-3.5 text-[#596d53]" /> Comprehensive Procedures
             </span>
             <h2 className="text-3xl sm:text-5xl font-[500] text-[#1b221d] tracking-tight">
-              Hair Transplant Services in India
+              Clinical Hair Restoration Procedures
             </h2>
           </div>
           <p className="max-w-xl text-sm sm:text-lg text-gray-600 leading-relaxed font-normal">
-            At {COMPANY_NAME} Clinic, we provide advanced hair transplant services designed to restore natural hair density, improve hairlines, and boost confidence. Our expert surgeons deliver scarless, painless, and long-lasting results.
+            At {COMPANY_NAME}, our specialized surgical and non-surgical procedures are engineered to deliver natural density, balanced facial framing, and permanent follicle growth.
           </p>
         </div>
 

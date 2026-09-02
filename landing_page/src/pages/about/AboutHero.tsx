@@ -4,12 +4,12 @@ import React from "react";
 import { COMPANY_NAME } from "@/config/constants";
 
 const STRIP_ITEMS = [
-  "Proven results with natural hair line",
-  "100% Post-operative care",
-  "Trained Surgical Team & clinic staff",
-  "Clean, sterile OT suites & advanced technology",
-  "15,000+ Successful Procedures",
-  "Transparent, upfront pricing with no hidden charges",
+  "Bespoke Hairline Architecture",
+  "Surgeon-Led Clinical Protocols",
+  "Comprehensive Post-Op Aftercare",
+  "Ultra-Sterile Hospital Theaters",
+  "95%+ Follicle Viability Rate",
+  "Transparent All-Inclusive Pricing",
 ];
 
 export default function AboutHero() {
@@ -50,7 +50,7 @@ export default function AboutHero() {
 
           {/* Subtitle */}
           <p className="mt-4 sm:mt-5 text-xs sm:text-[13.5px] text-[#5c685f] leading-relaxed max-w-2xl mx-auto font-normal text-center">
-            At {COMPANY_NAME} Hair Transplant Clinic, our specialty is treating baldness, but beyond that, our goal is to transform lives with both natural and permanent results. We have taken hair restoration to a new level with a combination of technology, training, and experience all with care.
+            At {COMPANY_NAME}, hair restoration is more than surgical coverage — it is an artistic discipline dedicated to restoring natural facial balance, density, and lasting confidence. By uniting board-certified surgical mastery with advanced micro-instrumentation, we set a higher standard of clinical care.
           </p>
         </div>
 

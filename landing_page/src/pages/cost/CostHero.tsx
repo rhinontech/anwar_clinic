@@ -22,7 +22,7 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
           </Link>
           <ChevronRight className="w-3 h-3 text-white/50" />
           <span className="text-white/95 font-medium">
-            Hair Transplant Cost in Delhi
+            Hair Transplant Cost in India
           </span>
         </nav>
 
@@ -33,26 +33,26 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
 
             {/* Tag Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 px-3.5 py-1 rounded-full text-xs font-semibold text-white">
-              <span>Per Graft Pricing from ₹50</span>
+              <span>Transparent Per-Graft Pricing</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-[500] text-white tracking-tight leading-[1.12]">
               Hair Transplant Cost <br className="hidden sm:block" />
               <span className="text-[#b1fc85]">in India</span> | Transparent <br className="hidden sm:block" />
-              Pricing, Real Results.
+              Pricing, Natural Results.
             </h1>
 
             {/* Overview Paragraph */}
             <p className="text-xs sm:text-lg text-white/85 leading-relaxed font-normal max-w-xl">
-              Hair transplant cost in India varies based on your stage of hair loss and the technique used. At {COMPANY_NAME} Clinic, pricing starts from ₹50/graft (FUT), ₹70/graft (FUE), and ₹100/graft with our patented {COMPANY_NAME} technique — performed under expert surgeon supervision, with 15,000+ procedures completed over 10+ years and transparent, upfront pricing.
+              Hair transplant pricing in India is determined by the stage of hair loss and the surgical technique selected. At {COMPANY_NAME}, procedures start from ₹50/graft (FUT), ₹70/graft (Motorized FUE), and ₹100/graft with our {COMPANY_NAME} Advanced Technique — all led by senior restoration surgeons with transparent, itemized billing.
             </p>
 
             {/* Action Buttons */}
             <div className="pt-3 flex flex-wrap items-center gap-4">
               <button
                 onClick={onOpenConsultation}
-                className="bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-sm sm:text-base py-3.5 px-8 rounded-full shadow-lg transition-all active:scale-95 duration-150"
+                className="bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-sm sm:text-base py-3.5 px-8 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
               >
                 Book Free Consultation
               </button>
@@ -74,7 +74,7 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
               {/* Card Dark Header */}
               <div className="bg-[#243322] py-4 px-6 text-center">
                 <h3 className="text-sm sm:text-base font-bold text-white tracking-wide">
-                  At a glance - {COMPANY_NAME} Clinic
+                  At a glance — {COMPANY_NAME}
                 </h3>
               </div>
 
@@ -107,7 +107,7 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
 
                 {/* Row 5 */}
                 <div className="py-3.5 flex items-center justify-between bg-[#f4f7f4] -mx-6 sm:-mx-7 px-6 sm:px-7">
-                  <span className="text-[#1b392b] font-bold">{COMPANY_NAME} Cost / Graft</span>
+                  <span className="text-[#1b392b] font-bold">{COMPANY_NAME} Advanced Technique</span>
                   <span className="font-extrabold text-[#1b392b] text-sm">From ₹100</span>
                 </div>
 

@@ -44,14 +44,14 @@ export default function CostQHTTableSection() {
         {/* Header */}
         <div className="max-w-4xl mb-10">
           <span className="text-xs sm:text-sm font-semibold text-[#5c685f] block mb-2 tracking-wide">
-            {COMPANY_NAME} Proprietary Technique
+            {COMPANY_NAME} Advanced Technique
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight mb-4">
-            {COMPANY_NAME} (Quick Hair Transplant) <br />
+            {COMPANY_NAME} Advanced Protocol <br />
             Cost in India
           </h2>
           <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-3xl">
-            {COMPANY_NAME} is {COMPANY_NAME} Clinic’s patented, proprietary technique - an advanced form of FUE that reduces graft out-of-body time to under 2 hours through simultaneous extraction and implantation, delivering industry-leading graft survival and density. At {COMPANY_NAME} Clinic, {COMPANY_NAME} starts from ₹100 per graft.
+            The {COMPANY_NAME} Advanced Protocol is our specialized direct micro-implantation technique engineered to minimize graft out-of-body holding time. By combining gentle motorized extraction with precise implanter pens, we achieve exceptional follicle viability and natural density. Pricing starts from ₹100 per graft.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function CostQHTTableSection() {
           <div className="bg-[#243322] text-white py-4 sm:py-5 px-6 sm:px-10 grid grid-cols-12 font-bold text-xs sm:text-sm">
             <div className="col-span-4 sm:col-span-5">Norwood Stage</div>
             <div className="col-span-4 sm:col-span-4">Grafts Required</div>
-            <div className="col-span-4 sm:col-span-3 text-left">{COMPANY_NAME} Cost</div>
+            <div className="col-span-4 sm:col-span-3 text-left">{COMPANY_NAME} Protocol Cost</div>
           </div>
 
           {/* Table Body Rows */}
@@ -89,7 +89,7 @@ export default function CostQHTTableSection() {
 
         {/* Footer Note */}
         <p className="text-xs text-gray-500 font-normal mt-6">
-          {COMPANY_NAME} from ₹100/graft. Proprietary technique exclusive to {COMPANY_NAME} Clinic. Fastest procedure with highest graft survival.
+          The {COMPANY_NAME} Advanced Technique starts from ₹100/graft, designed for patients seeking maximum follicular viability, soft hairline transitions, and rapid recovery.
         </p>
 
       </div>

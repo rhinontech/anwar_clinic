@@ -18,32 +18,32 @@ export default function AboutLegacySection() {
     {
       id: 1,
       year: "Phase 01",
-      title: "Pioneering Hair Transplant Clinic in Haridwar",
-      desc: "We started with just a small idea and vision to eventually create the first determined centre of hair restoration excellence in Uttarakhand, setting the foundation for ethical, patient-first care.",
+      title: "Founding Clinical Center in Haridwar",
+      desc: "Established our initial center of excellence in Uttarakhand, building our clinical foundation on ethical diagnosis, patient transparency, and surgeon-led care.",
     },
     {
       id: 2,
       year: "Phase 02",
-      title: `Advancement in technique – ${COMPANY_NAME} Hair Transplant Process`,
-      desc: `We pioneered and introduced the state-of-the-art ${COMPANY_NAME} hair transplant process using sapphire instruments with extremely fast simultaneous extraction and implantation for superior graft survival.`,
+      title: "Advancement in Technique — Direct Micro-Implantation",
+      desc: `Pioneered our direct micro-implantation protocol, reducing graft out-of-body time and utilizing precision implanter pens for maximum follicle survival.`,
     },
     {
       id: 3,
       year: "Phase 03",
-      title: "Lives Transformed – 15,000+ Happy Patients Throughout India",
-      desc: "Whether you look at Delhi, Haridwar, Gurugram or Hyderabad, our clinic has transformed the lives of over 15,000+ happy clients with natural density and lifetime hairline growth.",
+      title: "Over 15,000+ Documented Patient Outcomes",
+      desc: "Across our centers in Delhi, Haridwar, Gurugram, and Hyderabad, delivering natural density, balanced hairline aesthetics, and lifelong follicular growth.",
     },
     {
       id: 4,
       year: "Phase 04",
-      title: "Multi-City Expansion Across Major Indian Metros",
-      desc: "Expanded state-of-the-art sterile surgical suites and trichology consultation centres across Delhi NCR, Hyderabad, and Eastern India to bring world-class hair restoration closer to everyone.",
+      title: "Multi-City Expansion Across Major Indian Hubs",
+      desc: "Expanded ultra-sterile surgical suites and trichology consultation centers across Delhi NCR, Hyderabad, and Northern India to bring clinical hair restoration closer to patients.",
     },
     {
       id: 5,
       year: "Phase 05",
-      title: "Global Recognition & International Medical Tourism",
-      desc: "Established a dedicated international patient desk providing seamless airport concierge, luxury accommodation, and internationally certified surgeons for patients from over 25+ countries.",
+      title: "Global Recognition & International Patient Care",
+      desc: "Established a dedicated international patient desk providing seamless airport concierge, hotel assistance, and surgeon-led care for patients from over 25+ countries.",
     },
   ];
 
@@ -73,7 +73,7 @@ export default function AboutLegacySection() {
                 Our Legacy in Hair Restoration
               </h2>
               <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
-                Starting from humble beginnings to one of the most recognized names across the whole country, {COMPANY_NAME} Hair Transplant Clinic is focused on providing the innovative process of hair restoration whilst creating trust and proven results.
+                From clinical inception to nationwide trust, {COMPANY_NAME} is dedicated to pioneering ethical, high-precision hair restoration with verified patient outcomes.
               </p>
             </div>
 

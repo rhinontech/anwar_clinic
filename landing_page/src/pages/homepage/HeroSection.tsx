@@ -16,16 +16,16 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
       <div className="qht-container text-center">
         {/* Main Headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-[500] text-[#181d19] tracking-tight leading-[1.18] max-w-7xl mx-auto">
-          Think the best hair transplant clinic in India,
-          <br />
+          Pioneering Natural Hair Restoration & Artistic Precision,{" "}
+          {/* <br /> */}
           <span className="text-[#52664d] font-[500] inline-block mt-1">
-            Think {COMPANY_NAME}
+            at {COMPANY_NAME}
           </span>
         </h1>
 
         {/* Subtitle */}
         <p className="mt-3.5 text-sm sm:text-[20px] text-[#5c685f] max-w-4xl mx-auto font-normal leading-relaxed">
-          Safe, natural, and trusted — restoring hair, style, and confidence for 15,000+ patients
+          Clinically advanced, undetectable results tailored to your unique facial aesthetics — restoring lifelong density, youthful definition, and confidence.
         </p>
 
         {/* Primary CTA Button */}
@@ -34,7 +34,7 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
             onClick={onOpenConsultation}
             className="bg-[#52664d] hover:bg-[#43543e] text-white font-medium text-sm sm:text-[15px] py-3.5 px-8 sm:px-9 rounded-full shadow-sm transition-all duration-200 active:scale-95 cursor-pointer"
           >
-            Book Your Free Consultation Now
+            Schedule Your Free Scalp Evaluation
           </button>
         </div>
       </div>

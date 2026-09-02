@@ -85,14 +85,14 @@ export default function ResultsHero({
           <div className="relative z-20 text-center flex flex-col items-center justify-center lg:-mr-24 lg:translate-x-4 max-w-sm sm:max-w-md pointer-events-auto">
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-[1.04]">
-              Real Results <br />
-              <span className="text-[#596d53]">Real</span> <br />
-              <span className="text-[#596d53]">confidence.</span>
+              Proven Results <br />
+              <span className="text-[#596d53]">Lasting</span> <br />
+              <span className="text-[#596d53]">Confidence.</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-xs sm:text-[16px] text-[#5c685f] mt-4 max-w-[270px] mx-auto leading-relaxed font-normal">
-              From thinning crowns to full heads — see what’s possible with {COMPANY_NAME}
+              From receding temples to full crown restoration — discover what’s possible with {COMPANY_NAME}.
             </p>
 
             {/* Vertical Scroll Down Indicator */}

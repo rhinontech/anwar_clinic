@@ -5,38 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { BALD_TRUTH_ITEMS } from "@/data/qhtData";
 import { COMPANY_NAME } from "@/config/constants";
 
-const BASE_TRUTH_ITEMS = [
-  BALD_TRUTH_ITEMS.find((item) => item.id === 6) || {
-    id: 6,
-    title: "Experience matters",
-    desc: `Only skilled surgeons, like those at ${COMPANY_NAME} Clinic, deliver safe, lasting results.`,
-  },
-  BALD_TRUTH_ITEMS.find((item) => item.id === 1) || {
-    id: 1,
-    title: "10% of transplants need repair",
-    desc: "ISHRS reports that around 10% of global cases require corrective surgery for failed results.",
-  },
-  BALD_TRUTH_ITEMS.find((item) => item.id === 2) || {
-    id: 2,
-    title: "Donor hair is non-regenerative",
-    desc: "Once removed from the donor site, it never grows back.",
-  },
-  BALD_TRUTH_ITEMS.find((item) => item.id === 3) || {
-    id: 3,
-    title: "Hair Loss doesn’t stop on its own",
-    desc: "Once balding starts, it progresses, making the recovery troublesome.",
-  },
-  BALD_TRUTH_ITEMS.find((item) => item.id === 4) || {
-    id: 4,
-    title: "Cheap clinics cost more later",
-    desc: "Low-cost procedures often lead to expensive repair surgeries.",
-  },
-  BALD_TRUTH_ITEMS.find((item) => item.id === 5) || {
-    id: 5,
-    title: "The Wrong Technique causes permanent damage.",
-    desc: "The old method of Hair transplant leaves scars and poor hairlines.",
-  },
-];
+const BASE_TRUTH_ITEMS = BALD_TRUTH_ITEMS;
 
 // Duplicate items 4 times to allow seamless infinite circular scrolling
 const LOOPED_ITEMS = [
@@ -95,10 +64,10 @@ export default function BaldTruthSection() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-[500] tracking-tight text-white">
-                The Bald Truth.
+                The Unfiltered Truth About Hair Restoration
               </h2>
               <p className="mt-1.5 text-xs sm:text-sm md:text-[18px] text-white/90 font-normal max-w-4xl">
-                Most transplants fail because no Hair transplantation clinic in India tells you what really happens
+                What most commercial clinics avoid telling you: why surgical precision, honest diagnosis, and graft preservation matter above all else.
               </p>
             </div>
 
